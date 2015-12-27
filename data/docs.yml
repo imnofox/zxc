@@ -1760,103 +1760,103 @@ docs:
   EntityType.BAT:
     type: constant
     description: >
-      No information yet.
+      A flying bat.
   EntityType.BLAZE:
     type: constant
     description: >
-      No information yet.
+      A blaze.
   EntityType.BOAT:
     type: constant
     description: >
-      No information yet.
+      A placed boat.
   EntityType.CAVE_SPIDER:
     type: constant
     description: >
-      No information yet.
+      A poisonous cave spider.
   EntityType.CHICKEN:
     type: constant
     description: >
-      No information yet.
+      A harmless chicken that lays eggs.
   EntityType.COW:
     type: constant
     description: >
-      No information yet.
+      A cow.
   EntityType.CREEPER:
     type: constant
     description: >
-      No information yet.
+      A creeper!
   EntityType.EGG:
     type: constant
     description: >
-      No information yet.
+      A thrown egg.
   EntityType.ENDERMAN:
     type: constant
     description: >
-      No information yet.
+      An enderman. Spooky.
   EntityType.EXPERIENCE_ORB:
     type: constant
     description: >
-      No information yet.
+      An experience orb on the ground.
   EntityType.EXPERIENCE_POTION:
     type: constant
     description: >
-      No information yet.
+      A thrown experience potion.
   EntityType.FALLING_BLOCK:
     type: constant
     description: >
-      No information yet.
+      A falling block. (Sand, gravel...)
   EntityType.FIREBALL:
     type: constant
     description: >
-      No information yet.
+      A flying fireball.
   EntityType.FISHING_HOOK:
     type: constant
     description: >
-      No information yet.
+      A fishing hook produced by a fishing rod.
   EntityType.GHAST:
     type: constant
     description: >
-      No information yet.
+      A ghast that lives in the nether.
   EntityType.IRON_GOLEM:
     type: constant
     description: >
-      No information yet.
+      An iron golem.
   EntityType.ITEM:
     type: constant
     description: >
-      No information yet.
+      A thrown item.
   EntityType.LAVA_SLIME:
     type: constant
     description: >
-      No information yet.
+      A magma cube.
   EntityType.LIGHTNING_BOLT:
     type: constant
     description: >
-      No information yet.
+      A lightning bolt.
   EntityType.MINECART:
     type: constant
     description: >
-      No information yet.
+      A placed minecart.
   EntityType.MUSHROOM_COW:
     type: constant
     description: >
-      No information yet.
+      A mooshroom cow.
   EntityType.OCELOT:
     type: constant
     description: >
-      No information yet.
+      An ocelot.
   EntityType.PAINTING:
     type: constant
     description: >
-      No information yet.
+      A placed painting (yes, these are entities.)
   EntityType.PIG:
     type: constant
     description: >
-      No information yet.
+      A pig.
   EntityType.PIG_ZOMBIE:
     type: constant
     description: >
-      No information yet.
+      A zombie pigman.
   EntityType.PLAYER:
     type: constant
     description: >
@@ -1864,27 +1864,27 @@ docs:
   EntityType.PRIMED_TNT:
     type: constant
     description: >
-      No information yet.
+      A lit TNT entity.
   EntityType.RABBIT:
     type: constant
     description: >
-      No information yet.
+      A rabbit.
   EntityType.SHEEP:
     type: constant
     description: >
-      No information yet.
+      A sheep.
   EntityType.SILVERFISH:
     type: constant
     description: >
-      No information yet.
+      A single silverfish.
   EntityType.SKELETON:
     type: constant
     description: >
-      No information yet.
+      An arrow-shooting skeleton.
   EntityType.SLIME:
     type: constant
     description: >
-      No information yet.
+      A slime.
   EntityType.SMALL_FIREBALL:
     type: constant
     description: >
@@ -1892,39 +1892,39 @@ docs:
   EntityType.SNOWBALL:
     type: constant
     description: >
-      No information yet.
+      A thrown snowball.
   EntityType.SNOW_GOLEM:
     type: constant
     description: >
-      No information yet.
+      A snowman!
   EntityType.SPIDER:
     type: constant
     description: >
-      No information yet.
+      A spider.
   EntityType.SQUID:
     type: constant
     description: >
-      No information yet.
+      A squid.
   EntityType.THROWN_POTION:
     type: constant
     description: >
-      No information yet.
+      A thrown potion.
   EntityType.VILLAGER:
     type: constant
     description: >
-      No information yet.
+      A(n) (annoying) villager.
   EntityType.WOLF:
     type: constant
     description: >
-      No information yet.
+      A wolf.
   EntityType.ZOMBIE:
     type: constant
     description: >
-      No information yet.
+      A harmful zombie.
   EntityType.ZOMBIE_VILLAGER:
     type: constant
     description: >
-      No information yet.
+      Zombie-villager hybrid.
   EntityRenderType.arrow:
     type: constant
     description: >
@@ -2100,19 +2100,19 @@ docs:
   ArmorType.boots:
     type: constant
     description: >
-      No information yet.
+      Boots armor. Covers the feet.
   ArmorType.chestplate:
     type: constant
     description: >
-      No information yet.
+      Chestplate armor. Covers the chestplate.
   ArmorType.helmet:
     type: constant
     description: >
-      No information yet.
+      Helmet armor. Covers the head.
   ArmorType.leggings:
     type: constant
     description: >
-      No information yet.
+      Leggings armor. Covers the legs.
   MobEffect.absorption:
     type: constant
     description: >
