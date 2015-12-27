@@ -13,6 +13,15 @@
 #current-doc {
   max-width: 100%;
   overflow: auto;
+  position: relative;
+  height: 100vh;
+}
+
+.report {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.8em;
+  left: 10px;
 }
 
 #nav h4 {
