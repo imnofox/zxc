@@ -10,6 +10,11 @@
   font-family: Roboto, sans-serif;
 }
 
+#current-doc {
+  max-width: 100%;
+  overflow: auto;
+}
+
 #nav h4 {
   margin-top: 1em;
 }
