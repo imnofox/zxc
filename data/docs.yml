@@ -337,6 +337,7 @@ docs:
   Level.getTile:
     type: namespacemethod
     args: 'int, int, int'
+    returns: int
     description: >
       Returns the ID of a block in the world. `(x, y, z)`
     example: >
@@ -500,7 +501,7 @@ docs:
     type: namespacemethod
     args: 'int, int, int'
     description: >
-      Adds an item into the player's inventory.
+      Adds an item into the player's inventory. `(id, count, damage)`
     example: >
       No information yet.
   Player.canFly:
@@ -981,6 +982,7 @@ docs:
   Entity.getX:
     type: namespacemethod
     args: 'entity'
+    returns: double
     description: >
       Returns the X coordinate of this entity.
     example: >
@@ -988,6 +990,7 @@ docs:
   Entity.getY:
     type: namespacemethod
     args: 'entity'
+    returns: double
     description: >
       Returns the Y coordinate of this entity.
     example: >
@@ -1002,6 +1005,7 @@ docs:
   Entity.getZ:
     type: namespacemethod
     args: 'entity'
+    returns: double
     description: >
       Returns the Z coordinate of this entity.
     example: >
@@ -1247,9 +1251,32 @@ docs:
       No information yet.
   Block.defineBlock:
     type: namespacemethod
-    args: 'int, string, Object, Object, Object, Object'
+    args: 'int, string, Object, int, bool, int'
     description: >
-      No information yet.
+      Defines a new block.
+      These are the parameters in order:
+
+      - `int`: The block ID.
+
+      - `string`: The name of the block.
+
+      - `Object`: The name of a texture, or a texture matrix.
+
+      **Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)  
+
+      Example of a texture matrix:
+
+      ```
+      
+      [["bottom texture", subID], ["top texture", subID], ["south texture", subID], ["north texture", subID], ["west texture", subID], ["east texture name", subID]]
+      
+      ```
+
+      - `int`: Use a block's material for this one.
+
+      - `opaque`: ???
+
+      - `renderType`: Sets the render type this block will use.
     example: >
       No information yet.
   Block.getAllBlockIds:
@@ -1291,14 +1318,14 @@ docs:
     type: namespacemethod
     args: 'int, double'
     description: >
-      No information yet.
+      Sets how long to destroy a block. A shorter time means lesser time required. `(id, time)`
     example: >
       No information yet.
   Block.setExplosionResistance:
     type: namespacemethod
     args: 'int, double'
     description: >
-      No information yet.
+      Sets the explosion resistance of a single block. `(id, resistance)`
     example: >
       No information yet.
   Block.setFriction:
@@ -1312,7 +1339,7 @@ docs:
     type: namespacemethod
     args: 'int, int'
     description: >
-      No information yet.
+      Sets how much light this block will give off.
     example: >
       No information yet.
   Block.setLightOpacity:
@@ -1333,14 +1360,14 @@ docs:
     type: namespacemethod
     args: 'int, int'
     description: >
-      No information yet.
+      Sets the layer this block will render at. `(id, layer)`
     example: >
       No information yet.
   Block.setRenderType:
     type: namespacemethod
     args: 'int, int'
     description: >
-      No information yet.
+      Sets the rendering type of this block. `(id, type)`
     example: >
       No information yet.
   Block.setShape:
@@ -1396,7 +1423,7 @@ docs:
     type: hook
     args: 'attacker, victim'
     description: >
-      No information yet.
+      Called when an entity hits (attacks) another entity.
     example: >
       No information yet.
   chatHook:
@@ -1410,42 +1437,42 @@ docs:
     type: hook
     args: 'x, y, z, side'
     description: >
-      No information yet.
+      Called when a block has been destroyed.
     example: >
       No information yet.
   projectileHitEntityHook:
     type: hook
     args: 'projectile, targetEntity'
     description: >
-      No information yet.
+      Called when a projectile hits an entity.
     example: >
       No information yet.
   eatHook:
     type: hook
     args: 'hearts, saturationRatio'
     description: >
-      No information yet.
+      Called when the player eats something.
     example: >
       No information yet.
   entityAddedHook:
     type: hook
     args: 'entity'
     description: >
-      No information yet.
+      Called when an entity has been added into the world.
     example: >
       No information yet.
   entityRemovedHook:
     type: hook
     args: 'entity'
     description: >
-      No information yet.
+      Called when an entity has been removed from the world.
     example: >
       No information yet.
   explodeHook:
     type: hook
     args: 'entity, x, y, z, power, onFire'
     description: >
-      No information yet.
+      Called when an explosion happens.
     example: >
       No information yet.
   serverMessageReceiveHook:
@@ -1466,14 +1493,14 @@ docs:
     type: hook
     args: ''
     description: >
-      No information yet.
+      Called when we leave a level.
     example: >
       No information yet.
   deathHook:
     type: hook
     args: 'attacker, victim'
     description: >
-      No information yet.
+      Called when an entity dies.
     example: >
       No information yet.
   redstoneUpdateHook:
@@ -1494,7 +1521,7 @@ docs:
     type: hook
     args: ''
     description: >
-      No information yet.
+      Called when the game starts loading into a level.
     example: >
       No information yet.
   startDestroyBlock:
@@ -1508,21 +1535,21 @@ docs:
     type: hook
     args: 'projectile, blockX, blockY, blockZ, side'
     description: >
-      No information yet.
+      Called when a projectile hits a block.
     example: >
       No information yet.
   modTick:
     type: hook
     args: ''
     description: >
-      No information yet.
+      Called every tick (usually 20 times per second). This can be used to create timers.
     example: >
       No information yet.
   useItem:
     type: hook
     args: 'x, y, z, itemid, blockid, side, itemDamage, blockDamage'
     description: >
-      No information yet.
+      Called when the player taps on a block.
     example: >
       No information yet.
   ChatColor.AQUA:
