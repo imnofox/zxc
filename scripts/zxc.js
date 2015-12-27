@@ -110,7 +110,7 @@ $(document).ready(function() {
 
   // Fetch and load data.
   // (Shouldn't take a while!)
-  $.get('/data/docs.yml', {}, function(data) {
+  $.get('data/docs.yml', {}, function(data) {
     window.g = jsyaml.load(data);
 
     for (key in g.docs) {
