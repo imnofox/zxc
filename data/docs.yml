@@ -2212,32 +2212,32 @@ docs:
   DimensionId.NETHER:
     type: constant
     description: >
-      No information yet.
+      The Dimension ID of the nether.
   DimensionId.NORMAL:
     type: constant
     description: >
-      No information yet.
+      The Dimension ID of the overworld.
   BlockFace.DOWN:
     type: constant
     description: >
-      No information yet.
+      The block side facing down.
   BlockFace.EAST:
     type: constant
     description: >
-      No information yet.
+      The block side facing east.
   BlockFace.NORTH:
     type: constant
     description: >
-      No information yet.
+      The block side facing north.
   BlockFace.SOUTH:
     type: constant
     description: >
-      No information yet.
+      The block side facing south.
   BlockFace.UP:
     type: constant
     description: >
-      No information yet.
+      The block side facing up.
   BlockFace.WEST:
     type: constant
     description: >
-      No information yet.
+      The block side facing west.
