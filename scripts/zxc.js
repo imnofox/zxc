@@ -45,7 +45,7 @@ $(document).ready(function() {
             .appendTo(nList); // Then append it to the namespace list.
         }
 
-        // Add list of namespacesg
+        // Add list of namespaces
         nList.appendTo(nSectionContents);
         nSectionContents.appendTo(nSection);
 
@@ -53,6 +53,44 @@ $(document).ready(function() {
         nSection.appendTo($('#nav-menu'));
       }
     }
+
+    // Called when we click a namespace value.
+    // Should open up in right side.
+    $('.nav-section-contents ul li').click(function() {
+      var namespace = $(this).attr('data-table-table');
+      var namespaceValueName = $(this).attr('data-table-table-key');
+
+      var data = dtable[namespace][namespaceValueName];
+      $('#current-doc #intro').hide();
+      $('#current-doc #actual-doc').show();
+
+      $('#current-doc #actual-doc h1').text(
+        (data.type == 'hook' ? '' : namespace + '.') + namespaceValueName);
+
+      // Determine correct type for displaying signature.
+      if (data.type == 'namespacemethod' || data.type == 'hook') {
+        // Show signature correctly.
+        $('#current-doc pre code').text(
+          (data.type == 'hook' ? '' : namespace + '.') + namespaceValueName + '(' +
+          (data.args || '') + ')');
+      } else if (data.type == 'constant') {
+        // Show constant.
+        $('#current-doc pre code').text(namespace + '.' + namespaceValueName);
+      }
+
+      // Show description
+      $('#current-doc #doc-description').text(data.description);
+
+      // Show description for namespacemethods and hooks
+      if (data.type == 'namespacemethod' || data.type == 'hook') {
+        // Show example for entries that have them.
+        $('#current-doc #doc-example, #current-doc #doc-example-header').show();
+        $('#current-doc #doc-example').text(data.example);
+      } else {
+        // Hide example for entries that don't have them.
+        $('#current-doc #doc-example, #current-doc #doc-example-header').hide();
+      }
+    });
   };
 
   // Fetch and load data.
@@ -90,4 +128,6 @@ $(document).ready(function() {
       $(this).parent().find('.nav-section-contents').slideToggle(150);
     });
   });
+
+  $('#actual-doc').hide();
 });
