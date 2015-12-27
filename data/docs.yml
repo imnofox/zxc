@@ -1,1504 +1,1526 @@
 docs:
   ModPE.dumpVtable:
     type: namespacemethod
-    args: string, int
+    args: 'string, int'
     description: >
-      No information yet.
+      Used to dump a vtable. Can be useful for addon development.
     example: >
       No information yet.
   ModPE.getBytesFromTexturePack:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
       No information yet.
     example: >
       No information yet.
   ModPE.getMinecraftVersion:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: 'version'
     description: >
-      No information yet.
+      Returns the current MC:PE version.
     example: >
       No information yet.
   ModPE.langEdit:
     type: namespacemethod
-    args: string, string
+    args: 'string, string'
     description: >
-      Sets a key-value pair in MC:PE's internal i18n system.
+      Changes a key-pair value in MC:PE's internal i18n database.
     example: >
-      Changes 'something.value' to say 'nope.'
-
-      ```
-
-      ModPE.langEdit('something.value', 'nope');
-      
-      ```
+      No information yet.
   ModPE.leaveGame:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
-      No information yet.
+      Leaves the game.
     example: >
       No information yet.
   ModPE.log:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
-      No information yet.
+      Logs a message into the logcat.
     example: >
       No information yet.
   ModPE.openInputStreamFromTexturePack:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
       No information yet.
     example: >
       No information yet.
   ModPE.overrideTexture:
     type: namespacemethod
-    args: string, string
+    args: 'string, string'
     description: >
       No information yet.
     example: >
       No information yet.
   ModPE.readData:
     type: namespacemethod
-    args: string
+    args: 'string'
+    returns: string
     description: >
-      No information yet.
+      Reads a value mod-specific save data by key.
     example: >
       No information yet.
   ModPE.removeData:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
-      No information yet.
+      Removes a key-value pair from mod-specific save data.
     example: >
       No information yet.
   ModPE.resetFov:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
-      No information yet.
+      Resets FOV to default?
     example: >
       No information yet.
   ModPE.resetImages:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
-      No information yet.
+      Resets textures to their defaults.
     example: >
       No information yet.
   ModPE.saveData:
     type: namespacemethod
-    args: string, string
+    args: 'string, string'
     description: >
-      No information yet.
+      Sets a value in mod-specific save data by key.
     example: >
       No information yet.
   ModPE.selectLevel:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
       No information yet.
     example: >
       No information yet.
   ModPE.setCamera:
     type: namespacemethod
-    args: Object
+    args: 'entity'
     description: >
-      No information yet.
+      Sets the entity the camera should target.
     example: >
       No information yet.
   ModPE.setFoodItem:
     type: namespacemethod
-    args: int, string, int, int, string, int
+    args: 'int, string, int, int, string, int'
     description: >
       No information yet.
     example: >
       No information yet.
   ModPE.setFov:
     type: namespacemethod
-    args: double
+    args: 'double'
     description: >
-      No information yet.
+      Sets the FOV for the player.
     example: >
       No information yet.
   ModPE.setGameSpeed:
     type: namespacemethod
-    args: double
+    args: 'double'
     description: >
-      No information yet.
+      Sets the amount of ticks per second.
     example: >
       No information yet.
   ModPE.setGuiBlocks:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
-      No information yet.
+      Sets the textures for GUI blocks. (The first argument should be a URL.)
     example: >
       No information yet.
   ModPE.setItem:
     type: namespacemethod
-    args: int, string, int, string, int
+    args: 'int, string, int, string, int'
     description: >
-      No information yet.
+      Adds an item into the game.
     example: >
       No information yet.
   ModPE.setItems:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
-      No information yet.
+      Sets the textures for items. (The first argument should be a URL.)
     example: >
       No information yet.
   ModPE.setTerrain:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
-      No information yet.
+      Sets the textures for the terrain. (The first argument should be a URL.)
     example: >
       No information yet.
   ModPE.showTipMessage:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
-      No information yet.
+      Shows a tip message (like the message shown when you tap an item.)
     example: >
       No information yet.
   ModPE.takeScreenshot:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.addParticle:
     type: namespacemethod
-    args: int, double, double, double, double, double, double, int
+    args: 'int, double, double, double, double, double, double, int'
     description: >
-      No information yet.
+      Spawns a particle in the world.
     example: >
       No information yet.
   Level.biomeIdToName:
     type: namespacemethod
-    args: int
+    args: 'int'
+    returns: 'string'
     description: >
-      No information yet.
+      Converts a biome ID into its name.
     example: >
       No information yet.
   Level.canSeeSky:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
+    returns: 'bool?'
     description: >
-      No information yet.
+      Returns whether a block `(x, y, z)` can see the sky.
     example: >
       No information yet.
   Level.destroyBlock:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
     description: >
-      No information yet.
+      Destroys a block `(x, y, z)` as if a player mined it.
     example: >
       No information yet.
   Level.dropItem:
     type: namespacemethod
-    args: double, double, double, double, int, int, int
+    args: 'double, double, double, double, int, int, int'
     description: >
-      No information yet.
+      Spawns a dropped item in the world.
     example: >
       No information yet.
   Level.explode:
     type: namespacemethod
-    args: double, double, double, double
+    args: 'double, double, double, double'
     description: >
-      No information yet.
+      Causes an explosion `(x, y, z, power)` somewhere in the world.
     example: >
       No information yet.
   Level.getAddress:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Level.getBiome:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
-      No information yet.
+      Gets the ID of a biome at a specific location `(x, z)` in the world.
     example: >
       No information yet.
   Level.getBiomeName:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
-      No information yet.
+      Gets the name of a biome at a specific location `(x, z)` in the world.
     example: >
       No information yet.
   Level.getBrightness:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
+    returns: 'int?/double?'
     description: >
-      No information yet.
+      Returns the light level at a position in the world `(x, y, z)`.
     example: >
       No information yet.
   Level.getChestSlot:
     type: namespacemethod
-    args: int, int, int, int
+    args: 'int, int, int, int'
     description: >
-      No information yet.
+      Returns the ID of an item in a chest. `(x, y, z, slot)`
     example: >
       No information yet.
   Level.getChestSlotCount:
     type: namespacemethod
-    args: int, int, int, int
+    args: 'int, int, int, int'
     description: >
-      No information yet.
+      Returns the count of an item in a chest. `(x, y, z, slot)`
     example: >
       No information yet.
   Level.getChestSlotData:
     type: namespacemethod
-    args: int, int, int, int
+    args: 'int, int, int, int'
     description: >
-      No information yet.
+      Returns the damage of an item in a chest. `(x, y, z, slot)`
     example: >
       No information yet.
   Level.getData:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
     description: >
-      No information yet.
+      Returns the data of an block in the world. `(x, y, z)`
     example: >
       No information yet.
   Level.getFurnaceSlot:
     type: namespacemethod
-    args: int, int, int, int
+    args: 'int, int, int, int'
     description: >
-      No information yet.
+      Returns the ID of an item in a furnace. `(x, y, z, slot)`
     example: >
       No information yet.
   Level.getFurnaceSlotCount:
     type: namespacemethod
-    args: int, int, int, int
+    args: 'int, int, int, int'
     description: >
-      No information yet.
+      Returns the count of an item in a furnace. `(x, y, z, slot)`
     example: >
       No information yet.
   Level.getFurnaceSlotData:
     type: namespacemethod
-    args: int, int, int, int
+    args: 'int, int, int, int'
     description: >
-      No information yet.
+      Returns the data of an item in a furnace. `(x, y, z, slot)`
     example: >
       No information yet.
   Level.getGameMode:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: 'int'
     description: >
-      No information yet.
+      Returns the gamemode the player is currently in.
     example: >
       No information yet.
   Level.getGrassColor:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.getLightningLevel:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Level.getRainLevel:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Level.getSignText:
     type: namespacemethod
-    args: int, int, int, int
+    args: 'int, int, int, int'
     description: >
-      No information yet.
+      Returns a line of text from a sign. `(x, y, z, line)`
     example: >
       No information yet.
   Level.getSpawnerEntityType:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
     description: >
-      No information yet.
+      Returns the entity ID of a spawner. `(x, y, z)`
     example: >
       No information yet.
   Level.getTile:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
     description: >
-      No information yet.
+      Returns the ID of a block in the world. `(x, y, z)`
     example: >
       No information yet.
   Level.getTime:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: 'int'
     description: >
-      No information yet.
+      Returns the amount of ticks passed in the world.
     example: >
       No information yet.
   Level.getWorldDir:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Level.getWorldName:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Level.playSound:
     type: namespacemethod
-    args: double, double, double, string, double, double
+    args: 'double, double, double, string, double, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.playSoundEnt:
     type: namespacemethod
-    args: Object, string, double, double
+    args: 'Object, string, double, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.setChestSlot:
     type: namespacemethod
-    args: int, int, int, int, int, int, int
+    args: 'int, int, int, int, int, int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.setFurnaceSlot:
     type: namespacemethod
-    args: int, int, int, int, int, int, int
+    args: 'int, int, int, int, int, int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.setGameMode:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
-      No information yet.
+      Sets the gamemode the player is in.
     example: >
       No information yet.
   Level.setGrassColor:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.setLightningLevel:
     type: namespacemethod
-    args: double
+    args: 'double'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.setNightMode:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
-      No information yet.
+      Unknown.
     example: >
       No information yet.
   Level.setRainLevel:
     type: namespacemethod
-    args: double
+    args: 'double'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.setSignText:
     type: namespacemethod
-    args: int, int, int, int, string
+    args: 'int, int, int, int, string'
     description: >
-      No information yet.
+      Sets a line of text in a sign. `(x, y, z, line, text)`
     example: >
       No information yet.
   Level.setSpawn:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
     description: >
-      No information yet.
+      Sets the spawn position `(x, y, z)` of the current world.
     example: >
       No information yet.
   Level.setSpawnerEntityType:
     type: namespacemethod
-    args: int, int, int, int
+    args: 'int, int, int, int'
     description: >
-      No information yet.
+      Sets the entity ID of an entity that an entity spawner will spawn. `(x, y, z, type)`
     example: >
       No information yet.
   Level.setTile:
     type: namespacemethod
-    args: int, int, int, int, int
+    args: 'int, int, int, int, int'
     description: >
-      No information yet.
+      Sets the ID and damage of a block in the world. `(x, y, z, id, dmg)`
     example: >
       No information yet.
   Level.setTime:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
-      No information yet.
+      Sets the amount of ticks that has passed in the world.
     example: >
       No information yet.
   Level.spawnChicken:
     type: namespacemethod
-    args: double, double, double, string
+    args: 'double, double, double, string'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.spawnCow:
     type: namespacemethod
-    args: double, double, double, string
+    args: 'double, double, double, string'
     description: >
       No information yet.
     example: >
       No information yet.
   Level.spawnMob:
     type: namespacemethod
-    args: double, double, double, int, string
+    args: 'double, double, double, int, string'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.addExp:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
-      No information yet.
+      Adds the amount of EXP the player has.
     example: >
       No information yet.
   Player.addItemCreativeInv:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.addItemInventory:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
     description: >
-      No information yet.
+      Adds an item into the player's inventory.
     example: >
       No information yet.
   Player.canFly:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: bool
     description: >
-      No information yet.
+      Returns whether the player can fly.
     example: >
       No information yet.
   Player.clearInventorySlot:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
-      No information yet.
+      Clears a slot in the player's inventory. `(slot)`
     example: >
       No information yet.
   Player.getArmorSlot:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
-      No information yet.
+      Returns the ID of an armor item. `(slot)`
     example: >
       No information yet.
   Player.getArmorSlotDamage:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
-      No information yet.
+      Returns the damage of an armor item. `(slot)`
     example: >
       No information yet.
   Player.getCarriedItem:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: int
     description: >
-      No information yet.
+      Returns the ID of the item the player is carrying.
     example: >
       No information yet.
   Player.getCarriedItemCount:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
-      No information yet.
+      Returns the count of the item the player is carrying.
     example: >
       No information yet.
   Player.getCarriedItemData:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
-      No information yet.
+      Returns the damage of the item the player is carrying.
     example: >
       No information yet.
   Player.getDimension:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: int
     description: >
-      No information yet.
+      Returns the dimension ID the player is in.
     example: >
       No information yet.
   Player.getEntity:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: entity
     description: >
-      No information yet.
+      Returns the player as an entity.
     example: >
       No information yet.
   Player.getExhaustion:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getExp:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: double
     description: >
-      No information yet.
+      Returns the amount of EXP the player has.
     example: >
       No information yet.
   Player.getHunger:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getInventorySlot:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getInventorySlotCount:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getInventorySlotData:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getLevel:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getName:
     type: namespacemethod
-    args: Object
+    args: 'Object'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getPointedBlockData:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getPointedBlockId:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getPointedBlockSide:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getPointedBlockX:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getPointedBlockY:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getPointedBlockZ:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getPointedEntity:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getPointedVecX:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getPointedVecY:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getPointedVecZ:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getSaturation:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getSelectedSlotId:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.getX:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: double
     description: >
-      No information yet.
+      Returns the X coordinate of the player.
     example: >
       No information yet.
   Player.getY:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: double
     description: >
-      No information yet.
+      Returns the Y coordinate of the player.
     example: >
       No information yet.
   Player.getZ:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: double
     description: >
-      No information yet.
+      Returns the Z coordinate of the player.
     example: >
       No information yet.
   Player.isFlying:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.isPlayer:
     type: namespacemethod
-    args: Object
+    args: 'entity'
+    returns: bool
     description: >
-      No information yet.
+      Returns whether an entity is a player.
     example: >
       No information yet.
   Player.setArmorSlot:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.setCanFly:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.setExhaustion:
     type: namespacemethod
-    args: double
+    args: 'double'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.setExp:
     type: namespacemethod
-    args: double
+    args: 'double'
     description: >
-      No information yet.
+      Sets the player's EXP.
     example: >
       No information yet.
   Player.setFlying:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Player.setHealth:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.setHunger:
     type: namespacemethod
-    args: double
+    args: 'double'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.setLevel:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.setSaturation:
     type: namespacemethod
-    args: double
+    args: 'double'
     description: >
       No information yet.
     example: >
       No information yet.
   Player.setSelectedSlotId:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.addEffect:
     type: namespacemethod
-    args: entity?, int, int, int
+    args: 'entity?, int, int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.getAll:
     type: namespacemethod
-    args: 
+    args: ''
+    returns: 'entity[]'
     description: >
-      No information yet.
+      Returns all of the entities in an array.
     example: >
       No information yet.
   Entity.getAnimalAge:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
     description: >
-      No information yet.
+      Returns the age of an animal.
     example: >
       No information yet.
   Entity.getArmor:
     type: namespacemethod
-    args: entity?, int
+    args: 'entity?, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.getArmorDamage:
     type: namespacemethod
-    args: entity?, int
+    args: 'entity?, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.getEntityTypeId:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: int
     description: >
-      No information yet.
+      Returns the entity ID of an entity.
     example: >
       No information yet.
   Entity.getHealth:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: int
     description: >
-      No information yet.
+      Returns the health of an entity.
     example: >
       No information yet.
   Entity.getItemEntityCount:
     type: namespacemethod
-    args: entity?
+    args: 'entity?'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.getItemEntityData:
     type: namespacemethod
-    args: entity?
+    args: 'entity?'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.getItemEntityId:
     type: namespacemethod
-    args: entity?
+    args: 'entity?'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.getMaxHealth:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: int
     description: >
-      No information yet.
+      Returns the maximum health for an entity.
     example: >
       No information yet.
   Entity.getMobSkin:
     type: namespacemethod
-    args: entity?
+    args: 'entity?'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.getNameTag:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: string
     description: >
-      No information yet.
+      Returns the name tag of an entity.
     example: >
       No information yet.
   Entity.getPitch:
     type: namespacemethod
-    args: entity?
+    args: 'entity?'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.getRenderType:
     type: namespacemethod
-    args: entity?
+    args: 'entity?'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.getRider:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: 'entity'
     description: >
-      No information yet.
+      Gets the entity that is riding this one.
     example: >
       No information yet.
   Entity.getRiding:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: 'entity'
     description: >
-      No information yet.
+      Gets the entity that is being ridden by this one.
     example: >
       No information yet.
   Entity.getUniqueId:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: string
     description: >
-      No information yet.
+      Returns the UUID of this entity.
     example: >
       No information yet.
   Entity.getVelX:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: double
     description: >
-      No information yet.
+      Returns the velocity of this entity in the X coordinate.
     example: >
       No information yet.
   Entity.getVelY:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: double
     description: >
-      No information yet.
+      Returns the velocity of this entity in the Y coordinate.
     example: >
       No information yet.
   Entity.getVelZ:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: double
     description: >
-      No information yet.
+      Returns the velocity of this entity in the Z coordinate.
     example: >
       No information yet.
   Entity.getX:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
     description: >
-      No information yet.
+      Returns the X coordinate of this entity.
     example: >
       No information yet.
   Entity.getY:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
     description: >
-      No information yet.
+      Returns the Y coordinate of this entity.
     example: >
       No information yet.
   Entity.getYaw:
     type: namespacemethod
-    args: entity?
+    args: 'entity?'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.getZ:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
     description: >
-      No information yet.
+      Returns the Z coordinate of this entity.
     example: >
       No information yet.
   Entity.isSneaking:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
+    returns: bool
     description: >
-      No information yet.
+      Returns whether this entity is sneaking.
     example: >
       No information yet.
   Entity.remove:
     type: namespacemethod
-    args: entity?
+    args: 'entity'
     description: >
-      No information yet.
+      Instantly removes this entity from the world.
     example: >
       No information yet.
   Entity.removeAllEffects:
     type: namespacemethod
-    args: entity?
+    args: 'entity?'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.removeEffect:
     type: namespacemethod
-    args: entity?, int
+    args: 'entity?, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.rideAnimal:
     type: namespacemethod
-    args: entity?, entity?
+    args: 'entity, entity'
     description: >
-      No information yet.
+      Makes an entity ride another.
     example: >
       No information yet.
   Entity.setAnimalAge:
     type: namespacemethod
-    args: entity?, int
+    args: 'entity?, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setArmor:
     type: namespacemethod
-    args: entity?, int, int, int
+    args: 'entity?, int, int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setCape:
     type: namespacemethod
-    args: entity?, string
+    args: 'entity?, string'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setCarriedItem:
     type: namespacemethod
-    args: entity?, int, int, int
+    args: 'entity?, int, int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setCollisionSize:
     type: namespacemethod
-    args: entity?, double, double
+    args: 'entity?, double, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setFireTicks:
     type: namespacemethod
-    args: entity?, int
+    args: 'entity?, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setHealth:
     type: namespacemethod
-    args: entity?, int
+    args: 'entity, int'
     description: >
-      No information yet.
+      Sets the health of an entity.
     example: >
       No information yet.
   Entity.setMaxHealth:
     type: namespacemethod
-    args: entity?, int
+    args: 'entity, int'
     description: >
-      No information yet.
+      Sets the maximum health of an entity.
     example: >
       No information yet.
   Entity.setMobSkin:
     type: namespacemethod
-    args: entity?, string
+    args: 'entity?, string'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setNameTag:
     type: namespacemethod
-    args: entity?, string
+    args: 'entity, string'
     description: >
-      No information yet.
+      Sets the name tag of an entity.
     example: >
       No information yet.
   Entity.setPosition:
     type: namespacemethod
-    args: entity?, double, double, double
+    args: 'entity, double, double, double'
     description: >
-      No information yet.
+      Sets the position of an entity. `(x, y, z)`
     example: >
       No information yet.
   Entity.setPositionRelative:
     type: namespacemethod
-    args: entity?, double, double, double
+    args: 'entity?, double, double, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setRenderType:
     type: namespacemethod
-    args: entity?, int
+    args: 'entity, int'
     description: >
-      No information yet.
+      Sets the render type ID of an entity.
     example: >
       No information yet.
   Entity.setRot:
     type: namespacemethod
-    args: entity?, double, double
+    args: 'entity?, double, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setSneaking:
     type: namespacemethod
-    args: entity?
+    args: 'entity?'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setVelX:
     type: namespacemethod
-    args: entity?, double
+    args: 'entity?, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setVelY:
     type: namespacemethod
-    args: entity?, double
+    args: 'entity?, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.setVelZ:
     type: namespacemethod
-    args: entity?, double
+    args: 'entity?, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Entity.spawnMob:
     type: namespacemethod
-    args: double, double, double, int, string
+    args: 'double, double, double, int, string'
     description: >
       No information yet.
     example: >
       No information yet.
   Item.addCraftRecipe:
     type: namespacemethod
-    args: int, int, int, Scriptable
+    args: 'int, int, int, Scriptable'
     description: >
       No information yet.
     example: >
       No information yet.
   Item.addFurnaceRecipe:
     type: namespacemethod
-    args: int, int, int
+    args: 'int, int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Item.addShapedRecipe:
     type: namespacemethod
-    args: int, int, int, Scriptable, Scriptable
+    args: 'int, int, int, Scriptable, Scriptable'
     description: >
       No information yet.
     example: >
       No information yet.
   Item.defineArmor:
     type: namespacemethod
-    args: int, string, int, string, string, int, int, int
+    args: 'int, string, int, string, string, int, int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Item.getName:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Item.isValidItem:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
       No information yet.
     example: >
       No information yet.
   Item.setCategory:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Item.setHandEquipped:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
       No information yet.
     example: >
       No information yet.
   Item.setMaxDamage:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Item.setProperties:
     type: namespacemethod
-    args: int, Object
+    args: 'int, Object'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.defineBlock:
     type: namespacemethod
-    args: int, string, Object, Object, Object, Object
+    args: 'int, string, Object, Object, Object, Object'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.getAllBlockIds:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Block.getDestroyTime:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.getFriction:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.getRenderType:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.setColor:
     type: namespacemethod
-    args: int, Scriptable
+    args: 'int, Scriptable'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.setDestroyTime:
     type: namespacemethod
-    args: int, double
+    args: 'int, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.setExplosionResistance:
     type: namespacemethod
-    args: int, double
+    args: 'int, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.setFriction:
     type: namespacemethod
-    args: int, double
+    args: 'int, double'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.setLightLevel:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.setLightOpacity:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.setRedstoneConsumer:
     type: namespacemethod
-    args: int
+    args: 'int'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.setRenderLayer:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.setRenderType:
     type: namespacemethod
-    args: int, int
+    args: 'int, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Block.setShape:
     type: namespacemethod
-    args: int, double, double, double, double, double, double, int
+    args: 'int, double, double, double, double, double, double, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Server.getAddress:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Server.getAllPlayerNames:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Server.getAllPlayers:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Server.getPort:
     type: namespacemethod
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   Server.joinServer:
     type: namespacemethod
-    args: string, int
+    args: 'string, int'
     description: >
       No information yet.
     example: >
       No information yet.
   Server.sendChat:
     type: namespacemethod
-    args: string
+    args: 'string'
     description: >
       No information yet.
     example: >
       No information yet.
   attackHook:
     type: hook
-    args: attacker, victim
+    args: 'attacker, victim'
     description: >
       No information yet.
     example: >
       No information yet.
   chatHook:
     type: hook
-    args: str
+    args: 'str'
     description: >
       No information yet.
     example: >
       No information yet.
   destroyBlock:
     type: hook
-    args: x, y, z, side
+    args: 'x, y, z, side'
     description: >
       No information yet.
     example: >
       No information yet.
   projectileHitEntityHook:
     type: hook
-    args: projectile, targetEntity
+    args: 'projectile, targetEntity'
     description: >
       No information yet.
     example: >
       No information yet.
   eatHook:
     type: hook
-    args: hearts, saturationRatio
+    args: 'hearts, saturationRatio'
     description: >
       No information yet.
     example: >
       No information yet.
   entityAddedHook:
     type: hook
-    args: entity
+    args: 'entity'
     description: >
       No information yet.
     example: >
       No information yet.
   entityRemovedHook:
     type: hook
-    args: entity
+    args: 'entity'
     description: >
       No information yet.
     example: >
       No information yet.
   explodeHook:
     type: hook
-    args: entity, x, y, z, power, onFire
+    args: 'entity, x, y, z, power, onFire'
     description: >
       No information yet.
     example: >
       No information yet.
   serverMessageReceiveHook:
     type: hook
-    args: str
+    args: 'str'
     description: >
       No information yet.
     example: >
       No information yet.
   chatReceiveHook:
     type: hook
-    args: str, sender
+    args: 'str, sender'
     description: >
       No information yet.
     example: >
       No information yet.
   leaveGame:
     type: hook
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   deathHook:
     type: hook
-    args: attacker, victim
+    args: 'attacker, victim'
     description: >
       No information yet.
     example: >
       No information yet.
   redstoneUpdateHook:
     type: hook
-    args: x, y, z, newCurrent, someBooleanIDontKnow, blockId, blockData
+    args: 'x, y, z, newCurrent, someBooleanIDontKnow, blockId, blockData'
     description: >
       No information yet.
     example: >
       No information yet.
   selectLevelHook:
     type: hook
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   newLevel:
     type: hook
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   startDestroyBlock:
     type: hook
-    args: x, y, z, side
+    args: 'x, y, z, side'
     description: >
       No information yet.
     example: >
       No information yet.
   projectileHitBlockHook:
     type: hook
-    args: projectile, blockX, blockY, blockZ, side
+    args: 'projectile, blockX, blockY, blockZ, side'
     description: >
       No information yet.
     example: >
       No information yet.
   modTick:
     type: hook
-    args: 
+    args: ''
     description: >
       No information yet.
     example: >
       No information yet.
   useItem:
     type: hook
-    args: x, y, z, itemid, blockid, side, itemDamage, blockDamage
+    args: 'x, y, z, itemid, blockid, side, itemDamage, blockDamage'
     description: >
       No information yet.
     example: >

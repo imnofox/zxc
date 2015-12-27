@@ -15,7 +15,7 @@ file_data.each_line do |line|
   unless md_method.nil?
     puts "  #{md_method[1]}:"
     puts "    type: hook"
-    puts "    args: #{md_method[2]}"
+    puts "    args: '#{md_method[2]}'"
     puts "    description: >"
     puts "      No information yet."
     puts "    example: >"
@@ -47,7 +47,7 @@ file_data.each_line do |line|
 
     puts "  #{md_namespacemethod[1]}.#{md_namespacemethod[2]}:"
     puts "    type: namespacemethod"
-    puts "    args: #{args.join(', ')}"
+    puts "    args: '#{args.join(', ')}'"
     puts "    description: >"
     puts "      No information yet."
     puts "    example: >"
