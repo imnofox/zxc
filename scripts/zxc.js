@@ -25,17 +25,23 @@ $(document).ready(function() {
         var nSectionContents = $('<div>');
         nSectionContents.addClass('nav-section-contents');
 
+        // Make a list to populate the values of a table-table.
         var nList = $('<ul>');
 
         // Populate contents
         for (child in tableval) {
           if (child == 'type') continue; // Internal value to represent type of contents
           var nListItem = $('<li>');
-          nListItem.text(child);
-          nListItem.appendTo(nList);
+
+          // Add internal data
+          nListItem
+            .text(child) // Add the text of the namespace value.
+            .attr('data-table-table', tablekey) // Add name of namespace.
+            .attr('data-table-table-key', child) // Add name of namespace value.
+            .appendTo(nList); // Then append it to the namespace list.
         }
 
-        // Add list to contents
+        // Add list of namespaces
         nList.appendTo(nSectionContents);
         nSectionContents.appendTo(nSection);
 
