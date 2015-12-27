@@ -16,7 +16,7 @@ docs:
   ModPE.getMinecraftVersion:
     type: namespacemethod
     args: ''
-    returns: 'version'
+    returns: 'string'
     description: >
       Returns the current MC:PE version.
     example: >
