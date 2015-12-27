@@ -4,6 +4,18 @@ $(document).ready(function() {
   // Populated when loading the docs.
   window.dtable = {};
 
+  // Configure marked.
+  marked.setOptions({
+    renderer: new marked.Renderer(),
+    gfm: true,
+    tables: true,
+    breaks: false,
+    pedantic: false,
+    sanitize: true,
+    smartLists: true,
+    smartypants: false
+  });
+
   // Populate side nav from dtable.
   var populateNav = function() {
     // Go through all of the keys in the table.
@@ -64,12 +76,15 @@ $(document).ready(function() {
       $('#current-doc #intro').hide();
       $('#current-doc #actual-doc').show();
 
+      // Show title.
       $('#current-doc #actual-doc h1').text(
         (data.type == 'hook' ? '' : namespace + '.') + namespaceValueName);
 
       // Determine correct type for displaying signature.
       if (data.type == 'namespacemethod' || data.type == 'hook') {
         // Show signature correctly.
+        // Only show the namespace when not using hooks,
+        // because in hooks, the "namespace" is only used to organize them.
         $('#current-doc pre code').text(
           (data.type == 'hook' ? '' : namespace + '.') + namespaceValueName + '(' +
           (data.args || '') + ')');
@@ -79,13 +94,13 @@ $(document).ready(function() {
       }
 
       // Show description
-      $('#current-doc #doc-description').text(data.description);
+      $('#current-doc #doc-description').html(marked(data.description));
 
       // Show description for namespacemethods and hooks
       if (data.type == 'namespacemethod' || data.type == 'hook') {
         // Show example for entries that have them.
         $('#current-doc #doc-example, #current-doc #doc-example-header').show();
-        $('#current-doc #doc-example').text(data.example);
+        $('#current-doc #doc-example').html(marked(data.example));
       } else {
         // Hide example for entries that don't have them.
         $('#current-doc #doc-example, #current-doc #doc-example-header').hide();

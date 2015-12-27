@@ -24,9 +24,15 @@ docs:
     type: namespacemethod
     args: string, string
     description: >
-      No information yet.
+      Sets a key-value pair in MC:PE's internal i18n system.
     example: >
-      No information yet.
+      Changes 'something.value' to say 'nope.'
+
+      ```
+
+      ModPE.langEdit('something.value', 'nope');
+      
+      ```
   ModPE.leaveGame:
     type: namespacemethod
     args: 
