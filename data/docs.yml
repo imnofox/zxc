@@ -1,0 +1,2215 @@
+docs:
+  ModPE.dumpVtable:
+    type: namespacemethod
+    args: string, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.getBytesFromTexturePack:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.getMinecraftVersion:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.langEdit:
+    type: namespacemethod
+    args: string, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.leaveGame:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.log:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.openInputStreamFromTexturePack:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.overrideTexture:
+    type: namespacemethod
+    args: string, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.readData:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.removeData:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.resetFov:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.resetImages:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.saveData:
+    type: namespacemethod
+    args: string, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.selectLevel:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.setCamera:
+    type: namespacemethod
+    args: Object
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.setFoodItem:
+    type: namespacemethod
+    args: int, string, int, int, string, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.setFov:
+    type: namespacemethod
+    args: double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.setGameSpeed:
+    type: namespacemethod
+    args: double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.setGuiBlocks:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.setItem:
+    type: namespacemethod
+    args: int, string, int, string, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.setItems:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.setTerrain:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.showTipMessage:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ModPE.takeScreenshot:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.addParticle:
+    type: namespacemethod
+    args: int, double, double, double, double, double, double, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.biomeIdToName:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.canSeeSky:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.destroyBlock:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.dropItem:
+    type: namespacemethod
+    args: double, double, double, double, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.explode:
+    type: namespacemethod
+    args: double, double, double, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getAddress:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getBiome:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getBiomeName:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getBrightness:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getChestSlot:
+    type: namespacemethod
+    args: int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getChestSlotCount:
+    type: namespacemethod
+    args: int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getChestSlotData:
+    type: namespacemethod
+    args: int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getData:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getFurnaceSlot:
+    type: namespacemethod
+    args: int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getFurnaceSlotCount:
+    type: namespacemethod
+    args: int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getFurnaceSlotData:
+    type: namespacemethod
+    args: int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getGameMode:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getGrassColor:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getLightningLevel:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getRainLevel:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getSignText:
+    type: namespacemethod
+    args: int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getSpawnerEntityType:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getTile:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getTime:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getWorldDir:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.getWorldName:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.playSound:
+    type: namespacemethod
+    args: double, double, double, string, double, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.playSoundEnt:
+    type: namespacemethod
+    args: Object, string, double, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setChestSlot:
+    type: namespacemethod
+    args: int, int, int, int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setFurnaceSlot:
+    type: namespacemethod
+    args: int, int, int, int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setGameMode:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setGrassColor:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setLightningLevel:
+    type: namespacemethod
+    args: double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setNightMode:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setRainLevel:
+    type: namespacemethod
+    args: double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setSignText:
+    type: namespacemethod
+    args: int, int, int, int, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setSpawn:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setSpawnerEntityType:
+    type: namespacemethod
+    args: int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setTile:
+    type: namespacemethod
+    args: int, int, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.setTime:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.spawnChicken:
+    type: namespacemethod
+    args: double, double, double, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.spawnCow:
+    type: namespacemethod
+    args: double, double, double, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Level.spawnMob:
+    type: namespacemethod
+    args: double, double, double, int, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.addExp:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.addItemCreativeInv:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.addItemInventory:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.canFly:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.clearInventorySlot:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getArmorSlot:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getArmorSlotDamage:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getCarriedItem:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getCarriedItemCount:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getCarriedItemData:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getDimension:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getEntity:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getExhaustion:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getExp:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getHunger:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getInventorySlot:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getInventorySlotCount:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getInventorySlotData:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getLevel:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getName:
+    type: namespacemethod
+    args: Object
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getPointedBlockData:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getPointedBlockId:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getPointedBlockSide:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getPointedBlockX:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getPointedBlockY:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getPointedBlockZ:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getPointedEntity:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getPointedVecX:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getPointedVecY:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getPointedVecZ:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getSaturation:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getSelectedSlotId:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getX:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getY:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.getZ:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.isFlying:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.isPlayer:
+    type: namespacemethod
+    args: Object
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.setArmorSlot:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.setCanFly:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.setExhaustion:
+    type: namespacemethod
+    args: double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.setExp:
+    type: namespacemethod
+    args: double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.setFlying:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.setHealth:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.setHunger:
+    type: namespacemethod
+    args: double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.setLevel:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.setSaturation:
+    type: namespacemethod
+    args: double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Player.setSelectedSlotId:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.addEffect:
+    type: namespacemethod
+    args: entity?, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getAll:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getAnimalAge:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getArmor:
+    type: namespacemethod
+    args: entity?, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getArmorDamage:
+    type: namespacemethod
+    args: entity?, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getEntityTypeId:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getHealth:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getItemEntityCount:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getItemEntityData:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getItemEntityId:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getMaxHealth:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getMobSkin:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getNameTag:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getPitch:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getRenderType:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getRider:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getRiding:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getUniqueId:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getVelX:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getVelY:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getVelZ:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getX:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getY:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getYaw:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.getZ:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.isSneaking:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.remove:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.removeAllEffects:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.removeEffect:
+    type: namespacemethod
+    args: entity?, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.rideAnimal:
+    type: namespacemethod
+    args: entity?, entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setAnimalAge:
+    type: namespacemethod
+    args: entity?, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setArmor:
+    type: namespacemethod
+    args: entity?, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setCape:
+    type: namespacemethod
+    args: entity?, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setCarriedItem:
+    type: namespacemethod
+    args: entity?, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setCollisionSize:
+    type: namespacemethod
+    args: entity?, double, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setFireTicks:
+    type: namespacemethod
+    args: entity?, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setHealth:
+    type: namespacemethod
+    args: entity?, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setMaxHealth:
+    type: namespacemethod
+    args: entity?, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setMobSkin:
+    type: namespacemethod
+    args: entity?, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setNameTag:
+    type: namespacemethod
+    args: entity?, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setPosition:
+    type: namespacemethod
+    args: entity?, double, double, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setPositionRelative:
+    type: namespacemethod
+    args: entity?, double, double, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setRenderType:
+    type: namespacemethod
+    args: entity?, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setRot:
+    type: namespacemethod
+    args: entity?, double, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setSneaking:
+    type: namespacemethod
+    args: entity?
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setVelX:
+    type: namespacemethod
+    args: entity?, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setVelY:
+    type: namespacemethod
+    args: entity?, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.setVelZ:
+    type: namespacemethod
+    args: entity?, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Entity.spawnMob:
+    type: namespacemethod
+    args: double, double, double, int, string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Item.addCraftRecipe:
+    type: namespacemethod
+    args: int, int, int, Scriptable
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Item.addFurnaceRecipe:
+    type: namespacemethod
+    args: int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Item.addShapedRecipe:
+    type: namespacemethod
+    args: int, int, int, Scriptable, Scriptable
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Item.defineArmor:
+    type: namespacemethod
+    args: int, string, int, string, string, int, int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Item.getName:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Item.isValidItem:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Item.setCategory:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Item.setHandEquipped:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Item.setMaxDamage:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Item.setProperties:
+    type: namespacemethod
+    args: int, Object
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.defineBlock:
+    type: namespacemethod
+    args: int, string, Object, Object, Object, Object
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.getAllBlockIds:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.getDestroyTime:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.getFriction:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.getRenderType:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.setColor:
+    type: namespacemethod
+    args: int, Scriptable
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.setDestroyTime:
+    type: namespacemethod
+    args: int, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.setExplosionResistance:
+    type: namespacemethod
+    args: int, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.setFriction:
+    type: namespacemethod
+    args: int, double
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.setLightLevel:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.setLightOpacity:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.setRedstoneConsumer:
+    type: namespacemethod
+    args: int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.setRenderLayer:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.setRenderType:
+    type: namespacemethod
+    args: int, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Block.setShape:
+    type: namespacemethod
+    args: int, double, double, double, double, double, double, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Server.getAddress:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Server.getAllPlayerNames:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Server.getAllPlayers:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Server.getPort:
+    type: namespacemethod
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Server.joinServer:
+    type: namespacemethod
+    args: string, int
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  Server.sendChat:
+    type: namespacemethod
+    args: string
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  attackHook:
+    type: hook
+    args: attacker, victim
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  chatHook:
+    type: hook
+    args: str
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  destroyBlock:
+    type: hook
+    args: x, y, z, side
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  projectileHitEntityHook:
+    type: hook
+    args: projectile, targetEntity
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  eatHook:
+    type: hook
+    args: hearts, saturationRatio
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  entityAddedHook:
+    type: hook
+    args: entity
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  entityRemovedHook:
+    type: hook
+    args: entity
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  explodeHook:
+    type: hook
+    args: entity, x, y, z, power, onFire
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  serverMessageReceiveHook:
+    type: hook
+    args: str
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  chatReceiveHook:
+    type: hook
+    args: str, sender
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  leaveGame:
+    type: hook
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  deathHook:
+    type: hook
+    args: attacker, victim
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  redstoneUpdateHook:
+    type: hook
+    args: x, y, z, newCurrent, someBooleanIDontKnow, blockId, blockData
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  selectLevelHook:
+    type: hook
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  newLevel:
+    type: hook
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  startDestroyBlock:
+    type: hook
+    args: x, y, z, side
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  projectileHitBlockHook:
+    type: hook
+    args: projectile, blockX, blockY, blockZ, side
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  modTick:
+    type: hook
+    args: 
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  useItem:
+    type: hook
+    args: x, y, z, itemid, blockid, side, itemDamage, blockDamage
+    description: >
+      No information yet.
+    example: >
+      No information yet.
+  ChatColor.AQUA:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.BEGIN:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.BLACK:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.BLUE:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.BOLD:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.DARK_AQUA:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.DARK_BLUE:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.DARK_GRAY:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.DARK_GREEN:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.DARK_PURPLE:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.DARK_RED:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.GOLD:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.GRAY:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.GREEN:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.LIGHT_PURPLE:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.RED:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.RESET:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.WHITE:
+    type: constant
+    description: >
+      No information yet.
+  ChatColor.YELLOW:
+    type: constant
+    description: >
+      No information yet.
+  ItemCategory.DECORATION:
+    type: constant
+    description: >
+      No information yet.
+  ItemCategory.FOOD:
+    type: constant
+    description: >
+      No information yet.
+  ItemCategory.INTERNAL:
+    type: constant
+    description: >
+      No information yet.
+  ItemCategory.MATERIAL:
+    type: constant
+    description: >
+      No information yet.
+  ItemCategory.TOOL:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.angryVillager:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.bubble:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.cloud:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.crit:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.dripLava:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.dripWater:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.enchantmenttable:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.fallingDust:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.flame:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.happyVillager:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.heart:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.hugeexplosion:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.hugeexplosionSeed:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.ink:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.itemBreak:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.largeexplode:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.lava:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.mobFlame:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.note:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.portal:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.rainSplash:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.redstone:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.slime:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.smoke:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.smoke2:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.snowballpoof:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.spell:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.spell2:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.spell3:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.splash:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.suspendedTown:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.terrain:
+    type: constant
+    description: >
+      No information yet.
+  ParticleType.waterWake:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.ARROW:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.BAT:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.BLAZE:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.BOAT:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.CAVE_SPIDER:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.CHICKEN:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.COW:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.CREEPER:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.EGG:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.ENDERMAN:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.EXPERIENCE_ORB:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.EXPERIENCE_POTION:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.FALLING_BLOCK:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.FIREBALL:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.FISHING_HOOK:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.GHAST:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.IRON_GOLEM:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.ITEM:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.LAVA_SLIME:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.LIGHTNING_BOLT:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.MINECART:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.MUSHROOM_COW:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.OCELOT:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.PAINTING:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.PIG:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.PIG_ZOMBIE:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.PLAYER:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.PRIMED_TNT:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.RABBIT:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.SHEEP:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.SILVERFISH:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.SKELETON:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.SLIME:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.SMALL_FIREBALL:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.SNOWBALL:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.SNOW_GOLEM:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.SPIDER:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.SQUID:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.THROWN_POTION:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.VILLAGER:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.WOLF:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.ZOMBIE:
+    type: constant
+    description: >
+      No information yet.
+  EntityType.ZOMBIE_VILLAGER:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.arrow:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.bat:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.blaze:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.boat:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.chicken:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.cow:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.creeper:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.egg:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.enderman:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.expPotion:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.experienceOrb:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.fallingTile:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.fireball:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.fishHook:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.ghast:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.human:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.ironGolem:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.item:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.lavaSlime:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.lightningBolt:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.minecart:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.mushroomCow:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.ocelot:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.pig:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.player:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.player2:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.sheep:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.silverfish:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.skeleton:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.slime:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.smallFireball:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.snowGolem:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.snowball:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.spider:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.squid:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.thrownPotion:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.tnt:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.unknown1:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.villager:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.villagerZombie:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.wolf:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.zombie:
+    type: constant
+    description: >
+      No information yet.
+  EntityRenderType.zombiePigman:
+    type: constant
+    description: >
+      No information yet.
+  ArmorType.boots:
+    type: constant
+    description: >
+      No information yet.
+  ArmorType.chestplate:
+    type: constant
+    description: >
+      No information yet.
+  ArmorType.helmet:
+    type: constant
+    description: >
+      No information yet.
+  ArmorType.leggings:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.absorption:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.blindness:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.confusion:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.damageBoost:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.damageResistance:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.digSlowdown:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.digSpeed:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.effectIds:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.fireResistance:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.harm:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.heal:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.healthBoost:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.hunger:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.invisibility:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.jump:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.movementSlowdown:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.movementSpeed:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.nightVision:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.poison:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.regeneration:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.saturation:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.waterBreathing:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.weakness:
+    type: constant
+    description: >
+      No information yet.
+  MobEffect.wither:
+    type: constant
+    description: >
+      No information yet.
+  DimensionId.NETHER:
+    type: constant
+    description: >
+      No information yet.
+  DimensionId.NORMAL:
+    type: constant
+    description: >
+      No information yet.
+  BlockFace.DOWN:
+    type: constant
+    description: >
+      No information yet.
+  BlockFace.EAST:
+    type: constant
+    description: >
+      No information yet.
+  BlockFace.NORTH:
+    type: constant
+    description: >
+      No information yet.
+  BlockFace.SOUTH:
+    type: constant
+    description: >
+      No information yet.
+  BlockFace.UP:
+    type: constant
+    description: >
+      No information yet.
+  BlockFace.WEST:
+    type: constant
+    description: >
+      No information yet.

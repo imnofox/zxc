@@ -1,0 +1,63 @@
+#nav {
+  background: #333;
+  color: white;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+#nav-menu {
+}
+
+.nav-section-contents ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-section-label {
+  cursor: pointer;
+}
+
+.nav-section-label::selection {
+  background: transparent;
+}
+
+/* - navigation sections badges - */
+
+.nav-section-label:before {
+  font-family: monospace;
+  padding: 0.2em;
+  margin-right: 0.5em;
+  font-size: 0.8em;
+  border-radius: 3px;
+}
+
+.nav-section-label-namespacemethod_table:before {
+  content: 'M';
+  background: #00d181;
+  border: solid 1px #00d181;
+}
+
+.nav-section-label-namespacemethod_table:hover:before {
+  content: 'Methods';
+} 
+
+.nav-section-label-hook_table:before {
+  content: 'H';
+  border: solid 1px orange;
+  background: orange;
+}
+
+.nav-section-label-hook_table:hover:before {
+  content: 'Hooks';
+}
+
+.nav-section-label-constant_table:before {
+  content: 'C';
+  border: solid 1px #9500ff;
+  background: #9500ff;
+}
+
+.nav-section-label-constant_table:hover:before {
+  content: 'Constants';
+} 
