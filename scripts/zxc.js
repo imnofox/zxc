@@ -87,7 +87,7 @@ $(document).ready(function() {
         // because in hooks, the "namespace" is only used to organize them.
         $('#current-doc pre code').text(
           (data.type == 'hook' ? '' : namespace + '.') + namespaceValueName + '(' +
-          (data.args || '') + ')');
+          (data.args || '') + ')' + (data.returns ? ' -> ' + data.returns : ''));
       } else if (data.type == 'constant') {
         // Show constant.
         $('#current-doc pre code').text(namespace + '.' + namespaceValueName);
