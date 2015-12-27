@@ -1,6 +1,10 @@
 $(document).ready(function() {
+  // Dtable (data table).
+  //
+  // Populated when loading the docs.
   window.dtable = {};
 
+  // Populate side nav from dtable.
   var populateNav = function() {
     // Go through all of the keys in the table.
     // ModPE, Level, etc...
@@ -41,7 +45,7 @@ $(document).ready(function() {
             .appendTo(nList); // Then append it to the namespace list.
         }
 
-        // Add list of namespaces
+        // Add list of namespacesg
         nList.appendTo(nSectionContents);
         nSectionContents.appendTo(nSection);
 
@@ -51,6 +55,8 @@ $(document).ready(function() {
     }
   };
 
+  // Fetch and load data.
+  // (Shouldn't take a while!)
   $.get('/data/docs.yml', {}, function(data) {
     window.g = jsyaml.load(data);
 
