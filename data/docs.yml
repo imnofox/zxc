@@ -1268,7 +1268,7 @@ docs:
     args: 'int, int, int, Scriptable, Scriptable'
     description: >
       Adds a shaped crafting recipe. Use this function
-      if you want your recipe to be in a specific state.
+      if you want your recipe to be in a specific shape.
 
       - `int`: Result item ID
 
