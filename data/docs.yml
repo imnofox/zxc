@@ -673,28 +673,28 @@ docs:
     type: namespacemethod
     args: ''
     description: >
-      No information yet.
+      Returns the pointed block's X position.
     example: >
       No information yet.
   Player.getPointedBlockY:
     type: namespacemethod
     args: ''
     description: >
-      No information yet.
+      Returns the pointed block's Y position.
     example: >
       No information yet.
   Player.getPointedBlockZ:
     type: namespacemethod
     args: ''
     description: >
-      No information yet.
+      Returns the pointed block's Z position.
     example: >
       No information yet.
   Player.getPointedEntity:
     type: namespacemethod
     args: ''
     description: >
-      No information yet.
+      Returns the pointed entity.
     example: >
       No information yet.
   Player.getPointedVecX:
