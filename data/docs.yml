@@ -1930,7 +1930,7 @@ docs:
   ParticleType.snowballpoof:
     type: constant
     description: >
-      Unknown. Possibly enchanting particles created by a snowball.
+      Unknown. Possibly particles created by a snowball.
   ParticleType.spell:
     type: constant
     description: >
@@ -2134,63 +2134,63 @@ docs:
   EntityRenderType.arrow:
     type: constant
     description: >
-      No information yet.
+      Arrow render type.
   EntityRenderType.bat:
     type: constant
     description: >
-      No information yet.
+      Bat render type.
   EntityRenderType.blaze:
     type: constant
     description: >
-      No information yet.
+      Blaze render type.
   EntityRenderType.boat:
     type: constant
     description: >
-      No information yet.
+      Boat render type.
   EntityRenderType.chicken:
     type: constant
     description: >
-      No information yet.
+      Chicken render type.
   EntityRenderType.cow:
     type: constant
     description: >
-      No information yet.
+      Cow render type. *moo*
   EntityRenderType.creeper:
     type: constant
     description: >
-      No information yet.
+      Creeper render type. *ssss*
   EntityRenderType.egg:
     type: constant
     description: >
-      No information yet.
+      Egg render type.
   EntityRenderType.enderman:
     type: constant
     description: >
-      No information yet.
+      Enderman render type.
   EntityRenderType.expPotion:
     type: constant
     description: >
-      No information yet.
+      Experience potion render type.
   EntityRenderType.experienceOrb:
     type: constant
     description: >
-      No information yet.
+      Experience orb render type.
   EntityRenderType.fallingTile:
     type: constant
     description: >
-      No information yet.
+      Falling tile render type.
   EntityRenderType.fireball:
     type: constant
     description: >
-      No information yet.
+      Fireball render type.
   EntityRenderType.fishHook:
     type: constant
     description: >
-      No information yet.
+      Fishing rod hook render type.
   EntityRenderType.ghast:
     type: constant
     description: >
-      No information yet.
+      Ghast render type.
   EntityRenderType.human:
     type: constant
     description: >
@@ -2198,35 +2198,35 @@ docs:
   EntityRenderType.ironGolem:
     type: constant
     description: >
-      No information yet.
+      Iron golem render type.
   EntityRenderType.item:
     type: constant
     description: >
-      No information yet.
+      Thrown item render type.
   EntityRenderType.lavaSlime:
     type: constant
     description: >
-      No information yet.
+      Magma cube render type.
   EntityRenderType.lightningBolt:
     type: constant
     description: >
-      No information yet.
+      Lightning bolt render type.
   EntityRenderType.minecart:
     type: constant
     description: >
-      No information yet.
+      Minecart render type.
   EntityRenderType.mushroomCow:
     type: constant
     description: >
-      No information yet.
+      Mooshroom render type.
   EntityRenderType.ocelot:
     type: constant
     description: >
-      No information yet.
+      Ocelot render type.
   EntityRenderType.pig:
     type: constant
     description: >
-      No information yet.
+      Pig render type.
   EntityRenderType.player:
     type: constant
     description: >
@@ -2238,19 +2238,19 @@ docs:
   EntityRenderType.sheep:
     type: constant
     description: >
-      No information yet.
+      Entity render type for a sheep.
   EntityRenderType.silverfish:
     type: constant
     description: >
-      No information yet.
+      Entity render type for a silverfish.
   EntityRenderType.skeleton:
     type: constant
     description: >
-      No information yet.
+      Entity render type for a skeleton.
   EntityRenderType.slime:
     type: constant
     description: >
-      No information yet.
+      Entity render type for a slime.
   EntityRenderType.smallFireball:
     type: constant
     description: >
@@ -2258,51 +2258,51 @@ docs:
   EntityRenderType.snowGolem:
     type: constant
     description: >
-      No information yet.
+      Snow golem (snowman) render type.
   EntityRenderType.snowball:
     type: constant
     description: >
-      No information yet.
+      Snowball render type.
   EntityRenderType.spider:
     type: constant
     description: >
-      No information yet.
+      Spider render type.
   EntityRenderType.squid:
     type: constant
     description: >
-      No information yet.
+      Squid render type.
   EntityRenderType.thrownPotion:
     type: constant
     description: >
-      No information yet.
+      Thrown potion render type.
   EntityRenderType.tnt:
     type: constant
     description: >
-      No information yet.
+      Ignited TNT render type.
   EntityRenderType.unknown1:
     type: constant
     description: >
-      No information yet.
+      Like the name says, unknown.
   EntityRenderType.villager:
     type: constant
     description: >
-      No information yet.
+      Villager render type.
   EntityRenderType.villagerZombie:
     type: constant
     description: >
-      No information yet.
+      Villager/zombie hybrid render type.
   EntityRenderType.wolf:
     type: constant
     description: >
-      No information yet.
+      Wolf render type.
   EntityRenderType.zombie:
     type: constant
     description: >
-      No information yet.
+      Zombie render type.
   EntityRenderType.zombiePigman:
     type: constant
     description: >
-      No information yet.
+      Zombie Pigman render type.
   ArmorType.boots:
     type: constant
     description: >
