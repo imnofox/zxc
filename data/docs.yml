@@ -302,8 +302,9 @@ docs:
   Level.getGrassColor:
     type: namespacemethod
     args: 'int, int'
+    returns: int
     description: >
-      No information yet.
+      Returns the color of grass. `(x, z)`
     example: >
       No information yet.
   Level.getLightningLevel:
@@ -403,7 +404,15 @@ docs:
     type: namespacemethod
     args: 'int, int, int'
     description: >
-      No information yet.
+      Sets the grass color.
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      - `int`: Color (`0xAABBCCDD` color)
     example: >
       No information yet.
   Level.setLightningLevel:
@@ -480,7 +489,18 @@ docs:
     type: namespacemethod
     args: 'double, double, double, int, string'
     description: >
-      No information yet.
+      Creates an entity.
+
+      - `double`: X
+
+      - `double`: Y
+
+      - `double`: Z
+
+      - `int`: Entity type ID
+
+      - `string`: Skin (PNG file)
+
     example: >
       No information yet.
   Player.addExp:
@@ -919,16 +939,27 @@ docs:
       No information yet.
   Entity.getPitch:
     type: namespacemethod
-    args: 'entity?'
+    args: 'entity'
+    returns: double
     description: >
-      No information yet.
+      Returns the pitch (rotation-wise) of this entity.
     example: >
-      No information yet.
+      
+      This example prints the player's yaw when they tap a block.
+      
+      ```
+
+      function useItem() {
+        clientMessage(Entity.getPitch(Player.getEntity()));
+      }
+
+      ```
   Entity.getRenderType:
     type: namespacemethod
-    args: 'entity?'
+    args: 'entity'
+    returns: int
     description: >
-      No information yet.
+      Returns the render type this entity has.
     example: >
       No information yet.
   Entity.getRider:
@@ -997,11 +1028,21 @@ docs:
       No information yet.
   Entity.getYaw:
     type: namespacemethod
-    args: 'entity?'
+    args: 'entity'
+    returns: double
     description: >
-      No information yet.
+      Returns the yaw (rotation-wise) of this entity.
     example: >
-      No information yet.
+      
+      This example prints the player's yaw when they tap a block.
+
+      ```
+
+      function useItem() {
+        clientMessage(Entity.getYaw(Player.getEntity()));
+      }
+
+      ```
   Entity.getZ:
     type: namespacemethod
     args: 'entity'
@@ -1183,23 +1224,80 @@ docs:
     type: namespacemethod
     args: 'int, int, int, Scriptable'
     description: >
-      No information yet.
+      Creates an unshaped crafting recipe.
+
+      - `int`: ID of the item you'll get from the recipe.
+      
+      - `int`: How much of that item.
+      
+      - `int`: The damage/data of that item.
+      
+      - `Scriptable`: Ingredients.
+
+
+      ### Ingredients
+
+      Ingredients should have a continuous 1D array like this:
+
+      ```
+
+      // Pattern: [id, count, damage, id, count, damage, ...]
+      Item.addCraftRecipe(256, 1, 0, [1, 1, 0, 2, 1, 0]);
+
+      ```
+
+      The above code creates a shovel from 1 stone block and 1 grass block.
     example: >
       No information yet.
   Item.addFurnaceRecipe:
     type: namespacemethod
     args: 'int, int, int'
     description: >
-      No information yet.
+      Creates a simple furnace recipe.
+
+      - `int`: Input ID
+      
+      - `int`: Output ID
+
+      - `int`: Output damage
+
     example: >
       No information yet.
   Item.addShapedRecipe:
     type: namespacemethod
     args: 'int, int, int, Scriptable, Scriptable'
     description: >
-      No information yet.
+      Adds a shaped crafting recipe. Use this function
+      if you want your recipe to be in a specific state.
+
+      - `int`: Result item ID
+
+      - `int`: Result item count
+
+      - `int`: Result item damage
+
+      - `Scriptable`: Shape matrix
+
+      - `Scriptable`: Letter defines.
     example: >
-      No information yet.
+      This makes you receive 64 stone from a crafting
+      recipe of grass blocks shaped in a diamond.
+
+      ```
+
+      // 1, 64 = Stack of stone.
+      
+      Item.addShapedRecipe(1, 64, 0, [
+        " x ", // Top row.
+        "x x", // Middle row.
+        " x " // Bottom row.
+      ], ["x", 2, 0]); // This makes "x" mean grass (2) with damage of (0).
+
+      ```
+
+      Here is an example of what it looks like in game:
+
+      ![picture of crafting recipe](images/craftingrecipe.png)
   Item.defineArmor:
     type: namespacemethod
     args: 'int, string, int, string, string, int, int, int'
@@ -1218,7 +1316,7 @@ docs:
     type: namespacemethod
     args: 'int'
     description: >
-      No information yet.
+      Returns whether this item is valid. `(id)`
     example: >
       No information yet.
   Item.setCategory:
@@ -1239,7 +1337,7 @@ docs:
     type: namespacemethod
     args: 'int, int'
     description: >
-      No information yet.
+      Sets the maximum amount of damage this item has? `(id, max)`
     example: >
       No information yet.
   Item.setProperties:
@@ -1374,7 +1472,24 @@ docs:
     type: namespacemethod
     args: 'int, double, double, double, double, double, double, int'
     description: >
-      No information yet.
+      Sets a block's boundaries.
+
+      - `int`: The ID.
+
+      - `double`: X min
+
+      - `double`: Y min
+
+      - `double`: Z min
+
+      - `double`: X max
+
+      - `double`: Y max
+
+      - `double`: Z max
+
+      - `int`: Data (damage) value
+
     example: >
       No information yet.
   Server.getAddress:
@@ -1409,7 +1524,12 @@ docs:
     type: namespacemethod
     args: 'string, int'
     description: >
-      No information yet.
+      Joins a server.
+
+      - `string`: IP
+
+      - `int`: Port (default = `19132`)
+
     example: >
       No information yet.
   Server.sendChat:
@@ -2143,31 +2263,31 @@ docs:
   MobEffect.absorption:
     type: constant
     description: >
-      No information yet.
+      Adds hearts that disappear once the affect ends.
   MobEffect.blindness:
     type: constant
     description: >
-      No information yet.
+      Blindess. Creates black fog around the entity so they cannot see.
   MobEffect.confusion:
     type: constant
     description: >
-      No information yet.
+      Confusion. Unknown.
   MobEffect.damageBoost:
     type: constant
     description: >
-      No information yet.
+      Damage boost (strength). Increases the amount of damage the entity deals.
   MobEffect.damageResistance:
     type: constant
     description: >
-      No information yet.
+      Resistance. Makes the entity more resistant to damage.
   MobEffect.digSlowdown:
     type: constant
     description: >
-      No information yet.
+      Dig slowdown (mining fatigue). Makes the entity mine slower.
   MobEffect.digSpeed:
     type: constant
     description: >
-      No information yet.
+      Dig speed (haste). Makes the entity mine faster.
   MobEffect.effectIds:
     type: constant
     description: >
@@ -2179,63 +2299,64 @@ docs:
   MobEffect.harm:
     type: constant
     description: >
-      No information yet.
+      Instant damage. Instantly damages the entity.
   MobEffect.heal:
     type: constant
     description: >
-      No information yet.
+      Instant health. Instantly increases health. (Not amount of hearts.)
   MobEffect.healthBoost:
     type: constant
     description: >
-      No information yet.
+      Health boost. Increases the amount of hearts the entity has.
   MobEffect.hunger:
     type: constant
     description: >
-      No information yet.
+      Hungers. Makes the entity hungry.
   MobEffect.invisibility:
     type: constant
     description: >
-      No information yet.
+      Invisibility. Makes the entity invisible.
   MobEffect.jump:
     type: constant
     description: >
-      No information yet.
+      Jump boost. Adds jump height.
   MobEffect.movementSlowdown:
     type: constant
     description: >
-      No information yet.
+      Slowness. Makes the entity move slower.
   MobEffect.movementSpeed:
     type: constant
     description: >
-      No information yet.
+      Speed. Makes the entity move faster.
   MobEffect.nightVision:
     type: constant
     description: >
-      No information yet.
+      Night vision. Allows the entity to see in the dark.
   MobEffect.poison:
     type: constant
     description: >
-      No information yet.
+      Poison. Makes the entity lose continuously lose hearts. They are left at one heart
+      if it is not cured.
   MobEffect.regeneration:
     type: constant
     description: >
-      No information yet.
+      Regeneration. Makes the entity regenerate their hearts continuously.
   MobEffect.saturation:
     type: constant
     description: >
-      No information yet.
+      Decreases how hungry the entity is per tick.
   MobEffect.waterBreathing:
     type: constant
     description: >
-      No information yet.
+      Water breathing. Allows the entity to breathe underwater.
   MobEffect.weakness:
     type: constant
     description: >
-      No information yet.
+      Weakness. Decreases the amount of attack the entity deals.
   MobEffect.wither:
     type: constant
     description: >
-      No information yet.
+      Similar to poison. Turns hearts black and can kill the entity.
   DimensionId.NETHER:
     type: constant
     description: >

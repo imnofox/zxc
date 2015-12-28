@@ -17,13 +17,6 @@
   height: 100vh;
 }
 
-.report {
-  position: absolute;
-  bottom: 10px;
-  font-size: 0.8em;
-  left: 10px;
-}
-
 #nav h4 {
   margin-top: 1em;
 }
