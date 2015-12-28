@@ -1846,7 +1846,7 @@ docs:
   ParticleType.dripLava:
     type: constant
     description: >
-      Dripping water.
+      Dripping lava.
   ParticleType.dripWater:
     type: constant
     description: >
