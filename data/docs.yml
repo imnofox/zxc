@@ -1297,7 +1297,28 @@ docs:
 
       Here is an example of what it looks like in game:
 
+
       ![picture of crafting recipe](images/craftingrecipe.png)
+
+
+      ### Another Example
+
+      This makes you receive 64 stone from a crafting
+      recipe of grass blocks shaped in a diamond, with a bedrock block in the center.
+
+      ```
+
+      // 1, 64 = Stack of stone.
+      
+      Item.addShapedRecipe(1, 64, 0, [
+        " x ", // Top row.
+        "xbx", // Middle row.
+        " x " // Bottom row.
+      ], ["x", 2, 0, "b", 7, 0]); // This makes "x" mean grass (2) with damage of (0).
+      
+      // Also makes "b" mean bedrock (7) with damage of (0).
+
+      ```
   Item.defineArmor:
     type: namespacemethod
     args: 'int, string, int, string, string, int, int, int'
