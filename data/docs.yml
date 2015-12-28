@@ -1337,7 +1337,11 @@ docs:
     type: namespacemethod
     args: 'int'
     description: >
-      Returns whether this item is valid. `(id)`
+
+      - `int`: ID
+
+
+      Returns whether this item is valid.
     example: >
       No information yet.
   Item.setCategory:
@@ -1358,7 +1362,13 @@ docs:
     type: namespacemethod
     args: 'int, int'
     description: >
-      Sets the maximum amount of damage this item has? `(id, max)`
+
+      - `int`: ID of the item
+
+      - `int`: Maximum damage
+
+
+      Sets the maximum amount of damage this item has?
     example: >
       No information yet.
   Item.setProperties:
@@ -1381,7 +1391,7 @@ docs:
 
       - `Object`: The name of a texture, or a texture matrix.
 
-      **Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)  
+      **Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)
 
       Example of a texture matrix:
 
@@ -1437,14 +1447,26 @@ docs:
     type: namespacemethod
     args: 'int, double'
     description: >
-      Sets how long to destroy a block. A shorter time means lesser time required. `(id, time)`
+
+      - `int`: ID
+
+      - `double`: Time
+
+
+      Sets how long to destroy a block. A shorter time means lesser time required.
     example: >
       No information yet.
   Block.setExplosionResistance:
     type: namespacemethod
     args: 'int, double'
     description: >
-      Sets the explosion resistance of a single block. `(id, resistance)`
+
+      - `int`: ID
+
+      - `double`: Resistance
+
+
+      Sets the explosion resistance of a single block.
     example: >
       No information yet.
   Block.setFriction:
@@ -1646,9 +1668,25 @@ docs:
       No information yet.
   redstoneUpdateHook:
     type: hook
-    args: 'x, y, z, newCurrent, someBooleanIDontKnow, blockId, blockData'
+    args: 'x, y, z, newCurrent, onLoad, blockId, blockData'
     description: >
-      No information yet.
+
+      - `x`: int, X coordinate
+
+      - `y`: int, Y coordinate
+
+      - `z`: int, Z coordinate
+
+      - `newCurrent`: ???, ???
+
+      - `onLoad`: bool, Did this take place on world load?
+
+      - `blockId`: int, Block ID
+
+      - `blockData`: int, Block Data
+
+
+      Called when a redstone event occurs?
     example: >
       No information yet.
   selectLevelHook:
@@ -1772,11 +1810,11 @@ docs:
   ItemCategory.DECORATION:
     type: constant
     description: >
-      No information yet.
+      Decorations category.
   ItemCategory.FOOD:
     type: constant
     description: >
-      No information yet.
+      Foodstuffs category.
   ItemCategory.INTERNAL:
     type: constant
     description: >
@@ -1784,63 +1822,63 @@ docs:
   ItemCategory.MATERIAL:
     type: constant
     description: >
-      No information yet.
+      Materials (general blocks?) actegory
   ItemCategory.TOOL:
     type: constant
     description: >
-      No information yet.
+      Tools category.
   ParticleType.angryVillager:
     type: constant
     description: >
-      No information yet.
+      Angry villager icons.
   ParticleType.bubble:
     type: constant
     description: >
-      No information yet.
+      Bubbles!
   ParticleType.cloud:
     type: constant
     description: >
-      No information yet.
+      Unknown.
   ParticleType.crit:
     type: constant
     description: >
-      No information yet.
+      Particles created by a critical hit.
   ParticleType.dripLava:
     type: constant
     description: >
-      No information yet.
+      Dripping water.
   ParticleType.dripWater:
     type: constant
     description: >
-      No information yet.
+      Dripping water.
   ParticleType.enchantmenttable:
     type: constant
     description: >
-      No information yet.
+      Enchantment table particles.
   ParticleType.fallingDust:
     type: constant
     description: >
-      No information yet.
+      Falling dust, probably created by unstable sand.
   ParticleType.flame:
     type: constant
     description: >
-      No information yet.
+      Flames.
   ParticleType.happyVillager:
     type: constant
     description: >
-      No information yet.
+      Happy villager icons.
   ParticleType.heart:
     type: constant
     description: >
-      No information yet.
+      Hearts, usually created by animals.
   ParticleType.hugeexplosion:
     type: constant
     description: >
-      No information yet.
+      A huge explosion.
   ParticleType.hugeexplosionSeed:
     type: constant
     description: >
-      No information yet.
+      Unknown.
   ParticleType.ink:
     type: constant
     description: >
@@ -1848,79 +1886,79 @@ docs:
   ParticleType.itemBreak:
     type: constant
     description: >
-      No information yet.
+      Particles of an item breaking.
   ParticleType.largeexplode:
     type: constant
     description: >
-      No information yet.
+      A large explosion.
   ParticleType.lava:
     type: constant
     description: >
-      No information yet.
+      Particles created by lava.
   ParticleType.mobFlame:
     type: constant
     description: >
-      No information yet.
+      Unknown.
   ParticleType.note:
     type: constant
     description: >
-      No information yet.
+      Particles emitted by a note block.
   ParticleType.portal:
     type: constant
     description: >
-      No information yet.
+      Particles emitted by portals.
   ParticleType.rainSplash:
     type: constant
     description: >
-      No information yet.
+      Particles emitted by rain when it hits the ground.
   ParticleType.redstone:
     type: constant
     description: >
-      No information yet.
+      Particles emitted by powered redstone.
   ParticleType.slime:
     type: constant
     description: >
-      No information yet.
+      Slime particles?
   ParticleType.smoke:
     type: constant
     description: >
-      No information yet.
+      Smoke.
   ParticleType.smoke2:
     type: constant
     description: >
-      No information yet.
+      Unknown. Probably an alternate smoke particle.
   ParticleType.snowballpoof:
     type: constant
     description: >
-      No information yet.
+      Unknown. Possibly enchanting particles created by a snowball.
   ParticleType.spell:
     type: constant
     description: >
-      No information yet.
+      Unknown. Possibly enchanting table spells.
   ParticleType.spell2:
     type: constant
     description: >
-      No information yet.
+      Unknown. Possibly enchanting table spells.
   ParticleType.spell3:
     type: constant
     description: >
-      No information yet.
+      Unknown. Possibly enchanting table spells.
   ParticleType.splash:
     type: constant
     description: >
-      No information yet.
+      Splash particles created from splashing in water.
   ParticleType.suspendedTown:
     type: constant
     description: >
-      No information yet.
+      Unknown.
   ParticleType.terrain:
     type: constant
     description: >
-      No information yet.
+      Unknown. Possibly particles emitted from breaking blocks.
   ParticleType.waterWake:
     type: constant
     description: >
-      No information yet.
+      Unknown.
   EntityType.ARROW:
     type: constant
     description: >
