@@ -105,6 +105,8 @@ $(document).ready(function() {
         // Hide example for entries that don't have them.
         $('#current-doc #doc-example, #current-doc #doc-example-header').hide();
       }
+
+      $('#current-doc')[0].scrollIntoView();
     });
   };
 
