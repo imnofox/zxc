@@ -187,30 +187,73 @@ docs:
   Level.canSeeSky:
     type: namespacemethod
     args: 'int, int, int'
-    returns: 'bool?'
+    returns: 'bool'
     description: >
-      Returns whether a block `(x, y, z)` can see the sky.
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+
+      Returns whether a block can see the sky.
     example: >
       No information yet.
   Level.destroyBlock:
     type: namespacemethod
     args: 'int, int, int'
     description: >
-      Destroys a block `(x, y, z)` as if a player mined it.
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      
+      Destroys a block as if a player mined it.
     example: >
       No information yet.
   Level.dropItem:
     type: namespacemethod
     args: 'double, double, double, double, int, int, int'
+    returns: entity
     description: >
-      Spawns a dropped item in the world.
+
+      - `double`: X
+
+      - `double`: Y
+
+      - `double`: Z
+
+      - `double`: Range? Usually just set this to `0.0`.
+
+      - `int`: ID of the item
+
+      - `int`: Count of the item
+
+      - `int`: Data (damage) of the item.
+
+
+      Spawns a dropped item in the world. It returns the newly
+      created entity, which can be manipulated.
     example: >
       No information yet.
   Level.explode:
     type: namespacemethod
     args: 'double, double, double, double'
     description: >
-      Causes an explosion `(x, y, z, power)` somewhere in the world.
+
+      - `double`: X
+
+      - `double`: Y
+
+      - `double`: Z
+
+      - `double`: Power
+      
+      Causes an explosion somewhere in the world.
     example: >
       No information yet.
   Level.getAddress:
@@ -224,14 +267,26 @@ docs:
     type: namespacemethod
     args: 'int, int'
     description: >
-      Gets the ID of a biome at a specific location `(x, z)` in the world.
+
+      - `int`: X
+
+      - `int`: Z
+
+
+      Gets the ID of a biome at a specific location in the world.
     example: >
       No information yet.
   Level.getBiomeName:
     type: namespacemethod
     args: 'int, int'
     description: >
-      Gets the name of a biome at a specific location `(x, z)` in the world.
+
+      - `int`: X
+
+      - `int`: Z
+
+
+      Gets the name of a biome at a specific location in the world.
     example: >
       No information yet.
   Level.getBrightness:
@@ -239,56 +294,132 @@ docs:
     args: 'int, int, int'
     returns: 'int?/double?'
     description: >
-      Returns the light level at a position in the world `(x, y, z)`.
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      
+      Returns the light level at a position in the world.
     example: >
       No information yet.
   Level.getChestSlot:
     type: namespacemethod
     args: 'int, int, int, int'
     description: >
-      Returns the ID of an item in a chest. `(x, y, z, slot)`
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      - `int`: Slot
+
+
+      Returns the ID of an item in a chest.
     example: >
       No information yet.
   Level.getChestSlotCount:
     type: namespacemethod
     args: 'int, int, int, int'
     description: >
-      Returns the count of an item in a chest. `(x, y, z, slot)`
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      - `int`: Slot
+
+
+      Returns the count of an item in a chest.
     example: >
       No information yet.
   Level.getChestSlotData:
     type: namespacemethod
     args: 'int, int, int, int'
     description: >
-      Returns the damage of an item in a chest. `(x, y, z, slot)`
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      - `int`: Slot in chest
+
+
+      Returns the damage of an item in a chest.
     example: >
       No information yet.
   Level.getData:
     type: namespacemethod
     args: 'int, int, int'
     description: >
-      Returns the data of an block in the world. `(x, y, z)`
+      
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      
+      Returns the data of an block in the world.
     example: >
       No information yet.
   Level.getFurnaceSlot:
     type: namespacemethod
     args: 'int, int, int, int'
     description: >
-      Returns the ID of an item in a furnace. `(x, y, z, slot)`
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      - `int`: Slot
+
+
+      Returns the ID of an item in a furnace.
     example: >
       No information yet.
   Level.getFurnaceSlotCount:
     type: namespacemethod
     args: 'int, int, int, int'
     description: >
-      Returns the count of an item in a furnace. `(x, y, z, slot)`
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      - `int`: Slot
+
+
+      Returns the count of an item in a furnace.
     example: >
       No information yet.
   Level.getFurnaceSlotData:
     type: namespacemethod
     args: 'int, int, int, int'
     description: >
-      Returns the data of an item in a furnace. `(x, y, z, slot)`
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      - `int`: Slot
+
+
+      Returns the data of an item in a furnace.
     example: >
       No information yet.
   Level.getGameMode:
@@ -304,7 +435,13 @@ docs:
     args: 'int, int'
     returns: int
     description: >
-      Returns the color of grass. `(x, z)`
+
+      - `int`: X
+
+      - `int`: Z
+
+
+      Returns the color of grass.
     example: >
       No information yet.
   Level.getLightningLevel:
@@ -325,14 +462,32 @@ docs:
     type: namespacemethod
     args: 'int, int, int, int'
     description: >
-      Returns a line of text from a sign. `(x, y, z, line)`
+
+      - `int`: X pos
+
+      - `int`: Y pos
+
+      - `int`: Z pos
+
+      - `int`: Line (0, 1, 2, or 3.)
+
+
+      Returns a line of text from a sign.
     example: >
       No information yet.
   Level.getSpawnerEntityType:
     type: namespacemethod
     args: 'int, int, int'
     description: >
-      Returns the entity ID of a spawner. `(x, y, z)`
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      
+      Returns the entity ID of a spawner.
     example: >
       No information yet.
   Level.getTile:
@@ -340,7 +495,15 @@ docs:
     args: 'int, int, int'
     returns: int
     description: >
-      Returns the ID of a block in the world. `(x, y, z)`
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      
+      Returns the ID of a block in the world.
     example: >
       No information yet.
   Level.getTime:
@@ -369,7 +532,21 @@ docs:
     type: namespacemethod
     args: 'double, double, double, string, double, double'
     description: >
-      No information yet.
+
+      - `double`: X pos
+
+      - `double`: Y pos
+
+      - `double`: Z pos
+
+      - `string`: Sound name, **NOT FILE**. e.g `random.click`
+
+      - `double`: ???
+
+      - `double`: ???
+
+
+      Plays a sound somewhere in the world.
     example: >
       No information yet.
   Level.playSoundEnt:
@@ -404,15 +581,15 @@ docs:
     type: namespacemethod
     args: 'int, int, int'
     description: >
-      Sets the grass color.
 
       - `int`: X
 
       - `int`: Y
 
-      - `int`: Z
-
       - `int`: Color (`0xAABBCCDD` color)
+
+
+      Sets the grass color of a column in the world.
     example: >
       No information yet.
   Level.setLightningLevel:
@@ -440,28 +617,70 @@ docs:
     type: namespacemethod
     args: 'int, int, int, int, string'
     description: >
-      Sets a line of text in a sign. `(x, y, z, line, text)`
+
+      - `int`: X pos
+
+      - `int`: Y pos
+
+      - `int`: Z pos
+
+      - `int`: Line (0, 1, 2, or 3)
+
+      - `string`: Text
+
+
+      Sets a line of text in a sign.
     example: >
       No information yet.
   Level.setSpawn:
     type: namespacemethod
     args: 'int, int, int'
     description: >
-      Sets the spawn position `(x, y, z)` of the current world.
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      
+      Sets the spawn position of the current world.
     example: >
       No information yet.
   Level.setSpawnerEntityType:
     type: namespacemethod
     args: 'int, int, int, int'
     description: >
-      Sets the entity ID of an entity that an entity spawner will spawn. `(x, y, z, type)`
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      - `int`: Entity type ID
+
+
+      Sets the entity ID of an entity that an entity spawner will spawn.
     example: >
       No information yet.
   Level.setTile:
     type: namespacemethod
     args: 'int, int, int, int, int'
     description: >
-      Sets the ID and damage of a block in the world. `(x, y, z, id, dmg)`
+
+      - `int`: X
+
+      - `int`: Y
+
+      - `int`: Z
+
+      - `int`: Block ID
+
+      - `int`: Block data
+
+
+      Sets the ID and damage of a block in the world.
     example: >
       No information yet.
   Level.setTime:
@@ -514,7 +733,15 @@ docs:
     type: namespacemethod
     args: 'int, int, int'
     description: >
-      No information yet.
+      - `int`: ID
+
+      - `int`: Count (usually 1)
+
+      - `int`: Data (damage)
+
+
+      Adds an item into the creative inventory.
+      If you want to set which creative tab (category) it belongs in, use `Item.setCategory`.
     example: >
       No information yet.
   Player.addItemInventory:
@@ -651,15 +878,17 @@ docs:
   Player.getPointedBlockData:
     type: namespacemethod
     args: ''
+    returns: int
     description: >
-      No information yet.
+      Returns the data (damage) of the block you are pointing at.
     example: >
       No information yet.
   Player.getPointedBlockId:
     type: namespacemethod
     args: ''
+    returns: int
     description: >
-      No information yet.
+      Returns the ID of the block you are pointing at.
     example: >
       No information yet.
   Player.getPointedBlockSide:
@@ -672,6 +901,7 @@ docs:
   Player.getPointedBlockX:
     type: namespacemethod
     args: ''
+    returns: int
     description: >
       Returns the pointed block's X position.
     example: >
@@ -679,6 +909,7 @@ docs:
   Player.getPointedBlockY:
     type: namespacemethod
     args: ''
+    returns: int
     description: >
       Returns the pointed block's Y position.
     example: >
@@ -686,6 +917,7 @@ docs:
   Player.getPointedBlockZ:
     type: namespacemethod
     args: ''
+    retunrs: int
     description: >
       Returns the pointed block's Z position.
     example: >
@@ -693,6 +925,7 @@ docs:
   Player.getPointedEntity:
     type: namespacemethod
     args: ''
+    returns: entity
     description: >
       Returns the pointed entity.
     example: >
@@ -728,8 +961,9 @@ docs:
   Player.getSelectedSlotId:
     type: namespacemethod
     args: ''
+    returns: int
     description: >
-      No information yet.
+      Returns the slot ID the player currently has selected.
     example: >
       No information yet.
   Player.getX:
@@ -775,7 +1009,15 @@ docs:
     type: namespacemethod
     args: 'int, int, int'
     description: >
-      No information yet.
+
+      - `int`: Slot number
+
+      - `int`: ID of the piece
+
+      - `int`: Damage (data) of the piece.
+
+
+      Sets the player's armor slot.
     example: >
       No information yet.
   Player.setCanFly:
@@ -810,28 +1052,29 @@ docs:
     type: namespacemethod
     args: 'int'
     description: >
-      No information yet.
+      Sets the player's health, in half-hearts. (1 heart = 2)
     example: >
       No information yet.
   Player.setHunger:
     type: namespacemethod
     args: 'double'
     description: >
-      No information yet.
+      Sets the player's hunger level.
     example: >
       No information yet.
   Player.setLevel:
     type: namespacemethod
     args: 'int'
     description: >
-      No information yet.
+      Sets the player's XP level.
     example: >
       No information yet.
   Player.setSaturation:
     type: namespacemethod
     args: 'double'
     description: >
-      No information yet.
+      Sets the player's saturation level. The player's hunger will not decrease unless their saturation level is
+      zero.
     example: >
       No information yet.
   Player.setSelectedSlotId:
@@ -843,9 +1086,19 @@ docs:
       No information yet.
   Entity.addEffect:
     type: namespacemethod
-    args: 'entity?, int, int, int'
+    args: 'entity, int, int, int'
     description: >
-      No information yet.
+
+      - `entity`: Target
+
+      - `int`: The effect. Use `MobEffect`.
+
+      - `int`: Duration, in ticks.
+
+      - `int`: ???
+
+
+      Gives an entity a potion effect.
     example: >
       No information yet.
   Entity.getAll:
@@ -895,25 +1148,32 @@ docs:
       No information yet.
   Entity.getItemEntityCount:
     type: namespacemethod
-    args: 'entity?'
+    args: 'entity'
+    returns: int
     description: >
-      No information yet.
+      Returns the count of the item in an item entity.
     example: >
       No information yet.
   Entity.getItemEntityData:
     type: namespacemethod
-    args: 'entity?'
+    args: 'entity'
+    returns: int
     description: >
-      No information yet.
+      Returns the data (damage) of the item in an item entity.
     example: >
       No information yet.
   Entity.getItemEntityId:
     type: namespacemethod
-    args: 'entity?'
+    args: 'entity'
+    returns: int
     description: >
-      No information yet.
+      Returns the ID of the item in an item entity.
     example: >
-      No information yet.
+      ```
+
+      clientMessage(Entity.getItemEntityId(my_item_entity));
+
+      ```
   Entity.getMaxHealth:
     type: namespacemethod
     args: 'entity'
@@ -924,9 +1184,10 @@ docs:
       No information yet.
   Entity.getMobSkin:
     type: namespacemethod
-    args: 'entity?'
+    args: 'entity'
+    returns: string
     description: >
-      No information yet.
+      Returns the skin file of an entity.
     example: >
       No information yet.
   Entity.getNameTag:
@@ -1068,18 +1329,32 @@ docs:
       No information yet.
   Entity.removeAllEffects:
     type: namespacemethod
-    args: 'entity?'
+    args: 'entity'
     description: >
-      No information yet.
+      Removes all effects from an entity.
     example: >
-      No information yet.
+      ```
+
+      Entity.removeAllEffects(Player.getEntity());
+
+      ```
   Entity.removeEffect:
     type: namespacemethod
-    args: 'entity?, int'
+    args: 'entity, int'
     description: >
-      No information yet.
+
+      - `entity`: Target
+
+      - `int`: ID of the effect. Use `MobEffect`.
+
+
+      Removes a specific potion effect from an entity.
     example: >
-      No information yet.
+      ```
+
+      Entity.removeEffect(Player.getEntity(), MobEffect.nightVision);
+
+      ```
   Entity.rideAnimal:
     type: namespacemethod
     args: 'entity, entity'
@@ -1124,9 +1399,9 @@ docs:
       No information yet.
   Entity.setFireTicks:
     type: namespacemethod
-    args: 'entity?, int'
+    args: 'entity, int'
     description: >
-      No information yet.
+      Sets how long an entity is on fire, using ticks. (20 = 1 second)
     example: >
       No information yet.
   Entity.setHealth:
@@ -1161,7 +1436,17 @@ docs:
     type: namespacemethod
     args: 'entity, double, double, double'
     description: >
-      Sets the position of an entity. `(x, y, z)`
+
+      - `entity`: Target
+
+      - `double`: X
+
+      - `double`: Y
+
+      - `double`: Z
+
+
+      Sets the position of an entity.
     example: >
       No information yet.
   Entity.setPositionRelative:
@@ -1194,30 +1479,42 @@ docs:
       No information yet.
   Entity.setVelX:
     type: namespacemethod
-    args: 'entity?, double'
+    args: 'entity, double'
     description: >
-      No information yet.
+      Sets an entity's velocity in the X axis.
     example: >
       No information yet.
   Entity.setVelY:
     type: namespacemethod
-    args: 'entity?, double'
+    args: 'entity, double'
     description: >
-      No information yet.
+      Sets an entity's velocity in the Y axis.
     example: >
       No information yet.
   Entity.setVelZ:
     type: namespacemethod
-    args: 'entity?, double'
+    args: 'entity, double'
     description: >
-      No information yet.
+      Sets an entity's velocity in the Z axis.
     example: >
       No information yet.
   Entity.spawnMob:
     type: namespacemethod
     args: 'double, double, double, int, string'
     description: >
-      No information yet.
+
+      - `double`: X
+
+      - `double`: Y
+
+      - `double`: Z
+
+      - `int`: Entity type ID
+
+      - `string`: Skin PNG
+
+
+      Spawns an entity.
     example: >
       No information yet.
   Item.addCraftRecipe:
@@ -1323,7 +1620,25 @@ docs:
     type: namespacemethod
     args: 'int, string, int, string, string, int, int, int'
     description: >
-      No information yet.
+
+      - `int`: ID of the new armor piece.
+
+      - `string`: ???
+
+      - `int`: ???
+
+      - `string`: Name of the item.
+
+      - `string`: Texture for the item?
+
+      - `int`: ???
+
+      - `int`: ???
+
+      - `int`: Type. Use `ArmorType`.
+
+
+      Defines a new piece of armor.
     example: >
       No information yet.
   Item.getName:
@@ -1348,7 +1663,15 @@ docs:
     type: namespacemethod
     args: 'int, int'
     description: >
-      No information yet.
+
+      - `int`: ID of the item.
+
+      - `int`: Category for the item. Use `ItemCategory`.
+
+
+      Sets the creative tab this item should belong in.
+
+      Note that it doesn't show unless you use `Player.addItemCreativeInv`.
     example: >
       No information yet.
   Item.setHandEquipped:
@@ -1375,9 +1698,32 @@ docs:
     type: namespacemethod
     args: 'int, Object'
     description: >
-      No information yet.
+
+      - `int`: ID of the item
+
+      - `Object`: Properties
+
+      
+      Sets an item's properties, like in `items.json`.
     example: >
-      No information yet.
+      This makes an item edible.
+
+      ```
+
+      var EXAMPLE_NUTRITION = 4;
+
+      Item.setProperties(YOUR_OWN_ID_HERE, {
+          "use_animation": "eat",
+          "use_duration": 32,
+      
+          "food": {
+            "nutrition": EXAMPLE_NUTRITION,
+            "saturation_modifier": "low",
+            "is_meat": false
+          }
+      });
+
+      ```
   Block.defineBlock:
     type: namespacemethod
     args: 'int, string, Object, int, bool, int'
@@ -1390,6 +1736,7 @@ docs:
       - `string`: The name of the block.
 
       - `Object`: The name of a texture, or a texture matrix.
+
 
       **Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)
 
@@ -1473,7 +1820,13 @@ docs:
     type: namespacemethod
     args: 'int, double'
     description: >
-      No information yet.
+
+      - `int`: ID
+
+      - `double`: Friction
+
+
+      Sets the friction of a block.
     example: >
       No information yet.
   Block.setLightLevel:
@@ -1487,14 +1840,28 @@ docs:
     type: namespacemethod
     args: 'int, int'
     description: >
-      No information yet.
+
+      - `int`: ID
+
+      - `double`: Light opacity
+
+
+      Sets the light opacity of a block.
+      You can use it for letting light through.
+
+      You may have to use `Block.setRenderLayer(YOUR_ID_HERE, 4);`, which sets
+      a block's render layer to 4 (plants), in order for the light to pass through.
     example: >
       No information yet.
   Block.setRedstoneConsumer:
     type: namespacemethod
     args: 'int'
     description: >
-      No information yet.
+
+      - `int`: ID
+
+
+      Allows a block to accept redstone input.
     example: >
       No information yet.
   Block.setRenderLayer:
@@ -1567,19 +1934,20 @@ docs:
     type: namespacemethod
     args: 'string, int'
     description: >
-      Joins a server.
 
       - `string`: IP
 
       - `int`: Port (default = `19132`)
 
+
+      Joins a server.
     example: >
       No information yet.
   Server.sendChat:
     type: namespacemethod
     args: 'string'
     description: >
-      No information yet.
+      Sends a message via chat.
     example: >
       No information yet.
   attackHook:
@@ -1656,7 +2024,7 @@ docs:
     type: hook
     args: ''
     description: >
-      Called when we leave a level.
+      Called when the game is exiting from a level.
     example: >
       No information yet.
   deathHook:
@@ -1668,7 +2036,7 @@ docs:
       No information yet.
   redstoneUpdateHook:
     type: hook
-    args: 'x, y, z, newCurrent, onLoad, blockId, blockData'
+    args: 'x, y, z, newCurrent, worldLoading, blockId, blockData'
     description: >
 
       - `x`: int, X coordinate
@@ -1679,7 +2047,7 @@ docs:
 
       - `newCurrent`: ???, ???
 
-      - `onLoad`: bool, Did this take place on world load?
+      - `worldLoading`: bool, Did this take place on world load?
 
       - `blockId`: int, Block ID
 
