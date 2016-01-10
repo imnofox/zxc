@@ -1724,6 +1724,32 @@ docs:
       });
 
       ```
+  Block.defineLiquidBlock:
+    type: namespacemethod
+    args: 'int, string, Object, int'
+    description: >
+
+      - `int`: The block ID. `id + 1` will be used for the still version.
+
+      - `string`: The name of the block.
+
+      - `Object`: The textures of the block? Example: `[["stone", 0], ["sand", ]]`
+
+      - `int`: The source material. Example: `10` for Lava.
+
+
+      Defines a new liquid block.
+    example: >
+      Example from zhuowei.
+
+      ```
+
+      var liquidId = 191;
+      var liquidIdStill = Block.defineLiquidBlock(liquidId /* 192 will also be used for still version */,
+        "Mudslide", [["stone", 0], ["sand", 0]],
+        10 /* material: lava */); 
+
+      ```
   Block.defineBlock:
     type: namespacemethod
     args: 'int, string, Object, int, bool, int'
