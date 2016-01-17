@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).load(function() {
   // Wrap entire thing in a try block
   // because debugging on Android Google Chrome
   // is hard.
