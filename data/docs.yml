@@ -766,6 +766,43 @@ docs:
       Clears a slot in the player's inventory. `(slot)`
     example: >
       No information yet.
+  Player.enchant:
+    type: namespacemethod
+    args: 'int, int, int'
+    description: >
+
+      - `int`: The slot ID of the item in the player's inventory.
+
+      - `int`: The enchantment.
+
+      - `int`: The level?
+
+
+      Enchants an item in the player's inventory.
+    example: >
+      No information yet.
+  Player.getEnchantments:
+    type: namespacemethod
+    args: 'int'
+    returns: 'Object[]'
+    description: >
+
+      - `int`: The slot ID of the item.
+
+
+      Returns the enchantments. It is an array that has the following structure-
+
+      ```
+
+      var x = Player.getEnchantments(...);
+
+      x.type // id of the enchant
+      
+      x.level // level of the enchant
+
+      ```
+    example: >
+      No information yet.
   Player.getArmorSlot:
     type: namespacemethod
     args: 'int'
@@ -1005,6 +1042,31 @@ docs:
       Returns whether an entity is a player.
     example: >
       No information yet.
+  Player.setItemCustomName:
+    type: namespacemethod
+    args: 'int, string'
+    description: >
+      
+      - `int`: The slot id of the target item.
+
+      - `string`: The new name.
+
+
+      Sets the custom name of an item.
+    example: >
+      No information yet.
+  Player.getItemCustomName:
+    type: namespacemethod
+    args: 'int'
+    returns: 'string'
+    description: >
+
+      - `int`: The slot id of the item.
+
+
+      Returns the custom name of an item.
+    example: >
+      No information yet.
   Player.setArmorSlot:
     type: namespacemethod
     args: 'int, int, int'
@@ -1022,9 +1084,9 @@ docs:
       No information yet.
   Player.setCanFly:
     type: namespacemethod
-    args: ''
+    args: 'boolean'
     description: >
-      No information yet.
+      Sets whether the player can fly.
     example: >
       No information yet.
   Player.setExhaustion:
@@ -1472,9 +1534,9 @@ docs:
       No information yet.
   Entity.setSneaking:
     type: namespacemethod
-    args: 'entity?'
+    args: 'entity, boolean'
     description: >
-      No information yet.
+      Sets whether an entity is sneaking (crouching).
     example: >
       No information yet.
   Entity.setVelX:
