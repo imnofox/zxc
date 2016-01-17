@@ -138,6 +138,18 @@ docs:
     type: namespacemethod
     args: 'int, string, int, string, int'
     description: >
+
+      - `int`: The ID of the new item.
+
+      - `string`: The texture name of the item.
+
+      - `int`: Texture offset. Used for textures like `texture_0`, `texture_1`...
+
+      - `string`: The name of the item.
+
+      - `int`: Stack size.
+
+
       Adds an item into the game.
     example: >
       No information yet.
