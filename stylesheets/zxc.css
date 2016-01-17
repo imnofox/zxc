@@ -42,6 +42,10 @@
   padding: 0.5rem;
 }
 
+#search:active, #search:focus {
+  outline: 0;
+}
+
 #nav-menu {
 }
 
