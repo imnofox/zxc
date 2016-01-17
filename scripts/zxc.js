@@ -1,4 +1,8 @@
 $(window).load(function() {
+  if (typeof window.marked !== "undefined") {
+    $("#uhoh").hide();
+  }
+
   // Wrap entire thing in a try block
   // because debugging on Android Google Chrome
   // is hard.
