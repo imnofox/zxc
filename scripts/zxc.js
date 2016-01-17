@@ -155,6 +155,33 @@ $(window).load(function() {
     });
 
     $('#actual-doc').hide();
+
+    // Init search filter thing
+    $("#search").on("keyup", function() {
+
+      var search_term = $(this).val().toLowerCase();
+
+      $("#nav-menu .nav-section").each(function() {
+
+        var section_shown = false;
+
+        $(this).find("li").each(function() {
+          // Show results that include the term, or all if the search is empty
+          if ($(this).text().toLowerCase().indexOf(search_term) > -1 || $(this).text() == "") {
+            $(this).show();
+            // As at least 1 item needs to be shown, the parent section must be
+            section_shown = true;
+          } else {
+            $(this).hide();
+          }
+        });
+
+        (section_shown) ? $(this).show() : $(this).hide();
+      });
+
+
+    });
+
   } catch (e) {
     alert("Looks like something went wrong: " + e);
   }
