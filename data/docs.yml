@@ -1807,7 +1807,7 @@ docs:
 
       - `string`: The name of the block.
 
-      - `Object`: The textures of the block? Example: `[["stone", 0], ["sand", ]]`
+      - `Object`: The textures of the block? Example: `[["stone", 0], ["sand", 0]]`
 
       - `int`: The source material. Example: `10` for Lava.
 
