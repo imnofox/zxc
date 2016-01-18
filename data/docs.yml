@@ -775,7 +775,11 @@ docs:
     type: namespacemethod
     args: 'int'
     description: >
-      Clears a slot in the player's inventory. `(slot)`
+
+      - `int`: The slot.
+
+
+      Clears a slot in the player's inventory.
     example: >
       No information yet.
   Player.enchant:
@@ -892,22 +896,37 @@ docs:
   Player.getInventorySlot:
     type: namespacemethod
     args: 'int'
+    returns: int
     description: >
-      No information yet.
+
+      - `int`: The slot.
+
+
+      Returns the ID of the item in the inventory slot.
     example: >
       No information yet.
   Player.getInventorySlotCount:
     type: namespacemethod
     args: 'int'
+    returns: int
     description: >
-      No information yet.
+
+      - `int`: The slot.
+
+
+      Returns the count of the item in the inventory slot.
     example: >
       No information yet.
   Player.getInventorySlotData:
     type: namespacemethod
     args: 'int'
+    returns: int
     description: >
-      No information yet.
+
+      - `int`: The slot.
+
+
+      Returns the damage (aux) of the item in the inventory slot.
     example: >
       No information yet.
   Player.getLevel:
@@ -976,7 +995,9 @@ docs:
     args: ''
     returns: entity
     description: >
-      Returns the pointed entity.
+      Returns the entity that is under the cursor.
+
+      Might only work in split touch mode.
     example: >
       No information yet.
   Player.getPointedVecX:
