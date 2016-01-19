@@ -572,14 +572,45 @@ docs:
     type: namespacemethod
     args: 'int, int, int, int, int, int, int'
     description: >
-      No information yet.
+      
+      - `int`: X of the chest
+
+      - `int`: Y of the chest
+
+      - `int`: Z of the chest
+
+      - `int`: Slot in the chest
+
+      - `int`: ID of the new item
+
+      - `int`: Damage (aux) of the new item
+
+      - `int`: Count of the new item.
+
+
+      Sets what item is in a chest, at a certain slot.
     example: >
       No information yet.
   Level.setFurnaceSlot:
     type: namespacemethod
     args: 'int, int, int, int, int, int, int'
     description: >
-      No information yet.
+
+      - `int`: X of the furnace
+
+      - `int`: Y of the furnace
+
+      - `int`: Z of the furnace
+
+      - `int`: Slot in the furnace
+
+      - `int`: ID of the new item
+
+      - `int`: Damage (aux) of the new item
+
+      - `int`: Count of the new item.
+
+      Sets what item is in a furnace, at a certain slot.
     example: >
       No information yet.
   Level.setGameMode:
