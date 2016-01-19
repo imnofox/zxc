@@ -610,6 +610,7 @@ docs:
 
       - `int`: Count of the new item.
 
+
       Sets what item is in a furnace, at a certain slot.
     example: >
       No information yet.
