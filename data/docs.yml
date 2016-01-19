@@ -823,14 +823,22 @@ docs:
     type: namespacemethod
     args: 'int'
     description: >
-      Returns the ID of an armor item. `(slot)`
+
+      - `int`: The slot
+
+
+      Returns the ID of an armor item.
     example: >
       No information yet.
   Player.getArmorSlotDamage:
     type: namespacemethod
     args: 'int'
     description: >
-      Returns the damage of an armor item. `(slot)`
+
+      - `int`: The slot
+
+
+      Returns the damage of an armor item.
     example: >
       No information yet.
   Player.getCarriedItem:
@@ -1989,14 +1997,26 @@ docs:
     type: namespacemethod
     args: 'int, int'
     description: >
-      Sets the layer this block will render at. `(id, layer)`
+
+      - `int`: The ID of the target block
+
+      - `int`: The render layer.
+
+
+      Sets the layer this block will render at.
     example: >
       No information yet.
   Block.setRenderType:
     type: namespacemethod
     args: 'int, int'
     description: >
-      Sets the rendering type of this block. `(id, type)`
+
+      - `int`: The ID of the target block
+
+      - `int`: The render layer.
+
+
+      Sets the rendering type of this block.
     example: >
       No information yet.
   Block.setShape:
@@ -2223,79 +2243,79 @@ docs:
   ChatColor.AQUA:
     type: constant
     description: >
-      No information yet.
+      Aqua (teal) colored text.
   ChatColor.BEGIN:
     type: constant
     description: >
-      No information yet.
+      Unknown.
   ChatColor.BLACK:
     type: constant
     description: >
-      No information yet.
+      Black colored text.
   ChatColor.BLUE:
     type: constant
     description: >
-      No information yet.
+      Blue colored text.
   ChatColor.BOLD:
     type: constant
     description: >
-      No information yet.
+      Bold text.
   ChatColor.DARK_AQUA:
     type: constant
     description: >
-      No information yet.
+      Dark aqua (teal) colored text.
   ChatColor.DARK_BLUE:
     type: constant
     description: >
-      No information yet.
+      Dark blue colored text.
   ChatColor.DARK_GRAY:
     type: constant
     description: >
-      No information yet.
+      Dark gray colored text.
   ChatColor.DARK_GREEN:
     type: constant
     description: >
-      No information yet.
+      Dark green colored text.
   ChatColor.DARK_PURPLE:
     type: constant
     description: >
-      No information yet.
+      Dark purple colored text.
   ChatColor.DARK_RED:
     type: constant
     description: >
-      No information yet.
+      Dark red colored text.
   ChatColor.GOLD:
     type: constant
     description: >
-      No information yet.
+      Golden colored text.
   ChatColor.GRAY:
     type: constant
     description: >
-      No information yet.
+      Gray colored text.
   ChatColor.GREEN:
     type: constant
     description: >
-      No information yet.
+      Green colored text.
   ChatColor.LIGHT_PURPLE:
     type: constant
     description: >
-      No information yet.
+      Light purple colored text.
   ChatColor.RED:
     type: constant
     description: >
-      No information yet.
+      Red colored text.
   ChatColor.RESET:
     type: constant
     description: >
-      No information yet.
+      Resets chat formatting back to normal.
   ChatColor.WHITE:
     type: constant
     description: >
-      No information yet.
+      White colored text.
   ChatColor.YELLOW:
     type: constant
     description: >
-      No information yet.
+      Yellow colored text.
   ItemCategory.DECORATION:
     type: constant
     description: >
