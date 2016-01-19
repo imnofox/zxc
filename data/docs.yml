@@ -823,7 +823,7 @@ docs:
 
       - `int`: The enchantment.
 
-      - `int`: The level?
+      - `int`: The level of the enchantment
 
 
       Enchants an item in the player's inventory.
@@ -2989,3 +2989,103 @@ docs:
     type: constant
     description: >
       The block side facing west.
+  Enchantment.PROTECTION:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.FIRE_PROTECTION:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.FEATHER_FALLING:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.BLAST_PROTECTION:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.PROJECTILE_PROTECTION:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.THORNS:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.RESPIRATION:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.AQUA_AFFINITY:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.DEPTH_STRIDER:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.SHARPNESS:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.SMITE:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.BANE_OF_ARTHROPODS:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.KNOCKBACK:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.FIRE_ASPECT:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.LOOTING:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.EFFICIENCY:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.SILK_TOUCH:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.UNBREAKING:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.FORTUNE:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.POWER:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.PUNCH:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.FLAME:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.INFINITY:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.LUCK_OF_THE_SEA:
+    type: constant
+    description: >
+      No information yet.
+  Enchantment.LURE:
+    type: constant
+    description: >
+      No information yet.
