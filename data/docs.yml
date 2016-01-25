@@ -3015,100 +3015,109 @@ docs:
   Enchantment.PROTECTION:
     type: constant
     description: >
-      No information yet.
+      Protection.
   Enchantment.FIRE_PROTECTION:
     type: constant
     description: >
-      No information yet.
+      Fire protection. Grants additional protection against fire.
   Enchantment.FEATHER_FALLING:
     type: constant
     description: >
-      No information yet.
+      Grants additional protection against fall damage.
   Enchantment.BLAST_PROTECTION:
     type: constant
     description: >
-      No information yet.
+      Grants additional protection against explosions (like TNT).
   Enchantment.PROJECTILE_PROTECTION:
     type: constant
     description: >
-      No information yet.
+      Grants additional protection against projectiles.
   Enchantment.THORNS:
     type: constant
     description: >
-      No information yet.
+      Makes enemies take damage when they hurt you.
   Enchantment.RESPIRATION:
     type: constant
     description: >
-      No information yet.
+      Allows you to breathe underwater for a longer period of time.
   Enchantment.AQUA_AFFINITY:
     type: constant
     description: >
-      No information yet.
+      Makes you break blocks underwater faster.
   Enchantment.DEPTH_STRIDER:
     type: constant
     description: >
-      No information yet.
+      Makes you walk faster underwater.
   Enchantment.SHARPNESS:
     type: constant
     description: >
-      No information yet.
+      Makes something sharper (does more damage.)
   Enchantment.SMITE:
     type: constant
     description: >
-      No information yet.
+      Increases damage dealt to undead mobs.
+      Applies to-
+
+      - Skeletons
+
+      - Zombies
+
+      - Zombie Pigmen
+
+      - Withers and Wither Skeletons when they exist.
   Enchantment.BANE_OF_ARTHROPODS:
     type: constant
     description: >
-      No information yet.
+      Makes something more effective against spiders.
   Enchantment.KNOCKBACK:
     type: constant
     description: >
-      No information yet.
+      Makes something knock things back further when hit.
   Enchantment.FIRE_ASPECT:
     type: constant
     description: >
-      No information yet.
+      Makes something light on fire when hit.
   Enchantment.LOOTING:
     type: constant
     description: >
-      No information yet.
+      Makes something drop more loot when killed with.
   Enchantment.EFFICIENCY:
     type: constant
     description: >
-      No information yet.
+      Makes something mine faster.
   Enchantment.SILK_TOUCH:
     type: constant
     description: >
-      No information yet.
+      Makes something return it's pure form when mined. (e.g makes mining stone drop actual stone, not cobblestone.)
   Enchantment.UNBREAKING:
     type: constant
     description: >
-      No information yet.
+      Makes something more durable.
   Enchantment.FORTUNE:
     type: constant
     description: >
-      No information yet.
+      Makes ores drop more stuff when mined with.
   Enchantment.POWER:
     type: constant
     description: >
-      No information yet.
+      Makes bows do more damage.
   Enchantment.PUNCH:
     type: constant
     description: >
-      No information yet.
+      Makes bows knock mobs/entities further.
   Enchantment.FLAME:
     type: constant
     description: >
-      No information yet.
+      Makes bows light mobs/entities on fire.
   Enchantment.INFINITY:
     type: constant
     description: >
-      No information yet.
+      Makes bows consume no arrows.
   Enchantment.LUCK_OF_THE_SEA:
     type: constant
     description: >
-      No information yet.
+      Decreases odds of catching useless items while fishing.
   Enchantment.LURE:
     type: constant
     description: >
-      No information yet.
+      Increases odds of fishes to bite your hook while fishing.
