@@ -1490,6 +1490,29 @@ docs:
       Entity.removeEffect(Player.getEntity(), MobEffect.nightVision);
 
       ```
+  Entity.setExtraData:
+    type: namespacemethod
+    args: 'entity, key, value'
+    description: >
+
+      - `entity`: Target
+
+      - `key`: The key. Must be in the form of `something.something.something`
+      - `value`: A string.
+      
+
+      Stores extra data for this entity.
+  Entity.getExtraData:
+    type: namespacemethod
+    args: 'entity, key'
+    description: >
+      
+      - `entity`: Target
+
+      - `key`: The key to get the value from.
+
+
+      Returns the data stored at this entity's key.
   Entity.rideAnimal:
     type: namespacemethod
     args: 'entity, entity'
