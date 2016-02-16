@@ -80,7 +80,7 @@ $(window).load(function () {
 
         // Called when we click a namespace value.
         // Should open up in right side.
-        $('.nav-section-contents ul li').click(function () {
+        $('.nav-section-contents ul li').on('click', function () {
             var namespace = $(this).attr('data-table-table');
             var namespaceValueName = $(this).attr('data-table-table-key');
 
@@ -169,7 +169,7 @@ $(window).load(function () {
         });
     });
 
-    $('#actual-doc').hide();
+    //$('#actual-doc').hide();
 
     // Init search filter thing
     $("#search").on("keyup", function () {
@@ -195,6 +195,11 @@ $(window).load(function () {
         });
 
 
+    });
+
+    $("#home").on('click', function () {
+        $('#current-doc #actual-doc').hide();
+        $('#current-doc #intro').show();
     });
 
 

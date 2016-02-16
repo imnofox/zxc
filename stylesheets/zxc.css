@@ -10,6 +10,20 @@
     font-family: Roboto, sans-serif;
 }
 
+#intro {
+    margin-top: 15px;
+}
+
+#home {
+    margin-top: 1em;
+}
+
+#uhoh {
+    color: red;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
 #current-doc {
     max-width: 100%;
     overflow: auto;
@@ -17,8 +31,16 @@
     height: 100vh;
 }
 
+#actual-doc {
+    display: none;
+}
+
 #nav h4 {
     margin-top: 1em;
+}
+
+#nav p {
+    margin-bottom: 0;
 }
 
 ::-webkit-scrollbar {
@@ -34,20 +56,8 @@
 }
 
 #search {
-    color: #000;
-    width: 100%;
     margin-bottom: 0.9rem;
-    border: 0;
-    -moz-appearance: none;
-    padding: 0.5rem;
 }
-
-#search:active,
-#search:focus {
-    outline: 0;
-}
-
-#nav-menu {}
 
 .nav-section-contents ul {
     padding: 0 0 0 0.5em;
