@@ -1,0 +1,2289 @@
+{
+    "config": {},
+    "docs": {
+        "ModPE": {
+            "namespace": true,
+            "values": {
+                "dumpVtable": {
+                    "type": "namespacemethod",
+                    "args": "string, int",
+                    "description": "Used to dump a vtable. Can be useful for addon development.\n",
+                    "example": "No information yet.\n"
+                },
+                "getBytesFromTexturePack": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getMinecraftVersion": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "string",
+                    "description": "Returns the current MC:PE version.\n",
+                    "example": "``` \nchatMessage(getMinecraftVersion()); \n``` \nWill post the current Minecraft version to the chat.\n"
+                },
+                "langEdit": {
+                    "type": "namespacemethod",
+                    "args": "string, string",
+                    "description": "Changes a key-pair value in MC:PE's internal i18n database.\n",
+                    "example": "No information yet.\n"
+                },
+                "leaveGame": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "Leaves the game.\n",
+                    "example": "No information yet.\n"
+                },
+                "log": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "Logs a message into the logcat.\n",
+                    "example": "No information yet.\n"
+                },
+                "openInputStreamFromTexturePack": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "overrideTexture": {
+                    "type": "namespacemethod",
+                    "args": "string, string",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "readData": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "returns": "string",
+                    "description": "Reads a value mod-specific save data by key.\n",
+                    "example": "No information yet.\n"
+                },
+                "removeData": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "Removes a key-value pair from mod-specific save data.\n",
+                    "example": "No information yet.\n"
+                },
+                "resetFov": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "Resets FOV to default?\n",
+                    "example": "No information yet.\n"
+                },
+                "resetImages": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "Resets textures to their defaults.\n",
+                    "example": "No information yet.\n"
+                },
+                "saveData": {
+                    "type": "namespacemethod",
+                    "args": "string, string",
+                    "description": "Sets a value in mod-specific save data by key.\n",
+                    "example": "No information yet.\n"
+                },
+                "selectLevel": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setCamera": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "description": "Sets the entity the camera should target.\n",
+                    "example": "No information yet.\n"
+                },
+                "setFoodItem": {
+                    "type": "namespacemethod",
+                    "args": "int, string, int, int, string, int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setFov": {
+                    "type": "namespacemethod",
+                    "args": "double",
+                    "description": "Sets the FOV for the player.\n",
+                    "example": "No information yet.\n"
+                },
+                "setGameSpeed": {
+                    "type": "namespacemethod",
+                    "args": "double",
+                    "description": "Sets the amount of ticks per second.\n",
+                    "example": "No information yet.\n"
+                },
+                "setGuiBlocks": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "Sets the textures for GUI blocks. (The first argument should be a URL.)\n",
+                    "example": "No information yet.\n"
+                },
+                "setItem": {
+                    "type": "namespacemethod",
+                    "args": "int, string, int, string, int",
+                    "description": "\n- `int`: The ID of the new item. \n- `string`: The texture name of the item. \n- `int`: Texture offset. Used for textures like `texture_0`, `texture_1`... \n- `string`: The name of the item. \n- `int`: Stack size. \n\nAdds an item into the game.\n",
+                    "example": "No information yet.  \n"
+                },
+                "setItems": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "Sets the textures for items. (The first argument should be a URL.)\n",
+                    "example": "No information yet.\n"
+                },
+                "setTerrain": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "Sets the textures for the terrain. (The first argument should be a URL.)\n",
+                    "example": "No information yet.\n"
+                },
+                "showTipMessage": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "Shows a tip message (like the message shown when you tap an item.)\n",
+                    "example": "No information yet.\n"
+                },
+                "takeScreenshot": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                }
+            }
+        },
+        "Level": {
+            "namespace": true,
+            "values": {
+                "addParticle": {
+                    "type": "namespacemethod",
+                    "args": "int, double, double, double, double, double, double, int",
+                    "description": "Spawns a particle in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "biomeIdToName": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "returns": "string",
+                    "description": "Converts a biome ID into its name.\n",
+                    "example": "No information yet.\n"
+                },
+                "canSeeSky": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "returns": "bool",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n\nReturns whether a block can see the sky.\n",
+                    "example": "No information yet.\n"
+                },
+                "destroyBlock": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n\nDestroys a block as if a player mined it.\n",
+                    "example": "No information yet.\n"
+                },
+                "dropItem": {
+                    "type": "namespacemethod",
+                    "args": "double, double, double, double, int, int, int",
+                    "returns": "entity",
+                    "description": "\n- `double`: X \n- `double`: Y \n- `double`: Z \n- `double`: Range? Usually just set this to `0.0`. \n- `int`: ID of the item \n- `int`: Count of the item \n- `int`: Data (damage) of the item. \n\nSpawns a dropped item in the world. It returns the newly created entity, which can be manipulated.\n",
+                    "example": "No information yet.\n"
+                },
+                "explode": {
+                    "type": "namespacemethod",
+                    "args": "double, double, double, double",
+                    "description": "\n- `double`: X \n- `double`: Y \n- `double`: Z \n- `double`: Power \nCauses an explosion somewhere in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "getAddress": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getBiome": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "\n- `int`: X \n- `int`: Z \n\nGets the ID of a biome at a specific location in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "getBiomeName": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "\n- `int`: X \n- `int`: Z \n\nGets the name of a biome at a specific location in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "getBrightness": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "returns": "int?/double?",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n\nReturns the light level at a position in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "getChestSlot": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n- `int`: Slot \n\nReturns the ID of an item in a chest.\n",
+                    "example": "No information yet.\n"
+                },
+                "getChestSlotCount": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n- `int`: Slot \n\nReturns the count of an item in a chest.\n",
+                    "example": "No information yet.\n"
+                },
+                "getChestSlotData": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n- `int`: Slot in chest \n\nReturns the damage of an item in a chest.\n",
+                    "example": "No information yet.\n"
+                },
+                "getData": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n\nReturns the data of an block in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "getFurnaceSlot": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n- `int`: Slot \n\nReturns the ID of an item in a furnace.\n",
+                    "example": "No information yet.\n"
+                },
+                "getFurnaceSlotCount": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n- `int`: Slot \n\nReturns the count of an item in a furnace.\n",
+                    "example": "No information yet.\n"
+                },
+                "getFurnaceSlotData": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n- `int`: Slot \n\nReturns the data of an item in a furnace.\n",
+                    "example": "No information yet.\n"
+                },
+                "getGameMode": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "int",
+                    "description": "Returns the gamemode the player is currently in.\n",
+                    "example": "No information yet.\n"
+                },
+                "getGrassColor": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "returns": "int",
+                    "description": "\n- `int`: X \n- `int`: Z \n\nReturns the color of grass.\n",
+                    "example": "No information yet.\n"
+                },
+                "getLightningLevel": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getRainLevel": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getSignText": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int",
+                    "description": "\n- `int`: X pos \n- `int`: Y pos \n- `int`: Z pos \n- `int`: Line (0, 1, 2, or 3.) \n\nReturns a line of text from a sign.\n",
+                    "example": "No information yet.\n"
+                },
+                "getSpawnerEntityType": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n\nReturns the entity ID of a spawner.\n",
+                    "example": "No information yet.\n"
+                },
+                "getTile": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "returns": "int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n\nReturns the ID of a block in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "getTime": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "int",
+                    "description": "Returns the amount of ticks passed in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "getWorldDir": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getWorldName": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "playSound": {
+                    "type": "namespacemethod",
+                    "args": "double, double, double, string, double, double",
+                    "description": "\n- `double`: X pos \n- `double`: Y pos \n- `double`: Z pos \n- `string`: Sound name, **NOT FILE**. e.g `random.click` \n- `double`: ??? \n- `double`: ??? \n\nPlays a sound somewhere in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "playSoundEnt": {
+                    "type": "namespacemethod",
+                    "args": "Object, string, double, double",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setChestSlot": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int, int, int, int",
+                    "description": "\n- `int`: X of the chest \n- `int`: Y of the chest \n- `int`: Z of the chest \n- `int`: Slot in the chest \n- `int`: ID of the new item \n- `int`: Damage (aux) of the new item \n- `int`: Count of the new item. \n\nSets what item is in a chest, at a certain slot.\n",
+                    "example": "No information yet.\n"
+                },
+                "setFurnaceSlot": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int, int, int, int",
+                    "description": "\n- `int`: X of the furnace \n- `int`: Y of the furnace \n- `int`: Z of the furnace \n- `int`: Slot in the furnace \n- `int`: ID of the new item \n- `int`: Damage (aux) of the new item \n- `int`: Count of the new item. \n\nSets what item is in a furnace, at a certain slot.\n",
+                    "example": "No information yet.\n"
+                },
+                "setGameMode": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "Sets the gamemode the player is in.\n",
+                    "example": "No information yet.\n"
+                },
+                "setGrassColor": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Color (`0xAABBCCDD` color) \n\nSets the grass color of a column in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "setLightningLevel": {
+                    "type": "namespacemethod",
+                    "args": "double",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setNightMode": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "Unknown.\n",
+                    "example": "No information yet.\n"
+                },
+                "setRainLevel": {
+                    "type": "namespacemethod",
+                    "args": "double",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setSignText": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int, string",
+                    "description": "\n- `int`: X pos \n- `int`: Y pos \n- `int`: Z pos \n- `int`: Line (0, 1, 2, or 3) \n- `string`: Text \n\nSets a line of text in a sign.\n",
+                    "example": "No information yet.\n"
+                },
+                "setSpawn": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n\nSets the spawn position of the current world.\n",
+                    "example": "No information yet.\n"
+                },
+                "setSpawnerEntityType": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n- `int`: Entity type ID \n\nSets the entity ID of an entity that an entity spawner will spawn.\n",
+                    "example": "No information yet.\n"
+                },
+                "setTile": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, int, int",
+                    "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n- `int`: Block ID \n- `int`: Block data \n\nSets the ID and damage of a block in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "setTime": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "Sets the amount of ticks that has passed in the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "spawnChicken": {
+                    "type": "namespacemethod",
+                    "args": "double, double, double, string",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "spawnCow": {
+                    "type": "namespacemethod",
+                    "args": "double, double, double, string",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "spawnMob": {
+                    "type": "namespacemethod",
+                    "args": "double, double, double, int, string",
+                    "description": "Creates an entity. \n- `double`: X \n- `double`: Y \n- `double`: Z \n- `int`: Entity type ID \n- `string`: Skin (PNG file)\n",
+                    "example": "No information yet.\n"
+                }
+            }
+        },
+        "Player": {
+            "namespace": true,
+            "values": {
+                "addExp": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "Adds the amount of EXP the player has.\n",
+                    "example": "No information yet.\n"
+                },
+                "addItemCreativeInv": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "description": "- `int`: ID \n- `int`: Count (usually 1) \n- `int`: Data (damage) \n\nAdds an item into the creative inventory. If you want to set which creative tab (category) it belongs in, use `Item.setCategory`.\n",
+                    "example": "No information yet.\n"
+                },
+                "addItemInventory": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "description": "Adds an item into the player's inventory. `(id, count, damage)`\n",
+                    "example": "No information yet.\n"
+                },
+                "canFly": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "bool",
+                    "description": "Returns whether the player can fly.\n",
+                    "example": "No information yet.\n"
+                },
+                "clearInventorySlot": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "\n- `int`: The slot. \n\nClears a slot in the player's inventory.\n",
+                    "example": "No information yet.\n"
+                },
+                "enchant": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "description": "\n- `int`: The slot ID of the item in the player's inventory. \n- `int`: The enchantment. \n- `int`: The level of the enchantment \n\nEnchants an item in the player's inventory.\n",
+                    "example": "No information yet.\n"
+                },
+                "getEnchantments": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "returns": "Object[]",
+                    "description": "\n- `int`: The slot ID of the item. \n\nReturns the enchantments. It is an array that has the following structure- \n``` \nvar x = Player.getEnchantments(...); \nx.type // id of the enchant \nx.level // level of the enchant \n```\n",
+                    "example": "No information yet.\n"
+                },
+                "getArmorSlot": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "\n- `int`: The slot \n\nReturns the ID of an armor item.\n",
+                    "example": "No information yet.\n"
+                },
+                "getArmorSlotDamage": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "\n- `int`: The slot \n\nReturns the damage of an armor item.\n",
+                    "example": "No information yet.\n"
+                },
+                "getCarriedItem": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "int",
+                    "description": "Returns the ID of the item the player is carrying.\n",
+                    "example": "No information yet.\n"
+                },
+                "getCarriedItemCount": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "Returns the count of the item the player is carrying.\n",
+                    "example": "No information yet.\n"
+                },
+                "getCarriedItemData": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "Returns the damage of the item the player is carrying.\n",
+                    "example": "No information yet.\n"
+                },
+                "getDimension": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "int",
+                    "description": "Returns the dimension ID the player is in.\n",
+                    "example": "No information yet.\n"
+                },
+                "getEntity": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "entity",
+                    "description": "Returns the player as an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getExhaustion": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getExp": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "double",
+                    "description": "Returns the amount of EXP the player has.\n",
+                    "example": "No information yet.\n"
+                },
+                "getHunger": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getInventorySlot": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "returns": "int",
+                    "description": "\n- `int`: The slot. \n\nReturns the ID of the item in the inventory slot.\n",
+                    "example": "No information yet.\n"
+                },
+                "getInventorySlotCount": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "returns": "int",
+                    "description": "\n- `int`: The slot. \n\nReturns the count of the item in the inventory slot.\n",
+                    "example": "No information yet.\n"
+                },
+                "getInventorySlotData": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "returns": "int",
+                    "description": "\n- `int`: The slot. \n\nReturns the damage (aux) of the item in the inventory slot.\n",
+                    "example": "No information yet.\n"
+                },
+                "getLevel": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getName": {
+                    "type": "namespacemethod",
+                    "args": "Object",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPointedBlockData": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "int",
+                    "description": "Returns the data (damage) of the block you are pointing at.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPointedBlockId": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "int",
+                    "description": "Returns the ID of the block you are pointing at.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPointedBlockSide": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPointedBlockX": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "int",
+                    "description": "Returns the pointed block's X position.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPointedBlockY": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "int",
+                    "description": "Returns the pointed block's Y position.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPointedBlockZ": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "retunrs": "int",
+                    "description": "Returns the pointed block's Z position.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPointedEntity": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "entity",
+                    "description": "Returns the entity that is under the cursor. \nMight only work in split touch mode.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPointedVecX": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPointedVecY": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPointedVecZ": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getSaturation": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getSelectedSlotId": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "int",
+                    "description": "Returns the slot ID the player currently has selected.\n",
+                    "example": "No information yet.\n"
+                },
+                "getX": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "double",
+                    "description": "Returns the X coordinate of the player.\n",
+                    "example": "No information yet.\n"
+                },
+                "getY": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "double",
+                    "description": "Returns the Y coordinate of the player.\n",
+                    "example": "No information yet.\n"
+                },
+                "getZ": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "double",
+                    "description": "Returns the Z coordinate of the player.\n",
+                    "example": "No information yet.\n"
+                },
+                "isFlying": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "isPlayer": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "bool",
+                    "description": "Returns whether an entity is a player.\n",
+                    "example": "No information yet.\n"
+                },
+                "setItemCustomName": {
+                    "type": "namespacemethod",
+                    "args": "int, string",
+                    "description": "\n- `int`: The slot id of the target item. \n- `string`: The new name. \n\nSets the custom name of an item.\n",
+                    "example": "No information yet.\n"
+                },
+                "getItemCustomName": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "returns": "string",
+                    "description": "\n- `int`: The slot id of the item. \n\nReturns the custom name of an item.\n",
+                    "example": "No information yet.\n"
+                },
+                "setArmorSlot": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "description": "\n- `int`: Slot number \n- `int`: ID of the piece \n- `int`: Damage (data) of the piece. \n\nSets the player's armor slot.\n",
+                    "example": "No information yet.\n"
+                },
+                "setCanFly": {
+                    "type": "namespacemethod",
+                    "args": "boolean",
+                    "description": "Sets whether the player can fly.\n",
+                    "example": "No information yet.\n"
+                },
+                "setExhaustion": {
+                    "type": "namespacemethod",
+                    "args": "double",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setExp": {
+                    "type": "namespacemethod",
+                    "args": "double",
+                    "description": "Sets the player's EXP.\n",
+                    "example": "No information yet.\n"
+                },
+                "setFlying": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setHealth": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "Sets the player's health, in half-hearts. (1 heart = 2)\n",
+                    "example": "No information yet.\n"
+                },
+                "setHunger": {
+                    "type": "namespacemethod",
+                    "args": "double",
+                    "description": "Sets the player's hunger \n",
+                    "example": "No information yet.\n"
+                },
+                "setLevel": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "Sets the player's XP \n",
+                    "example": "No information yet.\n"
+                },
+                "setSaturation": {
+                    "type": "namespacemethod",
+                    "args": "double",
+                    "description": "Sets the player's saturation  The player's hunger will not decrease unless their saturation level is zero.\n",
+                    "example": "No information yet.\n"
+                },
+                "setSelectedSlotId": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                }
+            }
+        },
+        "Entity": {
+            "namespace": true,
+            "values": {
+                "addEffect": {
+                    "type": "namespacemethod",
+                    "args": "entity, int, int, int",
+                    "description": "\n- `entity`: Target \n- `int`: The effect. Use `MobEffect`. \n- `int`: Duration, in ticks. \n- `int`: ??? \n\nGives an entity a potion effect.\n",
+                    "example": "No information yet.\n"
+                },
+                "getAll": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "returns": "entity[]",
+                    "description": "Returns all of the entities in an array.\n",
+                    "example": "No information yet.\n"
+                },
+                "getAnimalAge": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "description": "Returns the age of an animal.\n",
+                    "example": "No information yet.\n"
+                },
+                "getArmor": {
+                    "type": "namespacemethod",
+                    "args": "entity?, int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getArmorDamage": {
+                    "type": "namespacemethod",
+                    "args": "entity?, int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getEntityTypeId": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "int",
+                    "description": "Returns the entity ID of an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getHealth": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "int",
+                    "description": "Returns the health of an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getItemEntityCount": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "int",
+                    "description": "Returns the count of the item in an item entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getItemEntityData": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "int",
+                    "description": "Returns the data (damage) of the item in an item entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getItemEntityId": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "int",
+                    "description": "Returns the ID of the item in an item entity.\n",
+                    "example": "``` \nclientMessage(Entity.getItemEntityId(my_item_entity)); \n```\n"
+                },
+                "getMaxHealth": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "int",
+                    "description": "Returns the maximum health for an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getMobSkin": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "string",
+                    "description": "Returns the skin file of an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getNameTag": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "string",
+                    "description": "Returns the name tag of an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPitch": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "double",
+                    "description": "Returns the pitch (rotation-wise) of this entity.\n",
+                    "example": "\nThis example prints the player's yaw when they tap a block. \n``` \nfunction useItem() {\n  clientMessage(Entity.getPitch(Player.getEntity()));\n} \n```\n"
+                },
+                "getRenderType": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "int",
+                    "description": "Returns the render type this entity has.\n",
+                    "example": "No information yet.\n"
+                },
+                "getRider": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "entity",
+                    "description": "Gets the entity that is riding this one.\n",
+                    "example": "No information yet.\n"
+                },
+                "getRiding": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "entity",
+                    "description": "Gets the entity that is being ridden by this one.\n",
+                    "example": "No information yet.\n"
+                },
+                "getUniqueId": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "string",
+                    "description": "Returns the UUID of this entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getVelX": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "double",
+                    "description": "Returns the velocity of this entity in the X coordinate.\n",
+                    "example": "No information yet.\n"
+                },
+                "getVelY": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "double",
+                    "description": "Returns the velocity of this entity in the Y coordinate.\n",
+                    "example": "No information yet.\n"
+                },
+                "getVelZ": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "double",
+                    "description": "Returns the velocity of this entity in the Z coordinate.\n",
+                    "example": "No information yet.\n"
+                },
+                "getX": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "double",
+                    "description": "Returns the X coordinate of this entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getY": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "double",
+                    "description": "Returns the Y coordinate of this entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "getYaw": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "double",
+                    "description": "Returns the yaw (rotation-wise) of this entity.\n",
+                    "example": "\nThis example prints the player's yaw when they tap a block. \n``` \nfunction useItem() {\n  clientMessage(Entity.getYaw(Player.getEntity()));\n} \n```\n"
+                },
+                "getZ": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "double",
+                    "description": "Returns the Z coordinate of this entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "isSneaking": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "returns": "bool",
+                    "description": "Returns whether this entity is sneaking.\n",
+                    "example": "No information yet.\n"
+                },
+                "remove": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "description": "Instantly removes this entity from the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "removeAllEffects": {
+                    "type": "namespacemethod",
+                    "args": "entity",
+                    "description": "Removes all effects from an entity.\n",
+                    "example": "``` \nEntity.removeAllEffects(Player.getEntity()); \n```\n"
+                },
+                "removeEffect": {
+                    "type": "namespacemethod",
+                    "args": "entity, int",
+                    "description": "\n- `entity`: Target \n- `int`: ID of the effect. Use `MobEffect`. \n\nRemoves a specific potion effect from an entity.\n",
+                    "example": "``` \nEntity.removeEffect(Player.getEntity(), MobEffect.nightVision); \n```\n"
+                },
+                "setExtraData": {
+                    "type": "namespacemethod",
+                    "args": "entity, key, value",
+                    "description": "\n- `entity`: Target \n- `key`: The key. Must be in the form of `something.something.something` - `value`: A string. \n\nStores extra data for this entity.\n"
+                },
+                "getExtraData": {
+                    "type": "namespacemethod",
+                    "args": "entity, key",
+                    "description": "\n- `entity`: Target \n- `key`: The key to get the value from. \n\nReturns the data stored at this entity's key.\n"
+                },
+                "rideAnimal": {
+                    "type": "namespacemethod",
+                    "args": "entity, entity",
+                    "description": "Makes an entity ride another.\n",
+                    "example": "No information yet.\n"
+                },
+                "setAnimalAge": {
+                    "type": "namespacemethod",
+                    "args": "entity?, int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setArmor": {
+                    "type": "namespacemethod",
+                    "args": "entity?, int, int, int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setCape": {
+                    "type": "namespacemethod",
+                    "args": "entity?, string",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setCarriedItem": {
+                    "type": "namespacemethod",
+                    "args": "entity?, int, int, int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setCollisionSize": {
+                    "type": "namespacemethod",
+                    "args": "entity?, double, double",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setFireTicks": {
+                    "type": "namespacemethod",
+                    "args": "entity, int",
+                    "description": "Sets how long an entity is on fire, using ticks. (20 = 1 second)\n",
+                    "example": "No information yet.\n"
+                },
+                "setHealth": {
+                    "type": "namespacemethod",
+                    "args": "entity, int",
+                    "description": "Sets the health of an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "setMaxHealth": {
+                    "type": "namespacemethod",
+                    "args": "entity, int",
+                    "description": "Sets the maximum health of an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "setMobSkin": {
+                    "type": "namespacemethod",
+                    "args": "entity?, string",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setNameTag": {
+                    "type": "namespacemethod",
+                    "args": "entity, string",
+                    "description": "Sets the name tag of an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "setPosition": {
+                    "type": "namespacemethod",
+                    "args": "entity, double, double, double",
+                    "description": "\n- `entity`: Target \n- `double`: X \n- `double`: Y \n- `double`: Z \n\nSets the position of an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "setPositionRelative": {
+                    "type": "namespacemethod",
+                    "args": "entity?, double, double, double",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setRenderType": {
+                    "type": "namespacemethod",
+                    "args": "entity, int",
+                    "description": "Sets the render type ID of an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "setRot": {
+                    "type": "namespacemethod",
+                    "args": "entity?, double, double",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setSneaking": {
+                    "type": "namespacemethod",
+                    "args": "entity, boolean",
+                    "description": "Sets whether an entity is sneaking (crouching).\n",
+                    "example": "No information yet.\n"
+                },
+                "setVelX": {
+                    "type": "namespacemethod",
+                    "args": "entity, double",
+                    "description": "Sets an entity's velocity in the X axis.\n",
+                    "example": "No information yet.\n"
+                },
+                "setVelY": {
+                    "type": "namespacemethod",
+                    "args": "entity, double",
+                    "description": "Sets an entity's velocity in the Y axis.\n",
+                    "example": "No information yet.\n"
+                },
+                "setVelZ": {
+                    "type": "namespacemethod",
+                    "args": "entity, double",
+                    "description": "Sets an entity's velocity in the Z axis.\n",
+                    "example": "No information yet.\n"
+                },
+                "spawnMob": {
+                    "type": "namespacemethod",
+                    "args": "double, double, double, int, string",
+                    "description": "\n- `double`: X \n- `double`: Y \n- `double`: Z \n- `int`: Entity type ID \n- `string`: Skin PNG \n\nSpawns an entity.\n",
+                    "example": "No information yet.\n"
+                }
+
+            }
+        },
+        "Item": {
+            "namespace": true,
+            "values": {
+                "addCraftRecipe": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, Scriptable",
+                    "description": "Creates an unshaped crafting recipe. \n- `int`: ID of the item you'll get from the recipe. \n- `int`: How much of that item. \n- `int`: The damage/data of that item. \n- `Scriptable`: Ingredients. \n\n\nIngredients should have a continuous 1D array like this: \n``` \n// Pattern: [id, count, damage, id, count, damage, ...] Item.addCraftRecipe(256, 1, 0, [1, 1, 0, 2, 1, 0]); \n``` \nThe above code creates a shovel from 1 stone block and 1 grass block.\n",
+                    "example": "No information yet.\n"
+                },
+                "addFurnaceRecipe": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int",
+                    "description": "Creates a simple furnace recipe. \n- `int`: Input ID \n- `int`: Output ID \n- `int`: Output damage\n",
+                    "example": "No information yet.\n"
+                },
+                "addShapedRecipe": {
+                    "type": "namespacemethod",
+                    "args": "int, int, int, Scriptable, Scriptable",
+                    "description": "Adds a shaped crafting recipe. Use this function if you want your recipe to be in a specific shape. \n- `int`: Result item ID \n- `int`: Result item count \n- `int`: Result item damage \n- `Scriptable`: Shape matrix \n- `Scriptable`: Letter defines.\n",
+                    "example": "This makes you receive 64 stone from a crafting recipe of grass blocks shaped in a diamond. \n``` \n// 1, 64 = Stack of stone. \nItem.addShapedRecipe(1, 64, 0, [\n  \" x \", // Top row.\n  \"x x\", // Middle row.\n  \" x \" // Bottom row.\n], [\"x\", 2, 0]); // This makes \"x\" mean grass (2) with damage of (0). \n``` \nHere is an example of what it looks like in game: \n\n![picture of crafting recipe](images/craftingrecipe.png) \n\n\nThis makes you receive 64 stone from a crafting recipe of grass blocks shaped in a diamond, with a bedrock block in the center. \n``` \n// 1, 64 = Stack of stone. \nItem.addShapedRecipe(1, 64, 0, [\n  \" x \", // Top row.\n  \"xbx\", // Middle row.\n  \" x \" // Bottom row.\n], [\"x\", 2, 0, \"b\", 7, 0]); // This makes \"x\" mean grass (2) with damage of (0). \n// Also makes \"b\" mean bedrock (7) with damage of (0). \n```\n"
+                },
+                "defineArmor": {
+                    "type": "namespacemethod",
+                    "args": "int, string, int, string, string, int, int, int",
+                    "description": "\n- `int`: ID of the new armor piece. \n- `string`: ??? \n- `int`: ??? \n- `string`: Name of the item. \n- `string`: Texture for the item? \n- `int`: ??? \n- `int`: ??? \n- `int`: Type. Use `ArmorType`. \n\nDefines a new piece of armor.\n",
+                    "example": "No information yet.\n"
+                },
+                "getName": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "isValidItem": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "\n- `int`: ID \n\nReturns whether this item is valid.\n",
+                    "example": "No information yet.\n"
+                },
+                "setCategory": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "\n- `int`: ID of the item. \n- `int`: Category for the item. Use `ItemCategory`. \n\nSets the creative tab this item should belong in. \nNote that it doesn't show unless you use `Player.addItemCreativeInv`.\n",
+                    "example": "No information yet.\n"
+                },
+                "setHandEquipped": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setMaxDamage": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "\n- `int`: ID of the item \n- `int`: Maximum damage \n\nSets the maximum amount of damage this item has?\n",
+                    "example": "No information yet.\n"
+                },
+                "setProperties": {
+                    "type": "namespacemethod",
+                    "args": "int, Object",
+                    "description": "\n- `int`: ID of the item \n- `Object`: Properties \n\nSets an item's properties, like in `items.json`.\n",
+                    "example": "This makes an item edible. \n``` \nvar EXAMPLE_NUTRITION = 4; \nItem.setProperties(YOUR_OWN_ID_HERE, {\n    \"use_animation\": \"eat\",\n    \"use_duration\": 32,\n\n    \"food\": {\n      \"nutrition\": EXAMPLE_NUTRITION,\n      \"saturation_modifier\": \"low\",\n      \"is_meat\": false\n    }\n}); \n```\n"
+                }
+            }
+        },
+        "Block": {
+            "namespace": true,
+            "values": {
+                "defineLiquidBlock": {
+                    "type": "namespacemethod",
+                    "args": "int, string, Object, int",
+                    "description": "\n- `int`: The block ID. `id + 1` will be used for the still version. \n- `string`: The name of the block. \n- `Object`: The textures of the block? Example: `[[\"stone\", 0], [\"sand\", 0]]` \n- `int`: The source material. Example: `10` for Lava. \n\nDefines a new liquid block.\n",
+                    "example": "Example from zhuowei. \n``` \nvar liquidId = 191; var liquidIdStill = Block.defineLiquidBlock(liquidId /* 192 will also be used for still version */,\n  \"Mudslide\", [[\"stone\", 0], [\"sand\", 0]],\n  10 /* material: lava */); \n\n```\n"
+                },
+                "defineBlock": {
+                    "type": "namespacemethod",
+                    "args": "int, string, Object, int, bool, int",
+                    "description": "Defines a new block. These are the parameters in order: \n- `int`: The block ID. \n- `string`: The name of the block. \n- `Object`: The name of a texture, or a texture matrix. \n\n**Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/) \nExample of a texture matrix: \n``` \n[[\"bottom texture\", subID], [\"top texture\", subID], [\"south texture\", subID], [\"north texture\", subID], [\"west texture\", subID], [\"east texture name\", subID]] \n``` \n- `int`: Use a block's material for this one. \n- `opaque`: ??? \n- `renderType`: Sets the render type this block will use.\n",
+                    "example": "No information yet.\n"
+                },
+                "getAllBlockIds": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getDestroyTime": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getFriction": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getRenderType": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setColor": {
+                    "type": "namespacemethod",
+                    "args": "int, Scriptable",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "setDestroyTime": {
+                    "type": "namespacemethod",
+                    "args": "int, double",
+                    "description": "\n- `int`: ID \n- `double`: Time \n\nSets how long to destroy a block. A shorter time means lesser time required.\n",
+                    "example": "No information yet.\n"
+                },
+                "setExplosionResistance": {
+                    "type": "namespacemethod",
+                    "args": "int, double",
+                    "description": "\n- `int`: ID \n- `double`: Resistance \n\nSets the explosion resistance of a single block.\n",
+                    "example": "No information yet.\n"
+                },
+                "setFriction": {
+                    "type": "namespacemethod",
+                    "args": "int, double",
+                    "description": "\n- `int`: ID \n- `double`: Friction \n\nSets the friction of a block.\n",
+                    "example": "No information yet.\n"
+                },
+                "setLightLevel": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "Sets how much light this block will give off.\n",
+                    "example": "No information yet.\n"
+                },
+                "setLightOpacity": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "\n- `int`: ID \n- `double`: Light opacity \n\nSets the light opacity of a block. You can use it for letting light through. \nYou may have to use `Block.setRenderLayer(YOUR_ID_HERE, 4);`, which sets a block's render layer to 4 (plants), in order for the light to pass through.\n",
+                    "example": "No information yet.\n"
+                },
+                "setRedstoneConsumer": {
+                    "type": "namespacemethod",
+                    "args": "int",
+                    "description": "\n- `int`: ID \n\nAllows a block to accept redstone input.\n",
+                    "example": "No information yet.\n"
+                },
+                "setRenderLayer": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "\n- `int`: The ID of the target block \n- `int`: The render layer. \n\nSets the layer this block will render at.\n",
+                    "example": "No information yet.\n"
+                },
+                "setRenderType": {
+                    "type": "namespacemethod",
+                    "args": "int, int",
+                    "description": "\n- `int`: The ID of the target block \n- `int`: The render layer. \n\nSets the rendering type of this block.\n",
+                    "example": "No information yet.\n"
+                },
+                "setShape": {
+                    "type": "namespacemethod",
+                    "args": "int, double, double, double, double, double, double, int",
+                    "description": "Sets a block's boundaries. \n- `int`: The ID. \n- `double`: X min \n- `double`: Y min \n- `double`: Z min \n- `double`: X max \n- `double`: Y max \n- `double`: Z max \n- `int`: Data (damage) value\n",
+                    "example": "No information yet.\n"
+                }
+            }
+        },
+        "Server": {
+            "namespace": true,
+            "values": {
+                "getAddress": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getAllPlayerNames": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getAllPlayers": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "getPort": {
+                    "type": "namespacemethod",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "joinServer": {
+                    "type": "namespacemethod",
+                    "args": "string, int",
+                    "description": "\n- `string`: IP \n- `int`: Port (default = `19132`) \n\nJoins a server.\n",
+                    "example": "No information yet.\n"
+                },
+                "sendChat": {
+                    "type": "namespacemethod",
+                    "args": "string",
+                    "description": "Sends a message via chat.\n",
+                    "example": "No information yet.\n"
+                }
+            }
+        },
+        "Hooks": {
+            "namespace": false,
+            "values": {
+                "attackHook": {
+                    "type": "hook",
+                    "args": "attacker, victim",
+                    "description": "Called when an entity hits (attacks) another entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "chatHook": {
+                    "type": "hook",
+                    "args": "str",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "destroyBlock": {
+                    "type": "hook",
+                    "args": "x, y, z, side",
+                    "description": "Called when a block has been destroyed.\n",
+                    "example": "No information yet.\n"
+                },
+                "projectileHitEntityHook": {
+                    "type": "hook",
+                    "args": "projectile, targetEntity",
+                    "description": "Called when a projectile hits an entity.\n",
+                    "example": "No information yet.\n"
+                },
+                "eatHook": {
+                    "type": "hook",
+                    "args": "hearts, saturationRatio",
+                    "description": "Called when the player eats something.\n",
+                    "example": "No information yet.\n"
+                },
+                "entityAddedHook": {
+                    "type": "hook",
+                    "args": "entity",
+                    "description": "Called when an entity has been added into the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "entityRemovedHook": {
+                    "type": "hook",
+                    "args": "entity",
+                    "description": "Called when an entity has been removed from the world.\n",
+                    "example": "No information yet.\n"
+                },
+                "explodeHook": {
+                    "type": "hook",
+                    "args": "entity, x, y, z, power, onFire",
+                    "description": "Called when an explosion happens.\n",
+                    "example": "No information yet.\n"
+                },
+                "serverMessageReceiveHook": {
+                    "type": "hook",
+                    "args": "str",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "chatReceiveHook": {
+                    "type": "hook",
+                    "args": "str, sender",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "leaveGame": {
+                    "type": "hook",
+                    "args": "",
+                    "description": "Called when the game is exiting from a \n",
+                    "example": "No information yet.\n"
+                },
+                "deathHook": {
+                    "type": "hook",
+                    "args": "attacker, victim",
+                    "description": "Called when an entity dies.\n",
+                    "example": "No information yet.\n"
+                },
+                "redstoneUpdateHook": {
+                    "type": "hook",
+                    "args": "x, y, z, newCurrent, worldLoading, blockId, blockData",
+                    "description": "\n- `x`: int, X coordinate \n- `y`: int, Y coordinate \n- `z`: int, Z coordinate \n- `newCurrent`: ???, ??? \n- `worldLoading`: bool, Did this take place on world load? \n- `blockId`: int, Block ID \n- `blockData`: int, Block Data \n\nCalled when a redstone event occurs?\n",
+                    "example": "No information yet.\n"
+                },
+                "selectLevelHook": {
+                    "type": "hook",
+                    "args": "",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "newLevel": {
+                    "type": "hook",
+                    "args": "",
+                    "description": "Called when the game starts loading into a \n",
+                    "example": "No information yet.\n"
+                },
+                "startDestroyBlock": {
+                    "type": "hook",
+                    "args": "x, y, z, side",
+                    "description": "No information yet.\n",
+                    "example": "No information yet.\n"
+                },
+                "projectileHitBlockHook": {
+                    "type": "hook",
+                    "args": "projectile, blockX, blockY, blockZ, side",
+                    "description": "Called when a projectile hits a block.\n",
+                    "example": "No information yet.\n"
+                },
+                "modTick": {
+                    "type": "hook",
+                    "args": "",
+                    "description": "Called every tick (usually 20 times per second). This can be used to create timers.\n",
+                    "example": "No information yet.\n"
+                },
+                "useItem": {
+                    "type": "hook",
+                    "args": "x, y, z, itemid, blockid, side, itemDamage, blockDamage",
+                    "description": "Called when the player taps on a block.\n",
+                    "example": "No information yet.\n"
+                }
+            }
+        },
+        "ChatColor": {
+            "namespace": true,
+            "values": {
+                "AQUA": {
+                    "type": "constant",
+                    "description": "Aqua (teal) colored text.\n"
+                },
+                "BEGIN": {
+                    "type": "constant",
+                    "description": "Unknown.\n"
+                },
+                "BLACK": {
+                    "type": "constant",
+                    "description": "Black colored text.\n"
+                },
+                "BLUE": {
+                    "type": "constant",
+                    "description": "Blue colored text.\n"
+                },
+                "BOLD": {
+                    "type": "constant",
+                    "description": "Bold text.\n"
+                },
+                "DARK_AQUA": {
+                    "type": "constant",
+                    "description": "Dark aqua (teal) colored text.\n"
+                },
+                "DARK_BLUE": {
+                    "type": "constant",
+                    "description": "Dark blue colored text.\n"
+                },
+                "DARK_GRAY": {
+                    "type": "constant",
+                    "description": "Dark gray colored text.\n"
+                },
+                "DARK_GREEN": {
+                    "type": "constant",
+                    "description": "Dark green colored text.\n"
+                },
+                "DARK_PURPLE": {
+                    "type": "constant",
+                    "description": "Dark purple colored text.\n"
+                },
+                "DARK_RED": {
+                    "type": "constant",
+                    "description": "Dark red colored text.\n"
+                },
+                "GOLD": {
+                    "type": "constant",
+                    "description": "Golden colored text.\n"
+                },
+                "GRAY": {
+                    "type": "constant",
+                    "description": "Gray colored text.\n"
+                },
+                "GREEN": {
+                    "type": "constant",
+                    "description": "Green colored text.\n"
+                },
+                "LIGHT_PURPLE": {
+                    "type": "constant",
+                    "description": "Light purple colored text.\n"
+                },
+                "RED": {
+                    "type": "constant",
+                    "description": "Red colored text.\n"
+                },
+                "RESET": {
+                    "type": "constant",
+                    "description": "Resets chat formatting back to normal.\n"
+                },
+                "WHITE": {
+                    "type": "constant",
+                    "description": "White colored text.\n"
+                },
+                "YELLOW": {
+                    "type": "constant",
+                    "description": "Yellow colored text.\n"
+                }
+            }
+        },
+        "ItemCategory": {
+            "namespace": true,
+            "values": {
+                "DECORATION": {
+                    "type": "constant",
+                    "description": "Decorations category.\n"
+                },
+                "FOOD": {
+                    "type": "constant",
+                    "description": "Foodstuffs category.\n"
+                },
+                "INTERNAL": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "MATERIAL": {
+                    "type": "constant",
+                    "description": "Materials (general blocks?) actegory\n"
+                },
+                "TOOL": {
+                    "type": "constant",
+                    "description": "Tools category.\n"
+                }
+            }
+        },
+        "ParticleType": {
+            "namespace": true,
+            "values": {
+                "angryVillager": {
+                    "type": "constant",
+                    "description": "Angry villager icons.\n"
+                },
+                "bubble": {
+                    "type": "constant",
+                    "description": "Bubbles!\n"
+                },
+                "cloud": {
+                    "type": "constant",
+                    "description": "Unknown.\n"
+                },
+                "crit": {
+                    "type": "constant",
+                    "description": "Particles created by a critical hit.\n"
+                },
+                "dripLava": {
+                    "type": "constant",
+                    "description": "Dripping lava.\n"
+                },
+                "dripWater": {
+                    "type": "constant",
+                    "description": "Dripping water.\n"
+                },
+                "enchantmenttable": {
+                    "type": "constant",
+                    "description": "Enchantment table particles.\n"
+                },
+                "fallingDust": {
+                    "type": "constant",
+                    "description": "Falling dust, probably created by unstable sand.\n"
+                },
+                "flame": {
+                    "type": "constant",
+                    "description": "Flames.\n"
+                },
+                "happyVillager": {
+                    "type": "constant",
+                    "description": "Happy villager icons.\n"
+                },
+                "heart": {
+                    "type": "constant",
+                    "description": "Hearts, usually created by animals.\n"
+                },
+                "hugeexplosion": {
+                    "type": "constant",
+                    "description": "A huge explosion.\n"
+                },
+                "hugeexplosionSeed": {
+                    "type": "constant",
+                    "description": "Unknown.\n"
+                },
+                "ink": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "itemBreak": {
+                    "type": "constant",
+                    "description": "Particles of an item breaking.\n"
+                },
+                "largeexplode": {
+                    "type": "constant",
+                    "description": "A large explosion.\n"
+                },
+                "lava": {
+                    "type": "constant",
+                    "description": "Particles created by lava.\n"
+                },
+                "mobFlame": {
+                    "type": "constant",
+                    "description": "Unknown.\n"
+                },
+                "note": {
+                    "type": "constant",
+                    "description": "Particles emitted by a note block.\n"
+                },
+                "portal": {
+                    "type": "constant",
+                    "description": "Particles emitted by portals.\n"
+                },
+                "rainSplash": {
+                    "type": "constant",
+                    "description": "Particles emitted by rain when it hits the ground.\n"
+                },
+                "redstone": {
+                    "type": "constant",
+                    "description": "Particles emitted by powered redstone.\n"
+                },
+                "slime": {
+                    "type": "constant",
+                    "description": "Slime particles?\n"
+                },
+                "smoke": {
+                    "type": "constant",
+                    "description": "Smoke.\n"
+                },
+                "smoke2": {
+                    "type": "constant",
+                    "description": "Unknown. Probably an alternate smoke particle.\n"
+                },
+                "snowballpoof": {
+                    "type": "constant",
+                    "description": "Unknown. Possibly particles created by a snowball.\n"
+                },
+                "spell": {
+                    "type": "constant",
+                    "description": "Unknown. Possibly enchanting table spells.\n"
+                },
+                "spell2": {
+                    "type": "constant",
+                    "description": "Unknown. Possibly enchanting table spells.\n"
+                },
+                "spell3": {
+                    "type": "constant",
+                    "description": "Unknown. Possibly enchanting table spells.\n"
+                },
+                "splash": {
+                    "type": "constant",
+                    "description": "Splash particles created from splashing in water.\n"
+                },
+                "suspendedTown": {
+                    "type": "constant",
+                    "description": "Unknown.\n"
+                },
+                "terrain": {
+                    "type": "constant",
+                    "description": "Unknown. Possibly particles emitted from breaking blocks.\n"
+                },
+                "waterWake": {
+                    "type": "constant",
+                    "description": "Unknown.\n"
+                }
+            }
+        },
+        "EntityType": {
+            "namespace": true,
+            "values": {
+                "ARROW": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "BAT": {
+                    "type": "constant",
+                    "description": "A flying bat.\n"
+                },
+                "BLAZE": {
+                    "type": "constant",
+                    "description": "A blaze.\n"
+                },
+                "BOAT": {
+                    "type": "constant",
+                    "description": "A placed boat.\n"
+                },
+                "CAVE_SPIDER": {
+                    "type": "constant",
+                    "description": "A poisonous cave spider.\n"
+                },
+                "CHICKEN": {
+                    "type": "constant",
+                    "description": "A harmless chicken that lays eggs.\n"
+                },
+                "COW": {
+                    "type": "constant",
+                    "description": "A cow.\n"
+                },
+                "CREEPER": {
+                    "type": "constant",
+                    "description": "A creeper!\n"
+                },
+                "EGG": {
+                    "type": "constant",
+                    "description": "A thrown egg.\n"
+                },
+                "ENDERMAN": {
+                    "type": "constant",
+                    "description": "An enderman. Spooky.\n"
+                },
+                "EXPERIENCE_ORB": {
+                    "type": "constant",
+                    "description": "An experience orb on the ground.\n"
+                },
+                "EXPERIENCE_POTION": {
+                    "type": "constant",
+                    "description": "A thrown experience potion.\n"
+                },
+                "FALLING_BLOCK": {
+                    "type": "constant",
+                    "description": "A falling block. (Sand, gravel...)\n"
+                },
+                "FIREBALL": {
+                    "type": "constant",
+                    "description": "A flying fireball.\n"
+                },
+                "FISHING_HOOK": {
+                    "type": "constant",
+                    "description": "A fishing hook produced by a fishing rod.\n"
+                },
+                "GHAST": {
+                    "type": "constant",
+                    "description": "A ghast that lives in the nether.\n"
+                },
+                "IRON_GOLEM": {
+                    "type": "constant",
+                    "description": "An iron golem.\n"
+                },
+                "ITEM": {
+                    "type": "constant",
+                    "description": "A thrown item.\n"
+                },
+                "LAVA_SLIME": {
+                    "type": "constant",
+                    "description": "A magma cube.\n"
+                },
+                "LIGHTNING_BOLT": {
+                    "type": "constant",
+                    "description": "A lightning bolt.\n"
+                },
+                "MINECART": {
+                    "type": "constant",
+                    "description": "A placed minecart.\n"
+                },
+                "MUSHROOM_COW": {
+                    "type": "constant",
+                    "description": "A mooshroom cow.\n"
+                },
+                "OCELOT": {
+                    "type": "constant",
+                    "description": "An ocelot.\n"
+                },
+                "PAINTING": {
+                    "type": "constant",
+                    "description": "A placed painting (yes, these are entities.)\n"
+                },
+                "PIG": {
+                    "type": "constant",
+                    "description": "A pig.\n"
+                },
+                "PIG_ZOMBIE": {
+                    "type": "constant",
+                    "description": "A zombie pigman.\n"
+                },
+                "PLAYER": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "PRIMED_TNT": {
+                    "type": "constant",
+                    "description": "A lit TNT entity.\n"
+                },
+                "RABBIT": {
+                    "type": "constant",
+                    "description": "A rabbit.\n"
+                },
+                "SHEEP": {
+                    "type": "constant",
+                    "description": "A sheep.\n"
+                },
+                "SILVERFISH": {
+                    "type": "constant",
+                    "description": "A single silverfish.\n"
+                },
+                "SKELETON": {
+                    "type": "constant",
+                    "description": "An arrow-shooting skeleton.\n"
+                },
+                "SLIME": {
+                    "type": "constant",
+                    "description": "A slime.\n"
+                },
+                "SMALL_FIREBALL": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "SNOWBALL": {
+                    "type": "constant",
+                    "description": "A thrown snowball.\n"
+                },
+                "SNOW_GOLEM": {
+                    "type": "constant",
+                    "description": "A snowman!\n"
+                },
+                "SPIDER": {
+                    "type": "constant",
+                    "description": "A spider.\n"
+                },
+                "SQUID": {
+                    "type": "constant",
+                    "description": "A squid.\n"
+                },
+                "THROWN_POTION": {
+                    "type": "constant",
+                    "description": "A thrown potion.\n"
+                },
+                "VILLAGER": {
+                    "type": "constant",
+                    "description": "A(n) (annoying) villager.\n"
+                },
+                "WOLF": {
+                    "type": "constant",
+                    "description": "A wolf.\n"
+                },
+                "ZOMBIE": {
+                    "type": "constant",
+                    "description": "A harmful zombie.\n"
+                },
+                "ZOMBIE_VILLAGER": {
+                    "type": "constant",
+                    "description": "Zombie-villager hybrid.\n"
+                }
+            }
+        },
+        "EntityRenderType": {
+            "namespace": true,
+            "values": {
+                "arrow": {
+                    "type": "constant",
+                    "description": "Arrow render type.\n"
+                },
+                "bat": {
+                    "type": "constant",
+                    "description": "Bat render type.\n"
+                },
+                "blaze": {
+                    "type": "constant",
+                    "description": "Blaze render type.\n"
+                },
+                "boat": {
+                    "type": "constant",
+                    "description": "Boat render type.\n"
+                },
+                "chicken": {
+                    "type": "constant",
+                    "description": "Chicken render type.\n"
+                },
+                "cow": {
+                    "type": "constant",
+                    "description": "Cow render type. *moo*\n"
+                },
+                "creeper": {
+                    "type": "constant",
+                    "description": "Creeper render type. *ssss*\n"
+                },
+                "egg": {
+                    "type": "constant",
+                    "description": "Egg render type.\n"
+                },
+                "enderman": {
+                    "type": "constant",
+                    "description": "Enderman render type.\n"
+                },
+                "expPotion": {
+                    "type": "constant",
+                    "description": "Experience potion render type.\n"
+                },
+                "experienceOrb": {
+                    "type": "constant",
+                    "description": "Experience orb render type.\n"
+                },
+                "fallingTile": {
+                    "type": "constant",
+                    "description": "Falling tile render type.\n"
+                },
+                "fireball": {
+                    "type": "constant",
+                    "description": "Fireball render type.\n"
+                },
+                "fishHook": {
+                    "type": "constant",
+                    "description": "Fishing rod hook render type.\n"
+                },
+                "ghast": {
+                    "type": "constant",
+                    "description": "Ghast render type.\n"
+                },
+                "human": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "ironGolem": {
+                    "type": "constant",
+                    "description": "Iron golem render type.\n"
+                },
+                "item": {
+                    "type": "constant",
+                    "description": "Thrown item render type.\n"
+                },
+                "lavaSlime": {
+                    "type": "constant",
+                    "description": "Magma cube render type.\n"
+                },
+                "lightningBolt": {
+                    "type": "constant",
+                    "description": "Lightning bolt render type.\n"
+                },
+                "minecart": {
+                    "type": "constant",
+                    "description": "Minecart render type.\n"
+                },
+                "mushroomCow": {
+                    "type": "constant",
+                    "description": "Mooshroom render type.\n"
+                },
+                "ocelot": {
+                    "type": "constant",
+                    "description": "Ocelot render type.\n"
+                },
+                "pig": {
+                    "type": "constant",
+                    "description": "Pig render type.\n"
+                },
+                "player": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "player2": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "sheep": {
+                    "type": "constant",
+                    "description": "Entity render type for a sheep.\n"
+                },
+                "silverfish": {
+                    "type": "constant",
+                    "description": "Entity render type for a silverfish.\n"
+                },
+                "skeleton": {
+                    "type": "constant",
+                    "description": "Entity render type for a skeleton.\n"
+                },
+                "slime": {
+                    "type": "constant",
+                    "description": "Entity render type for a slime.\n"
+                },
+                "smallFireball": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "snowGolem": {
+                    "type": "constant",
+                    "description": "Snow golem (snowman) render type.\n"
+                },
+                "snowball": {
+                    "type": "constant",
+                    "description": "Snowball render type.\n"
+                },
+                "spider": {
+                    "type": "constant",
+                    "description": "Spider render type.\n"
+                },
+                "squid": {
+                    "type": "constant",
+                    "description": "Squid render type.\n"
+                },
+                "thrownPotion": {
+                    "type": "constant",
+                    "description": "Thrown potion render type.\n"
+                },
+                "tnt": {
+                    "type": "constant",
+                    "description": "Ignited TNT render type.\n"
+                },
+                "unknown1": {
+                    "type": "constant",
+                    "description": "Like the name says, unknown.\n"
+                },
+                "villager": {
+                    "type": "constant",
+                    "description": "Villager render type.\n"
+                },
+                "villagerZombie": {
+                    "type": "constant",
+                    "description": "Villager/zombie hybrid render type.\n"
+                },
+                "wolf": {
+                    "type": "constant",
+                    "description": "Wolf render type.\n"
+                },
+                "zombie": {
+                    "type": "constant",
+                    "description": "Zombie render type.\n"
+                },
+                "zombiePigman": {
+                    "type": "constant",
+                    "description": "Zombie Pigman render type.\n"
+                }
+            }
+        },
+        "ArmorType": {
+            "namespace": true,
+            "values": {
+                "boots": {
+                    "type": "constant",
+                    "description": "Boots armor. Covers the feet.\n"
+                },
+                "chestplate": {
+                    "type": "constant",
+                    "description": "Chestplate armor. Covers the chestplate.\n"
+                },
+                "helmet": {
+                    "type": "constant",
+                    "description": "Helmet armor. Covers the head.\n"
+                },
+                "leggings": {
+                    "type": "constant",
+                    "description": "Leggings armor. Covers the legs.\n"
+                }
+            }
+        },
+        "MobEffect": {
+            "namespace": true,
+            "values": {
+                "absorption": {
+                    "type": "constant",
+                    "description": "Adds hearts that disappear once the affect ends.\n"
+                },
+                "blindness": {
+                    "type": "constant",
+                    "description": "Blindess. Creates black fog around the entity so they cannot see.\n"
+                },
+                "confusion": {
+                    "type": "constant",
+                    "description": "Confusion. Unknown.\n"
+                },
+                "damageBoost": {
+                    "type": "constant",
+                    "description": "Damage boost (strength). Increases the amount of damage the entity deals.\n"
+                },
+                "damageResistance": {
+                    "type": "constant",
+                    "description": "Resistance. Makes the entity more resistant to damage.\n"
+                },
+                "digSlowdown": {
+                    "type": "constant",
+                    "description": "Dig slowdown (mining fatigue). Makes the entity mine slower.\n"
+                },
+                "digSpeed": {
+                    "type": "constant",
+                    "description": "Dig speed (haste). Makes the entity mine faster.\n"
+                },
+                "effectIds": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "fireResistance": {
+                    "type": "constant",
+                    "description": "No information yet.\n"
+                },
+                "harm": {
+                    "type": "constant",
+                    "description": "Instant damage. Instantly damages the entity.\n"
+                },
+                "heal": {
+                    "type": "constant",
+                    "description": "Instant health. Instantly increases health. (Not amount of hearts.)\n"
+                },
+                "healthBoost": {
+                    "type": "constant",
+                    "description": "Health boost. Increases the amount of hearts the entity has.\n"
+                },
+                "hunger": {
+                    "type": "constant",
+                    "description": "Hungers. Makes the entity hungry.\n"
+                },
+                "invisibility": {
+                    "type": "constant",
+                    "description": "Invisibility. Makes the entity invisible.\n"
+                },
+                "jump": {
+                    "type": "constant",
+                    "description": "Jump boost. Adds jump height.\n"
+                },
+                "movementSlowdown": {
+                    "type": "constant",
+                    "description": "Slowness. Makes the entity move slower.\n"
+                },
+                "movementSpeed": {
+                    "type": "constant",
+                    "description": "Speed. Makes the entity move faster.\n"
+                },
+                "nightVision": {
+                    "type": "constant",
+                    "description": "Night vision. Allows the entity to see in the dark.\n"
+                },
+                "poison": {
+                    "type": "constant",
+                    "description": "Poison. Makes the entity lose continuously lose hearts. They are left at one heart if it is not cured.\n"
+                },
+                "regeneration": {
+                    "type": "constant",
+                    "description": "Regeneration. Makes the entity regenerate their hearts continuously.\n"
+                },
+                "saturation": {
+                    "type": "constant",
+                    "description": "Decreases how hungry the entity is per tick.\n"
+                },
+                "waterBreathing": {
+                    "type": "constant",
+                    "description": "Water breathing. Allows the entity to breathe underwater.\n"
+                },
+                "weakness": {
+                    "type": "constant",
+                    "description": "Weakness. Decreases the amount of attack the entity deals.\n"
+                },
+                "wither": {
+                    "type": "constant",
+                    "description": "Similar to poison. Turns hearts black and can kill the entity.\n"
+                }
+            }
+        },
+        "DimensionId": {
+            "namespace": true,
+            "values": {
+                "NETHER": {
+                    "type": "constant",
+                    "description": "The Dimension ID of the nether.\n"
+                },
+                "NORMAL": {
+                    "type": "constant",
+                    "description": "The Dimension ID of the overworld.\n"
+                }
+            }
+        },
+        "BlockFace": {
+            "namespace": true,
+            "values": {
+                "DOWN": {
+                    "type": "constant",
+                    "description": "The block side facing down.\n"
+                },
+                "EAST": {
+                    "type": "constant",
+                    "description": "The block side facing east.\n"
+                },
+                "NORTH": {
+                    "type": "constant",
+                    "description": "The block side facing north.\n"
+                },
+                "SOUTH": {
+                    "type": "constant",
+                    "description": "The block side facing south.\n"
+                },
+                "UP": {
+                    "type": "constant",
+                    "description": "The block side facing up.\n"
+                },
+                "WEST": {
+                    "type": "constant",
+                    "description": "The block side facing west.\n"
+                }
+            }
+        },
+        "Enchantment": {
+            "namespace": true,
+            "values": {
+                "PROTECTION": {
+                    "type": "constant",
+                    "description": "Protection.\n"
+                },
+                "FIRE_PROTECTION": {
+                    "type": "constant",
+                    "description": "Fire protection. Grants additional protection against fire.\n"
+                },
+                "FEATHER_FALLING": {
+                    "type": "constant",
+                    "description": "Grants additional protection against fall damage.\n"
+                },
+                "BLAST_PROTECTION": {
+                    "type": "constant",
+                    "description": "Grants additional protection against explosions (like TNT).\n"
+                },
+                "PROJECTILE_PROTECTION": {
+                    "type": "constant",
+                    "description": "Grants additional protection against projectiles.\n"
+                },
+                "THORNS": {
+                    "type": "constant",
+                    "description": "Makes enemies take damage when they hurt you.\n"
+                },
+                "RESPIRATION": {
+                    "type": "constant",
+                    "description": "Allows you to breathe underwater for a longer period of time.\n"
+                },
+                "AQUA_AFFINITY": {
+                    "type": "constant",
+                    "description": "Makes you break blocks underwater faster.\n"
+                },
+                "DEPTH_STRIDER": {
+                    "type": "constant",
+                    "description": "Makes you walk faster underwater.\n"
+                },
+                "SHARPNESS": {
+                    "type": "constant",
+                    "description": "Makes something sharper (does more damage.)\n"
+                },
+                "SMITE": {
+                    "type": "constant",
+                    "description": "Increases damage dealt to undead mobs. Applies to- \n- Skeletons \n- Zombies \n- Zombie Pigmen \n- Withers and Wither Skeletons when they exist.\n"
+                },
+                "BANE_OF_ARTHROPODS": {
+                    "type": "constant",
+                    "description": "Makes something more effective against spiders.\n"
+                },
+                "KNOCKBACK": {
+                    "type": "constant",
+                    "description": "Makes something knock things back further when hit.\n"
+                },
+                "FIRE_ASPECT": {
+                    "type": "constant",
+                    "description": "Makes something light on fire when hit.\n"
+                },
+                "LOOTING": {
+                    "type": "constant",
+                    "description": "Makes something drop more loot when killed with.\n"
+                },
+                "EFFICIENCY": {
+                    "type": "constant",
+                    "description": "Makes something mine faster.\n"
+                },
+                "SILK_TOUCH": {
+                    "type": "constant",
+                    "description": "Makes something return it's pure form when mined. (e.g makes mining stone drop actual stone, not cobblestone.)\n"
+                },
+                "UNBREAKING": {
+                    "type": "constant",
+                    "description": "Makes something more durable.\n"
+                },
+                "FORTUNE": {
+                    "type": "constant",
+                    "description": "Makes ores drop more stuff when mined with.\n"
+                },
+                "POWER": {
+                    "type": "constant",
+                    "description": "Makes bows do more damage.\n"
+                },
+                "PUNCH": {
+                    "type": "constant",
+                    "description": "Makes bows knock mobs/entities further.\n"
+                },
+                "FLAME": {
+                    "type": "constant",
+                    "description": "Makes bows light mobs/entities on fire.\n"
+                },
+                "INFINITY": {
+                    "type": "constant",
+                    "description": "Makes bows consume no arrows.\n"
+                },
+                "LUCK_OF_THE_SEA": {
+                    "type": "constant",
+                    "description": "Decreases odds of catching useless items while fishing.\n"
+                },
+                "LURE": {
+                    "type": "constant",
+                    "description": "Increases odds of fishes to bite your hook while fishing.\n"
+                }
+            }
+        }
+    }
+}

@@ -20,7 +20,13 @@ docs:
     description: >
       Returns the current MC:PE version.
     example: >
-      No information yet.
+      ```
+      
+      chatMessage(ModPE.getMinecraftVersion());
+      
+      ```
+      
+      Will post the current Minecraft version to the chat.
   ModPE.langEdit:
     type: namespacemethod
     args: 'string, string'
@@ -153,6 +159,7 @@ docs:
       Adds an item into the game.
     example: >
       No information yet.
+      
   ModPE.setItems:
     type: namespacemethod
     args: 'string'
