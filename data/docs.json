@@ -177,12 +177,14 @@
                 },
                 "destroyBlock": {
                     "type": "namespacemethod",
+                    "arg_names": "x, y, z",
                     "args": "int, int, int",
                     "description": "\n- `int`: X \n- `int`: Y \n- `int`: Z \n\nDestroys a block as if a player mined it.",
                     "example": "No information yet."
                 },
                 "dropItem": {
                     "type": "namespacemethod",
+                    "arg_names": "x, y, z, range, id, count, itemData",
                     "args": "double, double, double, double, int, int, int",
                     "returns": "entity",
                     "description": "\n- `double`: X \n- `double`: Y \n- `double`: Z \n- `double`: Range? Usually just set this to `0.0`. \n- `int`: ID of the item \n- `int`: Count of the item \n- `int`: Data (damage) of the item. \n\nSpawns a dropped item in the world. It returns the newly created entity, which can be manipulated.",

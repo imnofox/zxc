@@ -6,7 +6,7 @@
     overflow: auto;
 }
 
-* {
+*:not(code span) {
     font-family: Roboto, sans-serif;
 }
 
