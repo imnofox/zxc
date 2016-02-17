@@ -6,7 +6,7 @@ $(window).load(function () {
     // Default configuration, 
     var config = {
         constants: [
-            'constants'
+            'constant'
         ],
         marked: {
             renderer: new marked.Renderer(),
@@ -34,7 +34,7 @@ $(window).load(function () {
         $('#current-doc #actual-doc').show();
 
         // Determine correct type for displaying signature.
-        if (!(data.type in config.constants)) {
+        if ($.inArray(data.type, config.constants) < 0) {
 
             // Show signature correctly.
             // Only show the namespace when not using hooks,
