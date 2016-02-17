@@ -211,6 +211,7 @@ $(window).load(function () {
     $("#home").on('click', function () {
         $('#current-doc #actual-doc').hide();
         $('#current-doc #intro').show();
+        window.location.hash = "";
     });
 
 
