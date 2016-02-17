@@ -36,41 +36,41 @@ $(window).load(function () {
         // Determine correct type for displaying signature.
         if (!(data.type in config.constants)) {
 
-            var args = data.args.split(',');
-            var names = false;
-            if (data.hasOwnProperty('arg_names')) {
-                names = data.arg_names.split(',');
-            }
-
             // Show signature correctly.
             // Only show the namespace when not using hooks,
             // because in hooks, the "namespace" is only used to organize them.
             $('#current-doc pre code').html(
                 (docs[namespace].namespace ? namespace + "." : '') + namespaceValueName + '(<span class="args"></span>)' + (data.returns ? ' -> ' + data.returns : ''));
 
-            for (var i = 0; i < args.length; i++) {
-                var argSpan = $("<span>");
-                if (names) {
-                    argSpan.text(names[i].trim());
-                    argSpan.tooltip({
-                        trigger: 'hover focus',
-                        title: args[i].trim()
-                    });
-                } else {
-                    argSpan.text(args[i].trim());
+            if (data.args) {
+                var args = data.args.split(',');
+                var names = false;
+                if (data.hasOwnProperty('arg_names')) {
+                    names = data.arg_names.split(',');
                 }
+                for (var i = 0; i < args.length; i++) {
+                    var argSpan = $("<span>");
+                    if (names) {
+                        argSpan.text(names[i].trim());
+                        argSpan.tooltip({
+                            trigger: 'hover focus',
+                            title: args[i].trim()
+                        });
+                    } else {
+                        argSpan.text(args[i].trim());
+                    }
 
-
-                $("#current-doc pre code span.args").append(argSpan).append((i == args.length - 1) ? "" : ", ");
-
-
+                    $("#current-doc pre code span.args").append(argSpan).append((i == args.length - 1) ? "" : ", ");
+                }
             }
 
-            //$("#current-doc pre code span.args").text($("span.args").text().slice(0, -2));
-
-            // Show example for entries that have them.
-            $('#current-doc #doc-example, #current-doc #doc-example-header').show();
-            $('#current-doc #doc-example').html(marked(data.example));
+            if (data.example) {
+                // Show example for entries that have them.
+                $('#current-doc #doc-example, #current-doc #doc-example-header').show();
+                $('#current-doc #doc-example').html(marked(data.example));
+            } else {
+                $('#current-doc #doc-example, #current-doc #doc-example-header').hide();
+            }
         } else {
             // Show constant.
             $('#current-doc pre code').text((docs[namespace].namespace ? namespace + "." : '') + namespaceValueName);
@@ -150,14 +150,6 @@ $(window).load(function () {
         }
     };
 
-    var loadLinked = function () {
-        var func = window.location.hash.substr(1).split('.', 2);
-
-        populateBody(func[0], func[1]);
-
-        console.log('Loading ' + func[0] + '.' + func[1] + ' from URL');
-    };
-
     // Fetch and load data.
     // (Shouldn't take a while!)
     console.log('Fetching...');
@@ -167,30 +159,6 @@ $(window).load(function () {
         $.extend(config, data.config);
 
         docs = data.docs;
-
-        /*for (key in info.docs) {
-            // Hook, create it as a global name.
-            if (records.docs[key].type == 'hook') {
-                if (!dtable.Hooks) {
-                    dtable.Hooks = {};
-                    dtable.Hooks.type = 'hook_table';
-                }
-
-                dtable.Hooks[key] = records.docs[key];
-            } else {
-                // Split into parts, because this isn't a hook.
-                var parts = key.split('.');
-
-                // Create new table if it doesn't exist.
-                if (!dtable[parts[0]]) {
-                    dtable[parts[0]] = {};
-                    dtable[parts[0]].type = records.docs[key].type + "_table";
-                }
-
-                // Add it into the table.
-                dtable[parts[0]][parts[1]] = records.docs[key];
-            }
-        }*/
 
         populateNav();
         $('.nav-section .nav-section-contents').hide();
@@ -205,10 +173,14 @@ $(window).load(function () {
             }
         });
 
-        loadLinked();
-    });
+        var func = window.location.hash.substr(1);
+        if (func) { // No point running a bunch of code if it's not needed
+            func = func.split('.', 2);
+            console.log('Loading ' + func[0] + '.' + func[1] + ' from URL');
+            populateBody(func[0], func[1]);
+        }
 
-    //$('#actual-doc').hide();
+    });
 
     // Init search filter thing
     $("#search").on("keyup", function () {
