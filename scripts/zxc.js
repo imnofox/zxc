@@ -4,7 +4,7 @@ $(window).load(function () {
     var docs = {};
 
     // Check if Android
-    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+    var isAndroid = true; //navigator.userAgent.toLowerCase().indexOf("android") > -1;
     if (isAndroid) console.log("Wow, a droid!");
 
     // Default configuration,
@@ -73,7 +73,13 @@ $(window).load(function () {
                 // Show example for entries that have them.
                 $("#current-doc #doc-example, #current-doc #doc-example-header").show();
                 $("#current-doc #doc-example").html(marked(data.example));
-                if (isAndroid) $("<button>").text("Try code in BlockLauncher").addClass("btn btn-block btn-warning").insertAfter($("#current-doc #doc-example pre"));
+                if (isAndroid){
+                    $("<a>").text("Try code in BlockLauncher")
+                    .prop("download", "zxc_example.js")
+                    .prop("href", "#")
+                    .addClass("btn btn-block btn-warning")
+                    .insertAfter($("#current-doc #doc-example pre"));
+            }
             } else {
                 $('#current-doc #doc-example, #current-doc #doc-example-header').hide();
             }
@@ -224,10 +230,10 @@ $(window).load(function () {
         window.location.hash = "";
     });
 
-    $("#doc-example").on('click', "pre + button", function (){
+    $("#doc-example").on('mousedown', "pre + a.btn", function (){
         var code = $(this).prev().children().text();
         var url =  "data:application/javascript;charset=UTF-8," + encodeURIComponent(code);
-        window.location = url;
+        $(this).prop("href", url);
     });
 
     $(window).on('hashchange', function (){
