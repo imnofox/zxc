@@ -101,6 +101,14 @@ pre code {
     background: transparent;
 }
 
+.nav-section-closed:before {
+    content: '+';
+}
+
+.nav-section-open:before {
+    content: '-';
+}
+
 @media (min-width: 769px) {
     #nav {
         overflow-y: auto;
