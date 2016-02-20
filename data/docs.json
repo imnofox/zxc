@@ -170,12 +170,14 @@
       "values": {
         "addParticle": {
           "type": "namespacemethod",
+          "arg_names": "particleType, x, y, z, velocityX, velocityY, velocityZ, size",
           "args": "int, double, double, double, double, double, double, int",
-          "description": "Spawns a particle in the world.",
+          "description": "Spawns a particle in the world.\nSee [ParticleType](#ParticleType.angryVillager) for particle types.",
           "example": "No information yet."
         },
         "biomeIdToName": {
           "type": "namespacemethod",
+          "arg_names": "biomeID",
           "args": "int",
           "returns": "string",
           "description": "Converts a biome ID into its name.",
@@ -183,16 +185,17 @@
         },
         "canSeeSky": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z",
           "args": "int, int, int",
           "returns": "bool",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n\nReturns whether a block can see the sky.",
+          "description": "Returns whether a block is open to the sky. (No blocks above it)",
           "example": "No information yet."
         },
         "destroyBlock": {
           "type": "namespacemethod",
-          "arg_names": "x, y, z",
-          "args": "int, int, int",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n\nDestroys a block as if a player mined it.",
+          "arg_names": "x, y, z, shouldDrop",
+          "args": "int, int, int, bool",
+          "description": "Destroys a block as if a player mined it.\nIf `shouldDrop` is `true`, then the block will drop any items it may drop.",
           "example": "No information yet."
         },
         "dropItem": {
@@ -200,13 +203,14 @@
           "arg_names": "x, y, z, range, id, count, itemData",
           "args": "double, double, double, double, int, int, int",
           "returns": "entity",
-          "description": "\n- `double`: X\n- `double`: Y\n- `double`: Z\n- `double`: Range? Usually just set this to `0.0`.\n- `int`: ID of the item\n- `int`: Count of the item\n- `int`: Data (damage) of the item.\n\nSpawns a dropped item in the world. It returns the newly created entity, which can be manipulated.",
+          "description": "Spawns a dropped item in the world. It returns the newly created entity, which can be manipulated.\n`range` is the furthest distance it can drop from the coordinates. `0.0` is recommended.",
           "example": "No information yet."
         },
         "explode": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z, radius",
           "args": "double, double, double, double",
-          "description": "\n- `double`: X\n- `double`: Y\n- `double`: Z\n- `double`: Power\nCauses an explosion somewhere in the world.",
+          "description": "Causes an explosion somewhere in the world.",
           "example": "No information yet."
         },
         "getAddress": {
@@ -217,21 +221,24 @@
         },
         "getBiome": {
           "type": "namespacemethod",
+          "arg_names": "x, z",
           "args": "int, int",
-          "description": "\n- `int`: X\n- `int`: Z\n\nGets the ID of a biome at a specific location in the world.",
+          "description": "Gets the ID of a biome at the specified coordinates in the world.",
           "example": "No information yet."
         },
         "getBiomeName": {
           "type": "namespacemethod",
+          "arg_names": "x, z",
           "args": "int, int",
-          "description": "\n- `int`: X\n- `int`: Z\n\nGets the name of a biome at a specific location in the world.",
+          "description": "Gets the name of a biome at the specified coordinates in the world.",
           "example": "No information yet."
         },
         "getBrightness": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z",
           "args": "int, int, int",
           "returns": "int?/double?",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n\nReturns the light level at a position in the world.",
+          "description": "Returns the light level at a position in the world.",
           "example": "No information yet."
         },
         "getChestSlot": {
@@ -2060,11 +2067,11 @@
         },
         "blindness": {
           "type": "constant",
-          "description": "Blindess. Creates black fog around the entity so they cannot see."
+          "description": "Blindness. Creates black fog around the entity so they cannot see."
         },
         "confusion": {
           "type": "constant",
-          "description": "Confusion. Unknown."
+          "description": "Nausea. Wobbles and warps the screen."
         },
         "damageBoost": {
           "type": "constant",

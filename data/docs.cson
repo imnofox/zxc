@@ -193,39 +193,36 @@ docs:
 		values:
 			addParticle:
 				type: "namespacemethod"
+				arg_names: "particleType, x, y, z, velocityX, velocityY, velocityZ, size"
 				args: "int, double, double, double, double, double, double, int"
-				description: "Spawns a particle in the world."
+				description: '''
+					Spawns a particle in the world.
+					See [ParticleType](#ParticleType.angryVillager) for particle types.
+				'''
 				example: "No information yet."
 			biomeIdToName:
 				type: "namespacemethod"
+				arg_names: "biomeID"
 				args: "int"
 				returns: "string"
 				description: "Converts a biome ID into its name."
 				example: "No information yet."
 			canSeeSky:
 				type: "namespacemethod"
+				arg_names: "x, y, z"
 				args: "int, int, int"
 				returns: "bool"
 				description: '''
-
-					- `int`: X
-					- `int`: Y
-					- `int`: Z
-
-					Returns whether a block can see the sky.
+					Returns whether a block is open to the sky. (No blocks above it)
 				'''
 				example: "No information yet."
 			destroyBlock:
 				type: "namespacemethod"
-				arg_names: "x, y, z"
-				args: "int, int, int"
+				arg_names: "x, y, z, shouldDrop"
+				args: "int, int, int, bool"
 				description: '''
-
-					- `int`: X
-					- `int`: Y
-					- `int`: Z
-
 					Destroys a block as if a player mined it.
+					If `shouldDrop` is `true`, then the block will drop any items it may drop.
 				'''
 				example: "No information yet."
 			dropItem:
@@ -234,27 +231,15 @@ docs:
 				args: "double, double, double, double, int, int, int"
 				returns: "entity"
 				description: '''
-
-					- `double`: X
-					- `double`: Y
-					- `double`: Z
-					- `double`: Range? Usually just set this to `0.0`.
-					- `int`: ID of the item
-					- `int`: Count of the item
-					- `int`: Data (damage) of the item.
-
 					Spawns a dropped item in the world. It returns the newly created entity, which can be manipulated.
+					`range` is the furthest distance it can drop from the coordinates. `0.0` is recommended.
 				'''
 				example: "No information yet."
 			explode:
 				type: "namespacemethod"
+				arg_names: "x, y, z, radius"
 				args: "double, double, double, double"
 				description: '''
-
-					- `double`: X
-					- `double`: Y
-					- `double`: Z
-					- `double`: Power
 					Causes an explosion somewhere in the world.
 				'''
 				example: "No information yet."
@@ -265,36 +250,26 @@ docs:
 				example: "No information yet."
 			getBiome:
 				type: "namespacemethod"
+				arg_names: "x, z"
 				args: "int, int"
 				description: '''
-
-					- `int`: X
-					- `int`: Z
-
-					Gets the ID of a biome at a specific location in the world.
+					Gets the ID of a biome at the specified coordinates in the world.
 				'''
 				example: "No information yet."
 			getBiomeName:
 				type: "namespacemethod"
+				arg_names: "x, z"
 				args: "int, int"
 				description: '''
-
-					- `int`: X
-					- `int`: Z
-
-					Gets the name of a biome at a specific location in the world.
+					Gets the name of a biome at the specified coordinates in the world.
 				'''
 				example: "No information yet."
 			getBrightness:
 				type: "namespacemethod"
+				arg_names: "x, y, z"
 				args: "int, int, int"
 				returns: "int?/double?"
 				description: '''
-
-					- `int`: X
-					- `int`: Y
-					- `int`: Z
-
 					Returns the light level at a position in the world.
 				'''
 				example: "No information yet."
@@ -2270,10 +2245,10 @@ docs:
 				description: "Adds hearts that disappear once the affect ends."
 			blindness:
 				type: "constant"
-				description: "Blindess. Creates black fog around the entity so they cannot see."
+				description: "Blindness. Creates black fog around the entity so they cannot see."
 			confusion:
 				type: "constant"
-				description: "Confusion. Unknown."
+				description: "Nausea. Wobbles and warps the screen."
 			damageBoost:
 				type: "constant"
 				description: "Damage boost (strength). Increases the amount of damage the entity deals."
