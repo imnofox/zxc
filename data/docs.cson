@@ -122,18 +122,24 @@ docs:
 				example: "No information yet."
 			setFoodItem:
 				type: "namespacemethod"
+				arg_names: "itemId, texture, offset, halfHearts, name, stackSize"
 				args: "int, string, int, int, string, int"
-				description: "No information yet."
+				description: '''
+					Adds a custom food item to the game.
+					`halfHearts` is the total half-hearts restores when eaten.
+				'''
 				example: "No information yet."
 			setFov:
 				type: "namespacemethod"
+				arg_names: "amount"
 				args: "double"
 				description: "Sets the FOV for the player."
 				example: "No information yet."
 			setGameSpeed:
 				type: "namespacemethod"
+				arg_names: "ticksPerSecond"
 				args: "double"
-				description: "Sets the amount of ticks per second."
+				description: "Sets the amount of ticks per second. Default is `20.0`"
 				example: "No information yet."
 			setGuiBlocks:
 				type: "namespacemethod"
@@ -160,13 +166,27 @@ docs:
 				example: "No information yet."
 			showTipMessage:
 				type: "namespacemethod"
+				arg_names: "message"
 				args: "string"
 				description: "Shows a tip message (like the message shown when you tap an item.)"
-				example: "No information yet."
+				example: '''
+					```
+					function useItem(x, y, z, id) {
+						if (id == 46) { // 46 = TNT
+							if (Level.getTile(x, y - 1, z) == 19) { // 19 = sponge
+								preventDefault();
+								ModPE.showTipMessage("You can't place TNT above sponge!");
+							}
+						}
+					}
+					```
+					This will cancel the action and show a tip message, warning the user that they can't place TNT above a sponge block.
+				'''
 			takeScreenshot:
 				type: "namespacemethod"
+				arg_names: "filename"
 				args: "string"
-				description: "No information yet."
+				description: "Takes a screenshot and saves it with the supplied filename."
 				example: "No information yet."
 	Level:
 		namespace: true

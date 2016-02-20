@@ -3,6 +3,10 @@ $(window).load(function () {
     // Populated when loading the docs.
     var docs = {};
 
+    // Check if Android
+    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
+    if (isAndroid) console.log("Wow, a droid!");
+
     // Default configuration,
     var config = {
         constants: [
@@ -67,8 +71,9 @@ $(window).load(function () {
 
             if (data.example) {
                 // Show example for entries that have them.
-                $('#current-doc #doc-example, #current-doc #doc-example-header').show();
-                $('#current-doc #doc-example').html(marked(data.example));
+                $("#current-doc #doc-example, #current-doc #doc-example-header").show();
+                $("#current-doc #doc-example").html(marked(data.example));
+                if (isAndroid) $("<button>").text("Try code in BlockLauncher").addClass("btn btn-block btn-warning").insertAfter($("#current-doc #doc-example pre"));
             } else {
                 $('#current-doc #doc-example, #current-doc #doc-example-header').hide();
             }
@@ -219,7 +224,13 @@ $(window).load(function () {
         window.location.hash = "";
     });
 
-    $(window).on('hashchange',function(){
+    $("#doc-example").on('click', "pre + button", function (){
+        var code = $(this).prev().children().text();
+        var url =  "data:application/javascript;charset=UTF-8," + encodeURIComponent(code);
+        window.location = url;
+    });
+
+    $(window).on('hashchange', function (){
         hash();
     });
 
