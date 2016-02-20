@@ -1,12 +1,9 @@
 #nav {
     background: #333;
     color: white;
-    min-height: 100vh;
-    max-height: 100vh;
-    overflow-y: auto;
 }
 
-*:not(code span) {
+body {
     font-family: Roboto, sans-serif;
 }
 
@@ -26,9 +23,7 @@
 
 #current-doc {
     max-width: 100%;
-    overflow: auto;
     position: relative;
-    height: 100vh;
 }
 
 #actual-doc {
@@ -76,6 +71,10 @@ pre code {
     white-space: pre;
 }
 
+#nav-menu {
+    padding-bottom: 10px;
+}
+
 .nav-section-contents ul {
     padding: 0;
     list-style-type: none;
@@ -102,57 +101,15 @@ pre code {
     background: transparent;
 }
 
-
-/* - navigation sections badges - */
-
-.nav-section-label:before {
-    font-family: monospace;
-    padding: 0.2em;
-    margin-right: 0.5em;
-    border-radius: 3px;
-    opacity: 0.7;
-}
-
-.nav-section-closed:before {
-    content: '+';
-}
-
-.nav-section-open:before {
-    content: '-';
-}
-
-.nav-section-label-namespacemethod_table:before {
-    content: 'M';
-    background: #00d181;
-    border: solid 1px #00d181;
-}
-
-.nav-section-label-namespacemethod_table:hover:before {
-    content: 'Methods';
-}
-
-.nav-section-label-hook_table:before {
-    content: 'H';
-    border: solid 1px orange;
-    background: orange;
-}
-
-.nav-section-label-hook_table:hover:before {
-    content: 'Hooks';
-}
-
-.nav-section-label-constant_table:before {
-    content: 'C';
-    border: solid 1px #9500ff;
-    background: #9500ff;
-}
-
-.nav-section-label-constant_table:hover:before {
-    content: 'Constants';
-}
-
-@media (max-width: 768px) {
+@media (min-width: 769px) {
     #nav {
-        overflow-y: visible;
+        overflow-y: auto;
+        min-height: 100vh;
+        max-height: 100vh;
+    }
+
+    #current-doc {
+        overflow: auto;
+        height: 100vh;
     }
 }

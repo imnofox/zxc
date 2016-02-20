@@ -4,7 +4,7 @@ $(window).load(function () {
     var docs = {};
 
     // Check if Android
-    var isAndroid = true; //navigator.userAgent.toLowerCase().indexOf("android") > -1;
+    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
     if (isAndroid) console.log("Wow, a droid!");
 
     // Default configuration,
@@ -26,8 +26,6 @@ $(window).load(function () {
 
     // Configure marked.
     marked.setOptions(config.marked);
-
-
 
     var populateBody = function (namespace, namespaceValueName) {
         var data = docs[namespace].values[namespaceValueName];
