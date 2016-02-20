@@ -150,3 +150,9 @@ pre code {
 .nav-section-label-constant_table:hover:before {
     content: 'Constants';
 }
+
+@media (max-width: 768px) {
+    #nav {
+        overflow-y: visible;
+    }
+}
