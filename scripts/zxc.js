@@ -23,6 +23,8 @@ $(window).load(function () {
     // Configure marked.
     marked.setOptions(config.marked);
 
+
+
     var populateBody = function (namespace, namespaceValueName) {
         var data = docs[namespace].values[namespaceValueName];
         if (!data) {
@@ -91,6 +93,15 @@ $(window).load(function () {
             scrollTop: $('#current-doc').offset().top
         }, 250);
     };
+
+    var hash = function() {
+        var func = window.location.hash.substr(1);
+        if (func) { // No point running a bunch of code if it's not needed
+            func = func.split('.', 2);
+            console.log('Loading ' + func[0] + '.' + func[1] + ' from URL');
+            populateBody(func[0], func[1]);
+        }
+    }
 
     // Populate side nav from doc data.
     var populateNav = function () {
@@ -173,12 +184,7 @@ $(window).load(function () {
             }
         });
 
-        var func = window.location.hash.substr(1);
-        if (func) { // No point running a bunch of code if it's not needed
-            func = func.split('.', 2);
-            console.log('Loading ' + func[0] + '.' + func[1] + ' from URL');
-            populateBody(func[0], func[1]);
-        }
+        hash();
 
     });
 
@@ -214,5 +220,8 @@ $(window).load(function () {
         window.location.hash = "";
     });
 
+    $(window).on('hashchange',function(){
+        hash();
+    });
 
 });

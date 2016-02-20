@@ -100,7 +100,15 @@ docs:
 				arg_names: "key, value"
 				args: "string, string"
 				description: "Sets a value in mod-specific save data by key."
-				example: "No information yet."
+				example: '''
+					```
+					function leaveGame() {
+					    ModPE.saveData('points', 500));
+					}
+					```
+					Sets the stored `points` value to `500` when the player leaves.
+					See [ModPE.readData](#ModPE.readData)
+				'''
 			selectLevel:
 				type: "namespacemethod"
 				arg_names: "level"
@@ -134,16 +142,10 @@ docs:
 				example: "No information yet."
 			setItem:
 				type: "namespacemethod"
+				arg_names: "itemId, texture, offset, name, stackSize"
 				args: "int, string, int, string, int"
 				description: '''
-
-					- `int`: The ID of the new item.
-					- `string`: The texture name of the item.
-					- `int`: Texture offset. Used for textures like `texture_0`, `texture_1`...
-					- `string`: The name of the item.
-					- `int`: Stack size.
-
-					Adds an item into the game.
+					Adds a custom item into the game.
 				'''
 				example: "No information yet.  "
 			setItems:
