@@ -70,6 +70,10 @@
     padding-left: 1.85em;
 }
 
+.nav-section-label {
+    display: block;
+}
+
 .nav-section-label,
 .nav-section-contents li {
     cursor: pointer;

@@ -3,7 +3,7 @@ $(window).load(function () {
     // Populated when loading the docs.
     var docs = {};
 
-    // Default configuration, 
+    // Default configuration,
     var config = {
         constants: [
             'constant'
