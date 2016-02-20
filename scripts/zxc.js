@@ -54,10 +54,9 @@ $(window).load(function () {
                     var argSpan = $("<span>");
                     if (names) {
                         argSpan.text(names[i].trim());
-                        argSpan.tooltip({
-                            trigger: 'hover focus',
-                            title: args[i].trim()
-                        });
+                        argSpan.prop('title', args[i].trim());
+                        argSpan.attr('data-toggle', 'tooltip');
+                        console.log('tt added');
                     } else {
                         argSpan.text(args[i].trim());
                     }
@@ -224,4 +223,5 @@ $(window).load(function () {
         hash();
     });
 
+    $('#actual-doc').tooltip({selector: '[data-toggle=tooltip]'});
 });
