@@ -1,5 +1,9 @@
 {
-  "config": {},
+  "config": {
+    "constants": [
+      "string"
+    ]
+  },
   "docs": {
     "ModPE": {
       "namespace": true,
@@ -243,44 +247,51 @@
         },
         "getChestSlot": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z, slotNumber",
           "args": "int, int, int, int",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n- `int`: Slot\n\nReturns the ID of an item in a chest.",
+          "description": "Returns the ID of an item in a chest, at the specified slot.",
           "example": "No information yet."
         },
         "getChestSlotCount": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z, slotNumber",
           "args": "int, int, int, int",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n- `int`: Slot\n\nReturns the count of an item in a chest.",
+          "description": "Returns the count of an item in a chest, at the specified slot.",
           "example": "No information yet."
         },
         "getChestSlotData": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z, slotNumber",
           "args": "int, int, int, int",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n- `int`: Slot in chest\n\nReturns the damage of an item in a chest.",
+          "description": "Returns the data of an item in a chest, at the specified slot.",
           "example": "No information yet."
         },
         "getData": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z",
           "args": "int, int, int",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n\nReturns the data of an block in the world.",
+          "description": "Returns the data of a block in the world.",
           "example": "No information yet."
         },
         "getFurnaceSlot": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z, slotNumber",
           "args": "int, int, int, int",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n- `int`: Slot\n\nReturns the ID of an item in a furnace.",
+          "description": "Returns the ID of an item in a furnace, at the specified slot.",
           "example": "No information yet."
         },
         "getFurnaceSlotCount": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z, slotNumber",
           "args": "int, int, int, int",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n- `int`: Slot\n\nReturns the count of an item in a furnace.",
+          "description": "Returns the count of an item in a furnace, at the specified slot.",
           "example": "No information yet."
         },
         "getFurnaceSlotData": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z, slotNumber",
           "args": "int, int, int, int",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n- `int`: Slot\n\nReturns the data of an item in a furnace.",
+          "description": "Returns the data of an item in a furnace, at the specified slot.",
           "example": "No information yet."
         },
         "getGameMode": {
@@ -292,9 +303,10 @@
         },
         "getGrassColor": {
           "type": "namespacemethod",
+          "arg_names": "x, z",
           "args": "int, int",
           "returns": "int",
-          "description": "\n- `int`: X\n- `int`: Z\n\nReturns the color of grass.",
+          "description": "Returns the color of grass at the specified coordinate.",
           "example": "No information yet."
         },
         "getLightningLevel": {
@@ -311,21 +323,24 @@
         },
         "getSignText": {
           "type": "namespacemethod",
-          "args": "int, int, int, int",
-          "description": "\n- `int`: X pos\n- `int`: Y pos\n- `int`: Z pos\n- `int`: Line (0, 1, 2, or 3.)\n\nReturns a line of text from a sign.",
+          "arg_names": "x, y, z, lineNumber",
+          "args": "int, int, int, int (0-4)",
+          "description": "Returns a line of text from a sign.",
           "example": "No information yet."
         },
         "getSpawnerEntityType": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z",
           "args": "int, int, int",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n\nReturns the entity ID of a spawner.",
+          "description": "Returns the entity ID of a spawner.",
           "example": "No information yet."
         },
         "getTile": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z",
           "args": "int, int, int",
           "returns": "int",
-          "description": "\n- `int`: X\n- `int`: Y\n- `int`: Z\n\nReturns the ID of a block in the world.",
+          "description": "Returns the ID of a block in the world.",
           "example": "No information yet."
         },
         "getTime": {
@@ -344,13 +359,15 @@
         "getWorldName": {
           "type": "namespacemethod",
           "args": "",
-          "description": "No information yet.",
+          "returns": "string",
+          "description": "Returns the name of the world.",
           "example": "No information yet."
         },
         "playSound": {
           "type": "namespacemethod",
+          "arg_names": "x, y, z, soundName, volume, pitch",
           "args": "double, double, double, string, double, double",
-          "description": "\n- `double`: X pos\n- `double`: Y pos\n- `double`: Z pos\n- `string`: Sound name, **NOT FILE**. e.g `random.click`\n- `double`: ???\n- `double`: ???\n\nPlays a sound somewhere in the world.",
+          "description": "Plays a sound somewhere in the world.",
           "example": "No information yet."
         },
         "playSoundEnt": {
@@ -1191,7 +1208,7 @@
         "defineBlock": {
           "type": "namespacemethod",
           "args": "int, string, Object, int, bool, int",
-          "description": "Defines a new block. These are the parameters in order:\n- `int`: The block ID.\n- `string`: The name of the block.\n- `Object`: The name of a texture, or a texture matrix.\n\n**Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)\nExample of a texture matrix:\n```\n[[\"bottom texture\", subID], [\"top texture\", subID], [\"south texture\", subID], [\"north texture\", subID], [\"west texture\", subID], [\"east texture name\", subID]]\n```\n- `int`: Use a block's material for this one.\n- `opaque`: ???\n- `renderType`: Sets the render type this block will use.",
+          "description": "Defines a new block_ These are the parameters in order:\n                display: \"block. These are the parameters in order\"\n- `int`: The block ID.\n- `string`: The name of the block.\n- `Object`: The name of a texture, or a texture matrix.\n\n**Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)\nExample of a texture matrix:\n```\n[[\"bottom texture\", subID], [\"top texture\", subID], [\"south texture\", subID], [\"north texture\", subID], [\"west texture\", subID], [\"east texture name\", subID]]\n```\n- `int`: Use a block's material for this one.\n- `opaque`: ???\n- `renderType`: Sets the render type this block will use.",
           "example": "No information yet."
         },
         "getAllBlockIds": {
@@ -2303,6 +2320,221 @@
         "LURE": {
           "type": "constant",
           "description": "Increases odds of fishes to bite your hook while fishing."
+        }
+      }
+    },
+    "Sounds": {
+      "namespace": false,
+      "values": {
+        "step_cloth": {
+          "display": "step.cloth",
+          "type": "string",
+          "description": "Stepping on wool."
+        },
+        "step_grass": {
+          "display": "step.grass",
+          "type": "string",
+          "description": "Stepping on grass."
+        },
+        "step_gravel": {
+          "display": "step.gravel",
+          "type": "string",
+          "description": "Stepping on gravel."
+        },
+        "step_sand": {
+          "display": "step.sand",
+          "type": "string",
+          "description": "Stepping on sand."
+        },
+        "step_stone": {
+          "display": "step.stone",
+          "type": "string",
+          "description": "Stepping on stone."
+        },
+        "step_wood": {
+          "display": "step.wood",
+          "type": "string",
+          "description": "Stepping on wood."
+        },
+        "random_splash": {
+          "display": "random.splash",
+          "type": "string",
+          "description": "Splashing water sound."
+        },
+        "random_explode": {
+          "display": "random.explode",
+          "type": "string",
+          "description": "Explosion sound."
+        },
+        "random_break": {
+          "display": "random.break",
+          "type": "string",
+          "description": "Sound when an item breaks."
+        },
+        "random_burp": {
+          "display": "random.burp",
+          "type": "string",
+          "description": "Burp sound."
+        },
+        "fire_fire": {
+          "display": "fire.fire",
+          "type": "string",
+          "description": "Fire crackle."
+        },
+        "fire_ignite": {
+          "display": "fire.ignite",
+          "type": "string",
+          "description": "Fire ignition sound."
+        },
+        "random_chestclosed": {
+          "display": "random.chestclosed",
+          "type": "string",
+          "description": "Chest closing."
+        },
+        "random_chestopen": {
+          "display": "random.chestopen",
+          "type": "string",
+          "description": "Chest opening"
+        },
+        "random_hurt": {
+          "display": "random.hurt",
+          "type": "string",
+          "description": "Player hurt sound."
+        },
+        "random_glass": {
+          "display": "random.glass",
+          "type": "string",
+          "description": "Glass breaking sound."
+        },
+        "mob_sheep": {
+          "display": "mob.sheep",
+          "type": "string",
+          "description": "Sheep baa."
+        },
+        "mob_pig": {
+          "display": "mob.pig",
+          "type": "string",
+          "description": "Pig oink."
+        },
+        "mob_pigdeath": {
+          "display": "mob.pigdeath",
+          "type": "string",
+          "description": "Pig dying sound."
+        },
+        "mob_cow": {
+          "display": "mob.cow",
+          "type": "string",
+          "description": "Cow moo."
+        },
+        "mob_cowhurt": {
+          "display": "mob.cowhurt",
+          "type": "string",
+          "description": "Cow hurting."
+        },
+        "mob_chicken": {
+          "display": "mob.chicken",
+          "type": "string",
+          "description": "Chicken cluck."
+        },
+        "mob_chickenhurt": {
+          "display": "mob.chickenhurt",
+          "type": "string",
+          "description": "Chicken hurting."
+        },
+        "mob_zombie": {
+          "display": "mob.zombie",
+          "type": "string",
+          "description": "Zombie growl."
+        },
+        "mob_zombiedeath": {
+          "display": "mob.zombiedeath",
+          "type": "string",
+          "description": "Zombie dying sound."
+        },
+        "mob_zombiehurt": {
+          "display": "mob.zombiehurt",
+          "type": "string",
+          "description": "Zombie hurting."
+        },
+        "mob_skeleton": {
+          "display": "mob.skeleton",
+          "type": "string",
+          "description": "Skeleton bones sound."
+        },
+        "mob_skeletonhurt": {
+          "display": "mob.skeletonhurt",
+          "type": "string",
+          "description": "Skeleton hurting."
+        },
+        "mob_spider": {
+          "display": "mob.spider",
+          "type": "string",
+          "description": "Spider hiss."
+        },
+        "mob_spiderdeath": {
+          "display": "mob.spiderdeath",
+          "type": "string",
+          "description": "Spider dying sound."
+        },
+        "mob_zombiepig_zpig": {
+          "display": "mob.zombiepig.zpig",
+          "type": "string",
+          "description": "Zombie pigman sound."
+        },
+        "mob_zombiepig_zpigangry": {
+          "display": "mob.zombiepig.zpigangry",
+          "type": "string",
+          "description": "Angry zombie pigman sound."
+        },
+        "mob_zombiepig_zpigdeath": {
+          "display": "mob.zombiepig.zpigdeath",
+          "type": "string",
+          "description": "Zombie pigman dying sound."
+        },
+        "mob_zombiepig_zpighurt": {
+          "display": "mob.zombiepig.zpighurt",
+          "type": "string",
+          "description": "Zombie pigman hurting."
+        },
+        "damage_fallbig": {
+          "display": "damage.fallbig",
+          "type": "string",
+          "description": "Large fall sound."
+        },
+        "damage_fallsmall": {
+          "display": "damage.fallsmall",
+          "type": "string",
+          "description": "Small fall sound."
+        },
+        "random_bow": {
+          "display": "random.bow",
+          "type": "string",
+          "description": "Bow noise."
+        },
+        "random_bowhit": {
+          "display": "random.bowhit",
+          "type": "string",
+          "description": "Bow hitting entity sound."
+        },
+        "mob_creeper": {
+          "display": "mob.creeper",
+          "type": "string",
+          "description": "Creeper hiss."
+        },
+        "mob_creeperdeath": {
+          "display": "mob.creeperdeath",
+          "type": "string",
+          "description": "Creeper dying sound."
+        },
+        "random_eat": {
+          "display": "random.eat",
+          "type": "string",
+          "description": "Eating sound."
+        },
+        "random_fuse": {
+          "display": "random.fuse",
+          "type": "string",
+          "description": "TNT fuse."
         }
       }
     }

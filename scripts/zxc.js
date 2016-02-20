@@ -27,14 +27,54 @@ $(window).load(function () {
     // Configure marked.
     marked.setOptions(config.marked);
 
+	var listNamespace = function (namespace) {
+
+		var data = docs[namespace];
+		if (!data) {
+            console.log("This item doesn't exist.");
+			return false;
+        }
+
+		window.location.hash = namespace;
+
+		$('#current-doc #intro, #current-doc #actual-doc').hide();
+        $('#current-doc #namespace-list').show();
+
+		$("#current-doc #namespace-list .list-group").html("");
+
+		for (child in docs[namespace].values) {
+			var href= $("<a>");
+			href.attr("href", "#" + namespace + "." + child)
+				.addClass("list-group-item")
+				.text(namespace + "." + (docs[namespace].values[child].display ? docs[namespace].values[child].display : child));
+
+			$("#current-doc #namespace-list .list-group").append(href);
+		}
+
+		// Show title.
+        $('#current-doc #namespace-list h1').text(namespace);
+
+	};
+
     var populateBody = function (namespace, namespaceValueName) {
+
+		if (!namespaceValueName) {
+			listNamespace(namespace);
+			return false;
+		}
+
         var data = docs[namespace].values[namespaceValueName];
         if (!data) {
             console.log("This item doesn't exist.");
-            return false;
+			return false;
         }
 
-        $('#current-doc #intro').hide();
+		window.location.hash = namespace + '.' + namespaceValueName;
+
+		if (data.display) namespaceValueName = data.display;
+		if (data.type == 'string') namespaceValueName = '"' + namespaceValueName + '"';
+
+        $('#current-doc #intro, #current-doc #namespace-list').hide();
         $('#current-doc #actual-doc').show();
 
         // Determine correct type for displaying signature.
@@ -95,8 +135,6 @@ $(window).load(function () {
         // Show description
         $('#current-doc #doc-description').html(marked(data.description));
 
-        window.location.hash = namespace + '.' + namespaceValueName;
-
         $('html, body').animate({
             scrollTop: $('#current-doc').offset().top
         }, 250);
@@ -143,8 +181,9 @@ $(window).load(function () {
                 var nListItem = $('<li>');
 
                 // Add internal data
-                var text = (docs[namespace].namespace ? namespace + "." : '') + child;
-                nListItem
+                var text = (docs[namespace].namespace ? namespace + "." : '') + (docs[namespace].values[child].display ? docs[namespace].values[child].display: child);
+
+				nListItem
                     .text(text) // Add the text of the namespace value.
                     .attr('data-table-table', namespace) // Add name of namespace.
                     .attr('data-table-table-key', child) // Add name of namespace value.
@@ -223,7 +262,7 @@ $(window).load(function () {
     });
 
     $("#home").on('click', function () {
-        $('#current-doc #actual-doc').hide();
+        $('#current-doc #actual-doc, #current-doc #namespace-list').hide();
         $('#current-doc #intro').show();
         window.location.hash = "";
     });
