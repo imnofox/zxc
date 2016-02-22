@@ -1,4 +1,4 @@
-$(window).load(function () {
+$(window).load(function() {
 
     // Populated when loading the docs.
     var docs = {};
@@ -27,52 +27,52 @@ $(window).load(function () {
     // Configure marked.
     marked.setOptions(config.marked);
 
-	var listNamespace = function (namespace) {
+    var listNamespace = function(namespace) {
 
-		var data = docs[namespace];
-		if (!data) {
+        var data = docs[namespace];
+        if (!data) {
             console.log("This item doesn't exist.");
-			return false;
+            return false;
         }
 
-		window.location.hash = namespace;
+        window.location.hash = namespace;
 
-		$('#current-doc #intro, #current-doc #actual-doc').hide();
+        $('#current-doc #intro, #current-doc #actual-doc').hide();
         $('#current-doc #namespace-list').show();
 
-		$("#current-doc #namespace-list .list-group").html("");
+        $("#current-doc #namespace-list .list-group").html("");
 
-		for (child in docs[namespace].values) {
-			var href= $("<a>");
-			href.attr("href", "#" + namespace + "." + child)
-				.addClass("list-group-item")
-				.text(namespace + "." + (docs[namespace].values[child].display ? docs[namespace].values[child].display : child));
+        for (child in docs[namespace].values) {
+            var href = $("<a>");
+            href.attr("href", "#" + namespace + "." + child)
+                .addClass("list-group-item")
+                .text(namespace + "." + (docs[namespace].values[child].display ? docs[namespace].values[child].display : child));
 
-			$("#current-doc #namespace-list .list-group").append(href);
-		}
+            $("#current-doc #namespace-list .list-group").append(href);
+        }
 
-		// Show title.
+        // Show title.
         $('#current-doc #namespace-list h1').text(namespace);
 
-	};
+    };
 
-    var populateBody = function (namespace, namespaceValueName) {
+    var populateBody = function(namespace, namespaceValueName) {
 
-		if (!namespaceValueName) {
-			listNamespace(namespace);
-			return false;
-		}
+        if (!namespaceValueName) {
+            listNamespace(namespace);
+            return false;
+        }
 
         var data = docs[namespace].values[namespaceValueName];
         if (!data) {
             console.log("This item doesn't exist.");
-			return false;
+            return false;
         }
 
-		window.location.hash = namespace + '.' + namespaceValueName;
+        window.location.hash = namespace + '.' + namespaceValueName;
 
-		if (data.display) namespaceValueName = data.display;
-		if (data.type == 'string') namespaceValueName = '"' + namespaceValueName + '"';
+        if (data.display) namespaceValueName = data.display;
+        if (data.type == 'string') namespaceValueName = '"' + namespaceValueName + '"';
 
         $('#current-doc #intro, #current-doc #namespace-list').hide();
         $('#current-doc #actual-doc').show();
@@ -111,13 +111,13 @@ $(window).load(function () {
                 // Show example for entries that have them.
                 $("#current-doc #doc-example, #current-doc #doc-example-header").show();
                 $("#current-doc #doc-example").html(marked(data.example));
-                if (isAndroid){
+                if (isAndroid) {
                     $("<a>").text("Try code in BlockLauncher")
-                    .prop("download", "zxc_example.js")
-                    .prop("href", "#")
-                    .addClass("btn btn-block btn-warning")
-                    .insertAfter($("#current-doc #doc-example pre"));
-            }
+                        .prop("download", "zxc_example.js")
+                        .prop("href", "#")
+                        .addClass("btn btn-block btn-warning")
+                        .insertAfter($("#current-doc #doc-example pre"));
+                }
             } else {
                 $('#current-doc #doc-example, #current-doc #doc-example-header').hide();
             }
@@ -150,7 +150,7 @@ $(window).load(function () {
     }
 
     // Populate side nav from doc data.
-    var populateNav = function () {
+    var populateNav = function() {
         // Go through all of the namespaces.
         // ModPE, Level, etc...
         for (namespace in docs) {
@@ -181,9 +181,9 @@ $(window).load(function () {
                 var nListItem = $('<li>');
 
                 // Add internal data
-                var text = (docs[namespace].namespace ? namespace + "." : '') + (docs[namespace].values[child].display ? docs[namespace].values[child].display: child);
+                var text = (docs[namespace].namespace ? namespace + "." : '') + (docs[namespace].values[child].display ? docs[namespace].values[child].display : child);
 
-				nListItem
+                nListItem
                     .text(text) // Add the text of the namespace value.
                     .attr('data-table-table', namespace) // Add name of namespace.
                     .attr('data-table-table-key', child) // Add name of namespace value.
@@ -199,7 +199,7 @@ $(window).load(function () {
 
             // Called when we click a namespace value.
             // Should open up in right side.
-            $('.nav-section-contents ul li').on('click', function () {
+            $('.nav-section-contents ul li').on('click', function() {
                 var namespace = $(this).attr('data-table-table');
                 var namespaceValueName = $(this).attr('data-table-table-key');
 
@@ -211,7 +211,7 @@ $(window).load(function () {
     // Fetch and load data.
     // (Shouldn't take a while!)
     console.log('Fetching...');
-    $.get('data/docs.json', function (data) {
+    $.get('data/docs.json', function(data) {
         console.log('Fetched...');
 
         $.extend(config, data.config);
@@ -220,7 +220,7 @@ $(window).load(function () {
 
         populateNav();
         $('.nav-section .nav-section-contents').hide();
-        $('.nav-section-label').click(function () {
+        $('.nav-section-label').click(function() {
             $(this).parent().find('.nav-section-contents').slideToggle(150);
             if ($(this).hasClass('nav-section-open')) {
                 $(this).removeClass('nav-section-open');
@@ -236,15 +236,15 @@ $(window).load(function () {
     });
 
     // Init search filter thing
-    $("#search").on("keyup", function () {
+    $("#search").on("keyup", function() {
 
         var search_term = $(this).val().toLowerCase();
 
-        $("#nav-menu .nav-section").each(function () {
+        $("#nav-menu .nav-section").each(function() {
 
             var section_shown = false;
 
-            $(this).find("li").each(function () {
+            $(this).find("li").each(function() {
                 // Show results that include the term, or all if the search is empty
                 if ($(this).text().toLowerCase().indexOf(search_term) > -1 || $(this).text() == "") {
                     $(this).show();
@@ -261,21 +261,23 @@ $(window).load(function () {
 
     });
 
-    $("#home").on('click', function () {
+    $("#home").on('click', function() {
         $('#current-doc #actual-doc, #current-doc #namespace-list').hide();
         $('#current-doc #intro').show();
         window.location.hash = "";
     });
 
-    $("#doc-example").on('mousedown', "pre + a.btn", function (){
+    $("#doc-example").on('mousedown', "pre + a.btn", function() {
         var code = $(this).prev().children().text();
-        var url =  "data:application/javascript;charset=UTF-8," + encodeURIComponent(code);
+        var url = "data:application/javascript;charset=UTF-8," + encodeURIComponent(code);
         $(this).prop("href", url);
     });
 
-    $(window).on('hashchange', function (){
+    $(window).on('hashchange', function() {
         hash();
     });
 
-    $('#actual-doc').tooltip({selector: '[data-toggle=tooltip]'});
+    $('#actual-doc').tooltip({
+        selector: '[data-toggle=tooltip]'
+    });
 });

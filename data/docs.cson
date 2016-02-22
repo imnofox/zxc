@@ -1687,8 +1687,8 @@ docs:
 				description: '''
 					Called when a block is updated by redstone.
 
-					`signalStrength` is the strength of the redstone signal, from 0 - 15.
-					`worldLoading` is `true` if the block update is caused by the world loading.
+					- `signalStrength` is the strength of the redstone signal, from 0 - 15.
+					- `worldLoading` is `true` if the block update is caused by the world loading.
 					'''
 				example: '''
 					```
