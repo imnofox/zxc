@@ -56,6 +56,26 @@ $(window).load(function() {
 
     };
 
+    var orderKeys = function(obj, expected) {
+				// from http://stackoverflow.com/a/33049762
+        var keys = Object.keys(obj).sort(function keyOrder(k1, k2) {
+            if (k1 < k2) return -1;
+            else if (k1 > k2) return +1;
+            else return 0;
+        });
+
+        var i, after = {};
+        for (i = 0; i < keys.length; i++) {
+            after[keys[i]] = obj[keys[i]];
+            delete obj[keys[i]];
+        }
+
+        for (i = 0; i < keys.length; i++) {
+            obj[keys[i]] = after[keys[i]];
+        }
+        return obj;
+    };
+
     var populateBody = function(namespace, namespaceValueName) {
 
         if (!namespaceValueName) {
@@ -217,6 +237,10 @@ $(window).load(function() {
         $.extend(config, data.config);
 
         docs = data.docs;
+
+				for (namespace in docs) {
+					docs[namespace].values = orderKeys(docs[namespace].values);
+				}
 
         populateNav();
         $('.nav-section .nav-section-contents').hide();
