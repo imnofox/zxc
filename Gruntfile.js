@@ -14,5 +14,6 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-cson');
+  grunt.registerTask('default', ['cson']);
 
 };

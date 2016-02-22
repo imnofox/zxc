@@ -1415,9 +1415,10 @@
         },
         "redstoneUpdateHook": {
           "type": "hook",
-          "args": "x, y, z, newCurrent, worldLoading, blockId, blockData",
-          "description": "\n- `x`: int, X coordinate\n- `y`: int, Y coordinate\n- `z`: int, Z coordinate\n- `newCurrent`: ???, ???\n- `worldLoading`: bool, Did this take place on world load?\n- `blockId`: int, Block ID\n- `blockData`: int, Block Data\n\nCalled when a redstone event occurs?",
-          "example": "No information yet."
+          "args_names": "x, y, z, signalStrength, worldLoading, blockId, blockData",
+          "args": "int, int, int, int, bool, int, int",
+          "description": "Called when a block is updated by redstone.\n\n`signalStrength` is the strength of the redstone signal, from 0 - 15.\n`worldLoading` is `true` if the block update is caused by the world loading.",
+          "example": "```\nfunction redstoneUpdateHook(x, y, z, signalStrength, worldLoading, blockId, blockData) {\n\tif (blockId == 35) { // 35 = wool\n\t\tif (!worldLoading && signalStrength > 0) { // make sure it's a 'power on' event\n\t\t\tblockData = blockData >= 15: 0 ? blockData + 1; // we want to reset the data value to 0 if it's already the highest, otherwise add 1;\n\t\t\tLevel.setTile(x, y, z, blockId, blockData);\n\t\t}\n\t}\n}\n```\nThis example increases the data value of a wool block when it's powered by redstone. If it's already black (the highest data value, 15), then it's resetted to white.\nIf you use a clock, you'll have disco wool."
         },
         "selectLevelHook": {
           "type": "hook",
@@ -1454,6 +1455,13 @@
           "args": "x, y, z, itemid, blockid, side, itemDamage, blockDamage",
           "description": "Called when the player taps on a block.",
           "example": "No information yet."
+        },
+        "procCmd": {
+          "type": "hook",
+          "arg_names": "command",
+          "args": "string",
+          "description": "Called whenever a command is entered",
+          "example": "```\nfunction procCmd(command) {\n\tvar cmd = command.split(' ');\n\tif (cmd[0].toLowerCase() == 'coords') {\n\t\tModPE.showTipMessage(Player.getX() + '/' + Player.getY() + '/' + Player.getZ());\n\t}\n}\n```\nIt is recommended to split `command` into an array, so you can individually access each argument.\nIf arguments are required, then `command` will equal `\"tp 500 128 30\"`. Once split by spaces, you can access `\"tp\"` with `cmd[0]`, `\"500\"` with `cmd[1]`, etc..."
         }
       }
     },
