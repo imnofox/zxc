@@ -32,7 +32,12 @@ docs:
 				arg_names: "key, value"
 				args: "string, string"
 				description: "Changes a key-pair value in MC:PE's internal i18n database."
-				example: "No information yet."
+				example: '''
+					```
+					ModPE.langEdit('action.interact.exit.boat', "Disembark");
+					```
+					i18n keys and default values can be found in the `/assets/loc/en_US-pocket.lang` file of the Minecraft PE APK.
+					'''
 			leaveGame:
 				type: "namespacemethod"
 				args: ""
