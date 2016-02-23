@@ -166,6 +166,17 @@
           "args": "string",
           "description": "Takes a screenshot and saves it with the supplied filename.",
           "example": "No information yet."
+        },
+        "getI18n": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "String"
+        },
+        "getLanguage": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet."
         }
       }
     },
@@ -797,6 +808,12 @@
           "args": "int",
           "description": "No information yet.",
           "example": "No information yet."
+        },
+        "setInventorySlot": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, int, int, int"
         }
       }
     },
@@ -1193,6 +1210,24 @@
           "args": "int, Object",
           "description": "\n- `int`: ID of the item\n- `Object`: Properties\n\nSets an item's properties, like in `items.json`.",
           "example": "This makes an item edible.\n```\nvar EXAMPLE_NUTRITION = 4;\nItem.setProperties(YOUR_OWN_ID_HERE, {\n    \"use_animation\": \"eat\",\n    \"use_duration\": 32,\n\n    \"food\": {\n      \"nutrition\": EXAMPLE_NUTRITION,\n      \"saturation_modifier\": \"low\",\n      \"is_meat\": false\n    }\n});\n```"
+        },
+        "getUseAnimation": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int"
+        },
+        "setStackedByData": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, par2boolean"
+        },
+        "setUseAnimation": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, int"
         }
       }
     },
@@ -2545,6 +2580,187 @@
           "description": "TNT fuse."
         }
       }
+    },
+    "NamespaceMethod": {
+      "values": {
+        "addItemInventory": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, int, int"
+        },
+        "bl_setMobSkin": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, String"
+        },
+        "bl_spawnMob": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "double, double, double, int, String"
+        },
+        "clientMessage": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "String"
+        },
+        "explode": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "double, double, double, double, par5boolean"
+        },
+        "getCarriedItem": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "getLevel": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "getPitch": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object"
+        },
+        "getPlayerEnt": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "getPlayerX": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "getPlayerY": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "getPlayerZ": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "getTile": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, int, int"
+        },
+        "getYaw": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object"
+        },
+        "preventDefault": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "print": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "String"
+        },
+        "rideAnimal": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, Object"
+        },
+        "setNightMode": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "par1boolean"
+        },
+        "setPosition": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, double, double, double"
+        },
+        "setPositionRelative": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, double, double, double"
+        },
+        "setRot": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, double, double"
+        },
+        "setTile": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, int, int, int, int"
+        },
+        "setVelX": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, double"
+        },
+        "setVelY": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, double"
+        },
+        "setVelZ": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, double"
+        },
+        "spawnChicken": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "double, double, double, String"
+        },
+        "spawnCow": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "double, double, double, String"
+        },
+        "spawnPigZombie": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "double, double, double, int, String"
+        }
+      },
+      "namespace": false
+    },
+    "UseAnimation": {
+      "values": {
+        "bow": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "normal": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        }
+      },
+      "namespace": true
     }
   }
 }

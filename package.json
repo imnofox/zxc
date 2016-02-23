@@ -9,5 +9,8 @@
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-cson": "^0.16.0"
+  },
+  "devDependencies": {
+    "cson": "^3.0.2"
   }
 }
