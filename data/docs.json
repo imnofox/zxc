@@ -2584,18 +2584,21 @@
     "NamespaceMethod": {
       "values": {
         "addItemInventory": {
+          "deprecated": "Player.addItemInventory",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "int, int, int"
         },
         "bl_setMobSkin": {
+          "deprecated": "Entity.setMobSkin",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "Object, String"
         },
         "bl_spawnMob": {
+          "deprecated": "Entity.spawnMob",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
@@ -2608,54 +2611,64 @@
           "args": "String"
         },
         "explode": {
+          "deprecated": "Level.explode",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "double, double, double, double, par5boolean"
         },
         "getCarriedItem": {
+          "deprecated": "Player.getCarriedItem",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet."
         },
         "getLevel": {
+          "deprecated": "Player.getLevel",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet."
         },
         "getPitch": {
+          "deprecated": "Player.getPitch",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "Object"
         },
         "getPlayerEnt": {
+          "deprecated": "Player.getEntity",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet."
         },
         "getPlayerX": {
+          "deprecated": "Player.getX",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet."
         },
         "getPlayerY": {
+          "deprecated": "Player.getY",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet."
         },
         "getPlayerZ": {
+          "deprecated": "Player.getZ",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet."
         },
         "getTile": {
+          "deprecated": "Level.getTile",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "int, int, int"
         },
         "getYaw": {
+          "deprecated": "Entity.getYaw",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
@@ -2673,72 +2686,84 @@
           "args": "String"
         },
         "rideAnimal": {
+          "deprecated": "Entity.rideAnimal",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "Object, Object"
         },
         "setNightMode": {
+          "deprecated": "Level.setNightMode",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "par1boolean"
         },
         "setPosition": {
+          "deprecated": "Entity.setPosition",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "Object, double, double, double"
         },
         "setPositionRelative": {
+          "deprecated": "Entity.setPositionRelative",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "Object, double, double, double"
         },
         "setRot": {
+          "deprecated": "Entity.setRot",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "Object, double, double"
         },
         "setTile": {
+          "deprecated": "Level.setTile",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "int, int, int, int, int"
         },
         "setVelX": {
+          "deprecated": "Entity.setVelX",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "Object, double"
         },
         "setVelY": {
+          "deprecated": "Entity.setVelY",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "Object, double"
         },
         "setVelZ": {
+          "deprecated": "Entity.setVelZ",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "Object, double"
         },
         "spawnChicken": {
+          "deprecated": "Level.spawnChicken",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "double, double, double, String"
         },
         "spawnCow": {
+          "deprecated": "Level.spawnCow",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "double, double, double, String"
         },
         "spawnPigZombie": {
+          "deprecated": "Level.spawnPigZombie",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",

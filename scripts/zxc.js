@@ -94,7 +94,7 @@ $(window).load(function() {
         if (data.display) namespaceValueName = data.display;
         if (data.type == 'string') namespaceValueName = '"' + namespaceValueName + '"';
 
-        $('#current-doc #intro, #current-doc #namespace-list').hide();
+        $('#current-doc #intro, #current-doc #namespace-list, #current-doc .alert').hide();
         $('#current-doc #actual-doc').show();
 
         // Determine correct type for displaying signature.
@@ -155,6 +155,12 @@ $(window).load(function() {
         // Show description
         $('#current-doc #doc-description').html(marked(data.description));
 
+				// Show deprecation notice
+				if (data.deprecated) {
+					$('#current-doc .alert a').prop('href', '#' + data.deprecated).text(data.deprecated);
+					$('#current-doc .alert').show();
+				}
+
         $('html, body').animate({
             scrollTop: $('#current-doc').offset().top
         }, 250);
@@ -206,8 +212,9 @@ $(window).load(function() {
                 nListItem
                     .text(text) // Add the text of the namespace value.
                     .attr('data-table-table', namespace) // Add name of namespace.
-                    .attr('data-table-table-key', child) // Add name of namespace value.
-                    .appendTo(nList); // Then append it to the namespace list.
+                    .attr('data-table-table-key', child); // Add name of namespace value.
+								if (docs[namespace].values[child].deprecated) nListItem.addClass('nav-item-deprecated');
+              	nListItem.appendTo(nList); // Then append it to the namespace list.
             }
 
             // Add list of namespaces

@@ -394,7 +394,7 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, int, int, int"
 				description: '''
-					
+
 					- `int`: X of the chest
 					- `int`: Y of the chest
 					- `int`: Z of the chest
@@ -402,7 +402,7 @@ docs:
 					- `int`: ID of the new item
 					- `int`: Damage (aux) of the new item
 					- `int`: Count of the new item.
-					
+
 					Sets what item is in a chest, at a certain slot.
 				'''
 				example: "No information yet."
@@ -410,7 +410,7 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, int, int, int"
 				description: '''
-					
+
 					- `int`: X of the furnace
 					- `int`: Y of the furnace
 					- `int`: Z of the furnace
@@ -418,7 +418,7 @@ docs:
 					- `int`: ID of the new item
 					- `int`: Damage (aux) of the new item
 					- `int`: Count of the new item.
-					
+
 					Sets what item is in a furnace, at a certain slot.
 				'''
 				example: "No information yet."
@@ -431,11 +431,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-					
+
 					- `int`: X
 					- `int`: Y
 					- `int`: Color (`0xAABBCCDD` color)
-					
+
 					Sets the grass color of a column in the world.
 				'''
 				example: "No information yet."
@@ -458,13 +458,13 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, string"
 				description: '''
-					
+
 					- `int`: X pos
 					- `int`: Y pos
 					- `int`: Z pos
 					- `int`: Line (0, 1, 2, or 3)
 					- `string`: Text
-					
+
 					Sets a line of text in a sign.
 				'''
 				example: "No information yet."
@@ -472,11 +472,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-					
+
 					- `int`: X
 					- `int`: Y
 					- `int`: Z
-					
+
 					Sets the spawn position of the current world.
 				'''
 				example: "No information yet."
@@ -484,12 +484,12 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int"
 				description: '''
-					
+
 					- `int`: X
 					- `int`: Y
 					- `int`: Z
 					- `int`: Entity type ID
-					
+
 					Sets the entity ID of an entity that an entity spawner will spawn.
 				'''
 				example: "No information yet."
@@ -497,13 +497,13 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, int"
 				description: '''
-					
+
 					- `int`: X
 					- `int`: Y
 					- `int`: Z
 					- `int`: Block ID
 					- `int`: Block data
-					
+
 					Sets the ID and damage of a block in the world.
 				'''
 				example: "No information yet."
@@ -549,7 +549,7 @@ docs:
 					- `int`: ID
 					- `int`: Count (usually 1)
 					- `int`: Data (damage)
-					
+
 					Adds an item into the creative inventory. If you want to set which creative tab (category) it belongs in, use `Item.setCategory`.
 				'''
 				example: "No information yet."
@@ -568,9 +568,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-					
+
 					- `int`: The slot.
-					
+
 					Clears a slot in the player's inventory.
 				'''
 				example: "No information yet."
@@ -578,11 +578,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-					
+
 					- `int`: The slot ID of the item in the player's inventory.
 					- `int`: The enchantment.
 					- `int`: The level of the enchantment
-					
+
 					Enchants an item in the player's inventory.
 				'''
 				example: "No information yet."
@@ -591,9 +591,9 @@ docs:
 				args: "int"
 				returns: "Object[]"
 				description: '''
-					
+
 					- `int`: The slot ID of the item.
-					
+
 					Returns the enchantments. It is an array that has the following structure-
 					```
 					var x = Player.getEnchantments(...);
@@ -606,9 +606,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-					
+
 					- `int`: The slot
-					
+
 					Returns the ID of an armor item.
 				'''
 				example: "No information yet."
@@ -616,9 +616,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-					
+
 					- `int`: The slot
-					
+
 					Returns the damage of an armor item.
 				'''
 				example: "No information yet."
@@ -671,9 +671,9 @@ docs:
 				args: "int"
 				returns: "int"
 				description: '''
-					
+
 					- `int`: The slot.
-					
+
 					Returns the ID of the item in the inventory slot.
 				'''
 				example: "No information yet."
@@ -682,9 +682,9 @@ docs:
 				args: "int"
 				returns: "int"
 				description: '''
-					
+
 					- `int`: The slot.
-					
+
 					Returns the count of the item in the inventory slot.
 				'''
 				example: "No information yet."
@@ -693,9 +693,9 @@ docs:
 				args: "int"
 				returns: "int"
 				description: '''
-					
+
 					- `int`: The slot.
-					
+
 					Returns the damage (aux) of the item in the inventory slot.
 				'''
 				example: "No information yet."
@@ -812,10 +812,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, string"
 				description: '''
-					
+
 					- `int`: The slot id of the target item.
 					- `string`: The new name.
-					
+
 					Sets the custom name of an item.
 				'''
 				example: "No information yet."
@@ -824,9 +824,9 @@ docs:
 				args: "int"
 				returns: "string"
 				description: '''
-					
+
 					- `int`: The slot id of the item.
-					
+
 					Returns the custom name of an item.
 				'''
 				example: "No information yet."
@@ -834,11 +834,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-					
+
 					- `int`: Slot number
 					- `int`: ID of the piece
 					- `int`: Damage (data) of the piece.
-					
+
 					Sets the player's armor slot.
 				'''
 				example: "No information yet."
@@ -899,12 +899,12 @@ docs:
 				type: "namespacemethod"
 				args: "entity, int, int, int"
 				description: '''
-					
+
 					- `entity`: Target
 					- `int`: The effect. Use `MobEffect`.
 					- `int`: Duration, in ticks.
 					- `int`: ???
-					
+
 					Gives an entity a potion effect.
 				'''
 				example: "No information yet."
@@ -987,7 +987,7 @@ docs:
 				returns: "double"
 				description: "Returns the pitch (rotation-wise) of this entity."
 				example: '''
-					
+
 					This example prints the player's yaw when they tap a block.
 					```
 					function useItem() {
@@ -1055,7 +1055,7 @@ docs:
 				returns: "double"
 				description: "Returns the yaw (rotation-wise) of this entity."
 				example: '''
-					
+
 					This example prints the player's yaw when they tap a block.
 					```
 					function useItem() {
@@ -1093,10 +1093,10 @@ docs:
 				type: "namespacemethod"
 				args: "entity, int"
 				description: '''
-					
+
 					- `entity`: Target
 					- `int`: ID of the effect. Use `MobEffect`.
-					
+
 					Removes a specific potion effect from an entity.
 				'''
 				example: '''
@@ -1108,20 +1108,20 @@ docs:
 				type: "namespacemethod"
 				args: "entity, key, value"
 				description: '''
-					
+
 					- `entity`: Target
 					- `key`: The key. Must be in the form of `something.something.something` - `value`: A string.
-					
+
 					Stores extra data for this entity.
 				'''
 			getExtraData:
 				type: "namespacemethod"
 				args: "entity, key"
 				description: '''
-					
+
 					- `entity`: Target
 					- `key`: The key to get the value from.
-					
+
 					Returns the data stored at this entity's key.
 				'''
 			rideAnimal:
@@ -1183,12 +1183,12 @@ docs:
 				type: "namespacemethod"
 				args: "entity, double, double, double"
 				description: '''
-					
+
 					- `entity`: Target
 					- `double`: X
 					- `double`: Y
 					- `double`: Z
-					
+
 					Sets the position of an entity.
 				'''
 				example: "No information yet."
@@ -1231,13 +1231,13 @@ docs:
 				type: "namespacemethod"
 				args: "double, double, double, int, string"
 				description: '''
-					
+
 					- `double`: X
 					- `double`: Y
 					- `double`: Z
 					- `int`: Entity type ID
 					- `string`: Skin PNG
-					
+
 					Spawns an entity.
 				'''
 				example: "No information yet."
@@ -1253,8 +1253,8 @@ docs:
 					- `int`: How much of that item.
 					- `int`: The damage/data of that item.
 					- `Scriptable`: Ingredients.
-					
-					
+
+
 					Ingredients should have a continuous 1D array like this:
 					```
 					// Pattern: [id, count, damage, id, count, damage, ...] Item.addCraftRecipe(256, 1, 0, [1, 1, 0, 2, 1, 0]);
@@ -1294,10 +1294,10 @@ docs:
 					], ["x", 2, 0]); // This makes "x" mean grass (2) with damage of (0).
 					```
 					Here is an example of what it looks like in game:
-					
+
 					![picture of crafting recipe](images/craftingrecipe.png)
-					
-					
+
+
 					This makes you receive 64 stone from a crafting recipe of grass blocks shaped in a diamond, with a bedrock block in the center.
 					```
 					// 1, 64 = Stack of stone.
@@ -1313,7 +1313,7 @@ docs:
 				type: "namespacemethod"
 				args: "int, string, int, string, string, int, int, int"
 				description: '''
-					
+
 					- `int`: ID of the new armor piece.
 					- `string`: ???
 					- `int`: ???
@@ -1322,7 +1322,7 @@ docs:
 					- `int`: ???
 					- `int`: ???
 					- `int`: Type. Use `ArmorType`.
-					
+
 					Defines a new piece of armor.
 				'''
 				example: "No information yet."
@@ -1335,9 +1335,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-					
+
 					- `int`: ID
-					
+
 					Returns whether this item is valid.
 				'''
 				example: "No information yet."
@@ -1345,10 +1345,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, int"
 				description: '''
-					
+
 					- `int`: ID of the item.
 					- `int`: Category for the item. Use `ItemCategory`.
-					
+
 					Sets the creative tab this item should belong in.
 					Note that it doesn't show unless you use `Player.addItemCreativeInv`.
 				'''
@@ -1362,10 +1362,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, int"
 				description: '''
-					
+
 					- `int`: ID of the item
 					- `int`: Maximum damage
-					
+
 					Sets the maximum amount of damage this item has?
 				'''
 				example: "No information yet."
@@ -1373,10 +1373,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, Object"
 				description: '''
-					
+
 					- `int`: ID of the item
 					- `Object`: Properties
-					
+
 					Sets an item's properties, like in `items.json`.
 				'''
 				example: '''
@@ -1386,7 +1386,7 @@ docs:
 					Item.setProperties(YOUR_OWN_ID_HERE, {
 					    "use_animation": "eat",
 					    "use_duration": 32,
-					
+
 					    "food": {
 					      "nutrition": EXAMPLE_NUTRITION,
 					      "saturation_modifier": "low",
@@ -1417,12 +1417,12 @@ docs:
 				type: "namespacemethod"
 				args: "int, string, Object, int"
 				description: '''
-					
+
 					- `int`: The block ID. `id + 1` will be used for the still version.
 					- `string`: The name of the block.
 					- `Object`: The textures of the block? Example: `[["stone", 0], ["sand", 0]]`
 					- `int`: The source material. Example: `10` for Lava.
-					
+
 					Defines a new liquid block.
 				'''
 				example: '''
@@ -1431,7 +1431,7 @@ docs:
 					var liquidId = 191; var liquidIdStill = Block.defineLiquidBlock(liquidId /* 192 will also be used for still version */,
 					  "Mudslide", [["stone", 0], ["sand", 0]],
 					  10 /* material: lava */);
-					
+
 					```
 				'''
 			defineBlock:
@@ -1443,7 +1443,7 @@ docs:
 					- `int`: The block ID.
 					- `string`: The name of the block.
 					- `Object`: The name of a texture, or a texture matrix.
-					
+
 					**Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)
 					Example of a texture matrix:
 					```
@@ -1483,10 +1483,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, double"
 				description: '''
-					
+
 					- `int`: ID
 					- `double`: Time
-					
+
 					Sets how long to destroy a block. A shorter time means lesser time required.
 				'''
 				example: "No information yet."
@@ -1494,10 +1494,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, double"
 				description: '''
-					
+
 					- `int`: ID
 					- `double`: Resistance
-					
+
 					Sets the explosion resistance of a single block.
 				'''
 				example: "No information yet."
@@ -1505,10 +1505,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, double"
 				description: '''
-					
+
 					- `int`: ID
 					- `double`: Friction
-					
+
 					Sets the friction of a block.
 				'''
 				example: "No information yet."
@@ -1521,10 +1521,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, int"
 				description: '''
-					
+
 					- `int`: ID
 					- `double`: Light opacity
-					
+
 					Sets the light opacity of a block. You can use it for letting light through.
 					You may have to use `Block.setRenderLayer(YOUR_ID_HERE, 4);`, which sets a block's render layer to 4 (plants), in order for the light to pass through.
 				'''
@@ -1533,9 +1533,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-					
+
 					- `int`: ID
-					
+
 					Allows a block to accept redstone input.
 				'''
 				example: "No information yet."
@@ -1543,10 +1543,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, int"
 				description: '''
-					
+
 					- `int`: The ID of the target block
 					- `int`: The render layer.
-					
+
 					Sets the layer this block will render at.
 				'''
 				example: "No information yet."
@@ -1554,10 +1554,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, int"
 				description: '''
-					
+
 					- `int`: The ID of the target block
 					- `int`: The render layer.
-					
+
 					Sets the rendering type of this block.
 				'''
 				example: "No information yet."
@@ -1603,10 +1603,10 @@ docs:
 				type: "namespacemethod"
 				args: "string, int"
 				description: '''
-					
+
 					- `string`: IP
 					- `int`: Port (default = `19132`)
-					
+
 					Joins a server.
 				'''
 				example: "No information yet."
@@ -1684,7 +1684,7 @@ docs:
 				args: "int, int, int, int, bool, int, int"
 				description: '''
 					Called when a block is updated by redstone.
-					
+
 					- `signalStrength` is the strength of the redstone signal, from 0 - 15.
 					- `worldLoading` is `true` if the block update is caused by the world loading.
 				'''
@@ -2571,16 +2571,19 @@ docs:
 	NamespaceMethod:
 		values:
 			addItemInventory:
+				deprecated: "Player.addItemInventory"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int"
 			bl_setMobSkin:
+				deprecated: "Entity.setMobSkin"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, String"
 			bl_spawnMob:
+				deprecated: "Entity.spawnMob"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
@@ -2591,45 +2594,55 @@ docs:
 				example: "No information yet."
 				args: "String"
 			explode:
+				deprecated: "Level.explode"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "double, double, double, double, par5boolean"
 			getCarriedItem:
+				deprecated: "Player.getCarriedItem"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 			getLevel:
+				deprecated: "Player.getLevel"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 			getPitch:
+				deprecated: "Player.getPitch"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object"
 			getPlayerEnt:
+				deprecated: "Player.getEntity"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 			getPlayerX:
+				deprecated: "Player.getX"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 			getPlayerY:
+				deprecated: "Player.getY"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 			getPlayerZ:
+				deprecated: "Player.getZ"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 			getTile:
+				deprecated: "Level.getTile"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int"
 			getYaw:
+				deprecated: "Entity.getYaw"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
@@ -2644,61 +2657,73 @@ docs:
 				example: "No information yet."
 				args: "String"
 			rideAnimal:
+				deprecated: "Entity.rideAnimal"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, Object"
 			setNightMode:
+				deprecated: "Level.setNightMode"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "par1boolean"
 			setPosition:
+				deprecated: "Entity.setPosition"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, double, double, double"
 			setPositionRelative:
+				deprecated: "Entity.setPositionRelative"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, double, double, double"
 			setRot:
+				deprecated: "Entity.setRot"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, double, double"
 			setTile:
+				deprecated: "Level.setTile"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int, int, int"
 			setVelX:
+				deprecated: "Entity.setVelX"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, double"
 			setVelY:
+				deprecated: "Entity.setVelY"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, double"
 			setVelZ:
+				deprecated: "Entity.setVelZ"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, double"
 			spawnChicken:
+				deprecated: "Level.spawnChicken"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "double, double, double, String"
 			spawnCow:
+				deprecated: "Level.spawnCow"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "double, double, double, String"
 			spawnPigZombie:
+				deprecated: "Level.spawnPigZombie"
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."

@@ -117,6 +117,10 @@ pre code {
     content: '-';
 }
 
+.nav-item-deprecated {
+	opacity: 0.5;
+}
+
 @media (min-width: 769px) {
     #nav {
         overflow-y: auto;
