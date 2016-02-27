@@ -51,6 +51,7 @@ ModPE.setGuiBlocks(par1String);
 ModPE.setItem(par1int, par2String, par3int, par4String, par5int);
 ModPE.setItems(par1String);
 ModPE.setTerrain(par1String);
+ModPE.setUiRenderDebug(par1boolean);
 ModPE.showTipMessage(par1String);
 ModPE.takeScreenshot(par1String);
 
@@ -66,6 +67,7 @@ Level.getBiomeName(par1int, par2int);
 Level.getBrightness(par1int, par2int, par3int);
 Level.getChestSlot(par1int, par2int, par3int, par4int);
 Level.getChestSlotCount(par1int, par2int, par3int, par4int);
+Level.getChestSlotCustomName(par1int, par2int, par3int, par4int);
 Level.getChestSlotData(par1int, par2int, par3int, par4int);
 Level.getData(par1int, par2int, par3int);
 Level.getDifficulty();
@@ -85,6 +87,7 @@ Level.getWorldName();
 Level.playSound(par1double, par2double, par3double, par4String, par5double, par6double);
 Level.playSoundEnt(par1Object, par2String, par3double, par4double);
 Level.setChestSlot(par1int, par2int, par3int, par4int, par5int, par6int, par7int);
+Level.setChestSlotCustomName(par1int, par2int, par3int, par4int, par5String);
 Level.setDifficulty(par1int);
 Level.setFurnaceSlot(par1int, par2int, par3int, par4int, par5int, par6int, par7int);
 Level.setGameMode(par1int);
@@ -172,6 +175,7 @@ Entity.getPitch(par1Object);
 Entity.getRenderType(par1Object);
 Entity.getRider(par1Object);
 Entity.getRiding(par1Object);
+Entity.getTarget(par1Object);
 Entity.getUniqueId(par1Object);
 Entity.getVelX(par1Object);
 Entity.getVelY(par1Object);
@@ -193,6 +197,7 @@ Entity.setCollisionSize(par1Object, par2double, par3double);
 Entity.setExtraData(par1Object, par2String, par3String);
 Entity.setFireTicks(par1Object, par2int);
 Entity.setHealth(par1Object, par2int);
+Entity.setImmobile(par1Object, par2boolean);
 Entity.setMaxHealth(par1Object, par2int);
 Entity.setMobSkin(par1Object, par2String);
 Entity.setNameTag(par1Object, par2String);
@@ -201,6 +206,7 @@ Entity.setPositionRelative(par1Object, par2double, par3double, par4double);
 Entity.setRenderType(par1Object, par2Object);
 Entity.setRot(par1Object, par2double, par3double);
 Entity.setSneaking(par1Object, par2boolean);
+Entity.setTarget(par1Object, par2Object);
 Entity.setVelX(par1Object, par2double);
 Entity.setVelY(par1Object, par2double);
 Entity.setVelZ(par1Object, par2double);
@@ -247,6 +253,7 @@ Server.sendChat(par1String);
 
 function attackHook(attacker, victim)
 function chatHook(str)
+function continueDestroyBlock(x, y, z, side, progress)
 function destroyBlock(x, y, z, side)
 function projectileHitEntityHook(projectile, targetEntity)
 function eatHook(hearts, saturationRatio)

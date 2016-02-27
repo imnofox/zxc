@@ -203,6 +203,11 @@ docs:
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
+			setUiRenderDebug:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "par1boolean"
 	Level:
 		namespace: true
 		values:
@@ -400,7 +405,7 @@ docs:
 				description: "Changes the difficulty level."
 				example: '''
 					```
-					function useItem(itemId) {
+					function useItem(x, y, z, itemId) {
 					    if (itemId == 280 && Level.getDifficulty == 1) { //280 = stick
 					    Level.setDifficulty(0);
 					    clientMessage("You are now in survival mode!");
@@ -563,6 +568,16 @@ docs:
 					- `string`: Skin (PNG file)
 				'''
 				example: "No information yet."
+			getChestSlotCustomName:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "int, int, int, int"
+			setChestSlotCustomName:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "int, int, int, int, String"
 	Player:
 		namespace: true
 		values:
@@ -1270,6 +1285,21 @@ docs:
 					Spawns an entity.
 				'''
 				example: "No information yet."
+			getTarget:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "Object"
+			setImmobile:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "Object, par2boolean"
+			setTarget:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "Object, Object"
 	Item:
 		namespace: true
 		values:
@@ -1473,7 +1503,6 @@ docs:
 				args: "int, string, Object, int, bool, int"
 				description: '''
 					Defines a new block_ These are the parameters in order:
-					                display: "block. These are the parameters in order"
 					- `int`: The block ID.
 					- `string`: The name of the block.
 					- `Object`: The name of a texture, or a texture matrix.
@@ -1496,12 +1525,19 @@ docs:
 			getDestroyTime:
 				type: "namespacemethod"
 				args: "int, int"
-				description: "No information yet."
+				arg_names: "id, data"
+				description: "Returns the destroy time of a block."
 				example: "No information yet."
 			getFriction:
 				type: "namespacemethod"
-				args: "int, int"
-				description: "No information yet."
+				args: "int"
+				arg_names: "id"
+				returns: "double"
+				description: '''
+					Returns the amount of friction a block has. The higher the friction, the slower the player walks over them.
+
+					All blocks return `0.6`, except ice which returns `0.98`.
+				'''
 				example: "No information yet."
 			getRenderType:
 				type: "namespacemethod"
@@ -1783,6 +1819,11 @@ docs:
 					It is recommended to split `command` into an array, so you can individually access each argument.
 					If arguments are required, then `command` will equal `"tp 500 128 30"`. Once split by spaces, you can access `"tp"` with `cmd[0]`, `"500"` with `cmd[1]`, etc...
 				'''
+			continueDestroyBlock:
+				type: "hook"
+				description: "No information yet."
+				example: "No information yet."
+				args: "x, y, z, side, progress"
 	ChatColor:
 		namespace: true
 		values:
