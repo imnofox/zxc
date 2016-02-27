@@ -241,13 +241,13 @@ $(window).load(function() {
     $.get('data/docs.json', function(data) {
         console.log('Fetched...');
 
-        $.extend(config, data.config);
+        $.extend(config.constants, data.config);
 
         docs = data.docs;
 
-				for (namespace in docs) {
-					docs[namespace].values = orderKeys(docs[namespace].values);
-				}
+		for (namespace in docs) {
+			docs[namespace].values = orderKeys(docs[namespace].values);
+		}
 
         populateNav();
         $('.nav-section .nav-section-contents').hide();
