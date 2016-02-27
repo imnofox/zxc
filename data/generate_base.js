@@ -21,6 +21,7 @@ var types = {
 };
 
 var docs_data = CSON.parse(fs.readFileSync('docs.cson'));
+console.dir(docs_data);
 
 var lr = lineReader.createInterface({
     input: fs.createReadStream('modpescript_dump.txt')

@@ -374,6 +374,20 @@
           "description": "Returns the name of the world.",
           "example": "No information yet."
         },
+        "getDifficulty": {
+          "type": "namespacemethod",
+          "args": "",
+          "returns": "int",
+          "description": "Returns the difficulty level as an integer.",
+          "example": "```\nfunction newLevel() {\n    if (Level.getDifficulty == 1) {\n        clientMessage(\"You are in creative mode!\");\n    }\n}\n```"
+        },
+        "setDifficulty": {
+          "type": "namespacemethod",
+          "args": "int",
+          "arg_names": "difficulty",
+          "description": "Changes the difficulty level.",
+          "example": "```\nfunction useItem(itemId) {\n    if (itemId == 280 && Level.getDifficulty == 1) { //280 = stick\n    Level.setDifficulty(0);\n    clientMessage(\"You are now in survival mode!\");\n    }\n}\n```"
+        },
         "playSound": {
           "type": "namespacemethod",
           "arg_names": "x, y, z, soundName, volume, pitch",
@@ -1228,6 +1242,12 @@
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "int, int"
+        },
+        "setEnchantType": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, int, int"
         }
       }
     },
@@ -2094,6 +2114,36 @@
         "zombiePigman": {
           "type": "constant",
           "description": "Zombie Pigman render type."
+        },
+        "camera": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "map": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "painting": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "rabbit": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "unknownItem": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "witch": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
         }
       }
     },
@@ -2780,6 +2830,66 @@
           "example": "No information yet."
         },
         "normal": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        }
+      },
+      "namespace": true
+    },
+    "EnchantType": {
+      "values": {
+        "all": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "axe": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "book": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "bow": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "fishingRod": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "flintAndSteel": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "hoe": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "pickaxe": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "shears": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "shovel": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "weapon": {
           "type": "constant",
           "description": "No information yet.",
           "example": "No information yet."
