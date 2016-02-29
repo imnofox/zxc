@@ -1467,7 +1467,7 @@
         "attackHook": {
           "type": "hook",
           "args": "entity, entity",
-          "args_names": "attacker, victim",
+          "arg_names": "attacker, victim",
           "description": "Called when an entity hits (attacks) another entity.",
           "example": "No information yet."
         },
@@ -1480,21 +1480,21 @@
         "destroyBlock": {
           "type": "hook",
           "args": "int, int, int, int",
-          "args_names": "x, y, z, side",
+          "arg_names": "x, y, z, side",
           "description": "Called when a block has been destroyed.",
           "example": "No information yet."
         },
         "projectileHitEntityHook": {
           "type": "hook",
           "args": "entity, entity",
-          "args_names": "projectile, targetEntity",
+          "arg_names": "projectile, targetEntity",
           "description": "Called when a projectile hits an entity.",
           "example": "No information yet."
         },
         "eatHook": {
           "type": "hook",
           "args": "int, int",
-          "args_names": "hearts, saturationRatio",
+          "arg_names": "hearts, saturationRatio",
           "description": "Called when the player eats something.",
           "example": "No information yet."
         },
