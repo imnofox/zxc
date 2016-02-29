@@ -177,6 +177,12 @@
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet."
+        },
+        "setUiRenderDebug": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "par1boolean"
         }
       }
     },
@@ -386,7 +392,7 @@
           "args": "int",
           "arg_names": "difficulty",
           "description": "Changes the difficulty level.",
-          "example": "```\nfunction useItem(itemId) {\n    if (itemId == 280 && Level.getDifficulty == 1) { //280 = stick\n    Level.setDifficulty(0);\n    clientMessage(\"You are now in survival mode!\");\n    }\n}\n```"
+          "example": "```\nfunction useItem(x, y, z, itemId) {\n    if (itemId == 280 && Level.getDifficulty == 1) { //280 = stick\n    Level.setDifficulty(0);\n    clientMessage(\"You are now in survival mode!\");\n    }\n}\n```"
         },
         "playSound": {
           "type": "namespacemethod",
@@ -490,6 +496,18 @@
           "args": "double, double, double, int, string",
           "description": "Creates an entity.\n- `double`: X\n- `double`: Y\n- `double`: Z\n- `int`: Entity type ID\n- `string`: Skin (PNG file)",
           "example": "No information yet."
+        },
+        "getChestSlotCustomName": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, int, int, int"
+        },
+        "setChestSlotCustomName": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, int, int, int, String"
         }
       }
     },
@@ -1159,6 +1177,24 @@
           "args": "double, double, double, int, string",
           "description": "\n- `double`: X\n- `double`: Y\n- `double`: Z\n- `int`: Entity type ID\n- `string`: Skin PNG\n\nSpawns an entity.",
           "example": "No information yet."
+        },
+        "getTarget": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object"
+        },
+        "setImmobile": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, par2boolean"
+        },
+        "setTarget": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, Object"
         }
       }
     },
@@ -1167,45 +1203,51 @@
       "values": {
         "addCraftRecipe": {
           "type": "namespacemethod",
-          "args": "int, int, int, Scriptable",
-          "description": "Creates an unshaped crafting recipe.\n- `int`: ID of the item you'll get from the recipe.\n- `int`: How much of that item.\n- `int`: The damage/data of that item.\n- `Scriptable`: Ingredients.\n\n\nIngredients should have a continuous 1D array like this:\n```\n// Pattern: [id, count, damage, id, count, damage, ...] Item.addCraftRecipe(256, 1, 0, [1, 1, 0, 2, 1, 0]);\n```\nThe above code creates a shovel from 1 stone block and 1 grass block.",
-          "example": "No information yet."
+          "arg_names": "id, count, data, ingredients",
+          "args": "int, int, int, array",
+          "description": "Creates an unshaped crafting recipe.\n\nIngredients should have a continuous 1D array like this:\n```\n[id, count, damage, id, count, damage, id, count, damage, ...]\n```",
+          "example": "```\nItem.addCraftRecipe(256, 1, 0, [1, 1, 0, 2, 1, 0]);\n```\nThis creates a shovel from 1 stone block & 1 grass block."
         },
         "addFurnaceRecipe": {
           "type": "namespacemethod",
           "args": "int, int, int",
-          "description": "Creates a simple furnace recipe.\n- `int`: Input ID\n- `int`: Output ID\n- `int`: Output damage",
-          "example": "No information yet."
+          "arg_names": "inputId, outputId, outptDamage",
+          "description": "Creates a simple furnace recipe.",
+          "example": "```\nItem.addFurnaceRecipe(1, 4, 0);\n```\nCreates a furnace recipe to make cobblestone from stone."
         },
         "addShapedRecipe": {
           "type": "namespacemethod",
-          "args": "int, int, int, Scriptable, Scriptable",
-          "description": "Adds a shaped crafting recipe. Use this function if you want your recipe to be in a specific shape.\n- `int`: Result item ID\n- `int`: Result item count\n- `int`: Result item damage\n- `Scriptable`: Shape matrix\n- `Scriptable`: Letter defines.",
-          "example": "This makes you receive 64 stone from a crafting recipe of grass blocks shaped in a diamond.\n```\n// 1, 64 = Stack of stone.\nItem.addShapedRecipe(1, 64, 0, [\n  \" x \", // Top row.\n  \"x x\", // Middle row.\n  \" x \" // Bottom row.\n], [\"x\", 2, 0]); // This makes \"x\" mean grass (2) with damage of (0).\n```\nHere is an example of what it looks like in game:\n\n![picture of crafting recipe](images/craftingrecipe.png)\n\n\nThis makes you receive 64 stone from a crafting recipe of grass blocks shaped in a diamond, with a bedrock block in the center.\n```\n// 1, 64 = Stack of stone.\nItem.addShapedRecipe(1, 64, 0, [\n  \" x \", // Top row.\n  \"xbx\", // Middle row.\n  \" x \" // Bottom row.\n], [\"x\", 2, 0, \"b\", 7, 0]); // This makes \"x\" mean grass (2) with damage of (0).\n// Also makes \"b\" mean bedrock (7) with damage of (0).\n```"
+          "args": "int, int, int, arry, array",
+          "arg_names": "id, count, damage, shape, letters",
+          "description": "Adds a shaped crafting recipe. Use this function if you want your recipe to be in a specific shape.",
+          "example": "This makes you receive 64 stone from a crafting recipe of grass blocks shaped in a diamond.\n```\nItem.addShapedRecipe(1, 64, 0, [\n  \" x \", // Top row.\n  \"x x\", // Middle row.\n  \" x \" // Bottom row.\n], [\"x\", 2, 0]); // This makes \"x\" mean grass (2) with damage of (0).\n```\nHere is an example of what it looks like in game:\n\n![picture of crafting recipe](images/shapedrecipe1.png)\n\n\nThis makes you receive 64 stone from a crafting recipe of grass blocks shaped in a diamond, with a bedrock block in the center.\n```\nItem.addShapedRecipe(1, 64, 0, [\n  \" x \", // Top row.\n  \"xbx\", // Middle row.\n  \" x \" // Bottom row.\n], [\"x\", 2, 0, \"b\", 7, 0]); // This makes \"x\" mean grass (2) with damage of (0).\n// Also makes \"b\" mean bedrock (7) with damage of (0).\n```\nHere is an example of what it looks like in game:\n\n![picture of crafting recipe](images/shapedrecipe2.png)"
         },
         "defineArmor": {
           "type": "namespacemethod",
           "args": "int, string, int, string, string, int, int, int",
-          "description": "\n- `int`: ID of the new armor piece.\n- `string`: ???\n- `int`: ???\n- `string`: Name of the item.\n- `string`: Texture for the item?\n- `int`: ???\n- `int`: ???\n- `int`: Type. Use `ArmorType`.\n\nDefines a new piece of armor.",
-          "example": "No information yet."
+          "arg_names": "id, iconName, iconIndex, name, texture, damageReduceAmount, maxDamage, armorType",
+          "description": "Defines a new piece of armor.",
+          "example": "```\nItem.defineArmor(411, \"empty_armor_slot_boots\", 0, \"Zombie mask\", \"mob/zombie.png\", 1, 10, ArmorType.helmet);\nItem.defineArmor(412, \"empty_armor_slot_chestplate\", 0, \"Zombie shirt\", \"mob/zombie.png\", 1, 10, ArmorType.chestplate);\nItem.defineArmor(413, \"empty_armor_slot_leggings\", 0, \"Zombie pants\", \"mob/zombie.png\", 1, 10, ArmorType.leggings);\nItem.defineArmor(414, \"empty_armor_slot_boots\", 0, \"Zombie shoes\", \"mob/zombie.png\", 1, 10, ArmorType.boots);\n```\nExample by [Zhuowei](https://github.com/zhuowei/ModPEScripts/blob/f8a6092f5e10a8b9829551b10c4350b6f928486c/armortest.js)"
         },
         "getName": {
           "type": "namespacemethod",
-          "args": "int, int",
+          "args": "int, int, boolean",
           "description": "No information yet.",
           "example": "No information yet."
         },
         "isValidItem": {
           "type": "namespacemethod",
           "args": "int",
-          "description": "\n- `int`: ID\n\nReturns whether this item is valid.",
+          "arg_names": "id",
+          "description": "Returns whether this item is valid.",
           "example": "No information yet."
         },
         "setCategory": {
           "type": "namespacemethod",
           "args": "int, int",
-          "description": "\n- `int`: ID of the item.\n- `int`: Category for the item. Use `ItemCategory`.\n\nSets the creative tab this item should belong in.\nNote that it doesn't show unless you use `Player.addItemCreativeInv`.",
-          "example": "No information yet."
+          "arg_names": "id, itemCategory",
+          "description": "Sets the creative tab this item should belong in.\nNote that it doesn't show unless you use `Player.addItemCreativeInv`.\n\nSee [ItemCategory](#ItemCategory) for ItemCategory constants.",
+          "example": "```\nModpe.setItem(440, 'camera', 0, \"Coin\", 32);\nItem.setCategory(440, ItemCategory.TOOL);\nPlayer.addItemCreativeInv(440, 1, 0);\n```"
         },
         "setHandEquipped": {
           "type": "namespacemethod",
@@ -1216,14 +1258,16 @@
         "setMaxDamage": {
           "type": "namespacemethod",
           "args": "int, int",
-          "description": "\n- `int`: ID of the item\n- `int`: Maximum damage\n\nSets the maximum amount of damage this item has?",
+          "arg_names": "id, maxDamage",
+          "description": "Sets the maximum amount of damage this item has?",
           "example": "No information yet."
         },
         "setProperties": {
           "type": "namespacemethod",
           "args": "int, Object",
-          "description": "\n- `int`: ID of the item\n- `Object`: Properties\n\nSets an item's properties, like in `items.json`.",
-          "example": "This makes an item edible.\n```\nvar EXAMPLE_NUTRITION = 4;\nItem.setProperties(YOUR_OWN_ID_HERE, {\n    \"use_animation\": \"eat\",\n    \"use_duration\": 32,\n\n    \"food\": {\n      \"nutrition\": EXAMPLE_NUTRITION,\n      \"saturation_modifier\": \"low\",\n      \"is_meat\": false\n    }\n});\n```"
+          "arg_names": "id, properties",
+          "description": "Sets an item's properties, like in `items.json`.",
+          "example": "This makes an item edible.\n```\n// Let's create a new item called 'Toast'\nModpe.setItem(440, 'bread', 0, \"Toast\", 32);\nItem.setProperties(440, {\n    use_animation: \"eat\", // Use the eating animation\n    use_duration: 32,\n\n    food: {\n      nutrition: 4, // Give it 4 1/2 hearts of nutrition\n      saturation_modifier: \"low\",\n      is_meat: false\n    }\n});\n```\nThis example can be replicated much easier with [ModPE.setFoodItem](#ModPE.setFoodItem)."
         },
         "getUseAnimation": {
           "type": "namespacemethod",
@@ -1256,99 +1300,117 @@
       "values": {
         "defineLiquidBlock": {
           "type": "namespacemethod",
-          "args": "int, string, Object, int",
-          "description": "\n- `int`: The block ID. `id + 1` will be used for the still version.\n- `string`: The name of the block.\n- `Object`: The textures of the block? Example: `[[\"stone\", 0], [\"sand\", 0]]`\n- `int`: The source material. Example: `10` for Lava.\n\nDefines a new liquid block.",
-          "example": "Example from zhuowei.\n```\nvar liquidId = 191; var liquidIdStill = Block.defineLiquidBlock(liquidId /* 192 will also be used for still version */,\n  \"Mudslide\", [[\"stone\", 0], [\"sand\", 0]],\n  10 /* material: lava */);\n\n```"
+          "args": "int, string, array OR string, int",
+          "arg_names": "id, name, textures, material",
+          "returns": "int",
+          "description": "Defines a new liquid block.\n\n`id + 1` will be used as the stationary version's ID.\n\nReturns `id + 1`",
+          "example": "```\nvar liquidId = 191; // 192 will be used for still version\nBlock.defineLiquidBlock(liquidId, \"Mudslide\", [[\"stone\", 0], [\"sand\", 0]], 10); // 10 = lava\n```"
         },
         "defineBlock": {
           "type": "namespacemethod",
-          "args": "int, string, Object, int, bool, int",
-          "description": "Defines a new block_ These are the parameters in order:\n                display: \"block. These are the parameters in order\"\n- `int`: The block ID.\n- `string`: The name of the block.\n- `Object`: The name of a texture, or a texture matrix.\n\n**Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)\nExample of a texture matrix:\n```\n[[\"bottom texture\", subID], [\"top texture\", subID], [\"south texture\", subID], [\"north texture\", subID], [\"west texture\", subID], [\"east texture name\", subID]]\n```\n- `int`: Use a block's material for this one.\n- `opaque`: ???\n- `renderType`: Sets the render type this block will use.",
-          "example": "No information yet."
+          "args": "int, string, array OR string, int, bool, int",
+          "arg_names": "id, name, textures, material, opaque, renderType",
+          "description": "Defines a new block These are the parameters in order:\n- `id`: The block ID.\n- `name`: The name of the block.\n- `textures`: The name of a texture, or a texture matrix.\n\n**Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)\nExample of a texture matrix:\n```\n[[\"bottom texture\", subID], [\"top texture\", subID], [\"south texture\", subID], [\"north texture\", subID], [\"west texture\", subID], [\"east texture name\", subID]]\n```\n- `material`: Use a block's material for this one.\n- `opaque`: ???\n- `renderType`: Sets the render type this block will use.",
+          "example": "```\nBlock.defineBlock(242, \"Strange Green Block\", ['melon', 0], 1, true, 0);\nBlock.defineBlock(241, \"Crate\", 'piston_top_normal', 54, true, 0);\nBlock.defineBlock(240, \"Weird Block\", [\n\t['soul_sand', 0], \t\t// bottom\n\t['pumpkin', 3], \t\t// top\n\t['piston_side', 0], \t// south\n\t['mycelium', 1], \t\t// north\n\t['jukebox_side', 0], \t// west\n\t['crafting_table', 1]\t// east\n\t], 20, true, 0);\n```"
         },
         "getAllBlockIds": {
           "type": "namespacemethod",
           "args": "",
-          "description": "No information yet.",
-          "example": "No information yet."
+          "returns": "array",
+          "description": "Returns an aray of all used block IDs.",
+          "example": "var blockId = 199;\nif (Block.getAllBlockIds().indexOf(blockId) > -1) { // we use the indexOf() function to see if the value is in the array\n\tprint('This ID is already taken!');\n}"
         },
         "getDestroyTime": {
           "type": "namespacemethod",
           "args": "int, int",
-          "description": "No information yet.",
+          "arg_names": "id, data",
+          "description": "Returns the destroy time of a block.",
           "example": "No information yet."
         },
         "getFriction": {
           "type": "namespacemethod",
-          "args": "int, int",
-          "description": "No information yet.",
+          "args": "int",
+          "arg_names": "id",
+          "returns": "double",
+          "description": "Returns the amount of friction a block has. The higher the friction, the slower the player walks over them.\n\nAll blocks return `0.6`, except ice which returns `0.98`.",
           "example": "No information yet."
         },
         "getRenderType": {
           "type": "namespacemethod",
           "args": "int",
-          "description": "No information yet.",
+          "returns": "int",
+          "description": "Returns the render type being used by the block.",
           "example": "No information yet."
         },
         "setColor": {
           "type": "namespacemethod",
-          "args": "int, Scriptable",
-          "description": "No information yet.",
-          "example": "No information yet."
+          "args": "int, array",
+          "arg_names": "id, colorArray",
+          "description": "Changes the color of the block.\n\nReplace `#` with `0x`, and wrap it inside an array.",
+          "example": "For instance, if I want to make my custom block pink (#ff00ff):\n```\nBlock.setColor(204, [0xff00ff]);\n```"
         },
         "setDestroyTime": {
           "type": "namespacemethod",
           "args": "int, double",
-          "description": "\n- `int`: ID\n- `double`: Time\n\nSets how long to destroy a block. A shorter time means lesser time required.",
-          "example": "No information yet."
+          "arg_names": "id, time",
+          "description": "Sets how long to destroy a block. A shorter time means a lesser time required.\nTime is not in seconds. See the MC wiki for examples, [specifically the 'Breaking time' by hand column](http://minecraft.gamepedia.com/Breaking#Blocks_by_hardness).",
+          "example": "```\nBlock.setDestroyTime(204, 40);\n```"
         },
         "setExplosionResistance": {
           "type": "namespacemethod",
           "args": "int, double",
-          "description": "\n- `int`: ID\n- `double`: Resistance\n\nSets the explosion resistance of a single block.",
+          "arg_names": "id, resistance",
+          "description": "Sets the explosion resistance of a single block.\n`resistance` is the total number of TNT explosions it will take to destroy the block.",
           "example": "No information yet."
         },
         "setFriction": {
           "type": "namespacemethod",
           "args": "int, double",
-          "description": "\n- `int`: ID\n- `double`: Friction\n\nSets the friction of a block.",
+          "arg_names": "id, friction",
+          "description": "Sets the friction of a block. The higher the friction, the slower the player walks over them.\n\nAll blocks have `0.6`, except ice which has `0.98`.",
           "example": "No information yet."
         },
         "setLightLevel": {
           "type": "namespacemethod",
           "args": "int, int",
-          "description": "Sets how much light this block will give off.",
+          "arg_names": "id, lightLevel",
+          "description": "Sets how much light this block will give off.\n`lightLevel` must be from 0-15.",
           "example": "No information yet."
         },
         "setLightOpacity": {
           "type": "namespacemethod",
           "args": "int, int",
-          "description": "\n- `int`: ID\n- `double`: Light opacity\n\nSets the light opacity of a block. You can use it for letting light through.\nYou may have to use `Block.setRenderLayer(YOUR_ID_HERE, 4);`, which sets a block's render layer to 4 (plants), in order for the light to pass through.",
+          "arg_names": "id, lightOpacity",
+          "description": "Sets the light opacity of a block. You can use it for letting light through.\n- 0 lets all light through.\n- 10 (max) lets none through.\nYou may have to use `Block.setRenderLayer(YOUR_ID_HERE, 4);`, which sets a block's render layer to 4 (plants), in order for the light to pass through.",
           "example": "No information yet."
         },
         "setRedstoneConsumer": {
           "type": "namespacemethod",
-          "args": "int",
-          "description": "\n- `int`: ID\n\nAllows a block to accept redstone input.",
+          "args": "int, boolean",
+          "arg_names": "id, boolean",
+          "description": "Allows a block to accept redstone input.",
           "example": "No information yet."
         },
         "setRenderLayer": {
           "type": "namespacemethod",
           "args": "int, int",
-          "description": "\n- `int`: The ID of the target block\n- `int`: The render layer.\n\nSets the layer this block will render at.",
+          "arg_names": "id, renderLayer",
+          "description": "Sets the layer this block will render at.",
           "example": "No information yet."
         },
         "setRenderType": {
           "type": "namespacemethod",
           "args": "int, int",
-          "description": "\n- `int`: The ID of the target block\n- `int`: The render layer.\n\nSets the rendering type of this block.",
+          "arg_names": "id, renderType",
+          "description": "Sets the rendering type of this block.",
           "example": "No information yet."
         },
         "setShape": {
           "type": "namespacemethod",
           "args": "int, double, double, double, double, double, double, int",
-          "description": "Sets a block's boundaries.\n- `int`: The ID.\n- `double`: X min\n- `double`: Y min\n- `double`: Z min\n- `double`: X max\n- `double`: Y max\n- `double`: Z max\n- `int`: Data (damage) value",
-          "example": "No information yet."
+          "arg_names": "id, minX, minY, minZ, maxX, maxY, maxZ, damage",
+          "description": "Sets a block's boundaries.",
+          "example": "```\nBlock.setShape(204, 0.25, 0, 0.25, 0.75, 0.5, 0.75, 0);\n```\nThis creates a block that is half the size of a regular block. Do note, with the full light opacity, blocks may not let light through.\n\n![picture of custom shape](images/setshape_example.png)"
         }
       }
     },
@@ -1517,6 +1579,12 @@
           "args": "string",
           "description": "Called whenever a command is entered",
           "example": "```\nfunction procCmd(command) {\n\tvar cmd = command.split(' ');\n\tif (cmd[0].toLowerCase() == 'coords') {\n\t\tModPE.showTipMessage(Player.getX() + '/' + Player.getY() + '/' + Player.getZ());\n\t}\n}\n```\nIt is recommended to split `command` into an array, so you can individually access each argument.\nIf arguments are required, then `command` will equal `\"tp 500 128 30\"`. Once split by spaces, you can access `\"tp\"` with `cmd[0]`, `\"500\"` with `cmd[1]`, etc..."
+        },
+        "continueDestroyBlock": {
+          "type": "hook",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "x, y, z, side, progress"
         }
       }
     },
