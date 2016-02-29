@@ -120,7 +120,7 @@ $(window).load(function() {
                         argSpan.text(names[i].trim());
                         argSpan.prop('title', args[i].trim());
                         argSpan.attr('data-toggle', 'tooltip');
-                        console.log('tt added + ' names[i].trim());
+                        console.log('tt added + ' + names[i].trim() );
                     } else {
                         argSpan.text(args[i].trim());
                     }
