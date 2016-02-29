@@ -171,7 +171,7 @@
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
-          "args": "String"
+          "args": "string"
         },
         "getLanguage": {
           "type": "namespacemethod",
@@ -507,7 +507,7 @@
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
-          "args": "int, int, int, int, String"
+          "args": "int, int, int, int, string"
         }
       }
     },
@@ -1420,36 +1420,42 @@
         "getAddress": {
           "type": "namespacemethod",
           "args": "",
-          "description": "No information yet.",
+          "returns": "string",
+          "description": "Returns the address of the current server.",
           "example": "No information yet."
         },
         "getAllPlayerNames": {
           "type": "namespacemethod",
           "args": "",
-          "description": "No information yet.",
+          "returns": "string[]",
+          "description": "Returns an array of all player names on the current server.",
           "example": "No information yet."
         },
         "getAllPlayers": {
           "type": "namespacemethod",
           "args": "",
-          "description": "No information yet.",
+          "returns": "int[]",
+          "description": "Returns an array of all player entity IDs on the current server.",
           "example": "No information yet."
         },
         "getPort": {
           "type": "namespacemethod",
           "args": "",
-          "description": "No information yet.",
+          "returns": "int",
+          "description": "Returns the port of the current server.",
           "example": "No information yet."
         },
         "joinServer": {
           "type": "namespacemethod",
           "args": "string, int",
-          "description": "\n- `string`: IP\n- `int`: Port (default = `19132`)\n\nJoins a server.",
+          "arg_names": "address, port",
+          "description": "Joins a server.",
           "example": "No information yet."
         },
         "sendChat": {
           "type": "namespacemethod",
           "args": "string",
+          "arg_names": "message",
           "description": "Sends a message via chat.",
           "example": "No information yet."
         }
@@ -1460,31 +1466,35 @@
       "values": {
         "attackHook": {
           "type": "hook",
-          "args": "attacker, victim",
+          "args": "entity, entity",
+          "args_names": "attacker, victim",
           "description": "Called when an entity hits (attacks) another entity.",
           "example": "No information yet."
         },
         "chatHook": {
           "type": "hook",
-          "args": "str",
+          "args": "string",
           "description": "No information yet.",
           "example": "No information yet."
         },
         "destroyBlock": {
           "type": "hook",
-          "args": "x, y, z, side",
+          "args": "int, int, int, int",
+          "args_names": "x, y, z, side",
           "description": "Called when a block has been destroyed.",
           "example": "No information yet."
         },
         "projectileHitEntityHook": {
           "type": "hook",
-          "args": "projectile, targetEntity",
+          "args": "entity, entity",
+          "args_names": "projectile, targetEntity",
           "description": "Called when a projectile hits an entity.",
           "example": "No information yet."
         },
         "eatHook": {
           "type": "hook",
-          "args": "hearts, saturationRatio",
+          "args": "int, int",
+          "args_names": "hearts, saturationRatio",
           "description": "Called when the player eats something.",
           "example": "No information yet."
         },
@@ -1502,19 +1512,21 @@
         },
         "explodeHook": {
           "type": "hook",
-          "args": "entity, x, y, z, power, onFire",
+          "args": "entity, int, int, int, int, boolean",
+          "arg_names": "entity, x, y, z, power, onFire",
           "description": "Called when an explosion happens.",
           "example": "No information yet."
         },
         "serverMessageReceiveHook": {
           "type": "hook",
-          "args": "str",
+          "args": "string",
           "description": "No information yet.",
           "example": "No information yet."
         },
         "chatReceiveHook": {
           "type": "hook",
-          "args": "str, sender",
+          "args": "string, ???",
+          "arg_names": "string, sender",
           "description": "No information yet.",
           "example": "No information yet."
         },
@@ -1526,13 +1538,14 @@
         },
         "deathHook": {
           "type": "hook",
-          "args": "attacker, victim",
+          "args": "entity, entity",
+          "arg_names": "attacker, victim",
           "description": "Called when an entity dies.",
           "example": "No information yet."
         },
         "redstoneUpdateHook": {
           "type": "hook",
-          "args_names": "x, y, z, signalStrength, worldLoading, blockId, blockData",
+          "arg_names": "x, y, z, signalStrength, worldLoading, blockId, blockData",
           "args": "int, int, int, int, bool, int, int",
           "description": "Called when a block is updated by redstone.\n\n- `signalStrength` is the strength of the redstone signal, from 0 - 15.\n- `worldLoading` is `true` if the block update is caused by the world loading.",
           "example": "```\nfunction redstoneUpdateHook(x, y, z, signalStrength, worldLoading, blockId, blockData) {\n\tif (blockId == 35) { // 35 = wool\n\t\tif (!worldLoading && signalStrength > 0) { // make sure it's a 'power on' event\n\t\t\tblockData = blockData >= 15: 0 ? blockData + 1; // we want to reset the data value to 0 if it's already the highest, otherwise add 1;\n\t\t\tLevel.setTile(x, y, z, blockId, blockData);\n\t\t}\n\t}\n}\n```\nThis example increases the data value of a wool block when it's powered by redstone. If it's already black (the highest data value, 15), then it's resetted to white.\nIf you use a clock, you'll have disco wool."
@@ -1551,13 +1564,15 @@
         },
         "startDestroyBlock": {
           "type": "hook",
-          "args": "x, y, z, side",
+          "args": "int, int, int, int",
+          "arg_names": "x, y, z, side",
           "description": "No information yet.",
           "example": "No information yet."
         },
         "projectileHitBlockHook": {
           "type": "hook",
-          "args": "projectile, blockX, blockY, blockZ, side",
+          "args": "entity, int, int, int, int",
+          "arg_names": "projectile, blockX, blockY, blockZ, side",
           "description": "Called when a projectile hits a block.",
           "example": "No information yet."
         },
@@ -1569,7 +1584,8 @@
         },
         "useItem": {
           "type": "hook",
-          "args": "x, y, z, itemid, blockid, side, itemDamage, blockDamage",
+          "args": "int, int, int, int, int, int, int, int",
+          "arg_names": "x, y, z, itemid, blockid, side, itemDamage, blockDamage",
           "description": "Called when the player taps on a block.",
           "example": "No information yet."
         },
@@ -1584,7 +1600,8 @@
           "type": "hook",
           "description": "No information yet.",
           "example": "No information yet.",
-          "args": "x, y, z, side, progress"
+          "args": "int, int, int, int, int?",
+          "arg_names": "x, y, z, side, progress"
         }
       }
     },
@@ -2713,20 +2730,20 @@
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
-          "args": "Object, String"
+          "args": "Object, string"
         },
         "bl_spawnMob": {
           "deprecated": "Entity.spawnMob",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
-          "args": "double, double, double, int, String"
+          "args": "double, double, double, int, string"
         },
         "clientMessage": {
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
-          "args": "String"
+          "args": "string"
         },
         "explode": {
           "deprecated": "Level.explode",
@@ -2801,7 +2818,7 @@
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
-          "args": "String"
+          "args": "string"
         },
         "rideAnimal": {
           "deprecated": "Entity.rideAnimal",
@@ -2871,21 +2888,21 @@
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
-          "args": "double, double, double, String"
+          "args": "double, double, double, string"
         },
         "spawnCow": {
           "deprecated": "Level.spawnCow",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
-          "args": "double, double, double, String"
+          "args": "double, double, double, string"
         },
         "spawnPigZombie": {
           "deprecated": "Level.spawnPigZombie",
           "type": "namespacemethod",
           "description": "No information yet.",
           "example": "No information yet.",
-          "args": "double, double, double, int, String"
+          "args": "double, double, double, int, string"
         }
       },
       "namespace": false
