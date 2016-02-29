@@ -36,6 +36,7 @@ $(window).load(function() {
         }
 
         window.location.hash = namespace;
+		document.title = "zxc - " + namespace;
 
         $('#current-doc #intro, #current-doc #actual-doc').hide();
         $('#current-doc #namespace-list').show();
@@ -90,6 +91,7 @@ $(window).load(function() {
         }
 
         window.location.hash = namespace + '.' + namespaceValueName;
+		document.title = "zxc - " + namespace + '.' + namespaceValueName;
 
         if (data.display) namespaceValueName = data.display;
         if (data.type == 'string') namespaceValueName = '"' + namespaceValueName + '"';
@@ -296,6 +298,7 @@ $(window).load(function() {
         $('#current-doc #actual-doc, #current-doc #namespace-list').hide();
         $('#current-doc #intro').show();
         window.location.hash = "";
+		document.title = "zxc";
     });
 
     $("#doc-example").on('mousedown', "pre + a.btn", function() {
