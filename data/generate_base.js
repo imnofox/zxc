@@ -53,7 +53,7 @@ lr.on('line', function(line) {
             func = types[t].can_have_ns ? match[2] : match[1];
             args = (types[t].can_have_ns ? match[3] : match[2]);
 
-			current_lines.push(namespace + '.' + func);
+			current_lines.push(ns + '.' + func);
 
             if (!(ns in docs_data.docs)) {
 				docs_data.docs[ns] = {
