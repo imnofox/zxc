@@ -20,6 +20,8 @@ var types = {
     }
 };
 
+var current_lines = [];
+
 var docs_data = CSON.parse(fs.readFileSync('docs.cson'));
 console.dir(docs_data);
 
@@ -51,9 +53,13 @@ lr.on('line', function(line) {
             func = types[t].can_have_ns ? match[2] : match[1];
             args = (types[t].can_have_ns ? match[3] : match[2]);
 
-            if (!(ns in docs_data.docs)) docs_data.docs[ns] = {
-                values: {}
-            };
+			current_lines.push(namespace + '.' + func);
+
+            if (!(ns in docs_data.docs)) {
+				docs_data.docs[ns] = {
+                	values: {}
+            	};
+			}
 
 			if (!('namespace' in docs_data.docs[ns])) docs_data.docs[ns].namespace = show_ns;
 
@@ -75,6 +81,15 @@ lr.on('line', function(line) {
 });
 
 lr.on('close', function() {
+
+	for (namespace in docs_data.docs) {
+		for (method in docs_data.docs[namespace]) {
+			if (current_lines.indexOf(namespace + '.' + method) < 0) {
+				docs_data.docs[namespace][method].deprecated = true;
+			}
+		}
+	}
+
     fs.writeFileSync('docs.cson', CSON.stringify(docs_data));
     console.log('Done.');
     process.exit();

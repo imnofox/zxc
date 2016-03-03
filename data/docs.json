@@ -854,9 +854,10 @@
       "values": {
         "addEffect": {
           "type": "namespacemethod",
-          "args": "entity, int, int, int",
-          "description": "\n- `entity`: Target\n- `int`: The effect. Use `MobEffect`.\n- `int`: Duration, in ticks.\n- `int`: ???\n\nGives an entity a potion effect.",
-          "example": "No information yet."
+          "args": "entity, int, int, int, bool, bool",
+          "arg_names": "target, effect, duration, amplifier, ambient, showParticles",
+          "description": "Gives an entity a potion effect.\n- `effect`: use [MobEffect](#MobEffect).\n- `duration`: is in ticks\n- `amplifier`: specifies the number of additional levels to add to the effect\n- `ambient`: Makes potion effect produce more, translucent, particles.",
+          "example": "```\nEntity.addEffect(Player.getEntity(), MobEffect.fireResistance, 1, 40, true, true);\n```"
         },
         "getAll": {
           "type": "namespacemethod",
@@ -944,7 +945,7 @@
           "args": "entity",
           "returns": "double",
           "description": "Returns the pitch (rotation-wise) of this entity.",
-          "example": "\nThis example prints the player's yaw when they tap a block.\n```\nfunction useItem() {\n  clientMessage(Entity.getPitch(Player.getEntity()));\n}\n```"
+          "example": "This example prints the player's yaw when they tap a block.\n```\nfunction useItem() {\n  clientMessage(Entity.getPitch(Player.getEntity()));\n}\n```"
         },
         "getRenderType": {
           "type": "namespacemethod",
@@ -1318,7 +1319,7 @@
           "args": "",
           "returns": "array",
           "description": "Returns an aray of all used block IDs.",
-          "example": "var blockId = 199;\nif (Block.getAllBlockIds().indexOf(blockId) > -1) { // we use the indexOf() function to see if the value is in the array\n\tprint('This ID is already taken!');\n}"
+          "example": "```\nvar blockId = 199;\nif (Block.getAllBlockIds().indexOf(blockId) > -1) { // we use the indexOf() function to see if the value is in the array\n\tprint('This ID is already taken!');\n}\n```"
         },
         "getDestroyTime": {
           "type": "namespacemethod",
@@ -1402,8 +1403,8 @@
           "type": "namespacemethod",
           "args": "int, int",
           "arg_names": "id, renderType",
-          "description": "Sets the rendering type of this block.",
-          "example": "No information yet."
+          "description": "Sets the rendering type of this block.\nUse (BlockRenderLayer)(#BlockRenderLayer).",
+          "example": "```\nBlock.setRenderLayer(204, BlockRenderLayer.alpha);"
         },
         "setShape": {
           "type": "namespacemethod",
@@ -2975,6 +2976,66 @@
           "example": "No information yet."
         },
         "weapon": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        }
+      },
+      "namespace": true
+    },
+    "BlockRenderLayer": {
+      "values": {
+        "alpha": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "alpha_seasons": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "alpha_single_side": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "blend": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "doubleside": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "far": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "opaque": {
+          "type": "constant",
+          "description": "Totally solid block, like stone.",
+          "example": "No information yet."
+        },
+        "opaque_seasons": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "seasons_far": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "seasons_far_alpha": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "water": {
           "type": "constant",
           "description": "No information yet.",
           "example": "No information yet."

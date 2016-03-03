@@ -3,6 +3,11 @@ $(window).load(function() {
     // Populated when loading the docs.
     var docs = {};
 
+	var deprec = {
+		string: "This method is <strong>deprecated</strong>, and may be removed in the future. Use <a></a> instead.",
+		bool: "This method is <strong>deprecated</strong>, and may be removed now or in the future. <strong>Find a replacement.</strong>"
+	}
+
     // Check if Android
     var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
     if (isAndroid) console.log("Wow, a droid!");
@@ -159,7 +164,11 @@ $(window).load(function() {
 
 				// Show deprecation notice
 				if (data.deprecated) {
-					$('#current-doc .alert a').prop('href', '#' + data.deprecated).text(data.deprecated);
+					if (typeof data.deprecated == 'string') {
+						$('#current-doc .alert').html(deprec.string).children('a:first-of-type').prop('href', '#' + data.deprecated).text(data.deprecated);
+					} else {
+						$('#current-doc .alert').html(deprec.bool);
+					}
 					$('#current-doc .alert').show();
 				}
 

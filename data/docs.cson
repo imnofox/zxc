@@ -941,17 +941,20 @@ docs:
 		values:
 			addEffect:
 				type: "namespacemethod"
-				args: "entity, int, int, int"
+				args: "entity, int, int, int, bool, bool"
+				arg_names: "target, effect, duration, amplifier, ambient, showParticles"
 				description: '''
-
-					- `entity`: Target
-					- `int`: The effect. Use `MobEffect`.
-					- `int`: Duration, in ticks.
-					- `int`: ???
-
 					Gives an entity a potion effect.
+					- `effect`: use [MobEffect](#MobEffect).
+					- `duration`: is in ticks
+					- `amplifier`: specifies the number of additional levels to add to the effect
+					- `ambient`: Makes potion effect produce more, translucent, particles.
 				'''
-				example: "No information yet."
+				example: '''
+					```
+					Entity.addEffect(Player.getEntity(), MobEffect.fireResistance, 1, 40, true, true);
+					```
+				'''
 			getAll:
 				type: "namespacemethod"
 				args: ""
@@ -1031,7 +1034,6 @@ docs:
 				returns: "double"
 				description: "Returns the pitch (rotation-wise) of this entity."
 				example: '''
-
 					This example prints the player's yaw when they tap a block.
 					```
 					function useItem() {
@@ -1325,9 +1327,7 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				arg_names: "inputId, outputId, outptDamage"
-				description: '''
-					Creates a simple furnace recipe.
-				'''
+				description: "Creates a simple furnace recipe."
 				example: '''
 					```
 					Item.addFurnaceRecipe(1, 4, 0);
@@ -1338,9 +1338,7 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, arry, array"
 				arg_names: "id, count, damage, shape, letters"
-				description: '''
-					Adds a shaped crafting recipe. Use this function if you want your recipe to be in a specific shape.
-				'''
+				description: "Adds a shaped crafting recipe. Use this function if you want your recipe to be in a specific shape."
 				example: '''
 					This makes you receive 64 stone from a crafting recipe of grass blocks shaped in a diamond.
 					```
@@ -1372,9 +1370,7 @@ docs:
 				type: "namespacemethod"
 				args: "int, string, int, string, string, int, int, int"
 				arg_names: "id, iconName, iconIndex, name, texture, damageReduceAmount, maxDamage, armorType"
-				description: '''
-					Defines a new piece of armor.
-				'''
+				description: "Defines a new piece of armor."
 				example: '''
 					```
 					Item.defineArmor(411, "empty_armor_slot_boots", 0, "Zombie mask", "mob/zombie.png", 1, 10, ArmorType.helmet);
@@ -1387,16 +1383,13 @@ docs:
 			getName:
 				type: "namespacemethod"
 				args: "int, int, boolean"
-				#arg_names: "id, ???, ???"
 				description: "No information yet."
 				example: "No information yet."
 			isValidItem:
 				type: "namespacemethod"
 				args: "int"
 				arg_names: "id"
-				description: '''
-					Returns whether this item is valid.
-				'''
+				description: "Returns whether this item is valid."
 				example: "No information yet."
 			setCategory:
 				type: "namespacemethod"
@@ -1424,17 +1417,13 @@ docs:
 				type: "namespacemethod"
 				args: "int, int"
 				arg_names: "id, maxDamage"
-				description: '''
-					Sets the maximum amount of damage this item has?
-				'''
+				description: "Sets the maximum amount of damage this item has?"
 				example: "No information yet."
 			setProperties:
 				type: "namespacemethod"
 				args: "int, Object"
 				arg_names: "id, properties"
-				description: '''
-					Sets an item's properties, like in `items.json`.
-				'''
+				description: "Sets an item's properties, like in `items.json`."
 				example: '''
 					This makes an item edible.
 					```
@@ -1451,7 +1440,7 @@ docs:
 					    }
 					});
 					```
-					This example can be replicated much easier with [ModPE.setFoodItem](#ModPE.setFoodItem).
+					This example can be replicated *much* easier with [ModPE.setFoodItem](#ModPE.setFoodItem).
 				'''
 			getUseAnimation:
 				type: "namespacemethod"
@@ -1531,14 +1520,14 @@ docs:
 				type: "namespacemethod"
 				args: ""
 				returns: "array"
-				description: '''
-					Returns an aray of all used block IDs.
-				'''
+				description: "Returns an aray of all used block IDs."
 				example: '''
-				var blockId = 199;
-				if (Block.getAllBlockIds().indexOf(blockId) > -1) { // we use the indexOf() function to see if the value is in the array
-					print('This ID is already taken!');
-				}
+					```
+					var blockId = 199;
+					if (Block.getAllBlockIds().indexOf(blockId) > -1) { // we use the indexOf() function to see if the value is in the array
+						print('This ID is already taken!');
+					}
+					```
 				'''
 			getDestroyTime:
 				type: "namespacemethod"
@@ -1561,9 +1550,7 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				returns: "int"
-				description: '''
-					Returns the render type being used by the block.
-				'''
+				description: "Returns the render type being used by the block."
 				example: "No information yet."
 			setColor:
 				type: "namespacemethod"
@@ -1636,17 +1623,13 @@ docs:
 				type: "namespacemethod"
 				args: "int, boolean"
 				arg_names: "id, boolean"
-				description: '''
-					Allows a block to accept redstone input.
-				'''
+				description: "Allows a block to accept redstone input."
 				example: "No information yet."
 			setRenderLayer:
 				type: "namespacemethod"
 				args: "int, int"
 				arg_names: "id, renderLayer"
-				description: '''
-					Sets the layer this block will render at.
-				'''
+				description: "Sets the layer this block will render at."
 				example: "No information yet."
 			setRenderType:
 				type: "namespacemethod"
@@ -1654,15 +1637,17 @@ docs:
 				arg_names: "id, renderType"
 				description: '''
 					Sets the rendering type of this block.
+					Use (BlockRenderLayer)(#BlockRenderLayer).
 				'''
-				example: "No information yet."
+				example: '''
+					```
+					Block.setRenderLayer(204, BlockRenderLayer.alpha);
+				'''
 			setShape:
 				type: "namespacemethod"
 				args: "int, double, double, double, double, double, double, int"
 				arg_names: "id, minX, minY, minZ, maxX, maxY, maxZ, damage"
-				description: '''
-					Sets a block's boundaries.
-				'''
+				description: "Sets a block's boundaries."
 				example: '''
 					```
 					Block.setShape(204, 0.25, 0, 0.25, 0.75, 0.5, 0.75, 0);
@@ -1678,41 +1663,31 @@ docs:
 				type: "namespacemethod"
 				args: ""
 				returns: "string"
-				description: '''
-					Returns the address of the current server.
-				'''
+				description: "Returns the address of the current server."
 				example: "No information yet."
 			getAllPlayerNames:
 				type: "namespacemethod"
 				args: ""
 				returns: "string[]"
-				description: '''
-					Returns an array of all player names on the current server.
-				'''
+				description: "Returns an array of all player names on the current server."
 				example: "No information yet."
 			getAllPlayers:
 				type: "namespacemethod"
 				args: ""
 				returns: "int[]"
-				description: '''
-					Returns an array of all player entity IDs on the current server.
-				'''
+				description: "Returns an array of all player entity IDs on the current server."
 				example: "No information yet."
 			getPort:
 				type: "namespacemethod"
 				args: ""
 				returns: "int"
-				description: '''
-					Returns the port of the current server.
-				'''
+				description: "Returns the port of the current server."
 				example: "No information yet."
 			joinServer:
 				type: "namespacemethod"
 				args: "string, int"
 				arg_names: "address, port"
-				description: '''
-					Joins a server.
-				'''
+				description: "Joins a server."
 				example: "No information yet."
 			sendChat:
 				type: "namespacemethod"
@@ -2928,6 +2903,53 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 			weapon:
+				type: "constant"
+				description: "No information yet."
+				example: "No information yet."
+		namespace: true
+	BlockRenderLayer:
+		values:
+			alpha:
+				type: "constant"
+				description: "No information yet."
+				example: "No information yet."
+			alpha_seasons:
+				type: "constant"
+				description: "No information yet."
+				example: "No information yet."
+			alpha_single_side:
+				type: "constant"
+				description: "No information yet."
+				example: "No information yet."
+			blend:
+				type: "constant"
+				description: "No information yet."
+				example: "No information yet."
+			doubleside:
+				type: "constant"
+				description: "No information yet."
+				example: "No information yet."
+			far:
+				type: "constant"
+				description: "No information yet."
+				example: "No information yet."
+			opaque:
+				type: "constant"
+				description: "Totally solid block, like stone."
+				example: "No information yet."
+			opaque_seasons:
+				type: "constant"
+				description: "No information yet."
+				example: "No information yet."
+			seasons_far:
+				type: "constant"
+				description: "No information yet."
+				example: "No information yet."
+			seasons_far_alpha:
+				type: "constant"
+				description: "No information yet."
+				example: "No information yet."
+			water:
 				type: "constant"
 				description: "No information yet."
 				example: "No information yet."

@@ -505,3 +505,15 @@ EnchantType.shears;
 EnchantType.shovel;
 EnchantType.weapon;
 
+BlockRenderLayer.alpha;
+BlockRenderLayer.alpha_seasons;
+BlockRenderLayer.alpha_single_side;
+BlockRenderLayer.blend;
+BlockRenderLayer.doubleside;
+BlockRenderLayer.far;
+BlockRenderLayer.opaque;
+BlockRenderLayer.opaque_seasons;
+BlockRenderLayer.seasons_far;
+BlockRenderLayer.seasons_far_alpha;
+BlockRenderLayer.water;
+
