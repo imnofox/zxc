@@ -516,4 +516,3 @@ BlockRenderLayer.opaque_seasons;
 BlockRenderLayer.seasons_far;
 BlockRenderLayer.seasons_far_alpha;
 BlockRenderLayer.water;
-

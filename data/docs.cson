@@ -428,7 +428,7 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, int, int, int"
 				description: '''
-
+					
 					- `int`: X of the chest
 					- `int`: Y of the chest
 					- `int`: Z of the chest
@@ -436,7 +436,7 @@ docs:
 					- `int`: ID of the new item
 					- `int`: Damage (aux) of the new item
 					- `int`: Count of the new item.
-
+					
 					Sets what item is in a chest, at a certain slot.
 				'''
 				example: "No information yet."
@@ -444,7 +444,7 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, int, int, int"
 				description: '''
-
+					
 					- `int`: X of the furnace
 					- `int`: Y of the furnace
 					- `int`: Z of the furnace
@@ -452,7 +452,7 @@ docs:
 					- `int`: ID of the new item
 					- `int`: Damage (aux) of the new item
 					- `int`: Count of the new item.
-
+					
 					Sets what item is in a furnace, at a certain slot.
 				'''
 				example: "No information yet."
@@ -465,11 +465,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-
+					
 					- `int`: X
 					- `int`: Y
 					- `int`: Color (`0xAABBCCDD` color)
-
+					
 					Sets the grass color of a column in the world.
 				'''
 				example: "No information yet."
@@ -492,13 +492,13 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, string"
 				description: '''
-
+					
 					- `int`: X pos
 					- `int`: Y pos
 					- `int`: Z pos
 					- `int`: Line (0, 1, 2, or 3)
 					- `string`: Text
-
+					
 					Sets a line of text in a sign.
 				'''
 				example: "No information yet."
@@ -506,11 +506,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-
+					
 					- `int`: X
 					- `int`: Y
 					- `int`: Z
-
+					
 					Sets the spawn position of the current world.
 				'''
 				example: "No information yet."
@@ -518,12 +518,12 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int"
 				description: '''
-
+					
 					- `int`: X
 					- `int`: Y
 					- `int`: Z
 					- `int`: Entity type ID
-
+					
 					Sets the entity ID of an entity that an entity spawner will spawn.
 				'''
 				example: "No information yet."
@@ -531,13 +531,13 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, int"
 				description: '''
-
+					
 					- `int`: X
 					- `int`: Y
 					- `int`: Z
 					- `int`: Block ID
 					- `int`: Block data
-
+					
 					Sets the ID and damage of a block in the world.
 				'''
 				example: "No information yet."
@@ -568,6 +568,7 @@ docs:
 					- `string`: Skin (PNG file)
 				'''
 				example: "No information yet."
+				deprecated: true
 			getChestSlotCustomName:
 				type: "namespacemethod"
 				description: "No information yet."
@@ -593,7 +594,7 @@ docs:
 					- `int`: ID
 					- `int`: Count (usually 1)
 					- `int`: Data (damage)
-
+					
 					Adds an item into the creative inventory. If you want to set which creative tab (category) it belongs in, use `Item.setCategory`.
 				'''
 				example: "No information yet."
@@ -612,9 +613,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-
+					
 					- `int`: The slot.
-
+					
 					Clears a slot in the player's inventory.
 				'''
 				example: "No information yet."
@@ -622,11 +623,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-
+					
 					- `int`: The slot ID of the item in the player's inventory.
 					- `int`: The enchantment.
 					- `int`: The level of the enchantment
-
+					
 					Enchants an item in the player's inventory.
 				'''
 				example: "No information yet."
@@ -635,9 +636,9 @@ docs:
 				args: "int"
 				returns: "Object[]"
 				description: '''
-
+					
 					- `int`: The slot ID of the item.
-
+					
 					Returns the enchantments. It is an array that has the following structure-
 					```
 					var x = Player.getEnchantments(...);
@@ -650,9 +651,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-
+					
 					- `int`: The slot
-
+					
 					Returns the ID of an armor item.
 				'''
 				example: "No information yet."
@@ -660,9 +661,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-
+					
 					- `int`: The slot
-
+					
 					Returns the damage of an armor item.
 				'''
 				example: "No information yet."
@@ -715,9 +716,9 @@ docs:
 				args: "int"
 				returns: "int"
 				description: '''
-
+					
 					- `int`: The slot.
-
+					
 					Returns the ID of the item in the inventory slot.
 				'''
 				example: "No information yet."
@@ -726,9 +727,9 @@ docs:
 				args: "int"
 				returns: "int"
 				description: '''
-
+					
 					- `int`: The slot.
-
+					
 					Returns the count of the item in the inventory slot.
 				'''
 				example: "No information yet."
@@ -737,9 +738,9 @@ docs:
 				args: "int"
 				returns: "int"
 				description: '''
-
+					
 					- `int`: The slot.
-
+					
 					Returns the damage (aux) of the item in the inventory slot.
 				'''
 				example: "No information yet."
@@ -856,10 +857,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, string"
 				description: '''
-
+					
 					- `int`: The slot id of the target item.
 					- `string`: The new name.
-
+					
 					Sets the custom name of an item.
 				'''
 				example: "No information yet."
@@ -868,9 +869,9 @@ docs:
 				args: "int"
 				returns: "string"
 				description: '''
-
+					
 					- `int`: The slot id of the item.
-
+					
 					Returns the custom name of an item.
 				'''
 				example: "No information yet."
@@ -878,11 +879,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-
+					
 					- `int`: Slot number
 					- `int`: ID of the piece
 					- `int`: Damage (data) of the piece.
-
+					
 					Sets the player's armor slot.
 				'''
 				example: "No information yet."
@@ -1101,7 +1102,7 @@ docs:
 				returns: "double"
 				description: "Returns the yaw (rotation-wise) of this entity."
 				example: '''
-
+					
 					This example prints the player's yaw when they tap a block.
 					```
 					function useItem() {
@@ -1139,10 +1140,10 @@ docs:
 				type: "namespacemethod"
 				args: "entity, int"
 				description: '''
-
+					
 					- `entity`: Target
 					- `int`: ID of the effect. Use `MobEffect`.
-
+					
 					Removes a specific potion effect from an entity.
 				'''
 				example: '''
@@ -1154,20 +1155,20 @@ docs:
 				type: "namespacemethod"
 				args: "entity, key, value"
 				description: '''
-
+					
 					- `entity`: Target
 					- `key`: The key. Must be in the form of `something.something.something` - `value`: A string.
-
+					
 					Stores extra data for this entity.
 				'''
 			getExtraData:
 				type: "namespacemethod"
 				args: "entity, key"
 				description: '''
-
+					
 					- `entity`: Target
 					- `key`: The key to get the value from.
-
+					
 					Returns the data stored at this entity's key.
 				'''
 			rideAnimal:
@@ -1229,12 +1230,12 @@ docs:
 				type: "namespacemethod"
 				args: "entity, double, double, double"
 				description: '''
-
+					
 					- `entity`: Target
 					- `double`: X
 					- `double`: Y
 					- `double`: Z
-
+					
 					Sets the position of an entity.
 				'''
 				example: "No information yet."
@@ -1277,13 +1278,13 @@ docs:
 				type: "namespacemethod"
 				args: "double, double, double, int, string"
 				description: '''
-
+					
 					- `double`: X
 					- `double`: Y
 					- `double`: Z
 					- `int`: Entity type ID
 					- `string`: Skin PNG
-
+					
 					Spawns an entity.
 				'''
 				example: "No information yet."
@@ -1311,7 +1312,7 @@ docs:
 				args: "int, int, int, array"
 				description: '''
 					Creates an unshaped crafting recipe.
-
+					
 					Ingredients should have a continuous 1D array like this:
 					```
 					[id, count, damage, id, count, damage, id, count, damage, ...]
@@ -1349,10 +1350,10 @@ docs:
 					], ["x", 2, 0]); // This makes "x" mean grass (2) with damage of (0).
 					```
 					Here is an example of what it looks like in game:
-
+					
 					![picture of crafting recipe](images/shapedrecipe1.png)
-
-
+					
+					
 					This makes you receive 64 stone from a crafting recipe of grass blocks shaped in a diamond, with a bedrock block in the center.
 					```
 					Item.addShapedRecipe(1, 64, 0, [
@@ -1363,7 +1364,7 @@ docs:
 					// Also makes "b" mean bedrock (7) with damage of (0).
 					```
 					Here is an example of what it looks like in game:
-
+					
 					![picture of crafting recipe](images/shapedrecipe2.png)
 				'''
 			defineArmor:
@@ -1398,7 +1399,7 @@ docs:
 				description: '''
 					Sets the creative tab this item should belong in.
 					Note that it doesn't show unless you use `Player.addItemCreativeInv`.
-
+					
 					See [ItemCategory](#ItemCategory) for ItemCategory constants.
 				'''
 				example: '''
@@ -1432,7 +1433,7 @@ docs:
 					Item.setProperties(440, {
 					    use_animation: "eat", // Use the eating animation
 					    use_duration: 32,
-
+					
 					    food: {
 					      nutrition: 4, // Give it 4 1/2 hearts of nutrition
 					      saturation_modifier: "low",
@@ -1472,9 +1473,9 @@ docs:
 				returns: "int"
 				description: '''
 					Defines a new liquid block.
-
+					
 					`id + 1` will be used as the stationary version's ID.
-
+					
 					Returns `id + 1`
 				'''
 				example: '''
@@ -1492,7 +1493,7 @@ docs:
 					- `id`: The block ID.
 					- `name`: The name of the block.
 					- `textures`: The name of a texture, or a texture matrix.
-
+					
 					**Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)
 					Example of a texture matrix:
 					```
@@ -1542,7 +1543,7 @@ docs:
 				returns: "double"
 				description: '''
 					Returns the amount of friction a block has. The higher the friction, the slower the player walks over them.
-
+					
 					All blocks return `0.6`, except ice which returns `0.98`.
 				'''
 				example: "No information yet."
@@ -1558,7 +1559,7 @@ docs:
 				arg_names: "id, colorArray"
 				description: '''
 					Changes the color of the block.
-
+					
 					Replace `#` with `0x`, and wrap it inside an array.
 				'''
 				example: '''
@@ -1595,7 +1596,7 @@ docs:
 				arg_names: "id, friction"
 				description: '''
 					Sets the friction of a block. The higher the friction, the slower the player walks over them.
-
+					
 					All blocks have `0.6`, except ice which has `0.98`.
 				'''
 				example: "No information yet."
@@ -1653,7 +1654,7 @@ docs:
 					Block.setShape(204, 0.25, 0, 0.25, 0.75, 0.5, 0.75, 0);
 					```
 					This creates a block that is half the size of a regular block. Do note, with the full light opacity, blocks may not let light through.
-
+					
 					![picture of custom shape](images/setshape_example.png)
 				'''
 	Server:
@@ -1771,7 +1772,7 @@ docs:
 				args: "int, int, int, int, bool, int, int"
 				description: '''
 					Called when a block is updated by redstone.
-
+					
 					- `signalStrength` is the strength of the redstone signal, from 0 - 15.
 					- `worldLoading` is `true` if the block update is caused by the world loading.
 				'''
@@ -1839,7 +1840,7 @@ docs:
 					It is recommended to split `command` into an array, so you can individually access each argument.
 					If arguments are required, then `command` will equal `"tp 500 128 30"`. Once split by spaces, you can access `"tp"` with `cmd[0]`, `"500"` with `cmd[1]`, etc...
 				'''
-
+				deprecated: true
 			continueDestroyBlock:
 				type: "hook"
 				description: "No information yet."
@@ -2239,7 +2240,7 @@ docs:
 			player2:
 				type: "constant"
 				description: "No information yet."
-
+				deprecated: true
 			sheep:
 				type: "constant"
 				description: "Entity render type for a sheep."
@@ -2276,7 +2277,7 @@ docs:
 			unknown1:
 				type: "constant"
 				description: "Like the name says, unknown."
-
+				deprecated: true
 			villager:
 				type: "constant"
 				description: "Villager render type."
@@ -2527,212 +2528,212 @@ docs:
 				display: "step.cloth"
 				type: "string"
 				description: "Stepping on wool."
-
+				deprecated: true
 			step_grass:
 				display: "step.grass"
 				type: "string"
 				description: "Stepping on grass."
-
+				deprecated: true
 			step_gravel:
 				display: "step.gravel"
 				type: "string"
 				description: "Stepping on gravel."
-
+				deprecated: true
 			step_sand:
 				display: "step.sand"
 				type: "string"
 				description: "Stepping on sand."
-
+				deprecated: true
 			step_stone:
 				display: "step.stone"
 				type: "string"
 				description: "Stepping on stone."
-
+				deprecated: true
 			step_wood:
 				display: "step.wood"
 				type: "string"
 				description: "Stepping on wood."
-
+				deprecated: true
 			random_splash:
 				display: "random.splash"
 				type: "string"
 				description: "Splashing water sound."
-
+				deprecated: true
 			random_explode:
 				display: "random.explode"
 				type: "string"
 				description: "Explosion sound."
-
+				deprecated: true
 			random_break:
 				display: "random.break"
 				type: "string"
 				description: "Sound when an item breaks."
-
+				deprecated: true
 			random_burp:
 				display: "random.burp"
 				type: "string"
 				description: "Burp sound."
-
+				deprecated: true
 			fire_fire:
 				display: "fire.fire"
 				type: "string"
 				description: "Fire crackle."
-
+				deprecated: true
 			fire_ignite:
 				display: "fire.ignite"
 				type: "string"
 				description: "Fire ignition sound."
-
+				deprecated: true
 			random_chestclosed:
 				display: "random.chestclosed"
 				type: "string"
 				description: "Chest closing."
-
+				deprecated: true
 			random_chestopen:
 				display: "random.chestopen"
 				type: "string"
 				description: "Chest opening"
-
+				deprecated: true
 			random_hurt:
 				display: "random.hurt"
 				type: "string"
 				description: "Player hurt sound."
-
+				deprecated: true
 			random_glass:
 				display: "random.glass"
 				type: "string"
 				description: "Glass breaking sound."
-
+				deprecated: true
 			mob_sheep:
 				display: "mob.sheep"
 				type: "string"
 				description: "Sheep baa."
-
+				deprecated: true
 			mob_pig:
 				display: "mob.pig"
 				type: "string"
 				description: "Pig oink."
-
+				deprecated: true
 			mob_pigdeath:
 				display: "mob.pigdeath"
 				type: "string"
 				description: "Pig dying sound."
-
+				deprecated: true
 			mob_cow:
 				display: "mob.cow"
 				type: "string"
 				description: "Cow moo."
-
+				deprecated: true
 			mob_cowhurt:
 				display: "mob.cowhurt"
 				type: "string"
 				description: "Cow hurting."
-
+				deprecated: true
 			mob_chicken:
 				display: "mob.chicken"
 				type: "string"
 				description: "Chicken cluck."
-
+				deprecated: true
 			mob_chickenhurt:
 				display: "mob.chickenhurt"
 				type: "string"
 				description: "Chicken hurting."
-
+				deprecated: true
 			mob_zombie:
 				display: "mob.zombie"
 				type: "string"
 				description: "Zombie growl."
-
+				deprecated: true
 			mob_zombiedeath:
 				display: "mob.zombiedeath"
 				type: "string"
 				description: "Zombie dying sound."
-
+				deprecated: true
 			mob_zombiehurt:
 				display: "mob.zombiehurt"
 				type: "string"
 				description: "Zombie hurting."
-
+				deprecated: true
 			mob_skeleton:
 				display: "mob.skeleton"
 				type: "string"
 				description: "Skeleton bones sound."
-
+				deprecated: true
 			mob_skeletonhurt:
 				display: "mob.skeletonhurt"
 				type: "string"
 				description: "Skeleton hurting."
-
+				deprecated: true
 			mob_spider:
 				display: "mob.spider"
 				type: "string"
 				description: "Spider hiss."
-
+				deprecated: true
 			mob_spiderdeath:
 				display: "mob.spiderdeath"
 				type: "string"
 				description: "Spider dying sound."
-
+				deprecated: true
 			mob_zombiepig_zpig:
 				display: "mob.zombiepig.zpig"
 				type: "string"
 				description: "Zombie pigman sound."
-
+				deprecated: true
 			mob_zombiepig_zpigangry:
 				display: "mob.zombiepig.zpigangry"
 				type: "string"
 				description: "Angry zombie pigman sound."
-
+				deprecated: true
 			mob_zombiepig_zpigdeath:
 				display: "mob.zombiepig.zpigdeath"
 				type: "string"
 				description: "Zombie pigman dying sound."
-
+				deprecated: true
 			mob_zombiepig_zpighurt:
 				display: "mob.zombiepig.zpighurt"
 				type: "string"
 				description: "Zombie pigman hurting."
-
+				deprecated: true
 			damage_fallbig:
 				display: "damage.fallbig"
 				type: "string"
 				description: "Large fall sound."
-
+				deprecated: true
 			damage_fallsmall:
 				display: "damage.fallsmall"
 				type: "string"
 				description: "Small fall sound."
-
+				deprecated: true
 			random_bow:
 				display: "random.bow"
 				type: "string"
 				description: "Bow noise."
-
+				deprecated: true
 			random_bowhit:
 				display: "random.bowhit"
 				type: "string"
 				description: "Bow hitting entity sound."
-
+				deprecated: true
 			mob_creeper:
 				display: "mob.creeper"
 				type: "string"
 				description: "Creeper hiss."
-
+				deprecated: true
 			mob_creeperdeath:
 				display: "mob.creeperdeath"
 				type: "string"
 				description: "Creeper dying sound."
-
+				deprecated: true
 			random_eat:
 				display: "random.eat"
 				type: "string"
 				description: "Eating sound."
-
+				deprecated: true
 			random_fuse:
 				display: "random.fuse"
 				type: "string"
 				description: "TNT fuse."
-
+				deprecated: true
 	NamespaceMethod:
 		values:
 			addItemInventory:

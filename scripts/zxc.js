@@ -164,12 +164,14 @@ $(window).load(function() {
 
 				// Show deprecation notice
 				if (data.deprecated) {
-					if (typeof data.deprecated == 'string') {
-						$('#current-doc .alert').html(deprec.string).children('a:first-of-type').prop('href', '#' + data.deprecated).text(data.deprecated);
-					} else {
-						$('#current-doc .alert').html(deprec.bool);
+					if (data.deprecated != 'ignore') {
+						if (typeof data.deprecated == 'string') {
+							$('#current-doc .alert').html(deprec.string).children('a:first-of-type').prop('href', '#' + data.deprecated).text(data.deprecated);
+						} else {
+							$('#current-doc .alert').html(deprec.bool);
+						}
+						$('#current-doc .alert').show();
 					}
-					$('#current-doc .alert').show();
 				}
 
         $('html, body').animate({
