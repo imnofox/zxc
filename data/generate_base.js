@@ -36,10 +36,10 @@ lr.on('line', function(line) {
             if (types[t].can_have_ns) {
                 if (match[1]) {
                     ns = match[1];
-										show_ns = true;
+					show_ns = true;
                 } else {
                     ns = types[t].default_prefix;
-										show_ns = false;
+					show_ns = false;
                 }
             } else {
                 ns = types[t].default_prefix;
@@ -55,7 +55,7 @@ lr.on('line', function(line) {
                 values: {}
             };
 
-						if (!('namespace' in docs_data.docs[ns])) docs_data.docs[ns].namespace = show_ns;
+			if (!('namespace' in docs_data.docs[ns])) docs_data.docs[ns].namespace = show_ns;
 
             if (!(func in docs_data.docs[ns].values)) {
                 docs_data.docs[ns].values[func] = {
@@ -64,9 +64,9 @@ lr.on('line', function(line) {
                     example: "No information yet."
                 };
                 if (args) {
-									args = args.replace(/(par\d(int|String|double|float|Scriptable|Object))/g, "$2");
-									// Not gonna bother changing 'Script' to 'script' or 'Entity' to 'entity' as they are proper objects.
-                  docs_data.docs[ns].values[func].args = args;
+					args = args.replace(/(par\d(int|String|double|float|Scriptable|Object))/g, "$2");
+					// Not gonna bother changing 'Script' to 'script' or 'Entity' to 'entity' as they are proper objects.
+                	docs_data.docs[ns].values[func].args = args;
                 }
             }
 
