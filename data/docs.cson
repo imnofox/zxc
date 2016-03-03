@@ -208,7 +208,6 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "par1boolean"
-
 	Level:
 		namespace: true
 		values:
@@ -579,7 +578,6 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int, int, string"
-
 	Player:
 		namespace: true
 		values:
@@ -938,7 +936,6 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int, int"
-
 	Entity:
 		namespace: true
 		values:
@@ -1305,7 +1302,6 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, Object"
-
 	Item:
 		namespace: true
 		values:
@@ -1466,7 +1462,6 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int"
-
 	Block:
 		namespace: true
 		values:
@@ -1661,7 +1656,6 @@ docs:
 
 					![picture of custom shape](images/setshape_example.png)
 				'''
-
 	Server:
 		namespace: true
 		values:
@@ -1701,7 +1695,6 @@ docs:
 				arg_names: "message"
 				description: "Sends a message via chat."
 				example: "No information yet."
-
 	Hooks:
 		namespace: false
 		values:
@@ -1846,13 +1839,13 @@ docs:
 					It is recommended to split `command` into an array, so you can individually access each argument.
 					If arguments are required, then `command` will equal `"tp 500 128 30"`. Once split by spaces, you can access `"tp"` with `cmd[0]`, `"500"` with `cmd[1]`, etc...
 				'''
+
 			continueDestroyBlock:
 				type: "hook"
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int, int, int?"
 				arg_names: "x, y, z, side, progress"
-
 	ChatColor:
 		namespace: true
 		values:
@@ -1913,7 +1906,6 @@ docs:
 			YELLOW:
 				type: "constant"
 				description: "Yellow colored text."
-
 	ItemCategory:
 		namespace: true
 		values:
@@ -1932,7 +1924,6 @@ docs:
 			TOOL:
 				type: "constant"
 				description: "Tools category."
-
 	ParticleType:
 		namespace: true
 		values:
@@ -2035,7 +2026,6 @@ docs:
 			waterWake:
 				type: "constant"
 				description: "Unknown."
-
 	EntityType:
 		namespace: true
 		values:
@@ -2168,7 +2158,6 @@ docs:
 			ZOMBIE_VILLAGER:
 				type: "constant"
 				description: "Zombie-villager hybrid."
-
 	EntityRenderType:
 		namespace: true
 		values:
@@ -2250,6 +2239,7 @@ docs:
 			player2:
 				type: "constant"
 				description: "No information yet."
+
 			sheep:
 				type: "constant"
 				description: "Entity render type for a sheep."
@@ -2286,6 +2276,7 @@ docs:
 			unknown1:
 				type: "constant"
 				description: "Like the name says, unknown."
+
 			villager:
 				type: "constant"
 				description: "Villager render type."
@@ -2325,7 +2316,6 @@ docs:
 				type: "constant"
 				description: "No information yet."
 				example: "No information yet."
-
 	ArmorType:
 		namespace: true
 		values:
@@ -2341,7 +2331,6 @@ docs:
 			leggings:
 				type: "constant"
 				description: "Leggings armor. Covers the legs."
-
 	MobEffect:
 		namespace: true
 		values:
@@ -2417,7 +2406,6 @@ docs:
 			wither:
 				type: "constant"
 				description: "Similar to poison. Turns hearts black and can kill the entity."
-
 	DimensionId:
 		namespace: true
 		values:
@@ -2427,7 +2415,6 @@ docs:
 			NORMAL:
 				type: "constant"
 				description: "The Dimension ID of the overworld."
-
 	BlockFace:
 		namespace: true
 		values:
@@ -2449,7 +2436,6 @@ docs:
 			WEST:
 				type: "constant"
 				description: "The block side facing west."
-
 	Enchantment:
 		namespace: true
 		values:
@@ -2534,7 +2520,6 @@ docs:
 			LURE:
 				type: "constant"
 				description: "Increases odds of fishes to bite your hook while fishing."
-
 	Sounds:
 		namespace: false
 		values:
@@ -2542,166 +2527,207 @@ docs:
 				display: "step.cloth"
 				type: "string"
 				description: "Stepping on wool."
+
 			step_grass:
 				display: "step.grass"
 				type: "string"
 				description: "Stepping on grass."
+
 			step_gravel:
 				display: "step.gravel"
 				type: "string"
 				description: "Stepping on gravel."
+
 			step_sand:
 				display: "step.sand"
 				type: "string"
 				description: "Stepping on sand."
+
 			step_stone:
 				display: "step.stone"
 				type: "string"
 				description: "Stepping on stone."
+
 			step_wood:
 				display: "step.wood"
 				type: "string"
 				description: "Stepping on wood."
+
 			random_splash:
 				display: "random.splash"
 				type: "string"
 				description: "Splashing water sound."
+
 			random_explode:
 				display: "random.explode"
 				type: "string"
 				description: "Explosion sound."
+
 			random_break:
 				display: "random.break"
 				type: "string"
 				description: "Sound when an item breaks."
+
 			random_burp:
 				display: "random.burp"
 				type: "string"
 				description: "Burp sound."
+
 			fire_fire:
 				display: "fire.fire"
 				type: "string"
 				description: "Fire crackle."
+
 			fire_ignite:
 				display: "fire.ignite"
 				type: "string"
 				description: "Fire ignition sound."
+
 			random_chestclosed:
 				display: "random.chestclosed"
 				type: "string"
 				description: "Chest closing."
+
 			random_chestopen:
 				display: "random.chestopen"
 				type: "string"
 				description: "Chest opening"
+
 			random_hurt:
 				display: "random.hurt"
 				type: "string"
 				description: "Player hurt sound."
+
 			random_glass:
 				display: "random.glass"
 				type: "string"
 				description: "Glass breaking sound."
+
 			mob_sheep:
 				display: "mob.sheep"
 				type: "string"
 				description: "Sheep baa."
+
 			mob_pig:
 				display: "mob.pig"
 				type: "string"
 				description: "Pig oink."
+
 			mob_pigdeath:
 				display: "mob.pigdeath"
 				type: "string"
 				description: "Pig dying sound."
+
 			mob_cow:
 				display: "mob.cow"
 				type: "string"
 				description: "Cow moo."
+
 			mob_cowhurt:
 				display: "mob.cowhurt"
 				type: "string"
 				description: "Cow hurting."
+
 			mob_chicken:
 				display: "mob.chicken"
 				type: "string"
 				description: "Chicken cluck."
+
 			mob_chickenhurt:
 				display: "mob.chickenhurt"
 				type: "string"
 				description: "Chicken hurting."
+
 			mob_zombie:
 				display: "mob.zombie"
 				type: "string"
 				description: "Zombie growl."
+
 			mob_zombiedeath:
 				display: "mob.zombiedeath"
 				type: "string"
 				description: "Zombie dying sound."
+
 			mob_zombiehurt:
 				display: "mob.zombiehurt"
 				type: "string"
 				description: "Zombie hurting."
+
 			mob_skeleton:
 				display: "mob.skeleton"
 				type: "string"
 				description: "Skeleton bones sound."
+
 			mob_skeletonhurt:
 				display: "mob.skeletonhurt"
 				type: "string"
 				description: "Skeleton hurting."
+
 			mob_spider:
 				display: "mob.spider"
 				type: "string"
 				description: "Spider hiss."
+
 			mob_spiderdeath:
 				display: "mob.spiderdeath"
 				type: "string"
 				description: "Spider dying sound."
+
 			mob_zombiepig_zpig:
 				display: "mob.zombiepig.zpig"
 				type: "string"
 				description: "Zombie pigman sound."
+
 			mob_zombiepig_zpigangry:
 				display: "mob.zombiepig.zpigangry"
 				type: "string"
 				description: "Angry zombie pigman sound."
+
 			mob_zombiepig_zpigdeath:
 				display: "mob.zombiepig.zpigdeath"
 				type: "string"
 				description: "Zombie pigman dying sound."
+
 			mob_zombiepig_zpighurt:
 				display: "mob.zombiepig.zpighurt"
 				type: "string"
 				description: "Zombie pigman hurting."
+
 			damage_fallbig:
 				display: "damage.fallbig"
 				type: "string"
 				description: "Large fall sound."
+
 			damage_fallsmall:
 				display: "damage.fallsmall"
 				type: "string"
 				description: "Small fall sound."
+
 			random_bow:
 				display: "random.bow"
 				type: "string"
 				description: "Bow noise."
+
 			random_bowhit:
 				display: "random.bowhit"
 				type: "string"
 				description: "Bow hitting entity sound."
+
 			mob_creeper:
 				display: "mob.creeper"
 				type: "string"
 				description: "Creeper hiss."
+
 			mob_creeperdeath:
 				display: "mob.creeperdeath"
 				type: "string"
 				description: "Creeper dying sound."
+
 			random_eat:
 				display: "random.eat"
 				type: "string"
 				description: "Eating sound."
+
 			random_fuse:
 				display: "random.fuse"
 				type: "string"
@@ -2867,7 +2893,6 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "double, double, double, int, string"
-
 		namespace: false
 	UseAnimation:
 		values:
@@ -2879,7 +2904,6 @@ docs:
 				type: "constant"
 				description: "No information yet."
 				example: "No information yet."
-
 		namespace: true
 	EnchantType:
 		values:
@@ -2927,7 +2951,6 @@ docs:
 				type: "constant"
 				description: "No information yet."
 				example: "No information yet."
-
 		namespace: true
 	BlockRenderLayer:
 		values:
@@ -2975,5 +2998,4 @@ docs:
 				type: "constant"
 				description: "No information yet."
 				example: "No information yet."
-
 		namespace: true

@@ -85,7 +85,9 @@ lr.on('close', function() {
 	for (namespace in docs_data.docs) {
 		for (method in docs_data.docs[namespace].values) {
 			if (current_lines.indexOf(namespace + '.' + method) < 0) {
-				docs_data.docs[namespace].values[method].deprecated = true;
+				if (docs_data.docs[namespace].values[method].deprecated == false) {
+					docs_data.docs[namespace].values[method].deprecated = true;
+				}
 			}
 		}
 	}
