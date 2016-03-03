@@ -208,6 +208,7 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "par1boolean"
+
 	Level:
 		namespace: true
 		values:
@@ -578,6 +579,7 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int, int, string"
+
 	Player:
 		namespace: true
 		values:
@@ -936,6 +938,7 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int, int"
+
 	Entity:
 		namespace: true
 		values:
@@ -1302,6 +1305,7 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, Object"
+
 	Item:
 		namespace: true
 		values:
@@ -1462,6 +1466,7 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int"
+
 	Block:
 		namespace: true
 		values:
@@ -1656,6 +1661,7 @@ docs:
 
 					![picture of custom shape](images/setshape_example.png)
 				'''
+
 	Server:
 		namespace: true
 		values:
@@ -1695,6 +1701,7 @@ docs:
 				arg_names: "message"
 				description: "Sends a message via chat."
 				example: "No information yet."
+
 	Hooks:
 		namespace: false
 		values:
@@ -1845,6 +1852,7 @@ docs:
 				example: "No information yet."
 				args: "int, int, int, int, int?"
 				arg_names: "x, y, z, side, progress"
+
 	ChatColor:
 		namespace: true
 		values:
@@ -1905,6 +1913,7 @@ docs:
 			YELLOW:
 				type: "constant"
 				description: "Yellow colored text."
+
 	ItemCategory:
 		namespace: true
 		values:
@@ -1923,6 +1932,7 @@ docs:
 			TOOL:
 				type: "constant"
 				description: "Tools category."
+
 	ParticleType:
 		namespace: true
 		values:
@@ -2025,6 +2035,7 @@ docs:
 			waterWake:
 				type: "constant"
 				description: "Unknown."
+
 	EntityType:
 		namespace: true
 		values:
@@ -2157,6 +2168,7 @@ docs:
 			ZOMBIE_VILLAGER:
 				type: "constant"
 				description: "Zombie-villager hybrid."
+
 	EntityRenderType:
 		namespace: true
 		values:
@@ -2313,6 +2325,7 @@ docs:
 				type: "constant"
 				description: "No information yet."
 				example: "No information yet."
+
 	ArmorType:
 		namespace: true
 		values:
@@ -2328,6 +2341,7 @@ docs:
 			leggings:
 				type: "constant"
 				description: "Leggings armor. Covers the legs."
+
 	MobEffect:
 		namespace: true
 		values:
@@ -2403,6 +2417,7 @@ docs:
 			wither:
 				type: "constant"
 				description: "Similar to poison. Turns hearts black and can kill the entity."
+
 	DimensionId:
 		namespace: true
 		values:
@@ -2412,6 +2427,7 @@ docs:
 			NORMAL:
 				type: "constant"
 				description: "The Dimension ID of the overworld."
+
 	BlockFace:
 		namespace: true
 		values:
@@ -2433,6 +2449,7 @@ docs:
 			WEST:
 				type: "constant"
 				description: "The block side facing west."
+
 	Enchantment:
 		namespace: true
 		values:
@@ -2517,6 +2534,7 @@ docs:
 			LURE:
 				type: "constant"
 				description: "Increases odds of fishes to bite your hook while fishing."
+
 	Sounds:
 		namespace: false
 		values:
@@ -2688,6 +2706,7 @@ docs:
 				display: "random.fuse"
 				type: "string"
 				description: "TNT fuse."
+
 	NamespaceMethod:
 		values:
 			addItemInventory:
@@ -2848,6 +2867,7 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "double, double, double, int, string"
+
 		namespace: false
 	UseAnimation:
 		values:
@@ -2859,6 +2879,7 @@ docs:
 				type: "constant"
 				description: "No information yet."
 				example: "No information yet."
+
 		namespace: true
 	EnchantType:
 		values:
@@ -2906,6 +2927,7 @@ docs:
 				type: "constant"
 				description: "No information yet."
 				example: "No information yet."
+
 		namespace: true
 	BlockRenderLayer:
 		values:
@@ -2953,4 +2975,5 @@ docs:
 				type: "constant"
 				description: "No information yet."
 				example: "No information yet."
+
 		namespace: true
