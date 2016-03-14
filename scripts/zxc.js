@@ -95,8 +95,8 @@ $(window).load(function() {
             return false;
         }
 
-        window.location.hash = namespace + '.' + namespaceValueName;
-        document.title = "zxc - " + namespace + '.' + namespaceValueName;
+        window.location.hash = ((docs[namespace].namespace) ? (namespace + '.') : '') + namespaceValueName;
+        document.title = "zxc - " + window.location.hash;
 
         if (data.display) namespaceValueName = data.display;
         if (data.type == 'string') namespaceValueName = '"' + namespaceValueName + '"';
