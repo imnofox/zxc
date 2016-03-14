@@ -3,10 +3,10 @@ $(window).load(function() {
     // Populated when loading the docs.
     var docs = {};
 
-	var deprec = {
-		string: "This method is <strong>deprecated</strong>, and may be removed in the future. Use <a></a> instead.",
-		bool: "This method is <strong>deprecated</strong>, and may be removed now or in the future. <strong>Find a replacement.</strong>"
-	}
+    var deprec = {
+        string: "This method is <strong>deprecated</strong>, and may be removed in the future. Use <a></a> instead.",
+        bool: "This method is <strong>deprecated</strong>, and may be removed now or in the future. <strong>Find a replacement.</strong>"
+    };
 
     // Check if Android
     var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1;
@@ -41,14 +41,14 @@ $(window).load(function() {
         }
 
         window.location.hash = namespace;
-		document.title = "zxc - " + namespace;
+        document.title = "zxc - " + namespace;
 
         $('#current-doc #intro, #current-doc #actual-doc').hide();
         $('#current-doc #namespace-list').show();
 
         $("#current-doc #namespace-list .list-group").html("");
 
-        for (child in docs[namespace].values) {
+        for (var child in docs[namespace].values) {
             var href = $("<a>");
             href.attr("href", "#" + namespace + "." + child)
                 .addClass("list-group-item")
@@ -63,7 +63,7 @@ $(window).load(function() {
     };
 
     var orderKeys = function(obj, expected) {
-				// from http://stackoverflow.com/a/33049762
+        // from http://stackoverflow.com/a/33049762
         var keys = Object.keys(obj).sort(function keyOrder(k1, k2) {
             if (k1 < k2) return -1;
             else if (k1 > k2) return +1;
@@ -96,7 +96,7 @@ $(window).load(function() {
         }
 
         window.location.hash = namespace + '.' + namespaceValueName;
-		document.title = "zxc - " + namespace + '.' + namespaceValueName;
+        document.title = "zxc - " + namespace + '.' + namespaceValueName;
 
         if (data.display) namespaceValueName = data.display;
         if (data.type == 'string') namespaceValueName = '"' + namespaceValueName + '"';
@@ -125,7 +125,7 @@ $(window).load(function() {
                         argSpan.text(names[i].trim());
                         argSpan.prop('title', args[i].trim());
                         argSpan.attr('data-toggle', 'tooltip');
-                        console.log('tt added + ' + names[i].trim() );
+                        console.log('tt added + ' + names[i].trim());
                     } else {
                         argSpan.text(args[i].trim());
                     }
@@ -162,17 +162,17 @@ $(window).load(function() {
         // Show description
         $('#current-doc #doc-description').html(marked(data.description));
 
-				// Show deprecation notice
-				if (data.deprecated) {
-					if (data.deprecated != 'ignore') {
-						if (typeof data.deprecated == 'string') {
-							$('#current-doc .alert').html(deprec.string).children('a:first-of-type').prop('href', '#' + data.deprecated).text(data.deprecated);
-						} else {
-							$('#current-doc .alert').html(deprec.bool);
-						}
-						$('#current-doc .alert').show();
-					}
-				}
+        // Show deprecation notice
+        if (data.deprecated) {
+            if (data.deprecated != 'ignore') {
+                if (typeof data.deprecated == 'string') {
+                    $('#current-doc .alert').html(deprec.string).children('a:first-of-type').prop('href', '#' + data.deprecated).text(data.deprecated);
+                } else {
+                    $('#current-doc .alert').html(deprec.bool);
+                }
+                $('#current-doc .alert').show();
+            }
+        }
 
         $('html, body').animate({
             scrollTop: $('#current-doc').offset().top
@@ -186,13 +186,13 @@ $(window).load(function() {
             console.log('Loading ' + func[0] + '.' + func[1] + ' from URL');
             populateBody(func[0], func[1]);
         }
-    }
+    };
 
     // Populate side nav from doc data.
     var populateNav = function() {
         // Go through all of the namespaces.
         // ModPE, Level, etc...
-        for (namespace in docs) {
+        for (var namespace in docs) {
 
             // Create section element
             var nSection = $('<section>');
@@ -215,7 +215,7 @@ $(window).load(function() {
             var nList = $('<ul>');
 
             // Populate contents
-            for (child in docs[namespace].values) {
+            for (var child in docs[namespace].values) {
                 //if (child == 'type') continue; // Internal value to represent type of contents
                 var nListItem = $('<li>');
 
@@ -226,8 +226,8 @@ $(window).load(function() {
                     .text(text) // Add the text of the namespace value.
                     .attr('data-table-table', namespace) // Add name of namespace.
                     .attr('data-table-table-key', child); // Add name of namespace value.
-								if (docs[namespace].values[child].deprecated) nListItem.addClass('nav-item-deprecated');
-              	nListItem.appendTo(nList); // Then append it to the namespace list.
+                if (docs[namespace].values[child].deprecated) nListItem.addClass('nav-item-deprecated');
+                nListItem.appendTo(nList); // Then append it to the namespace list.
             }
 
             // Add list of namespaces
@@ -236,16 +236,16 @@ $(window).load(function() {
 
             // Add to nav
             nSection.appendTo($('#nav-menu'));
-
-            // Called when we click a namespace value.
-            // Should open up in right side.
-            $('.nav-section-contents ul li').on('click', function() {
-                var namespace = $(this).attr('data-table-table');
-                var namespaceValueName = $(this).attr('data-table-table-key');
-
-                populateBody(namespace, namespaceValueName);
-            });
         }
+
+        // Called when we click a namespace value.
+        // Should open up in right side.
+        $('.nav-section-contents ul li').on('click', function() {
+            var namespace = $(this).attr('data-table-table');
+            var namespaceValueName = $(this).attr('data-table-table-key');
+
+            populateBody(namespace, namespaceValueName);
+        });
     };
 
     // Fetch and load data.
@@ -258,9 +258,9 @@ $(window).load(function() {
 
         docs = data.docs;
 
-		for (namespace in docs) {
-			docs[namespace].values = orderKeys(docs[namespace].values);
-		}
+        for (var namespace in docs) {
+            docs[namespace].values = orderKeys(docs[namespace].values);
+        }
 
         populateNav();
         $('.nav-section .nav-section-contents').hide();
@@ -290,7 +290,7 @@ $(window).load(function() {
 
             $(this).find("li").each(function() {
                 // Show results that include the term, or all if the search is empty
-                if ($(this).text().toLowerCase().indexOf(search_term) > -1 || $(this).text() == "") {
+                if ($(this).text().toLowerCase().indexOf(search_term) > -1 || $(this).text() === "") {
                     $(this).show();
                     // As at least 1 item needs to be shown, the parent section must be
                     section_shown = true;
@@ -299,7 +299,11 @@ $(window).load(function() {
                 }
             });
 
-            (section_shown) ? $(this).show(): $(this).hide();
+            if (section_shown) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
         });
 
 
@@ -309,7 +313,7 @@ $(window).load(function() {
         $('#current-doc #actual-doc, #current-doc #namespace-list').hide();
         $('#current-doc #intro').show();
         window.location.hash = "";
-		document.title = "zxc";
+        document.title = "zxc";
     });
 
     $("#doc-example").on('mousedown', "pre + a.btn", function() {
