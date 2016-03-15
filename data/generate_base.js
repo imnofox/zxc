@@ -30,9 +30,9 @@ var lr = lineReader.createInterface({
 });
 
 lr.on('line', function(line) {
-    for (t in types) {
+    for (let t in types) {
         var match;
-        if (match = line.match(types[t].regex)) {
+        if (let match = line.match(types[t].regex)) {
             var ns, func, args, show_ns;
 
             if (types[t].can_have_ns) {
@@ -81,19 +81,6 @@ lr.on('line', function(line) {
 });
 
 lr.on('close', function() {
-
-	for (namespace in docs_data.docs) {
-		for (method in docs_data.docs[namespace].values) {
-			if (current_lines.indexOf(namespace + '.' + method) < 0) {
-				if (docs_data.docs[namespace].values[method].deprecated != "ignore") {
-					docs_data.docs[namespace].values[method].deprecated = true;
-				}
-			} else if (docs_data.docs[namespace].values[method].deprecated == true) {
-				docs_data.docs[namespace].values[method].deprecated = false;
-			}
-		}
-	}
-
     fs.writeFileSync('docs.cson', CSON.stringify(docs_data));
     console.log('Done.');
     process.exit();
