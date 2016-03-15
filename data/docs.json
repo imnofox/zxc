@@ -495,8 +495,7 @@
           "type": "namespacemethod",
           "args": "double, double, double, int, string",
           "description": "Creates an entity.\n- `double`: X\n- `double`: Y\n- `double`: Z\n- `int`: Entity type ID\n- `string`: Skin (PNG file)",
-          "example": "No information yet.",
-          "deprecated": true
+          "example": "No information yet."
         },
         "getChestSlotCustomName": {
           "type": "namespacemethod",
@@ -1651,8 +1650,7 @@
           "arg_names": "command",
           "args": "string",
           "description": "Called whenever a command is entered",
-          "example": "```\nfunction procCmd(command) {\n\tvar cmd = command.split(' ');\n\tif (cmd[0].toLowerCase() == 'coords') {\n\t\tModPE.showTipMessage(Player.getX() + '/' + Player.getY() + '/' + Player.getZ());\n\t}\n}\n```\nIt is recommended to split `command` into an array, so you can individually access each argument.\nIf arguments are required, then `command` will equal `\"tp 500 128 30\"`. Once split by spaces, you can access `\"tp\"` with `cmd[0]`, `\"500\"` with `cmd[1]`, etc...",
-          "deprecated": true
+          "example": "```\nfunction procCmd(command) {\n\tvar cmd = command.split(' ');\n\tif (cmd[0].toLowerCase() == 'coords') {\n\t\tModPE.showTipMessage(Player.getX() + '/' + Player.getY() + '/' + Player.getZ());\n\t}\n}\n```\nIt is recommended to split `command` into an array, so you can individually access each argument.\nIf arguments are required, then `command` will equal `\"tp 500 128 30\"`. Once split by spaces, you can access `\"tp\"` with `cmd[0]`, `\"500\"` with `cmd[1]`, etc..."
         },
         "continueDestroyBlock": {
           "type": "hook",
