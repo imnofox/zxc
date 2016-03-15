@@ -937,6 +937,10 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int, int"
+			getScore:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
 	Entity:
 		namespace: true
 		values:
@@ -1303,6 +1307,16 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "Object, Object"
+			getArmorCustomName:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "Object, int"
+			setArmorCustomName:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "Object, int, String"
 	Item:
 		namespace: true
 		values:
@@ -1463,6 +1477,26 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				args: "int, int, int"
+			getMaxDamage:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "int"
+			getTextureCoords:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "int, int"
+			internalNameToId:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "String"
+			translatedNameToId:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "String"
 	Block:
 		namespace: true
 		values:
@@ -1657,6 +1691,11 @@ docs:
 					
 					![picture of custom shape](images/setshape_example.png)
 				'''
+			getTextureCoords:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "int, int, int"
 	Server:
 		namespace: true
 		values:
@@ -1705,17 +1744,20 @@ docs:
 				arg_names: "attacker, victim"
 				description: "Called when an entity hits (attacks) another entity."
 				example: "No information yet."
+				can_prevent: true
 			chatHook:
 				type: "hook"
 				args: "string"
 				description: "No information yet."
 				example: "No information yet."
+				can_prevent: true
 			destroyBlock:
 				type: "hook"
 				args: "int, int, int, int"
 				arg_names: "x, y, z, side"
 				description: "Called when a block has been destroyed."
 				example: "No information yet."
+				can_prevent: true
 			projectileHitEntityHook:
 				type: "hook"
 				args: "entity, entity"
@@ -1744,11 +1786,13 @@ docs:
 				arg_names: "entity, x, y, z, power, onFire"
 				description: "Called when an explosion happens."
 				example: "No information yet."
+				can_prevent: true
 			serverMessageReceiveHook:
 				type: "hook"
 				args: "string"
 				description: "No information yet."
 				example: "No information yet."
+				can_prevent: true
 			chatReceiveHook:
 				type: "hook"
 				args: "string, ???"
@@ -1766,6 +1810,7 @@ docs:
 				arg_names: "attacker, victim"
 				description: "Called when an entity dies."
 				example: "No information yet."
+				can_prevent: true
 			redstoneUpdateHook:
 				type: "hook"
 				arg_names: "x, y, z, signalStrength, worldLoading, blockId, blockData"
@@ -1806,6 +1851,7 @@ docs:
 				arg_names: "x, y, z, side"
 				description: "No information yet."
 				example: "No information yet."
+				can_prevent: true
 			projectileHitBlockHook:
 				type: "hook"
 				args: "entity, int, int, int, int"
@@ -1823,6 +1869,7 @@ docs:
 				arg_names: "x, y, z, itemid, blockid, side, itemDamage, blockDamage"
 				description: "Called when the player taps on a block."
 				example: "No information yet."
+				can_prevent: true
 			procCmd:
 				type: "hook"
 				arg_names: "command"
@@ -1847,6 +1894,25 @@ docs:
 				example: "No information yet."
 				args: "int, int, int, int, int?"
 				arg_names: "x, y, z, side, progress"
+				can_prevent: true
+			entityHurtHook:
+				type: "hook"
+				description: "No information yet."
+				example: "No information yet."
+				args: "attacker, victim, halfhearts"
+				can_prevent: true
+			playerAddExpHook:
+				type: "hook"
+				description: "No information yet."
+				example: "No information yet."
+				args: "player, experienceAdded"
+				can_prevent: true
+			playerExpLevelChangeHook:
+				type: "hook"
+				description: "No information yet."
+				example: "No information yet."
+				args: "player, levelsAdded"
+				can_prevent: true
 	ChatColor:
 		namespace: true
 		values:

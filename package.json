@@ -10,6 +10,9 @@
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-cson": "^0.16.0"
   },
+  "jshintConfig": {
+    "esversion": 6
+  },
   "devDependencies": {
     "cson": "^3.0.2"
   }

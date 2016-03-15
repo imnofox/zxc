@@ -1,9 +1,12 @@
+"use strict";
 const fs = require('fs');
 const path = require('path')
 const CSON = require('cson');
 const lineReader = require('readline');
 
-var types = {
+const can_prevent = "// can use preventDefault()";
+
+const types = {
     namespacemethod: {
         regex: /(?:(.+)\.)?(.+)\((.+)?\);/,
         default_prefix: 'NamespaceMethod',
@@ -29,10 +32,11 @@ var lr = lineReader.createInterface({
     input: fs.createReadStream('modpescript_dump.txt')
 });
 
+var prev_line = "";
 lr.on('line', function(line) {
     for (let t in types) {
         var match;
-        if (let match = line.match(types[t].regex)) {
+        if (match = line.match(types[t].regex)) {
             var ns, func, args, show_ns;
 
             if (types[t].can_have_ns) {
@@ -76,8 +80,13 @@ lr.on('line', function(line) {
                 }
             }
 
+			if (prev_line == can_prevent) {
+				docs_data.docs[ns].values[func].can_prevent = true;
+			}
+
         }
     }
+	prev_line = line;
 });
 
 lr.on('close', function() {

@@ -138,6 +138,7 @@ Player.getPointedVecX();
 Player.getPointedVecY();
 Player.getPointedVecZ();
 Player.getSaturation();
+Player.getScore();
 Player.getSelectedSlotId();
 Player.getX();
 Player.getY();
@@ -161,6 +162,7 @@ Entity.addEffect(par1Object, par2int, par3int, par4int, par5boolean, par6boolean
 Entity.getAll();
 Entity.getAnimalAge(par1Object);
 Entity.getArmor(par1Object, par2int);
+Entity.getArmorCustomName(par1Object, par2int);
 Entity.getArmorDamage(par1Object, par2int);
 Entity.getEntityTypeId(par1Object);
 Entity.getExtraData(par1Object, par2String);
@@ -191,6 +193,7 @@ Entity.removeEffect(par1Object, par2int);
 Entity.rideAnimal(par1Object, par2Object);
 Entity.setAnimalAge(par1Object, par2int);
 Entity.setArmor(par1Object, par2int, par3int, par4int);
+Entity.setArmorCustomName(par1Object, par2int, par3String);
 Entity.setCape(par1Object, par2String);
 Entity.setCarriedItem(par1Object, par2int, par3int, par4int);
 Entity.setCollisionSize(par1Object, par2double, par3double);
@@ -216,8 +219,11 @@ Item.addCraftRecipe(par1int, par2int, par3int, par4Scriptable);
 Item.addFurnaceRecipe(par1int, par2int, par3int);
 Item.addShapedRecipe(par1int, par2int, par3int, par4Scriptable, par5Scriptable);
 Item.defineArmor(par1int, par2String, par3int, par4String, par5String, par6int, par7int, par8int);
+Item.getMaxDamage(par1int);
 Item.getName(par1int, par2int, par3boolean);
+Item.getTextureCoords(par1int, par2int);
 Item.getUseAnimation(par1int);
+Item.internalNameToId(par1String);
 Item.isValidItem(par1int);
 Item.setCategory(par1int, par2int);
 Item.setEnchantType(par1int, par2int, par3int);
@@ -226,6 +232,7 @@ Item.setMaxDamage(par1int, par2int);
 Item.setProperties(par1int, par2Object);
 Item.setStackedByData(par1int, par2boolean);
 Item.setUseAnimation(par1int, par2int);
+Item.translatedNameToId(par1String);
 
 Block.defineBlock(par1int, par2String, par3Object, par4Object, par5Object, par6Object);
 Block.defineLiquidBlock(par1int, par2String, par3Object, par4Object);
@@ -233,6 +240,7 @@ Block.getAllBlockIds();
 Block.getDestroyTime(par1int, par2int);
 Block.getFriction(par1int, par2int);
 Block.getRenderType(par1int);
+Block.getTextureCoords(par1int, par2int, par3int);
 Block.setColor(par1int, par2Scriptable);
 Block.setDestroyTime(par1int, par2double);
 Block.setExplosionResistance(par1int, par2double);
@@ -251,25 +259,37 @@ Server.getPort();
 Server.joinServer(par1String, par2int);
 Server.sendChat(par1String);
 
+// can use preventDefault()
 function attackHook(attacker, victim)
+// can use preventDefault()
 function chatHook(str)
+// can use preventDefault()
 function continueDestroyBlock(x, y, z, side, progress)
+// can use preventDefault()
 function destroyBlock(x, y, z, side)
 function projectileHitEntityHook(projectile, targetEntity)
 function eatHook(hearts, saturationRatio)
 function entityAddedHook(entity)
+// can use preventDefault()
+function entityHurtHook(attacker, victim, halfhearts)
 function entityRemovedHook(entity)
+// can use preventDefault()
 function explodeHook(entity, x, y, z, power, onFire)
+// can use preventDefault()
 function serverMessageReceiveHook(str)
-function chatReceiveHook(str, sender)
-function leaveGame()
+// can use preventDefault()
 function deathHook(attacker, victim)
+// can use preventDefault()
+function playerAddExpHook(player, experienceAdded)
+// can use preventDefault()
+function playerExpLevelChangeHook(player, levelsAdded)
 function redstoneUpdateHook(x, y, z, newCurrent, someBooleanIDontKnow, blockId, blockData)
-function selectLevelHook()
 function newLevel()
+// can use preventDefault()
 function startDestroyBlock(x, y, z, side)
 function projectileHitBlockHook(projectile, blockX, blockY, blockZ, side)
 function modTick()
+// can use preventDefault()
 function useItem(x, y, z, itemid, blockid, side, itemDamage, blockDamage)
 
 ChatColor.AQUA;
@@ -516,3 +536,4 @@ BlockRenderLayer.opaque_seasons;
 BlockRenderLayer.seasons_far;
 BlockRenderLayer.seasons_far_alpha;
 BlockRenderLayer.water;
+
