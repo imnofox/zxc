@@ -39,6 +39,12 @@ body {
     hyphens: auto;
 }
 
+#current-doc h1 .label {
+	font-size: 18px;
+	margin-left: 10px;
+	vertical-align: middle;
+}
+
 #doc-example pre > a {
     margin: 0 0 10px;
 }

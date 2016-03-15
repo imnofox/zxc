@@ -158,6 +158,7 @@ $(window).load(function() {
 
         // Show title.
         $('#current-doc #actual-doc h1').text((docs[namespace].namespace ? namespace + "." : '') + namespaceValueName);
+		if (data.can_prevent) $('#current-doc #actual-doc h1').append($('<span class="label label-info">Default Preventable</span>'));
 
         // Show description
         $('#current-doc #doc-description').html(marked(data.description));
