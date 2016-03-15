@@ -495,7 +495,8 @@
           "type": "namespacemethod",
           "args": "double, double, double, int, string",
           "description": "Creates an entity.\n- `double`: X\n- `double`: Y\n- `double`: Z\n- `int`: Entity type ID\n- `string`: Skin (PNG file)",
-          "example": "No information yet."
+          "example": "No information yet.",
+          "deprecated": true
         },
         "getChestSlotCustomName": {
           "type": "namespacemethod",
@@ -846,6 +847,11 @@
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "int, int, int, int"
+        },
+        "getScore": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet."
         }
       }
     },
@@ -1196,6 +1202,18 @@
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "Object, Object"
+        },
+        "getArmorCustomName": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, int"
+        },
+        "setArmorCustomName": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "Object, int, String"
         }
       }
     },
@@ -1268,7 +1286,7 @@
           "args": "int, Object",
           "arg_names": "id, properties",
           "description": "Sets an item's properties, like in `items.json`.",
-          "example": "This makes an item edible.\n```\n// Let's create a new item called 'Toast'\nModpe.setItem(440, 'bread', 0, \"Toast\", 32);\nItem.setProperties(440, {\n    use_animation: \"eat\", // Use the eating animation\n    use_duration: 32,\n\n    food: {\n      nutrition: 4, // Give it 4 1/2 hearts of nutrition\n      saturation_modifier: \"low\",\n      is_meat: false\n    }\n});\n```\nThis example can be replicated much easier with [ModPE.setFoodItem](#ModPE.setFoodItem)."
+          "example": "This makes an item edible.\n```\n// Let's create a new item called 'Toast'\nModpe.setItem(440, 'bread', 0, \"Toast\", 32);\nItem.setProperties(440, {\n    use_animation: \"eat\", // Use the eating animation\n    use_duration: 32,\n\n    food: {\n      nutrition: 4, // Give it 4 1/2 hearts of nutrition\n      saturation_modifier: \"low\",\n      is_meat: false\n    }\n});\n```\nThis example can be replicated *much* easier with [ModPE.setFoodItem](#ModPE.setFoodItem)."
         },
         "getUseAnimation": {
           "type": "namespacemethod",
@@ -1293,6 +1311,30 @@
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "int, int, int"
+        },
+        "getMaxDamage": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int"
+        },
+        "getTextureCoords": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, int"
+        },
+        "internalNameToId": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "String"
+        },
+        "translatedNameToId": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "String"
         }
       }
     },
@@ -1412,6 +1454,12 @@
           "arg_names": "id, minX, minY, minZ, maxX, maxY, maxZ, damage",
           "description": "Sets a block's boundaries.",
           "example": "```\nBlock.setShape(204, 0.25, 0, 0.25, 0.75, 0.5, 0.75, 0);\n```\nThis creates a block that is half the size of a regular block. Do note, with the full light opacity, blocks may not let light through.\n\n![picture of custom shape](images/setshape_example.png)"
+        },
+        "getTextureCoords": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int, int, int"
         }
       }
     },
@@ -1470,20 +1518,23 @@
           "args": "entity, entity",
           "arg_names": "attacker, victim",
           "description": "Called when an entity hits (attacks) another entity.",
-          "example": "No information yet."
+          "example": "No information yet.",
+          "can_prevent": true
         },
         "chatHook": {
           "type": "hook",
           "args": "string",
           "description": "No information yet.",
-          "example": "No information yet."
+          "example": "No information yet.",
+          "can_prevent": true
         },
         "destroyBlock": {
           "type": "hook",
           "args": "int, int, int, int",
           "arg_names": "x, y, z, side",
           "description": "Called when a block has been destroyed.",
-          "example": "No information yet."
+          "example": "No information yet.",
+          "can_prevent": true
         },
         "projectileHitEntityHook": {
           "type": "hook",
@@ -1516,13 +1567,15 @@
           "args": "entity, int, int, int, int, boolean",
           "arg_names": "entity, x, y, z, power, onFire",
           "description": "Called when an explosion happens.",
-          "example": "No information yet."
+          "example": "No information yet.",
+          "can_prevent": true
         },
         "serverMessageReceiveHook": {
           "type": "hook",
           "args": "string",
           "description": "No information yet.",
-          "example": "No information yet."
+          "example": "No information yet.",
+          "can_prevent": true
         },
         "chatReceiveHook": {
           "type": "hook",
@@ -1542,7 +1595,8 @@
           "args": "entity, entity",
           "arg_names": "attacker, victim",
           "description": "Called when an entity dies.",
-          "example": "No information yet."
+          "example": "No information yet.",
+          "can_prevent": true
         },
         "redstoneUpdateHook": {
           "type": "hook",
@@ -1568,7 +1622,8 @@
           "args": "int, int, int, int",
           "arg_names": "x, y, z, side",
           "description": "No information yet.",
-          "example": "No information yet."
+          "example": "No information yet.",
+          "can_prevent": true
         },
         "projectileHitBlockHook": {
           "type": "hook",
@@ -1588,21 +1643,45 @@
           "args": "int, int, int, int, int, int, int, int",
           "arg_names": "x, y, z, itemid, blockid, side, itemDamage, blockDamage",
           "description": "Called when the player taps on a block.",
-          "example": "No information yet."
+          "example": "No information yet.",
+          "can_prevent": true
         },
         "procCmd": {
           "type": "hook",
           "arg_names": "command",
           "args": "string",
           "description": "Called whenever a command is entered",
-          "example": "```\nfunction procCmd(command) {\n\tvar cmd = command.split(' ');\n\tif (cmd[0].toLowerCase() == 'coords') {\n\t\tModPE.showTipMessage(Player.getX() + '/' + Player.getY() + '/' + Player.getZ());\n\t}\n}\n```\nIt is recommended to split `command` into an array, so you can individually access each argument.\nIf arguments are required, then `command` will equal `\"tp 500 128 30\"`. Once split by spaces, you can access `\"tp\"` with `cmd[0]`, `\"500\"` with `cmd[1]`, etc..."
+          "example": "```\nfunction procCmd(command) {\n\tvar cmd = command.split(' ');\n\tif (cmd[0].toLowerCase() == 'coords') {\n\t\tModPE.showTipMessage(Player.getX() + '/' + Player.getY() + '/' + Player.getZ());\n\t}\n}\n```\nIt is recommended to split `command` into an array, so you can individually access each argument.\nIf arguments are required, then `command` will equal `\"tp 500 128 30\"`. Once split by spaces, you can access `\"tp\"` with `cmd[0]`, `\"500\"` with `cmd[1]`, etc...",
+          "deprecated": true
         },
         "continueDestroyBlock": {
           "type": "hook",
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "int, int, int, int, int?",
-          "arg_names": "x, y, z, side, progress"
+          "arg_names": "x, y, z, side, progress",
+          "can_prevent": true
+        },
+        "entityHurtHook": {
+          "type": "hook",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "attacker, victim, halfhearts",
+          "can_prevent": true
+        },
+        "playerAddExpHook": {
+          "type": "hook",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "player, experienceAdded",
+          "can_prevent": true
+        },
+        "playerExpLevelChangeHook": {
+          "type": "hook",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "player, levelsAdded",
+          "can_prevent": true
         }
       }
     },
@@ -2131,7 +2210,8 @@
         },
         "player2": {
           "type": "constant",
-          "description": "No information yet."
+          "description": "No information yet.",
+          "deprecated": true
         },
         "sheep": {
           "type": "constant",
@@ -2179,7 +2259,8 @@
         },
         "unknown1": {
           "type": "constant",
-          "description": "Like the name says, unknown."
+          "description": "Like the name says, unknown.",
+          "deprecated": true
         },
         "villager": {
           "type": "constant",
@@ -2508,212 +2589,254 @@
         "step_cloth": {
           "display": "step.cloth",
           "type": "string",
-          "description": "Stepping on wool."
+          "description": "Stepping on wool.",
+          "deprecated": true
         },
         "step_grass": {
           "display": "step.grass",
           "type": "string",
-          "description": "Stepping on grass."
+          "description": "Stepping on grass.",
+          "deprecated": true
         },
         "step_gravel": {
           "display": "step.gravel",
           "type": "string",
-          "description": "Stepping on gravel."
+          "description": "Stepping on gravel.",
+          "deprecated": true
         },
         "step_sand": {
           "display": "step.sand",
           "type": "string",
-          "description": "Stepping on sand."
+          "description": "Stepping on sand.",
+          "deprecated": true
         },
         "step_stone": {
           "display": "step.stone",
           "type": "string",
-          "description": "Stepping on stone."
+          "description": "Stepping on stone.",
+          "deprecated": true
         },
         "step_wood": {
           "display": "step.wood",
           "type": "string",
-          "description": "Stepping on wood."
+          "description": "Stepping on wood.",
+          "deprecated": true
         },
         "random_splash": {
           "display": "random.splash",
           "type": "string",
-          "description": "Splashing water sound."
+          "description": "Splashing water sound.",
+          "deprecated": true
         },
         "random_explode": {
           "display": "random.explode",
           "type": "string",
-          "description": "Explosion sound."
+          "description": "Explosion sound.",
+          "deprecated": true
         },
         "random_break": {
           "display": "random.break",
           "type": "string",
-          "description": "Sound when an item breaks."
+          "description": "Sound when an item breaks.",
+          "deprecated": true
         },
         "random_burp": {
           "display": "random.burp",
           "type": "string",
-          "description": "Burp sound."
+          "description": "Burp sound.",
+          "deprecated": true
         },
         "fire_fire": {
           "display": "fire.fire",
           "type": "string",
-          "description": "Fire crackle."
+          "description": "Fire crackle.",
+          "deprecated": true
         },
         "fire_ignite": {
           "display": "fire.ignite",
           "type": "string",
-          "description": "Fire ignition sound."
+          "description": "Fire ignition sound.",
+          "deprecated": true
         },
         "random_chestclosed": {
           "display": "random.chestclosed",
           "type": "string",
-          "description": "Chest closing."
+          "description": "Chest closing.",
+          "deprecated": true
         },
         "random_chestopen": {
           "display": "random.chestopen",
           "type": "string",
-          "description": "Chest opening"
+          "description": "Chest opening",
+          "deprecated": true
         },
         "random_hurt": {
           "display": "random.hurt",
           "type": "string",
-          "description": "Player hurt sound."
+          "description": "Player hurt sound.",
+          "deprecated": true
         },
         "random_glass": {
           "display": "random.glass",
           "type": "string",
-          "description": "Glass breaking sound."
+          "description": "Glass breaking sound.",
+          "deprecated": true
         },
         "mob_sheep": {
           "display": "mob.sheep",
           "type": "string",
-          "description": "Sheep baa."
+          "description": "Sheep baa.",
+          "deprecated": true
         },
         "mob_pig": {
           "display": "mob.pig",
           "type": "string",
-          "description": "Pig oink."
+          "description": "Pig oink.",
+          "deprecated": true
         },
         "mob_pigdeath": {
           "display": "mob.pigdeath",
           "type": "string",
-          "description": "Pig dying sound."
+          "description": "Pig dying sound.",
+          "deprecated": true
         },
         "mob_cow": {
           "display": "mob.cow",
           "type": "string",
-          "description": "Cow moo."
+          "description": "Cow moo.",
+          "deprecated": true
         },
         "mob_cowhurt": {
           "display": "mob.cowhurt",
           "type": "string",
-          "description": "Cow hurting."
+          "description": "Cow hurting.",
+          "deprecated": true
         },
         "mob_chicken": {
           "display": "mob.chicken",
           "type": "string",
-          "description": "Chicken cluck."
+          "description": "Chicken cluck.",
+          "deprecated": true
         },
         "mob_chickenhurt": {
           "display": "mob.chickenhurt",
           "type": "string",
-          "description": "Chicken hurting."
+          "description": "Chicken hurting.",
+          "deprecated": true
         },
         "mob_zombie": {
           "display": "mob.zombie",
           "type": "string",
-          "description": "Zombie growl."
+          "description": "Zombie growl.",
+          "deprecated": true
         },
         "mob_zombiedeath": {
           "display": "mob.zombiedeath",
           "type": "string",
-          "description": "Zombie dying sound."
+          "description": "Zombie dying sound.",
+          "deprecated": true
         },
         "mob_zombiehurt": {
           "display": "mob.zombiehurt",
           "type": "string",
-          "description": "Zombie hurting."
+          "description": "Zombie hurting.",
+          "deprecated": true
         },
         "mob_skeleton": {
           "display": "mob.skeleton",
           "type": "string",
-          "description": "Skeleton bones sound."
+          "description": "Skeleton bones sound.",
+          "deprecated": true
         },
         "mob_skeletonhurt": {
           "display": "mob.skeletonhurt",
           "type": "string",
-          "description": "Skeleton hurting."
+          "description": "Skeleton hurting.",
+          "deprecated": true
         },
         "mob_spider": {
           "display": "mob.spider",
           "type": "string",
-          "description": "Spider hiss."
+          "description": "Spider hiss.",
+          "deprecated": true
         },
         "mob_spiderdeath": {
           "display": "mob.spiderdeath",
           "type": "string",
-          "description": "Spider dying sound."
+          "description": "Spider dying sound.",
+          "deprecated": true
         },
         "mob_zombiepig_zpig": {
           "display": "mob.zombiepig.zpig",
           "type": "string",
-          "description": "Zombie pigman sound."
+          "description": "Zombie pigman sound.",
+          "deprecated": true
         },
         "mob_zombiepig_zpigangry": {
           "display": "mob.zombiepig.zpigangry",
           "type": "string",
-          "description": "Angry zombie pigman sound."
+          "description": "Angry zombie pigman sound.",
+          "deprecated": true
         },
         "mob_zombiepig_zpigdeath": {
           "display": "mob.zombiepig.zpigdeath",
           "type": "string",
-          "description": "Zombie pigman dying sound."
+          "description": "Zombie pigman dying sound.",
+          "deprecated": true
         },
         "mob_zombiepig_zpighurt": {
           "display": "mob.zombiepig.zpighurt",
           "type": "string",
-          "description": "Zombie pigman hurting."
+          "description": "Zombie pigman hurting.",
+          "deprecated": true
         },
         "damage_fallbig": {
           "display": "damage.fallbig",
           "type": "string",
-          "description": "Large fall sound."
+          "description": "Large fall sound.",
+          "deprecated": true
         },
         "damage_fallsmall": {
           "display": "damage.fallsmall",
           "type": "string",
-          "description": "Small fall sound."
+          "description": "Small fall sound.",
+          "deprecated": true
         },
         "random_bow": {
           "display": "random.bow",
           "type": "string",
-          "description": "Bow noise."
+          "description": "Bow noise.",
+          "deprecated": true
         },
         "random_bowhit": {
           "display": "random.bowhit",
           "type": "string",
-          "description": "Bow hitting entity sound."
+          "description": "Bow hitting entity sound.",
+          "deprecated": true
         },
         "mob_creeper": {
           "display": "mob.creeper",
           "type": "string",
-          "description": "Creeper hiss."
+          "description": "Creeper hiss.",
+          "deprecated": true
         },
         "mob_creeperdeath": {
           "display": "mob.creeperdeath",
           "type": "string",
-          "description": "Creeper dying sound."
+          "description": "Creeper dying sound.",
+          "deprecated": true
         },
         "random_eat": {
           "display": "random.eat",
           "type": "string",
-          "description": "Eating sound."
+          "description": "Eating sound.",
+          "deprecated": true
         },
         "random_fuse": {
           "display": "random.fuse",
           "type": "string",
-          "description": "TNT fuse."
+          "description": "TNT fuse.",
+          "deprecated": true
         }
       }
     },
