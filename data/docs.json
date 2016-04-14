@@ -50,14 +50,15 @@
         "openInputStreamFromTexturePack": {
           "type": "namespacemethod",
           "args": "string",
-          "description": "No information yet.",
-          "example": "No information yet."
+          "arg_names": "filePath",
+          "description": "Returns a Java [InputStream](https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html) of a file from a texture pack. This is quite advanced.",
+          "example": "```\nvar sheet = BitmapFactory.decodeStream(ModPE.openInputStreamFromTexturePack(\"images/gui/spritesheet.png\"));\n```\nExample from [RetroPE's FontPE script](https://github.com/RetroPE/FontPE/blob/a5da4ee12b52da03944f7481d155e9ba25e7c05c/FontPE.js#L18)."
         },
         "overrideTexture": {
           "type": "namespacemethod",
           "arg_names": "texturePath, replacementPath",
           "args": "string, string",
-          "description": "No information yet.",
+          "description": "Overrides a default texture with the file at the supplied file path or URL.",
           "example": "```\nModPE.overrideTexture('images/items-opaque.png', 'http://example.com/items-replacement.png');\n```\nChanges the items texture file to the image at the specified URL."
         },
         "readData": {
@@ -78,8 +79,8 @@
         "resetFov": {
           "type": "namespacemethod",
           "args": "",
-          "description": "Resets FOV to default?",
-          "example": "No information yet."
+          "description": "Resets FOV to default.",
+          "example": "```\nfunction procCmd(cmd) {\n\tif (cmd.toLowerCase() == 'resetfov') {\n\t\tModPE.resetFov();\n\t}\n}\n```\nResets the FOV when `/resetfov` is run."
         },
         "resetImages": {
           "type": "namespacemethod",
@@ -210,14 +211,14 @@
           "args": "int, int, int",
           "returns": "bool",
           "description": "Returns whether a block is open to the sky. (No blocks above it)",
-          "example": "No information yet."
+          "example": "```\nfunction destroyBlock(x, y, z, side) {\n\tif (Level.getTile(x, y, z) == 56) { // 56 = diamond ore\n\t\tif (Level.canSeeSky(x, y, z)) {\n\t\t\tif (Math.floor(Math.random() * 10 + 1) == 1) { // Get a random number between from 1 to 10\n\t\t\t\tpreventDefault();\n\t\t\t\tLevel.explode(x, y, z, 5);\n\t\t\t\tclientMessage(ChatColor.RED + \"Diamonds are sometimes quite sensitive to sunlight!\");\n\t\t\t} else {\n\t\t\t\tclientMessage(\"Ooh, lucky!\");\n\t\t\t}\n\t\t}\n\t}\n}\n```\nWhen the player destroys a block of diamond ore, if the block can see sky, there is a 1/10 chance of the block exploding."
         },
         "destroyBlock": {
           "type": "namespacemethod",
           "arg_names": "x, y, z, shouldDrop",
           "args": "int, int, int, bool",
           "description": "Destroys a block as if a player mined it.\nIf `shouldDrop` is `true`, then the block will drop any items it may drop.",
-          "example": "No information yet."
+          "example": "```\nvar superBreakOn = true;\nfunction useItem(x, y, z) {\n\tif (superBreakOn && Level.getTile(x, y, z) != 0) {\n\t\tLevel.destroyBlock(x, y, z, true);\n\t}\n}\n```\nThis script let's the player break blocks just by tapping them while the boolean variable `superBreakOn` is `true`.\nThe parameter `shouldDrop` is set to `true`, so blocks will drop their drops."
         },
         "dropItem": {
           "type": "namespacemethod",
@@ -225,14 +226,14 @@
           "args": "double, double, double, double, int, int, int",
           "returns": "entity",
           "description": "Spawns a dropped item in the world. It returns the newly created entity, which can be manipulated.\n`range` is the furthest distance it can drop from the coordinates. `0.0` is recommended.",
-          "example": "No information yet."
+          "example": "```\nfunction deathHook(attacker, victim) {\n\tLevel.dropItem(Entity.getX(victim), Entity.getY(victim), Entity.getz(victim), 2.5, 38, 1, 0); // 38:0 = poppy\n}\n```\nWhen any entity dies, including the player, a red poppy is dropped at the death location."
         },
         "explode": {
           "type": "namespacemethod",
           "arg_names": "x, y, z, radius",
           "args": "double, double, double, double",
           "description": "Causes an explosion somewhere in the world.",
-          "example": "No information yet."
+          "example": "```\nfunction destroyBlock(x, y, z, side) {\n\tif (Level.getTile(x, y, z) == 56) { // 56 = diamond ore\n\t\tif (Level.canSeeSky(x, y, z)) {\n\t\t\tif (Math.floor(Math.random() * 10 + 1) == 1) { // Get a random number between from 1 to 10\n\t\t\t\tpreventDefault();\n\t\t\t\tLevel.explode(x, y, z, 5);\n\t\t\t\tclientMessage(ChatColor.RED + \"Diamonds are sometimes quite sensitive to sunlight!\");\n\t\t\t} else {\n\t\t\t\tclientMessage(\"Ooh, lucky!\");\n\t\t\t}\n\t\t}\n\t}\n}\n```\nWhen the player destroys a block of diamond ore, if the block can see sky, there is a 1/10 chance of the block exploding with an explosionn radius of `5`."
         },
         "getAddress": {
           "type": "namespacemethod",
@@ -252,15 +253,15 @@
           "arg_names": "x, z",
           "args": "int, int",
           "description": "Gets the name of a biome at the specified coordinates in the world.",
-          "example": "No information yet."
+          "example": "```\nfunction procCmd(cmd) {\n\tif (cmd.toLowerCase() == 'biome') {\n\t\tvar biomeName = Level.getBiomeName(Player.getX(), Player.getY());\n\t\tclientMessage(\"The current biome is \" + biomeName);\n\t}\n}\n```"
         },
         "getBrightness": {
           "type": "namespacemethod",
           "arg_names": "x, y, z",
           "args": "int, int, int",
-          "returns": "int?/double?",
+          "returns": "int",
           "description": "Returns the light level at a position in the world.",
-          "example": "No information yet."
+          "example": "```\nfunction useItem(x, y, z, itemId, blockId) {\n\tif (itemId == 354) { // 354 = cake\n\t\tif (Level.getBrightness(x, y, z) < 8) {\n\t\t\tclientMessage(\"Are you sure you want to leave your cake in this damp darkness?\");\n\t\t\tLevel.spawnMob(x, y + 0.5, z, EntityType.SILVERFISH);\n\t\t}\n\t}\n}\n```\nThis example spawns a silverfish on cakes that have been placed in places where the light level is less than `8`, which is the light range that most hostile mobs spawn in."
         },
         "getChestSlot": {
           "type": "namespacemethod",
