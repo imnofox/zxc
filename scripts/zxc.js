@@ -125,7 +125,6 @@ $(window).load(function() {
                         argSpan.text(names[i].trim());
                         argSpan.prop('title', args[i].trim());
                         argSpan.attr('data-toggle', 'tooltip');
-                        console.log('tt added + ' + names[i].trim());
                     } else {
                         argSpan.text(args[i].trim());
                     }
@@ -158,7 +157,7 @@ $(window).load(function() {
 
         // Show title.
         $('#current-doc #actual-doc h1').text((docs[namespace].namespace ? namespace + "." : '') + namespaceValueName);
-		if (data.can_prevent) $('#current-doc #actual-doc h1').append($('<span class="label label-info">Default Preventable</span>'));
+        if (data.can_prevent) $('#current-doc #actual-doc h1').append($('<span class="label label-info">Default Preventable</span>'));
 
         // Show description
         $('#current-doc #doc-description').html(marked(data.description));
@@ -174,6 +173,10 @@ $(window).load(function() {
                 $('#current-doc .alert').show();
             }
         }
+
+        $("#current-doc pre code").each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
 
         $('html, body').animate({
             scrollTop: $('#current-doc').offset().top

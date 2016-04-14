@@ -77,6 +77,10 @@ pre code {
     white-space: pre;
 }
 
+pre code.hljs {
+  background-color: transparent;
+}
+
 #nav-menu {
     padding-bottom: 10px;
 }
