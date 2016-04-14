@@ -1285,7 +1285,7 @@
           "args": "int, Object",
           "arg_names": "id, properties",
           "description": "Sets an item's properties, like in `items.json`.",
-          "example": "This makes an item edible.\n```\n// Let's create a new item called 'Toast'\nModpe.setItem(440, 'bread', 0, \"Toast\", 32);\nItem.setProperties(440, {\n    use_animation: \"eat\", // Use the eating animation\n    use_duration: 32,\n\n    food: {\n      nutrition: 4, // Give it 4 1/2 hearts of nutrition\n      saturation_modifier: \"low\",\n      is_meat: false\n    }\n});\n```\nThis example can be replicated *much* easier with [ModPE.setFoodItem](#ModPE.setFoodItem)."
+          "example": "This makes an item edible.\n```\n// Let's create a new item called 'Toast'\nModpe.setItem(440, 'bread', 0, \"Toast\", 32);\nItem.setProperties(440, {\n    use_animation: \"eat\", // Use the eating animation\n    use_duration: 32,\n    food: {\n      nutrition: 4, // Give it 4 1/2 hearts of nutrition\n      saturation_modifier: \"low\",\n      is_meat: false\n    }\n});\n```\nThis example can be replicated *much* easier with [ModPE.setFoodItem](#ModPE.setFoodItem)."
         },
         "getUseAnimation": {
           "type": "namespacemethod",
@@ -1334,6 +1334,13 @@
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "String"
+        },
+        "getMaxStackSize": {
+          "type": "namespacemethod",
+          "description": "Returns the maximum stack size of an item.",
+          "example": "```\nclientMessage(Item.getMaxStackSize(332)); // 332 = snowball\n```\nThe above prints `16` to the chat.",
+          "args": "int",
+          "arg_names": "id"
         }
       }
     },
