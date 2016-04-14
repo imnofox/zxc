@@ -144,6 +144,9 @@ $(window).load(function() {
                         .addClass("btn btn-block btn-warning")
                         .insertAfter($("#current-doc #doc-example pre"));
                 }
+                $("#current-doc #doc-example pre code").each(function(i, block) {
+                  hljs.highlightBlock(block);
+                });
             } else {
                 $('#current-doc #doc-example, #current-doc #doc-example-header').hide();
             }
@@ -173,10 +176,6 @@ $(window).load(function() {
                 $('#current-doc .alert').show();
             }
         }
-
-        $("#current-doc pre code").each(function(i, block) {
-          hljs.highlightBlock(block);
-        });
 
         $('html, body').animate({
             scrollTop: $('#current-doc').offset().top
