@@ -55,10 +55,10 @@ docs:
 				arg_names: "filePath"
 				description: "Returns a Java [InputStream](https://docs.oracle.com/javase/7/docs/api/java/io/InputStream.html) of a file from a texture pack. This is quite advanced."
 				example: '''
-				```
-				var sheet = BitmapFactory.decodeStream(ModPE.openInputStreamFromTexturePack("images/gui/spritesheet.png"));
-				```
-				Example from [RetroPE's FontPE script](https://github.com/RetroPE/FontPE/blob/a5da4ee12b52da03944f7481d155e9ba25e7c05c/FontPE.js#L18).
+					```
+					var sheet = BitmapFactory.decodeStream(ModPE.openInputStreamFromTexturePack("images/gui/spritesheet.png"));
+					```
+					Example from [RetroPE's FontPE script](https://github.com/RetroPE/FontPE/blob/a5da4ee12b52da03944f7481d155e9ba25e7c05c/FontPE.js#L18).
 				'''
 			overrideTexture:
 				type: "namespacemethod"
@@ -104,14 +104,14 @@ docs:
 				args: ""
 				description: "Resets FOV to default."
 				example: '''
-				```
-				function procCmd(cmd) {
-					if (cmd.toLowerCase() == 'resetfov') {
-						ModPE.resetFov();
+					```
+					function procCmd(cmd) {
+						if (cmd.toLowerCase() == 'resetfov') {
+							ModPE.resetFov();
+						}
 					}
-				}
-				```
-				Resets the FOV when `/resetfov` is run.
+					```
+					Resets the FOV when `/resetfov` is run.
 				'''
 			resetImages:
 				type: "namespacemethod"
@@ -249,22 +249,22 @@ docs:
 				returns: "bool"
 				description: "Returns whether a block is open to the sky. (No blocks above it)"
 				example: '''
-				```
-				function destroyBlock(x, y, z, side) {
-					if (Level.getTile(x, y, z) == 56) { // 56 = diamond ore
-						if (Level.canSeeSky(x, y, z)) {
-							if (Math.floor(Math.random() * 10 + 1) == 1) { // Get a random number between from 1 to 10
-								preventDefault();
-								Level.explode(x, y, z, 5);
-								clientMessage(ChatColor.RED + "Diamonds are sometimes quite sensitive to sunlight!");
-							} else {
-								clientMessage("Ooh, lucky!");
+					```
+					function destroyBlock(x, y, z, side) {
+						if (Level.getTile(x, y, z) == 56) { // 56 = diamond ore
+							if (Level.canSeeSky(x, y, z)) {
+								if (Math.floor(Math.random() * 10 + 1) == 1) { // Get a random number between from 1 to 10
+									preventDefault();
+									Level.explode(x, y, z, 5);
+									clientMessage(ChatColor.RED + "Diamonds are sometimes quite sensitive to sunlight!");
+								} else {
+									clientMessage("Ooh, lucky!");
+								}
 							}
 						}
 					}
-				}
-				```
-				When the player destroys a block of diamond ore, if the block can see sky, there is a 1/10 chance of the block exploding.
+					```
+					When the player destroys a block of diamond ore, if the block can see sky, there is a 1/10 chance of the block exploding.
 				'''
 			destroyBlock:
 				type: "namespacemethod"
@@ -274,17 +274,17 @@ docs:
 					Destroys a block as if a player mined it.
 					If `shouldDrop` is `true`, then the block will drop any items it may drop.
 				'''
-				example:'''
-				```
-				var superBreakOn = true;
-				function useItem(x, y, z) {
-					if (superBreakOn && Level.getTile(x, y, z) != 0) {
-						Level.destroyBlock(x, y, z, true);
+				example: '''
+					```
+					var superBreakOn = true;
+					function useItem(x, y, z) {
+						if (superBreakOn && Level.getTile(x, y, z) != 0) {
+							Level.destroyBlock(x, y, z, true);
+						}
 					}
-				}
-				```
-				This script let's the player break blocks just by tapping them while the boolean variable `superBreakOn` is `true`.
-				The parameter `shouldDrop` is set to `true`, so blocks will drop their drops.
+					```
+					This script let's the player break blocks just by tapping them while the boolean variable `superBreakOn` is `true`.
+					The parameter `shouldDrop` is set to `true`, so blocks will drop their drops.
 				'''
 			dropItem:
 				type: "namespacemethod"
@@ -296,12 +296,12 @@ docs:
 					`range` is the furthest distance it can drop from the coordinates. `0.0` is recommended.
 				'''
 				example: '''
-				```
-				function deathHook(attacker, victim) {
-					Level.dropItem(Entity.getX(victim), Entity.getY(victim), Entity.getz(victim), 2.5, 38, 1, 0); // 38:0 = poppy
-				}
-				```
-				When any entity dies, including the player, a red poppy is dropped at the death location.
+					```
+					function deathHook(attacker, victim) {
+						Level.dropItem(Entity.getX(victim), Entity.getY(victim), Entity.getz(victim), 2.5, 38, 1, 0); // 38:0 = poppy
+					}
+					```
+					When any entity dies, including the player, a red poppy is dropped at the death location.
 				'''
 			explode:
 				type: "namespacemethod"
@@ -309,22 +309,22 @@ docs:
 				args: "double, double, double, double"
 				description: "Causes an explosion somewhere in the world."
 				example: '''
-				```
-				function destroyBlock(x, y, z, side) {
-					if (Level.getTile(x, y, z) == 56) { // 56 = diamond ore
-						if (Level.canSeeSky(x, y, z)) {
-							if (Math.floor(Math.random() * 10 + 1) == 1) { // Get a random number between from 1 to 10
-								preventDefault();
-								Level.explode(x, y, z, 5);
-								clientMessage(ChatColor.RED + "Diamonds are sometimes quite sensitive to sunlight!");
-							} else {
-								clientMessage("Ooh, lucky!");
+					```
+					function destroyBlock(x, y, z, side) {
+						if (Level.getTile(x, y, z) == 56) { // 56 = diamond ore
+							if (Level.canSeeSky(x, y, z)) {
+								if (Math.floor(Math.random() * 10 + 1) == 1) { // Get a random number between from 1 to 10
+									preventDefault();
+									Level.explode(x, y, z, 5);
+									clientMessage(ChatColor.RED + "Diamonds are sometimes quite sensitive to sunlight!");
+								} else {
+									clientMessage("Ooh, lucky!");
+								}
 							}
 						}
 					}
-				}
-				```
-				When the player destroys a block of diamond ore, if the block can see sky, there is a 1/10 chance of the block exploding with an explosionn radius of `5`.
+					```
+					When the player destroys a block of diamond ore, if the block can see sky, there is a 1/10 chance of the block exploding with an explosionn radius of `5`.
 				'''
 			getAddress:
 				type: "namespacemethod"
@@ -343,14 +343,14 @@ docs:
 				args: "int, int"
 				description: "Gets the name of a biome at the specified coordinates in the world."
 				example: '''
-				```
-				function procCmd(cmd) {
-					if (cmd.toLowerCase() == 'biome') {
-						var biomeName = Level.getBiomeName(Player.getX(), Player.getY());
-						clientMessage("The current biome is " + biomeName);
+					```
+					function procCmd(cmd) {
+						if (cmd.toLowerCase() == 'biome') {
+							var biomeName = Level.getBiomeName(Player.getX(), Player.getY());
+							clientMessage("The current biome is " + biomeName);
+						}
 					}
-				}
-				```
+					```
 				'''
 			getBrightness:
 				type: "namespacemethod"
@@ -359,17 +359,17 @@ docs:
 				returns: "int"
 				description: "Returns the light level at a position in the world."
 				example: '''
-				```
-				function useItem(x, y, z, itemId, blockId) {
-					if (itemId == 354) { // 354 = cake
-						if (Level.getBrightness(x, y, z) < 8) {
-							clientMessage("Are you sure you want to leave your cake in this damp darkness?");
-							Level.spawnMob(x, y + 0.5, z, EntityType.SILVERFISH);
+					```
+					function useItem(x, y, z, itemId, blockId) {
+						if (itemId == 354) { // 354 = cake
+							if (Level.getBrightness(x, y, z) < 8) {
+								clientMessage("Are you sure you want to leave your cake in this damp darkness?");
+								Level.spawnMob(x, y + 0.5, z, EntityType.SILVERFISH);
+							}
 						}
 					}
-				}
-				```
-				This example spawns a silverfish on cakes that have been placed in places where the light level is less than `8`, which is the light range that most hostile mobs spawn in.
+					```
+					This example spawns a silverfish on cakes that have been placed in places where the light level is less than `8`, which is the light range that most hostile mobs spawn in.
 				'''
 			getChestSlot:
 				type: "namespacemethod"
@@ -1587,13 +1587,23 @@ docs:
 				type: "namespacemethod"
 				description: "Returns the maximum stack size of an item."
 				example: '''
-				```
-				clientMessage(Item.getMaxStackSize(332)); // 332 = snowball
-				```
-				The above prints `16` to the chat.
+					```
+					clientMessage(Item.getMaxStackSize(332)); // 332 = snowball
+					```
+					The above prints `16` to the chat.
 				'''
 				args: "int"
 				arg_names: "id"
+			defineThrowable:
+				type: "namespacemethod"
+				description: "Allows an item to be a throwable projectile, like a snowball."
+				example: "No information yet."
+				args: "int, String, int, String, int"
+			getCustomThrowableRenderType:
+				type: "namespacemethod"
+				description: "No information yet."
+				example: "No information yet."
+				args: "int"
 	Block:
 		namespace: true
 		values:

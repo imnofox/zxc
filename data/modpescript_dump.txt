@@ -219,6 +219,8 @@ Item.addCraftRecipe(par1int, par2int, par3int, par4Scriptable);
 Item.addFurnaceRecipe(par1int, par2int, par3int);
 Item.addShapedRecipe(par1int, par2int, par3int, par4Scriptable, par5Scriptable);
 Item.defineArmor(par1int, par2String, par3int, par4String, par5String, par6int, par7int, par8int);
+Item.defineThrowable(par1int, par2String, par3int, par4String, par5int);
+Item.getCustomThrowableRenderType(par1int);
 Item.getMaxDamage(par1int);
 Item.getMaxStackSize(par1int);
 Item.getName(par1int, par2int, par3boolean);
@@ -537,3 +539,4 @@ BlockRenderLayer.opaque_seasons;
 BlockRenderLayer.seasons_far;
 BlockRenderLayer.seasons_far_alpha;
 BlockRenderLayer.water;
+

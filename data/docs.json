@@ -1342,6 +1342,18 @@
           "example": "```\nclientMessage(Item.getMaxStackSize(332)); // 332 = snowball\n```\nThe above prints `16` to the chat.",
           "args": "int",
           "arg_names": "id"
+        },
+        "defineThrowable": {
+          "type": "namespacemethod",
+          "description": "Allows an item to be a throwable projectile, like a snowball.",
+          "example": "No information yet.",
+          "args": "int, String, int, String, int"
+        },
+        "getCustomThrowableRenderType": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int"
         }
       }
     },
