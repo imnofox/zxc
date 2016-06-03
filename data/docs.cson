@@ -1597,13 +1597,19 @@ docs:
 			defineThrowable:
 				type: "namespacemethod"
 				description: "Allows an item to be a throwable projectile, like a snowball."
-				example: "No information yet."
+				example: '''
+				```
+				Item.defineThrowable(4015, "apple", 0, "Throwable Thing", 64);
+				```
+				'''
 				args: "int, String, int, String, int"
+				arg_names:"id, texture, offset, name, stackLimit"
 			getCustomThrowableRenderType:
 				type: "namespacemethod"
 				description: "No information yet."
 				example: "No information yet."
 				args: "int"
+				arg_names: "id"
 	Block:
 		namespace: true
 		values:
