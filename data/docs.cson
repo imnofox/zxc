@@ -151,7 +151,13 @@ docs:
 					Adds a custom food item to the game.
 					`halfHearts` is the total half-hearts restores when eaten.
 				'''
-				example: "No information yet."
+				example: '''
+				```
+				ModPE.setFoodItem(461, "rabbit_foot", 0, "2", "Bread Crumb", "32");
+				```
+				Creates a new food with the [rabbit foot](http://minecraft.gamepedia.com/Rabbit's_Foot) texture called "Bread Crumb".
+				Has a stack size of 32, and restores 1 heart, or 2 half-hearts.
+				'''
 			setFov:
 				type: "namespacemethod"
 				arg_names: "amount"
@@ -174,7 +180,13 @@ docs:
 				arg_names: "itemId, texture, offset, name, stackSize"
 				args: "int, string, int, string, int"
 				description: "Adds a custom item into the game."
-				example: "No information yet.  "
+				example: '''
+				```
+				ModPE.setItem(460, "fireworks_charge", 0, "Space Rock", "32");
+				```
+				Creates a new item with the [fireworks star](http://minecraft.gamepedia.com/Firework_Star) texture called "Space Rock".
+				Has a stack size of 32.
+				'''
 			setItems:
 				type: "namespacemethod"
 				args: "string"
@@ -1906,12 +1918,12 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				can_prevent: true
-			chatReceiveHook:
+			###chatReceiveHook:
 				type: "hook"
 				args: "string, ???"
 				arg_names: "string, sender"
 				description: "No information yet."
-				example: "No information yet."
+				example: "No information yet."###
 			leaveGame:
 				type: "hook"
 				args: ""

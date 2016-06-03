@@ -113,7 +113,7 @@
           "arg_names": "itemId, texture, offset, halfHearts, name, stackSize",
           "args": "int, string, int, int, string, int",
           "description": "Adds a custom food item to the game.\n`halfHearts` is the total half-hearts restores when eaten.",
-          "example": "No information yet."
+          "example": "```\nModPE.setFoodItem(461, \"rabbit_foot\", 0, \"2\", \"Bread Crumb\", \"32\");\n```\nCreates a new food with the [rabbit foot](http://minecraft.gamepedia.com/Rabbit's_Foot) texture called \"Bread Crumb\".\nHas a stack size of 32, and restores 1 heart, or 2 half-hearts."
         },
         "setFov": {
           "type": "namespacemethod",
@@ -140,7 +140,7 @@
           "arg_names": "itemId, texture, offset, name, stackSize",
           "args": "int, string, int, string, int",
           "description": "Adds a custom item into the game.",
-          "example": "No information yet.  "
+          "example": "```\nModPE.setItem(460, \"fireworks_charge\", 0, \"Space Rock\", \"32\");\n```\nCreates a new item with the [fireworks star](http://minecraft.gamepedia.com/Firework_Star) texture called \"Space Rock\".\nHas a stack size of 32."
         },
         "setItems": {
           "type": "namespacemethod",
@@ -1597,13 +1597,6 @@
           "description": "No information yet.",
           "example": "No information yet.",
           "can_prevent": true
-        },
-        "chatReceiveHook": {
-          "type": "hook",
-          "args": "string, ???",
-          "arg_names": "string, sender",
-          "description": "No information yet.",
-          "example": "No information yet."
         },
         "leaveGame": {
           "type": "hook",
