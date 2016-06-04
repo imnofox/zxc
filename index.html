@@ -23,11 +23,13 @@
           <button id="home" type="button" class="btn btn-default pull-right">Home</button>
         </div>
       </div>
-      <hr>
+      <hr/>
       <input type="text" id="search" class="form-control" autocomplete="off" placeholder="Search navigation"/>
       <!-- begin: nav menu -->
       <section id="nav-menu"></section>
       <!-- end: nav menu -->
+      <hr/>
+      <a class="label-link" id="textures-button">Textures</a>
     </div>
 
     <div class="col-lg-9 col-md-9 col-sm-9" id="current-doc">
@@ -74,9 +76,22 @@
           </div>
 
         </div>
+        <div id="textures">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Texture</th>
+                <th>Name</th>
+                <th>Offset</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
         <div id="actual-doc">
           <!-- namespace + '.' + namespaceValueName -->
-          <h1 id="doc-title">[error]</h1>
+          <h1>[error]</h1>
 
           <div class="alert alert-danger">[error]</div>
 
@@ -92,7 +107,7 @@
           <p id="doc-example"></p>
         </div>
         <div id="namespace-list">
-          <h1 id="doc-title">[error]</h1>
+          <h1>[error]</h1>
 
           <div class="list-group"></div>
         </div>

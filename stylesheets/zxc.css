@@ -26,7 +26,7 @@ body {
     position: relative;
 }
 
-#actual-doc, #namespace-list {
+#actual-doc, #namespace-list, #textures {
     display: none;
 }
 
@@ -81,10 +81,6 @@ pre code.hljs {
   background-color: transparent;
 }
 
-#nav-menu {
-    padding-bottom: 10px;
-}
-
 .nav-section-contents ul {
     padding: 0;
     list-style-type: none;
@@ -111,7 +107,7 @@ pre code.hljs {
     background: transparent;
 }
 
-.nav-section-label:before {
+.nav-section-label:before, a.label-link:before {
     font-family: monospace;
     padding: 0.2em;
     margin-right: 0.5em;
@@ -131,6 +127,20 @@ pre code.hljs {
 	opacity: 0.5;
 }
 
+a.label-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.label-link:before {
+  content: '↳';
+}
+
+#textures th:first-of-type {
+  padding-left: 0; /* This padding makes the sprites too wide otherwise*/
+}
+
 @media (min-width: 769px) {
     #nav {
         overflow-y: auto;
@@ -142,4 +152,15 @@ pre code.hljs {
         overflow: auto;
         height: 100vh;
     }
+}
+
+.pixelated {
+  image-rendering:optimizeSpeed;             /* Legal fallback */
+  image-rendering:-moz-crisp-edges;          /* Firefox        */
+  image-rendering:-o-crisp-edges;            /* Opera          */
+  image-rendering:-webkit-optimize-contrast; /* Safari         */
+  image-rendering:optimize-contrast;         /* CSS3 Proposed  */
+  image-rendering:crisp-edges;               /* CSS4 Proposed  */
+  image-rendering:pixelated;                 /* CSS4 Proposed  */
+  -ms-interpolation-mode:nearest-neighbor;   /* IE8+           */
 }

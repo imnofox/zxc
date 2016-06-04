@@ -182,15 +182,6 @@ $(window).load(function() {
         }, 250);
     };
 
-    var hash = function() {
-        var func = window.location.hash.substr(1);
-        if (func) { // No point running a bunch of code if it's not needed
-            func = func.split('.', 2);
-            console.log('Loading ' + func[0] + '.' + func[1] + ' from URL');
-            populateBody(func[0], func[1]);
-        }
-    };
-
     // Populate side nav from doc data.
     var populateNav = function() {
         // Go through all of the namespaces.
@@ -312,11 +303,82 @@ $(window).load(function() {
 
     });
 
+    var showTextures = function() {
+      $('#actual-doc, #namespace-list, #intro').hide();
+      $('#textures').show();
+      window.location.hash = "/textures";
+      document.title = "zxc - textures";
+    };
+
+    function buildPicCell(picCellElem, uv, fileName, scale) {
+    	var x1 = uv[0];
+    	var y1 = uv[1];
+    	var x2 = uv[2];
+    	var y2 = uv[3];
+    	var imgWidth = uv[4];
+    	var imgHeight = uv[5];
+    	var sx = x1;
+    	var sy = y1;
+    	var width = x2 - x1;
+    	var height = y2 - y1;
+    	picCellElem.css("background-image", "url(" + fileName + ")");
+    	picCellElem.css("width", (scale * width) + "px");
+    	picCellElem.css("height", (scale * height) + "px");
+    	picCellElem.css("background-size", (scale * imgWidth) + "px " + (scale * imgHeight) + "px");
+    	picCellElem.css("background-position", (scale * -1 * sx) + "px " + (scale * -1 * sy) + "px");
+    	picCellElem.addClass("pixelated");
+      return picCellElem;
+    }
+
+    var populateTextures = function() {
+      $.getJSON("http://zhuoweizhang.net/mcpetexturenames/items.meta", function(data) {
+        for (var item in data) {
+          for (var i = 0; i < data[item].uvs.length; i++) {
+            var new_row = $('<tr>');
+            new_row.append(buildPicCell($('<td>'), data[item].uvs[i], "http://zhuoweizhang.net/mcpetexturenames/items-opaque.png", 4));
+            new_row.append($('<td>').text(data[item].name));
+            new_row.append($('<td>').text(i));
+            $("#textures tbody").append(new_row);
+          }
+        }
+        $.getJSON("http://zhuoweizhang.net/mcpetexturenames/terrain.meta", function(data) {
+          for (var item in data) {
+            for (var i = 0; i < data[item].uvs.length; i++) {
+              var new_row = $('<tr>');
+              new_row.append(buildPicCell($('<td>'), data[item].uvs[i], "http://zhuoweizhang.net/mcpetexturenames/terrain-atlas.png", 4));
+              new_row.append($('<td>').text(data[item].name));
+              new_row.append($('<td>').text(i));
+              $("#textures tbody").append(new_row);
+            }
+          }
+        });
+      });
+    };
+
+    populateTextures();
+
+    var hash = function() {
+        var func = window.location.hash.substr(1);
+        if (func.substring(0,1) == '/') {
+          if (func == "/textures") {
+            showTextures();
+          }
+        } else if (func) {
+            func = func.split('.', 2);
+            console.log('Loading ' + func[0] + '.' + func[1] + ' from URL');
+            populateBody(func[0], func[1]);
+        }
+    };
+
     $("#home").on('click', function() {
-        $('#current-doc #actual-doc, #current-doc #namespace-list').hide();
-        $('#current-doc #intro').show();
+        $('#actual-doc, #namespace-list, #textures').hide();
+        $('#intro').show();
         window.location.hash = "";
         document.title = "zxc";
+    });
+
+    $("#textures-button").on('click', function() {
+      showTextures();
     });
 
     $("#doc-example").on('mousedown', "pre + a.btn", function() {
