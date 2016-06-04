@@ -101,7 +101,7 @@ $(window).load(function() {
         if (data.display) namespaceValueName = data.display;
         if (data.type == 'string') namespaceValueName = '"' + namespaceValueName + '"';
 
-        $('#current-doc .container-fluid > div, .alert').hide();
+        $('#current-doc .container-fluid > div, #current-doc .alert').hide();
         $('#current-doc #actual-doc').show();
 
         // Determine correct type for displaying signature.
