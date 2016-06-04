@@ -310,32 +310,30 @@ $(window).load(function() {
       document.title = "zxc - textures";
     };
 
-    function buildPicCell(picCellElem, uv, fileName, scale) {
+    var buildPicCell = function(elem, uv, fileName) {
     	var x1 = uv[0];
     	var y1 = uv[1];
     	var x2 = uv[2];
     	var y2 = uv[3];
     	var imgWidth = uv[4];
     	var imgHeight = uv[5];
-    	var sx = x1;
-    	var sy = y1;
     	var width = x2 - x1;
     	var height = y2 - y1;
-    	picCellElem.css("background-image", "url(" + fileName + ")");
-    	picCellElem.css("width", (scale * width) + "px");
-    	picCellElem.css("height", (scale * height) + "px");
-    	picCellElem.css("background-size", (scale * imgWidth) + "px " + (scale * imgHeight) + "px");
-    	picCellElem.css("background-position", (scale * -1 * sx) + "px " + (scale * -1 * sy) + "px");
-    	picCellElem.addClass("pixelated");
-      return picCellElem;
-    }
+    	elem.css("background-image", "url(" + fileName + ")");
+    	elem.css("width", (4 * width) + "px");
+    	elem.css("height", (4 * height) + "px");
+    	elem.css("background-size", (4 * imgWidth) + "px " + (4 * imgHeight) + "px");
+    	elem.css("background-position", (4 * -1 * x1) + "px " + (4 * -1 * y1) + "px");
+    	elem.addClass("pixelated");
+      return elem;
+    };
 
     var populateTextures = function() {
       $.getJSON("http://zhuoweizhang.net/mcpetexturenames/items.meta", function(data) {
         for (var item in data) {
           for (var i = 0; i < data[item].uvs.length; i++) {
             var new_row = $('<tr>');
-            new_row.append(buildPicCell($('<td>'), data[item].uvs[i], "http://zhuoweizhang.net/mcpetexturenames/items-opaque.png", 4));
+            new_row.append(buildPicCell($('<td>'), data[item].uvs[i], "http://zhuoweizhang.net/mcpetexturenames/items-opaque.png"));
             new_row.append($('<td>').text(data[item].name));
             new_row.append($('<td>').text(i));
             $("#textures tbody").append(new_row);
@@ -345,7 +343,7 @@ $(window).load(function() {
           for (var item in data) {
             for (var i = 0; i < data[item].uvs.length; i++) {
               var new_row = $('<tr>');
-              new_row.append(buildPicCell($('<td>'), data[item].uvs[i], "http://zhuoweizhang.net/mcpetexturenames/terrain-atlas.png", 4));
+              new_row.append(buildPicCell($('<td>'), data[item].uvs[i], "http://zhuoweizhang.net/mcpetexturenames/terrain-atlas.png"));
               new_row.append($('<td>').text(data[item].name));
               new_row.append($('<td>').text(i));
               $("#textures tbody").append(new_row);
