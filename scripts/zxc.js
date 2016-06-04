@@ -43,8 +43,8 @@ $(window).load(function() {
         window.location.hash = namespace;
         document.title = "zxc - " + namespace;
 
-        $('#current-doc #intro, #current-doc #actual-doc').hide();
-        $('#current-doc #namespace-list').show();
+        $('#current-doc > div').hide();
+        $('#namespace-list').show();
 
         $("#current-doc #namespace-list .list-group").html("");
 
@@ -101,7 +101,7 @@ $(window).load(function() {
         if (data.display) namespaceValueName = data.display;
         if (data.type == 'string') namespaceValueName = '"' + namespaceValueName + '"';
 
-        $('#current-doc #intro, #current-doc #namespace-list, #current-doc .alert').hide();
+        $('#current-doc > div').hide();
         $('#current-doc #actual-doc').show();
 
         // Determine correct type for displaying signature.
@@ -304,7 +304,7 @@ $(window).load(function() {
     });
 
     var showTextures = function() {
-      $('#actual-doc, #namespace-list, #intro').hide();
+      $('#current-doc > div').hide();
       $('#textures').show();
       window.location.hash = "/textures";
       document.title = "zxc - textures";
@@ -371,7 +371,7 @@ $(window).load(function() {
     };
 
     $("#home").on('click', function() {
-        $('#actual-doc, #namespace-list, #textures').hide();
+        $('#current-doc > div').hide();
         $('#intro').show();
         window.location.hash = "";
         document.title = "zxc";
