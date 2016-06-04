@@ -1,6 +1,7 @@
 #nav {
     background: #333;
     color: white;
+    padding-bottom: 20px;
 }
 
 body {
@@ -125,6 +126,10 @@ pre code.hljs {
 
 .nav-item-deprecated {
 	opacity: 0.5;
+}
+
+#nav > :last-child {
+  padding-bottom: 30px;
 }
 
 a.label-link {
