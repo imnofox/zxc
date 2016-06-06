@@ -160,7 +160,7 @@ a.label-link:before {
 }
 
 @media (max-width: 768px) {
-    #container {
+    .container-fluid {
       padding-left: 0;
       padding-right: 0;
     }
