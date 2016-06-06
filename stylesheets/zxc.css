@@ -159,6 +159,13 @@ a.label-link:before {
     }
 }
 
+@media (max-width: 768px) {
+    #container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+}
+
 .pixelated {
   image-rendering:optimizeSpeed;             /* Legal fallback */
   image-rendering:-moz-crisp-edges;          /* Firefox        */
