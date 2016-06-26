@@ -110,10 +110,12 @@ pre code.hljs {
 
 .nav-section-label:before, a.label-link:before {
     font-family: monospace;
-    padding: 0.2em;
     margin-right: 0.5em;
     border-radius: 3px;
     opacity: 0.7;
+    display: inline-block;
+    width: 18px;
+    text-align: center;
 }
 
 .nav-section-closed:before {
