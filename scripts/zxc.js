@@ -218,8 +218,8 @@ $(window).load(function() {
 
                 nListItem
                     .text(text) // Add the text of the namespace value.
-                    .attr('data-table-table', namespace) // Add name of namespace.
-                    .attr('data-table-table-key', child); // Add name of namespace value.
+                    .attr('data-namespace', namespace) // Add name of namespace.
+                    .attr('data-method', child); // Add name of namespace value.
                 if (docs[namespace].values[child].deprecated) nListItem.addClass('nav-item-deprecated');
                 nListItem.appendTo(nList); // Then append it to the namespace list.
             }
@@ -235,8 +235,8 @@ $(window).load(function() {
         // Called when we click a namespace value.
         // Should open up in right side.
         $('.nav-section-contents ul li').on('click', function() {
-            var namespace = $(this).attr('data-table-table');
-            var namespaceValueName = $(this).attr('data-table-table-key');
+            var namespace = $(this).attr('data-namespace');
+            var namespaceValueName = $(this).attr('data-method');
 
             populateBody(namespace, namespaceValueName);
         });
