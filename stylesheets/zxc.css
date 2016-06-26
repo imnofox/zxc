@@ -4,6 +4,10 @@
     padding-bottom: 20px;
 }
 
+hr {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
 body {
     font-family: Roboto, sans-serif;
 }
