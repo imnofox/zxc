@@ -4,6 +4,10 @@
     padding-bottom: 20px;
 }
 
+hr {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
 body {
     font-family: Roboto, sans-serif;
 }
@@ -60,14 +64,21 @@ body {
 
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-track {
     width: 5px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: gray;
+    background: #666;
+    border-radius: 3px;
+}
+
+pre::-webkit-scrollbar-thumb, #current-doc::-webkit-scrollbar-thumb {
+    background: #bbb;
 }
 
 #search {
