@@ -1466,8 +1466,8 @@
           "type": "namespacemethod",
           "args": "int, int",
           "arg_names": "id, renderType",
-          "description": "Sets the rendering type of this block.\nUse (BlockRenderLayer)(#BlockRenderLayer).",
-          "example": "```\nBlock.setRenderLayer(204, BlockRenderLayer.alpha);"
+          "description": "Sets the rendering type of this block.\nUse [BlockRenderLayer](#BlockRenderLayer).",
+          "example": "```\nBlock.setRenderLayer(204, BlockRenderLayer.alpha);\n```"
         },
         "setShape": {
           "type": "namespacemethod",

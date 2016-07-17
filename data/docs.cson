@@ -1797,11 +1797,12 @@ docs:
 				arg_names: "id, renderType"
 				description: '''
 					Sets the rendering type of this block.
-					Use (BlockRenderLayer)(#BlockRenderLayer).
+					Use [BlockRenderLayer](#BlockRenderLayer).
 				'''
 				example: '''
 					```
 					Block.setRenderLayer(204, BlockRenderLayer.alpha);
+					```
 				'''
 			setShape:
 				type: "namespacemethod"
