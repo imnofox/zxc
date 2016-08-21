@@ -1,6 +1,5 @@
-"use strict";
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
 const CSON = require('cson');
 const lineReader = require('readline');
 
