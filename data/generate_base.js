@@ -89,7 +89,7 @@ lr.on('line', function(line) {
 });
 
 lr.on('close', function() {
-    fs.writeFileSync('docs.cson', CSON.stringify(docs_data));
+    fs.writeFileSync('docs.cson', CSON.createCSONString(docs_data, {indent: "  "}));
     console.log('Done.');
     process.exit();
 });
