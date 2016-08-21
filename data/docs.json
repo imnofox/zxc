@@ -2609,253 +2609,253 @@
           "display": "step.cloth",
           "type": "string",
           "description": "Stepping on wool.",
-          "deprecated": true
+          "deprecated": false
         },
         "step_grass": {
           "display": "step.grass",
           "type": "string",
           "description": "Stepping on grass.",
-          "deprecated": true
+          "deprecated": false
         },
         "step_gravel": {
           "display": "step.gravel",
           "type": "string",
           "description": "Stepping on gravel.",
-          "deprecated": true
+          "deprecated": false
         },
         "step_sand": {
           "display": "step.sand",
           "type": "string",
           "description": "Stepping on sand.",
-          "deprecated": true
+          "deprecated": false
         },
         "step_stone": {
           "display": "step.stone",
           "type": "string",
           "description": "Stepping on stone.",
-          "deprecated": true
+          "deprecated": false
         },
         "step_wood": {
           "display": "step.wood",
           "type": "string",
           "description": "Stepping on wood.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_splash": {
           "display": "random.splash",
           "type": "string",
           "description": "Splashing water sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_explode": {
           "display": "random.explode",
           "type": "string",
           "description": "Explosion sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_break": {
           "display": "random.break",
           "type": "string",
           "description": "Sound when an item breaks.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_burp": {
           "display": "random.burp",
           "type": "string",
           "description": "Burp sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "fire_fire": {
           "display": "fire.fire",
           "type": "string",
           "description": "Fire crackle.",
-          "deprecated": true
+          "deprecated": false
         },
         "fire_ignite": {
           "display": "fire.ignite",
           "type": "string",
           "description": "Fire ignition sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_chestclosed": {
           "display": "random.chestclosed",
           "type": "string",
           "description": "Chest closing.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_chestopen": {
           "display": "random.chestopen",
           "type": "string",
           "description": "Chest opening",
-          "deprecated": true
+          "deprecated": false
         },
         "random_hurt": {
           "display": "random.hurt",
           "type": "string",
           "description": "Player hurt sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_glass": {
           "display": "random.glass",
           "type": "string",
           "description": "Glass breaking sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_sheep": {
           "display": "mob.sheep",
           "type": "string",
           "description": "Sheep baa.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_pig": {
           "display": "mob.pig",
           "type": "string",
           "description": "Pig oink.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_pigdeath": {
           "display": "mob.pigdeath",
           "type": "string",
           "description": "Pig dying sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_cow": {
           "display": "mob.cow",
           "type": "string",
           "description": "Cow moo.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_cowhurt": {
           "display": "mob.cowhurt",
           "type": "string",
           "description": "Cow hurting.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_chicken": {
           "display": "mob.chicken",
           "type": "string",
           "description": "Chicken cluck.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_chickenhurt": {
           "display": "mob.chickenhurt",
           "type": "string",
           "description": "Chicken hurting.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_zombie": {
           "display": "mob.zombie",
           "type": "string",
           "description": "Zombie growl.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_zombiedeath": {
           "display": "mob.zombiedeath",
           "type": "string",
           "description": "Zombie dying sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_zombiehurt": {
           "display": "mob.zombiehurt",
           "type": "string",
           "description": "Zombie hurting.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_skeleton": {
           "display": "mob.skeleton",
           "type": "string",
           "description": "Skeleton bones sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_skeletonhurt": {
           "display": "mob.skeletonhurt",
           "type": "string",
           "description": "Skeleton hurting.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_spider": {
           "display": "mob.spider",
           "type": "string",
           "description": "Spider hiss.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_spiderdeath": {
           "display": "mob.spiderdeath",
           "type": "string",
           "description": "Spider dying sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_zombiepig_zpig": {
           "display": "mob.zombiepig.zpig",
           "type": "string",
           "description": "Zombie pigman sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_zombiepig_zpigangry": {
           "display": "mob.zombiepig.zpigangry",
           "type": "string",
           "description": "Angry zombie pigman sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_zombiepig_zpigdeath": {
           "display": "mob.zombiepig.zpigdeath",
           "type": "string",
           "description": "Zombie pigman dying sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_zombiepig_zpighurt": {
           "display": "mob.zombiepig.zpighurt",
           "type": "string",
           "description": "Zombie pigman hurting.",
-          "deprecated": true
+          "deprecated": false
         },
         "damage_fallbig": {
           "display": "damage.fallbig",
           "type": "string",
           "description": "Large fall sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "damage_fallsmall": {
           "display": "damage.fallsmall",
           "type": "string",
           "description": "Small fall sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_bow": {
           "display": "random.bow",
           "type": "string",
           "description": "Bow noise.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_bowhit": {
           "display": "random.bowhit",
           "type": "string",
           "description": "Bow hitting entity sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_creeper": {
           "display": "mob.creeper",
           "type": "string",
           "description": "Creeper hiss.",
-          "deprecated": true
+          "deprecated": false
         },
         "mob_creeperdeath": {
           "display": "mob.creeperdeath",
           "type": "string",
           "description": "Creeper dying sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_eat": {
           "display": "random.eat",
           "type": "string",
           "description": "Eating sound.",
-          "deprecated": true
+          "deprecated": false
         },
         "random_fuse": {
           "display": "random.fuse",
           "type": "string",
           "description": "TNT fuse.",
-          "deprecated": true
+          "deprecated": false
         }
       }
     },
