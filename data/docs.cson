@@ -152,11 +152,11 @@ docs:
 					`halfHearts` is the total half-hearts restores when eaten.
 				'''
 				example: '''
-				```
-				ModPE.setFoodItem(461, "rabbit_foot", 0, "2", "Bread Crumb", "32");
-				```
-				Creates a new food with the [rabbit foot](http://minecraft.gamepedia.com/Rabbit's_Foot) texture called "Bread Crumb".
-				Has a stack size of 32, and restores 1 heart, or 2 half-hearts.
+					```
+					ModPE.setFoodItem(461, "rabbit_foot", 0, "2", "Bread Crumb", "32");
+					```
+					Creates a new food with the [rabbit foot](http://minecraft.gamepedia.com/Rabbit's_Foot) texture called "Bread Crumb".
+					Has a stack size of 32, and restores 1 heart, or 2 half-hearts.
 				'''
 			setFov:
 				type: "namespacemethod"
@@ -181,11 +181,11 @@ docs:
 				args: "int, string, int, string, int"
 				description: "Adds a custom item into the game."
 				example: '''
-				```
-				ModPE.setItem(460, "fireworks_charge", 0, "Space Rock", "32");
-				```
-				Creates a new item with the [fireworks star](http://minecraft.gamepedia.com/Firework_Star) texture called "Space Rock".
-				Has a stack size of 32.
+					```
+					ModPE.setItem(460, "fireworks_charge", 0, "Space Rock", "32");
+					```
+					Creates a new item with the [fireworks star](http://minecraft.gamepedia.com/Firework_Star) texture called "Space Rock".
+					Has a stack size of 32.
 				'''
 			setItems:
 				type: "namespacemethod"
@@ -528,7 +528,7 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, int, int, int"
 				description: '''
-
+					
 					- `int`: X of the chest
 					- `int`: Y of the chest
 					- `int`: Z of the chest
@@ -536,7 +536,7 @@ docs:
 					- `int`: ID of the new item
 					- `int`: Damage (aux) of the new item
 					- `int`: Count of the new item.
-
+					
 					Sets what item is in a chest, at a certain slot.
 				'''
 				example: "No information yet."
@@ -544,7 +544,7 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, int, int, int"
 				description: '''
-
+					
 					- `int`: X of the furnace
 					- `int`: Y of the furnace
 					- `int`: Z of the furnace
@@ -552,7 +552,7 @@ docs:
 					- `int`: ID of the new item
 					- `int`: Damage (aux) of the new item
 					- `int`: Count of the new item.
-
+					
 					Sets what item is in a furnace, at a certain slot.
 				'''
 				example: "No information yet."
@@ -565,11 +565,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-
+					
 					- `int`: X
 					- `int`: Y
 					- `int`: Color (`0xAABBCCDD` color)
-
+					
 					Sets the grass color of a column in the world.
 				'''
 				example: "No information yet."
@@ -592,13 +592,13 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, string"
 				description: '''
-
+					
 					- `int`: X pos
 					- `int`: Y pos
 					- `int`: Z pos
 					- `int`: Line (0, 1, 2, or 3)
 					- `string`: Text
-
+					
 					Sets a line of text in a sign.
 				'''
 				example: "No information yet."
@@ -606,11 +606,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-
+					
 					- `int`: X
 					- `int`: Y
 					- `int`: Z
-
+					
 					Sets the spawn position of the current world.
 				'''
 				example: "No information yet."
@@ -618,12 +618,12 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int"
 				description: '''
-
+					
 					- `int`: X
 					- `int`: Y
 					- `int`: Z
 					- `int`: Entity type ID
-
+					
 					Sets the entity ID of an entity that an entity spawner will spawn.
 				'''
 				example: "No information yet."
@@ -631,13 +631,13 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int, int, int"
 				description: '''
-
+					
 					- `int`: X
 					- `int`: Y
 					- `int`: Z
 					- `int`: Block ID
 					- `int`: Block data
-
+					
 					Sets the ID and damage of a block in the world.
 				'''
 				example: "No information yet."
@@ -693,7 +693,7 @@ docs:
 					- `int`: ID
 					- `int`: Count (usually 1)
 					- `int`: Data (damage)
-
+					
 					Adds an item into the creative inventory. If you want to set which creative tab (category) it belongs in, use `Item.setCategory`.
 				'''
 				example: "No information yet."
@@ -712,9 +712,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-
+					
 					- `int`: The slot.
-
+					
 					Clears a slot in the player's inventory.
 				'''
 				example: "No information yet."
@@ -722,11 +722,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-
+					
 					- `int`: The slot ID of the item in the player's inventory.
 					- `int`: The enchantment.
 					- `int`: The level of the enchantment
-
+					
 					Enchants an item in the player's inventory.
 				'''
 				example: "No information yet."
@@ -735,9 +735,9 @@ docs:
 				args: "int"
 				returns: "Object[]"
 				description: '''
-
+					
 					- `int`: The slot ID of the item.
-
+					
 					Returns the enchantments. It is an array that has the following structure-
 					```
 					var x = Player.getEnchantments(...);
@@ -750,9 +750,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-
+					
 					- `int`: The slot
-
+					
 					Returns the ID of an armor item.
 				'''
 				example: "No information yet."
@@ -760,9 +760,9 @@ docs:
 				type: "namespacemethod"
 				args: "int"
 				description: '''
-
+					
 					- `int`: The slot
-
+					
 					Returns the damage of an armor item.
 				'''
 				example: "No information yet."
@@ -815,9 +815,9 @@ docs:
 				args: "int"
 				returns: "int"
 				description: '''
-
+					
 					- `int`: The slot.
-
+					
 					Returns the ID of the item in the inventory slot.
 				'''
 				example: "No information yet."
@@ -826,9 +826,9 @@ docs:
 				args: "int"
 				returns: "int"
 				description: '''
-
+					
 					- `int`: The slot.
-
+					
 					Returns the count of the item in the inventory slot.
 				'''
 				example: "No information yet."
@@ -837,9 +837,9 @@ docs:
 				args: "int"
 				returns: "int"
 				description: '''
-
+					
 					- `int`: The slot.
-
+					
 					Returns the damage (aux) of the item in the inventory slot.
 				'''
 				example: "No information yet."
@@ -956,10 +956,10 @@ docs:
 				type: "namespacemethod"
 				args: "int, string"
 				description: '''
-
+					
 					- `int`: The slot id of the target item.
 					- `string`: The new name.
-
+					
 					Sets the custom name of an item.
 				'''
 				example: "No information yet."
@@ -968,9 +968,9 @@ docs:
 				args: "int"
 				returns: "string"
 				description: '''
-
+					
 					- `int`: The slot id of the item.
-
+					
 					Returns the custom name of an item.
 				'''
 				example: "No information yet."
@@ -978,11 +978,11 @@ docs:
 				type: "namespacemethod"
 				args: "int, int, int"
 				description: '''
-
+					
 					- `int`: Slot number
 					- `int`: ID of the piece
 					- `int`: Damage (data) of the piece.
-
+					
 					Sets the player's armor slot.
 				'''
 				example: "No information yet."
@@ -1205,7 +1205,7 @@ docs:
 				returns: "double"
 				description: "Returns the yaw (rotation-wise) of this entity."
 				example: '''
-
+					
 					This example prints the player's yaw when they tap a block.
 					```
 					function useItem() {
@@ -1243,10 +1243,10 @@ docs:
 				type: "namespacemethod"
 				args: "entity, int"
 				description: '''
-
+					
 					- `entity`: Target
 					- `int`: ID of the effect. Use `MobEffect`.
-
+					
 					Removes a specific potion effect from an entity.
 				'''
 				example: '''
@@ -1258,20 +1258,20 @@ docs:
 				type: "namespacemethod"
 				args: "entity, key, value"
 				description: '''
-
+					
 					- `entity`: Target
 					- `key`: The key. Must be in the form of `something.something.something` - `value`: A string.
-
+					
 					Stores extra data for this entity.
 				'''
 			getExtraData:
 				type: "namespacemethod"
 				args: "entity, key"
 				description: '''
-
+					
 					- `entity`: Target
 					- `key`: The key to get the value from.
-
+					
 					Returns the data stored at this entity's key.
 				'''
 			rideAnimal:
@@ -1333,12 +1333,12 @@ docs:
 				type: "namespacemethod"
 				args: "entity, double, double, double"
 				description: '''
-
+					
 					- `entity`: Target
 					- `double`: X
 					- `double`: Y
 					- `double`: Z
-
+					
 					Sets the position of an entity.
 				'''
 				example: "No information yet."
@@ -1381,13 +1381,13 @@ docs:
 				type: "namespacemethod"
 				args: "double, double, double, int, string"
 				description: '''
-
+					
 					- `double`: X
 					- `double`: Y
 					- `double`: Z
 					- `int`: Entity type ID
 					- `string`: Skin PNG
-
+					
 					Spawns an entity.
 				'''
 				example: "No information yet."
@@ -1425,7 +1425,7 @@ docs:
 				args: "int, int, int, array"
 				description: '''
 					Creates an unshaped crafting recipe.
-
+					
 					Ingredients should have a continuous 1D array like this:
 					```
 					[id, count, damage, id, count, damage, id, count, damage, ...]
@@ -1463,10 +1463,10 @@ docs:
 					], ["x", 2, 0]); // This makes "x" mean grass (2) with damage of (0).
 					```
 					Here is an example of what it looks like in game:
-
+					
 					![picture of crafting recipe](images/shapedrecipe1.png)
-
-
+					
+					
 					This makes you receive 64 stone from a crafting recipe of grass blocks shaped in a diamond, with a bedrock block in the center.
 					```
 					Item.addShapedRecipe(1, 64, 0, [
@@ -1477,7 +1477,7 @@ docs:
 					// Also makes "b" mean bedrock (7) with damage of (0).
 					```
 					Here is an example of what it looks like in game:
-
+					
 					![picture of crafting recipe](images/shapedrecipe2.png)
 				'''
 			defineArmor:
@@ -1512,7 +1512,7 @@ docs:
 				description: '''
 					Sets the creative tab this item should belong in.
 					Note that it doesn't show unless you use `Player.addItemCreativeInv`.
-
+					
 					See [ItemCategory](#ItemCategory) for ItemCategory constants.
 				'''
 				example: '''
@@ -1610,12 +1610,12 @@ docs:
 				type: "namespacemethod"
 				description: "Allows an item to be a throwable projectile, like a snowball."
 				example: '''
-				```
-				Item.defineThrowable(4015, "apple", 0, "Throwable Thing", 64);
-				```
+					```
+					Item.defineThrowable(4015, "apple", 0, "Throwable Thing", 64);
+					```
 				'''
 				args: "int, String, int, String, int"
-				arg_names:"id, texture, offset, name, stackLimit"
+				arg_names: "id, texture, offset, name, stackLimit"
 			getCustomThrowableRenderType:
 				type: "namespacemethod"
 				description: "No information yet."
@@ -1632,9 +1632,9 @@ docs:
 				returns: "int"
 				description: '''
 					Defines a new liquid block.
-
+					
 					`id + 1` will be used as the stationary version's ID.
-
+					
 					Returns `id + 1`
 				'''
 				example: '''
@@ -1652,7 +1652,7 @@ docs:
 					- `id`: The block ID.
 					- `name`: The name of the block.
 					- `textures`: The name of a texture, or a texture matrix.
-
+					
 					**Note**: You can find texture names [here, on zhuowei's site.](http://zhuoweizhang.net/mcpetexturenames/)
 					Example of a texture matrix:
 					```
@@ -1702,7 +1702,7 @@ docs:
 				returns: "double"
 				description: '''
 					Returns the amount of friction a block has. The higher the friction, the slower the player walks over them.
-
+					
 					All blocks return `0.6`, except ice which returns `0.98`.
 				'''
 				example: "No information yet."
@@ -1718,7 +1718,7 @@ docs:
 				arg_names: "id, colorArray"
 				description: '''
 					Changes the color of the block.
-
+					
 					Replace `#` with `0x`, and wrap it inside an array.
 				'''
 				example: '''
@@ -1755,7 +1755,7 @@ docs:
 				arg_names: "id, friction"
 				description: '''
 					Sets the friction of a block. The higher the friction, the slower the player walks over them.
-
+					
 					All blocks have `0.6`, except ice which has `0.98`.
 				'''
 				example: "No information yet."
@@ -1814,7 +1814,7 @@ docs:
 					Block.setShape(204, 0.25, 0, 0.25, 0.75, 0.5, 0.75, 0);
 					```
 					This creates a block that is half the size of a regular block. Do note, with the full light opacity, blocks may not let light through.
-
+					
 					![picture of custom shape](images/setshape_example.png)
 				'''
 			getTextureCoords:
@@ -1919,12 +1919,6 @@ docs:
 				description: "No information yet."
 				example: "No information yet."
 				can_prevent: true
-			###chatReceiveHook:
-				type: "hook"
-				args: "string, ???"
-				arg_names: "string, sender"
-				description: "No information yet."
-				example: "No information yet."###
 			leaveGame:
 				type: "hook"
 				args: ""
@@ -1943,7 +1937,7 @@ docs:
 				args: "int, int, int, int, bool, int, int"
 				description: '''
 					Called when a block is updated by redstone.
-
+					
 					- `signalStrength` is the strength of the redstone signal, from 0 - 15.
 					- `worldLoading` is `true` if the block update is caused by the world loading.
 				'''
@@ -2038,6 +2032,11 @@ docs:
 				example: "No information yet."
 				args: "player, levelsAdded"
 				can_prevent: true
+			screenChangeHook:
+				type: "hook"
+				description: "No information yet."
+				example: "No information yet."
+				args: "screenName"
 	ChatColor:
 		namespace: true
 		values:

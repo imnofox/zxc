@@ -1695,6 +1695,12 @@
           "example": "No information yet.",
           "args": "player, levelsAdded",
           "can_prevent": true
+        },
+        "screenChangeHook": {
+          "type": "hook",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "screenName"
         }
       }
     },
