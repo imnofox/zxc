@@ -235,6 +235,10 @@ docs:
         description: "No information yet."
         example: "No information yet."
         args: "par1boolean"
+      getOS:
+        type: "namespacemethod"
+        description: "No information yet."
+        example: "No information yet."
   Level:
     namespace: true
     values:
@@ -1822,6 +1826,11 @@ docs:
         description: "No information yet."
         example: "No information yet."
         args: "int, int, int"
+      getRenderLayer:
+        type: "namespacemethod"
+        description: "No information yet."
+        example: "No information yet."
+        args: "int"
   Server:
     namespace: true
     values:
@@ -2217,6 +2226,14 @@ docs:
       waterWake:
         type: "constant"
         description: "Unknown."
+      carrotboost:
+        type: "constant"
+        description: "No information yet."
+        example: "No information yet."
+      witchspell:
+        type: "constant"
+        description: "No information yet."
+        example: "No information yet."
   EntityType:
     namespace: true
     values:

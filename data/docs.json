@@ -184,6 +184,11 @@
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "par1boolean"
+        },
+        "getOS": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet."
         }
       }
     },
@@ -1481,6 +1486,12 @@
           "description": "No information yet.",
           "example": "No information yet.",
           "args": "int, int, int"
+        },
+        "getRenderLayer": {
+          "type": "namespacemethod",
+          "description": "No information yet.",
+          "example": "No information yet.",
+          "args": "int"
         }
       }
     },
@@ -1665,7 +1676,7 @@
           "arg_names": "command",
           "args": "string",
           "description": "Called whenever a command is entered",
-          "example": "```\nfunction procCmd(command) {\n\tvar cmd = command.split(' ');\n\tif (cmd[0].toLowerCase() == 'coords') {\n\t\tModPE.showTipMessage(Player.getX() + '/' + Player.getY() + '/' + Player.getZ());\n\t}\n}\n```\nIt is recommended to split `command` into an array, so you can individually access each argument.\nIf arguments are required, then `command` will equal `\"tp 500 128 30\"`. Once split by spaces, you can access `\"tp\"` with `cmd[0]`, `\"500\"` with `cmd[1]`, etc..."
+          "example": "```\nfunction procCmd(command) {\n\tvar cmd = command.split(' ');\n\tif (cmd[0].toLowerCase() == 'coords') {\n\t\tModPE.showTipMessage(Player.getX() + '/' + Player.getY() + '/' + Player.getZ());\n\t}\n}\n```\nIt is recommended to split `command` into an array, so you can individually access each argument.\nIf arguments are required, then `command` will equal `\"tp 500 128 30\"`. Once split by   , you can access `\"tp\"` with `cmd[0]`, `\"500\"` with `cmd[1]`, etc..."
         },
         "continueDestroyBlock": {
           "type": "hook",
@@ -1944,6 +1955,16 @@
         "waterWake": {
           "type": "constant",
           "description": "Unknown."
+        },
+        "carrotboost": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
+        },
+        "witchspell": {
+          "type": "constant",
+          "description": "No information yet.",
+          "example": "No information yet."
         }
       }
     },
