@@ -187,8 +187,8 @@
         },
         "getOS": {
           "type": "namespacemethod",
-          "description": "No information yet.",
-          "example": "No information yet."
+          "description": "Return's the client's operating system name.",
+          "example": "```\nfunction newLevel() {\n    clientMessage(\"You are playing on: \" + ModPE.getOS());\n}\n```\nThis would output \"You are playing on: Android\" to the chat."
         }
       }
     },
@@ -1958,13 +1958,11 @@
         },
         "carrotboost": {
           "type": "constant",
-          "description": "No information yet.",
-          "example": "No information yet."
+          "description": "No information yet."
         },
         "witchspell": {
           "type": "constant",
-          "description": "No information yet.",
-          "example": "No information yet."
+          "description": "Particles emitted from witch magic."
         }
       }
     },
